@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pré Raio-X Operacional Gratuito | ESPX Tecnologia</title>
+<meta name="description" content="Receba gratuitamente um pré-diagnóstico da operação tecnológica da sua empresa, ligado às 7 dimensões que sustentam o crescimento. Em poucos minutos no seu WhatsApp.">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><rect width='120' height='120' rx='26' fill='%23102A43'/><text x='60' y='84' font-size='74' font-weight='700' fill='%23EE6C2B' text-anchor='middle' font-family='Georgia,serif'>X</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--navy-900:#081320;--navy-700:#102A43;--orange:#EE6C2B;--orange-soft:#f6915a;--paper:#F4F1EA;--paper-2:#ECE7DC;--ink:#11202E;--muted:#5d6b78;--line:rgba(255,255,255,.10);--line-dark:#dcd5c8;--green:#3f7d58}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'IBM Plex Sans',sans-serif;background:var(--navy-900);color:#eef3f8;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3{font-family:'IBM Plex Serif',serif;font-weight:600;line-height:1.12;letter-spacing:-.01em}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--orange);font-weight:500}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  nav{padding:22px 0;border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between}
+  .logo{font-family:'IBM Plex Serif',serif;font-weight:700;font-size:1.25rem;color:#fff}
+  .logo .x{color:var(--orange)}
+  .logo .desc{font-family:'IBM Plex Sans',sans-serif;font-weight:400;font-size:.9rem;color:#b9c6d4}
+  .nav-tag{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:#7f90a1}
+  .hero{position:relative;overflow:hidden;padding:60px 0 80px}
+  .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(900px 480px at 75% -10%,rgba(238,108,43,.18),transparent 60%),radial-gradient(700px 600px at 5% 110%,rgba(59,110,165,.20),transparent 55%)}
+  .hero-x{position:absolute;right:-100px;top:40%;transform:translateY(-50%);font-family:'IBM Plex Serif',serif;font-weight:700;font-size:40rem;line-height:1;color:rgba(255,255,255,.022);user-select:none;pointer-events:none}
+  .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+  .hero h1{font-size:clamp(2.1rem,4.4vw,3.3rem);color:#fff;margin-top:18px}
+  .hero h1 .accent{color:var(--orange-soft)}
+  .hero .sub{font-size:1.12rem;color:#b9c6d4;margin-top:20px;font-weight:300;max-width:48ch}
+  .benefits{list-style:none;margin-top:28px;display:flex;flex-direction:column;gap:12px}
+  .benefits li{font-size:1rem;color:#dde6ef;padding-left:28px;position:relative}
+  .benefits li:before{content:"\2192";position:absolute;left:0;color:var(--orange);font-weight:700}
+  .trust{margin-top:34px;padding-top:24px;border-top:1px solid var(--line);font-size:.9rem;color:#9fb0c0}
+  .trust strong{color:#fff;font-weight:500}
+
+  .card{background:#fff;color:var(--ink);border-radius:14px;padding:32px;box-shadow:0 40px 80px -30px rgba(0,0,0,.6);min-height:430px;display:flex;flex-direction:column}
+  .card-progress{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+  .ptrack{flex:1;height:7px;background:var(--paper-2);border-radius:5px;overflow:hidden}
+  .ptrack>i{display:block;height:100%;width:0;background:var(--orange);border-radius:5px;transition:width .4s ease}
+  .ppct{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:.78rem;color:var(--navy-700);min-width:34px;text-align:right}
+  .step{display:none;flex:1;flex-direction:column}
+  .step.active{display:flex;animation:fade .35s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .qn{font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);font-weight:600}
+  .step h2{font-size:1.4rem;color:var(--navy-700);margin-top:8px}
+  .step .qhint{color:var(--muted);font-size:.92rem;margin-top:6px}
+  .ip{margin-top:auto}
+  input,select{width:100%;font-family:'IBM Plex Sans',sans-serif;font-size:1.02rem;color:var(--ink);background:var(--paper);border:1px solid var(--line-dark);border-radius:8px;padding:14px;transition:.15s;margin-top:20px}
+  input:focus,select:focus{outline:none;border-color:var(--orange);background:#fff;box-shadow:0 0 0 3px rgba(238,108,43,.12)}
+  .opt-detail{font-size:.86rem;margin-top:12px}
+  .opt-detail input{margin-top:8px;font-size:.94rem}
+  .email-confirm{display:none;gap:10px;align-items:flex-start;margin-top:16px;font-size:.86rem;color:#33424f;background:var(--soft,#F1EEE6);border:1px solid var(--line-dark);border-radius:8px;padding:13px}
+  .email-confirm.show{display:flex}
+  .email-confirm input{width:18px;height:18px;margin-top:2px;accent-color:var(--orange);flex-shrink:0}
+  .consent{display:flex;gap:11px;align-items:flex-start;margin-top:20px;font-size:.84rem;color:#33424f}
+  .consent input{margin-top:3px;width:18px;height:18px;accent-color:var(--orange);flex-shrink:0}
+  .nav-btns{display:flex;justify-content:space-between;gap:12px;margin-top:24px}
+  .btn{font-family:'IBM Plex Sans',sans-serif;font-weight:600;font-size:1rem;padding:14px 24px;border-radius:8px;cursor:pointer;border:1px solid transparent;transition:.2s}
+  .btn-prev{background:transparent;border-color:var(--line-dark);color:var(--muted)}
+  .btn-prev:hover{border-color:var(--navy-700);color:var(--navy-700)}
+  .btn-next{background:var(--orange);color:#fff;margin-left:auto}
+  .btn-next:hover{background:#ff7d3c;transform:translateY(-1px)}
+  .btn-next:disabled{opacity:.5;cursor:not-allowed;transform:none}
+  .msg{display:none;padding:12px;border-radius:8px;font-size:.9rem;margin-top:14px;background:#f7e3e0;color:#a33}
+  .hp{position:absolute;left:-9999px;opacity:0}
+  .success{display:none;text-align:center;padding:30px 0;margin:auto}
+  .success .ico{width:64px;height:64px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 18px}
+  .success h2{color:var(--navy-700)}
+  .success p{color:var(--muted);margin-top:10px}
+  footer{border-top:1px solid var(--line);padding:30px 0;font-size:.82rem;color:#6f7f8e;text-align:center}
+  @media(max-width:820px){.hero-grid{grid-template-columns:1fr;gap:36px}.hero-x{font-size:22rem}}
+</style>
+</head>
+<body>
+<nav><div class="wrap nav-in">
+  <div class="logo">ESP<span class="x">X</span> <span class="desc">Tecnologia</span></div>
+  <div class="nav-tag">Pré Raio-X Operacional</div>
+</div></nav>
+
+<header class="hero">
+  <div class="hero-x">X</div>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Pré Raio-X Operacional Gratuito</div>
+      <h1>Sua tecnologia sustenta o crescimento, ou <span class="accent">já está te segurando?</span></h1>
+      <p class="sub">Receba gratuitamente um Pré Raio-X da operação tecnológica da sua empresa, ligado às 7 dimensões que sustentam um negócio em crescimento. Direto no seu WhatsApp, em poucos minutos.</p>
+      <ul class="benefits">
+        <li>Um retrato inicial dos pontos de atenção da sua operação</li>
+        <li>Análise nas 7 dimensões que sustentam o crescimento</li>
+        <li>Pela ótica de quem sustentou operações de Centenas de milhões por mês</li>
+      </ul>
+      <div class="trust"><strong>ESPX Tecnologia</strong> · Thiego Bastos · 20+ anos de Liderança em Operações Críticas de Tecnologia</div>
+    </div>
+
+    <div class="card">
+      <div id="formView" style="display:flex;flex-direction:column;flex:1">
+        <div class="card-progress"><div class="ptrack"><i id="pbar"></i></div><div class="ppct" id="ppct">0%</div></div>
+        <div class="msg" id="errMsg"></div>
+        <input type="text" id="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="step active" data-idx="0">
+          <div class="qn">Passo 1 de 5</div>
+          <h2>Qual é o seu nome completo?</h2>
+          <div class="qhint">Nome e sobrenome.</div>
+          <div class="ip"><input type="text" id="nome" autocomplete="name" placeholder="Seu nome completo"></div>
+          <div class="nav-btns"><button type="button" class="btn btn-next" onclick="next(0)">Continuar</button></div>
+        </div>
+
+        <div class="step" data-idx="1">
+          <div class="qn">Passo 2 de 5</div>
+          <h2>Qual o nome da empresa?</h2>
+          <div class="ip"><input type="text" id="empresa" autocomplete="organization" placeholder="Nome da empresa"></div>
+          <div class="nav-btns"><button type="button" class="btn btn-prev" onclick="go(0)">Voltar</button><button type="button" class="btn btn-next" onclick="next(1)">Continuar</button></div>
+        </div>
+
+        <div class="step" data-idx="2">
+          <div class="qn">Passo 3 de 5</div>
+          <h2>Qual o seu papel na empresa?</h2>
+          <div class="qhint">Ajuda a personalizar a conversa.</div>
+          <div class="ip">
+            <select id="cargo">
+              <option value="">Selecione</option>
+              <option>Dono ou sócio</option>
+              <option>Diretor ou C-level</option>
+              <option>Gerente ou coordenador</option>
+              <option>Analista ou técnico</option>
+              <option>Outro</option>
+            </select>
+            <div class="opt-detail"><input type="text" id="cargo_detalhe" placeholder="Se quiser, detalhe seu cargo (opcional)"></div>
+          </div>
+          <div class="nav-btns"><button type="button" class="btn btn-prev" onclick="go(1)">Voltar</button><button type="button" class="btn btn-next" onclick="next(2)">Continuar</button></div>
+        </div>
+
+        <div class="step" data-idx="3">
+          <div class="qn">Passo 4 de 5</div>
+          <h2>Qual o seu WhatsApp?</h2>
+          <div class="qhint">É onde você vai receber o seu Pré Raio-X.</div>
+          <div class="ip"><input type="tel" id="telefone" autocomplete="tel" placeholder="(21) 99999-9999"></div>
+          <div class="nav-btns"><button type="button" class="btn btn-prev" onclick="go(2)">Voltar</button><button type="button" class="btn btn-next" onclick="next(3)">Continuar</button></div>
+        </div>
+
+        <div class="step" data-idx="4">
+          <div class="qn">Passo 5 de 5</div>
+          <h2>Qual o seu melhor e-mail?</h2>
+          <div class="qhint">De preferência o corporativo.</div>
+          <div class="ip">
+            <input type="email" id="email" autocomplete="email" placeholder="voce@suaempresa.com.br" oninput="checkEmail()">
+            <label class="email-confirm" id="emailConfirm"><input type="checkbox" id="emailPessoalOk"><span>Confirmo que é o meu e-mail e que represento uma empresa real.</span></label>
+            <label class="consent"><input type="checkbox" id="consent"><span>Autorizo a ESPX a entrar em contato e enviar o Pré Raio-X e comunicados por WhatsApp e e-mail.</span></label>
+          </div>
+          <div class="nav-btns"><button type="button" class="btn btn-prev" onclick="go(3)">Voltar</button><button type="button" class="btn btn-next" id="finalBtn" onclick="next(4)">Receber meu Pré Raio-X</button></div>
+        </div>
+      </div>
+
+      <div class="success" id="successView">
+        <div class="ico">&#10003;</div>
+        <h2>Tudo certo!</h2>
+        <p>Vamos te chamar no WhatsApp agora para liberar o seu acesso ao pré-diagnóstico. É rápido: leva cerca de 3 minutos e revela dependências críticas, riscos e gargalos invisíveis da sua operação.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<footer><div class="wrap">ESPX Tecnologia · Especialistas em multiplicar resultados · Niterói, RJ</div></footer>
+
+<script>
+// ===================== CONFIG =====================
+// Web3Forms recebe, armazena e dispara webhook para o n8n (configurado no painel do Web3Forms).
+const WEB3FORMS_KEY="9459a661-8b6e-48f7-9faf-bcdbd32f2beb";
+const WEB3FORMS_URL="https://api.web3forms.com/submit";
+// ==================================================
+
+const TOTAL=5;let cur=0;
+const D={};
+const free=["gmail.","hotmail.","outlook.","yahoo.","live.","icloud.","bol.com","uol.com.br","terra.com.br","msn."];
+
+function prog(){const p=Math.round((cur/TOTAL)*100);document.getElementById('pbar').style.width=p+'%';document.getElementById('ppct').textContent=p+'%';}
+function go(i){document.querySelectorAll('.step').forEach(s=>s.classList.remove('active'));document.querySelector('.step[data-idx="'+i+'"]').classList.add('active');cur=i;prog();}
+function showErr(t){const e=document.getElementById('errMsg');e.textContent=t;e.style.display='block';setTimeout(()=>e.style.display='none',3500);}
+
+function checkEmail(){
+  const v=document.getElementById('email').value.trim().toLowerCase();
+  const isFree=free.some(f=>v.includes("@")&&v.split("@")[1] && v.split("@")[1].startsWith(f));
+  document.getElementById('emailConfirm').classList.toggle('show', isFree && v.includes("@"));
+}
+
+function validEmail(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);}
+function isFreeEmail(v){const d=v.split("@")[1]||"";return free.some(f=>d.startsWith(f));}
+
+function next(i){
+  if(i===0){D.nome=document.getElementById('nome').value.trim();if(D.nome.split(" ").filter(Boolean).length<2){showErr("Informe nome e sobrenome.");return;}go(1);}
+  else if(i===1){D.empresa=document.getElementById('empresa').value.trim();if(D.empresa.length<2){showErr("Informe o nome da empresa.");return;}go(2);}
+  else if(i===2){D.cargo=document.getElementById('cargo').value;D.cargo_detalhe=document.getElementById('cargo_detalhe').value.trim();if(!D.cargo){showErr("Selecione o seu papel.");return;}go(3);}
+  else if(i===3){D.telefone=document.getElementById('telefone').value.trim();const digits=D.telefone.replace(/\D/g,'');if(digits.length < 10 || digits.length > 11){showErr("Informe um WhatsApp válido com DDD.");return;}go(4);}
+  else if(i===4){
+    D.email=document.getElementById('email').value.trim();
+    if(!validEmail(D.email)){showErr("Informe um e-mail válido.");return;}
+    if(isFreeEmail(D.email) && !document.getElementById('emailPessoalOk').checked){showErr("Confirme que representa uma empresa real.");return;}
+    if(!document.getElementById('consent').checked){showErr("Autorize o contato para continuar.");return;}
+    submitLead();
+  }
+}
+
+async function submitLead(){
+  if(document.getElementById('website').value.trim()!==""){return;}
+  const btn=document.getElementById('finalBtn');btn.disabled=true;btn.textContent="Enviando...";
+  const payload={
+    access_key:WEB3FORMS_KEY,
+    subject:"Novo lead Pré Raio-X (LP1) - "+D.empresa,
+    from_name:"ESPX - LP1 Captura",
+    origem:"LP1_captura",
+    nome:D.nome,
+    empresa:D.empresa,
+    cargo:D.cargo,
+    cargo_detalhe:D.cargo_detalhe||"",
+    telefone:D.telefone,
+    email:D.email,
+    email_pessoal_confirmado:isFreeEmail(D.email),
+    consentimento_whatsapp:"sim",
+    consentimento_data:new Date().toISOString(),
+    pagina:location.href,
+    botcheck:""
+  };
+  try{
+    const r=await fetch(WEB3FORMS_URL,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(payload)});
+    const data=await r.json();
+    if(!data.success)throw new Error();
+    document.getElementById('formView').style.display='none';
+    document.getElementById('successView').style.display='block';
+  }catch(e){showErr("Não foi possível enviar agora. Tente novamente.");btn.disabled=false;btn.textContent="Receber meu Pré Raio-X";}
+}
+prog();
+</script>
+</body>
+</html>
