@@ -167,7 +167,7 @@
 
 <script>
 
-const WEB3FORMS_URL="https://n8n.srv853510.hstgr.cloud/webhook/espx-lead-lp1";
+const OK="https://n8n.srv853510.hstgr.cloud/webhook/novo";
 const TOTAL=5;let cur=0;
 const D={};
 const free=["gmail.","hotmail.","outlook.","yahoo.","live.","icloud.","bol.com","uol.com.br","terra.com.br","msn."];
@@ -220,7 +220,7 @@ async function submitLead(){
     botcheck:""
   };
   try{
-    const r=await fetch(WEB3FORMS_URL,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json","x-nada":"ESPX_2026_f8K29xP4mQ7zL@"},body:JSON.stringify(payload)});
+    const r=await fetch(OK,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json","x-nada":"ESPX_2026_f8K29xP4mQ7zL@"},body:JSON.stringify(payload)});
     const data=await r.json();
     if(!data.success)throw new Error();
     document.getElementById('formView').style.display='none';
