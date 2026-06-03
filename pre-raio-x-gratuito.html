@@ -203,7 +203,6 @@ async function submitLead(){
   if(document.getElementById('website').value.trim()!==""){return;}
   const btn=document.getElementById('finalBtn');btn.disabled=true;btn.textContent="Enviando...";
   const payload={
-    access_key:WEB3FORMS_KEY,
     subject:"Novo lead Pré Raio-X (LP1) - "+D.empresa,
     from_name:"ESPX - LP1 Captura",
     origem:"LP1_captura",
