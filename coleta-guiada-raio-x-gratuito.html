@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pré Raio-X Operacional Gratuito | ESPX Tecnologia</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><rect width='120' height='120' rx='26' fill='%23102A43'/><text x='60' y='84' font-size='74' font-weight='700' fill='%23EE6C2B' text-anchor='middle' font-family='Georgia,serif'>X</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#102A43;--navy-d:#081320;--orange:#EE6C2B;--orange-soft:#f6915a;--paper:#F4F1EA;--paper-2:#ECE7DC;--ink:#11202E;--muted:#5d6b78;--line:#dcd5c8;--soft:#F1EEE6;--green:#3f7d58}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'IBM Plex Sans',sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'IBM Plex Serif',serif;line-height:1.15;letter-spacing:-.01em}
+  .wrap{max-width:680px;margin:0 auto;padding:0 22px}
+  .top{background:var(--navy-d);color:#fff;padding:30px 0 28px}
+  .top .logo{font-family:'IBM Plex Serif',serif;font-weight:700;font-size:1.2rem}
+  .top .logo .x{color:var(--orange)}
+  .top .logo .desc{font-family:'IBM Plex Sans',sans-serif;font-weight:400;font-size:.9rem;color:#b9c6d4}
+  .top h1{font-size:1.55rem;color:#fff;margin-top:16px}
+  .top .sub{color:#b9c6d4;font-size:.95rem;margin-top:8px;font-weight:300}
+  .method-frame{display:flex;gap:12px;align-items:flex-start;margin-top:20px;background:rgba(238,108,43,.08);border:1px solid rgba(238,108,43,.25);border-radius:10px;padding:15px 17px}
+  .method-frame .badge{font-family:'IBM Plex Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);font-weight:600;border:1px solid var(--orange);border-radius:20px;padding:4px 10px;white-space:nowrap;flex-shrink:0;margin-top:2px}
+  .method-frame p{color:#cdd8e3;font-size:.86rem;margin:0;line-height:1.55}
+  .method-frame strong{color:#fff;font-weight:500}
+  .privacy{display:flex;gap:10px;align-items:flex-start;margin-top:14px;padding:0 2px}
+  .privacy .lock{color:var(--orange-soft);font-size:.95rem;flex-shrink:0;margin-top:1px}
+  .privacy p{color:#8b9bab;font-size:.76rem;margin:0;line-height:1.5}
+  .privacy strong{color:#aebccb;font-weight:500}
+  .progress-wrap{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line);padding:13px 0}
+  .progress-wrap .wrap{display:flex;align-items:center;gap:14px}
+  .ptrack{flex:1;height:8px;background:var(--paper-2);border-radius:5px;overflow:hidden}
+  .ptrack>i{display:block;height:100%;width:0;background:var(--orange);border-radius:5px;transition:width .4s ease}
+  .ppct{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:.82rem;color:var(--navy);min-width:38px;text-align:right}
+  main{padding:28px 0 60px}
+  .step{display:none}
+  .step.active{display:block;animation:fade .4s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .qcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;margin-bottom:16px;box-shadow:0 12px 30px -24px rgba(16,42,67,.4)}
+  .qcard .dim{font-family:'IBM Plex Mono',monospace;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);font-weight:600}
+  .qcard h3{font-family:'IBM Plex Sans',sans-serif;font-size:1.2rem;font-weight:600;margin-top:8px;color:var(--navy);line-height:1.3}
+  .qcard .hint{font-size:.85rem;color:var(--muted);margin-top:6px}
+  .opts{margin-top:18px;display:flex;flex-direction:column;gap:9px}
+  .opt{display:flex;align-items:center;gap:12px;padding:15px 16px;border:1px solid var(--line);border-radius:9px;cursor:pointer;background:var(--soft);transition:.15s;font-size:.97rem;min-height:54px}
+  .opt:hover{border-color:var(--orange)}
+  .opt.sel{border-color:var(--orange);background:#fdf3ec}
+  .opt .mk{width:22px;height:22px;border-radius:6px;border:2px solid var(--line);flex-shrink:0;transition:.15s;position:relative}
+  .opt.sel .mk{border-color:var(--orange);background:var(--orange)}
+  .opt.sel .mk:after{content:"\2713";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.82rem;font-weight:700}
+  .opt.single .mk{border-radius:50%}
+  .opt.single.sel .mk:after{content:"";inset:5px;border-radius:50%;background:#fff}
+  .multi-hint{font-size:.78rem;color:var(--orange);font-family:'IBM Plex Mono',monospace;margin-top:13px;letter-spacing:.02em}
+  .obs{margin-top:15px}
+  .obs label{font-size:.74rem;color:var(--muted);font-family:'IBM Plex Mono',monospace;letter-spacing:.03em}
+  .obs textarea{width:100%;font-family:'IBM Plex Sans',sans-serif;font-size:.96rem;color:var(--ink);background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin-top:7px;min-height:52px;line-height:1.5;resize:vertical;transition:.15s}
+  .obs textarea:focus{outline:none;border-color:var(--orange);background:#fff;box-shadow:0 0 0 3px rgba(238,108,43,.1)}
+  .nav-btns{display:flex;justify-content:space-between;gap:12px;margin-top:4px}
+  .btn{font-family:'IBM Plex Sans',sans-serif;font-weight:600;font-size:1rem;padding:15px 26px;border-radius:8px;cursor:pointer;border:1px solid transparent;transition:.2s}
+  .btn-prev{background:transparent;border-color:var(--line);color:var(--muted)}
+  .btn-prev:hover{border-color:var(--navy);color:var(--navy)}
+  .btn-next{background:var(--orange);color:#fff;margin-left:auto}
+  .btn-next:hover{background:#ff7d3c;transform:translateY(-1px)}
+  .btn-next:disabled{opacity:.5;cursor:not-allowed;transform:none}
+  .msg{display:none;padding:14px;border-radius:8px;font-size:.92rem;margin-bottom:14px;background:#f7e3e0;color:#a33}
+  .done{display:none;text-align:center;padding:36px 0}
+  .done .ico{width:70px;height:70px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:2.2rem;margin:0 auto 20px}
+  .done h2{color:var(--navy);font-size:1.5rem}
+  .done .lead{color:var(--ink);margin-top:14px;font-size:1.05rem;font-weight:500}
+  .done p{color:var(--muted);margin-top:10px;font-size:.98rem;max-width:52ch;margin-left:auto;margin-right:auto}
+  .done .badge{display:inline-block;margin-top:20px;font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);border:1px solid var(--orange);border-radius:20px;padding:8px 16px}
+  .done .wa-fallback{display:none;align-items:center;gap:9px;margin:22px auto 0;background:#25D366;color:#fff;font-weight:600;font-size:.95rem;padding:13px 22px;border-radius:8px;transition:.2s;width:fit-content}
+  .done .wa-fallback.show{display:inline-flex}
+  .done .wa-fallback svg{width:20px;height:20px;fill:currentColor}
+  .hp{position:absolute;left:-9999px;opacity:0}
+  .lgpd-foot{text-align:center;color:var(--muted);font-size:.78rem;padding:18px 0 50px;line-height:1.6}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap">
+  <div class="logo">ESP<span class="x">X</span> <span class="desc">Tecnologia</span></div>
+  <h1>Pr&eacute; Raio-X Operacional</h1>
+  <p class="sub">Poucas perguntas, cerca de 3 minutos.</p>
+  <div class="method-frame">
+    <span class="badge">7 dimens&otilde;es</span>
+    <p>Empresas em crescimento normalmente n&atilde;o percebem os sinais de desgaste operacional at&eacute; que eles afetem <strong>margem, efici&ecirc;ncia e capacidade de evolu&ccedil;&atilde;o</strong>. As pr&oacute;ximas perguntas analisam os pontos que sustentam continuidade, crescimento e previsibilidade da sua opera&ccedil;&atilde;o.</p>
+  </div>
+  <div class="privacy"><span class="lock">&#128274;</span><p><strong>Ambiente seguro.</strong> Suas respostas servem apenas para gerar o seu relat&oacute;rio. N&atilde;o compartilhamos com terceiros nem vendemos seus dados, e voc&ecirc; pode pedir a exclus&atilde;o quando quiser. Tratamento conforme a LGPD.</p></div>
+</div></div>
+
+<div class="progress-wrap"><div class="wrap">
+  <div class="ptrack"><i id="pbar"></i></div><div class="ppct" id="ppct">0%</div>
+</div></div>
+
+<main><div class="wrap">
+  <div class="msg" id="errMsg"></div>
+  <input type="text" id="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <div id="steps"></div>
+  <div class="done" id="doneView">
+    <div class="ico" id="doneIco">&#10003;</div>
+    <h2 id="doneTitle">Seu pr&eacute;-diagn&oacute;stico foi registrado.</h2>
+    <p class="lead" id="doneLead">Empresas em crescimento costumam apresentar gargalos invis&iacute;veis antes que eles virem problemas vis&iacute;veis.</p>
+    <p id="doneMsg">Vamos analisar os sinais identificados na sua opera&ccedil;&atilde;o e preparar uma leitura inicial dos principais pontos de aten&ccedil;&atilde;o. Seu relat&oacute;rio chega no WhatsApp em poucos minutos.</p>
+    <div class="badge" id="doneBadge">Analisando os sinais da sua opera&ccedil;&atilde;o</div>
+    <a class="wa-fallback" id="waFallback" href="https://wa.me/5521967090786?text=Ol%C3%A1%2C%20conclu%C3%AD%20meu%20pr%C3%A9-diagn%C3%B3stico%20no%20site%20da%20ESPX%20e%20quero%20receber%20o%20relat%C3%B3rio." target="_blank" rel="noopener">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C9.46 3 4.1 8.32 4.1 14.86c0 2.1.56 4.16 1.62 5.97L4 29l8.37-1.69a12.03 12.03 0 0 0 3.67.57c6.58 0 11.94-5.32 11.94-11.86S22.62 3 16.04 3z"/></svg>
+      Falar com a ESPX no WhatsApp
+    </a>
+  </div>
+  <div class="lgpd-foot">Seus dados s&atilde;o tratados conforme a LGPD e usados somente para a gera&ccedil;&atilde;o do seu pr&eacute;-diagn&oacute;stico.</div>
+</div></main>
+
+<script>
+// ===================== CONFIG =====================
+const OK="https://automation.espxtecnologia.com.br/webhook/prediagnostico";
+const SEC_HEADER="ESPX_2026_f8K29xP4mQ7zL@";
+const params=new URLSearchParams(location.search);
+const LEAD_ID=params.get('lead')||params.get('id')||'';
+// ==================================================
+
+/*
+  7 perguntas. Projetivas (descrever, nao confessar). Pesos OCULTOS por dimensao (w), 0 a 2.
+  Dimensoes: CON DAD DEP SEG EFI CUS CRE.
+  P1 pessoas (porte operacional). P2 e P6 multipla escolha. Demais, unica.
+  Custo coberto em P2 (opcao nova) e P7 (peso oculto), alem do sono.
+*/
+const STEPS=[
+ {key:"pessoas",dim:"Porte operacional",multi:false,required:true,
+  q:"Hoje, aproximadamente quantas pessoas participam da operação da sua empresa?",
+  hint:"Ajuda a contextualizar a leitura do seu pré-diagnóstico.",
+  choices:[
+    {t:"Até 5 pessoas",w:{}},
+    {t:"6 a 20 pessoas",w:{CON:1}},
+    {t:"21 a 50 pessoas",w:{DEP:1,CRE:1}},
+    {t:"51 a 100 pessoas",w:{DEP:1,CRE:1,CON:1}},
+    {t:"Mais de 100 pessoas",w:{DEP:1,CRE:1,CON:1}},
+  ]},
+
+ {key:"energia",dim:"Operação",multi:true,required:true,
+  q:"Hoje, o que mais consome energia da sua operação?",
+  hint:"Pode marcar mais de uma. Seja honesto, é o que mais ajuda no seu retrato.",
+  choices:[
+    {t:"Retrabalho e correções",w:{EFI:2,DAD:1}},
+    {t:"Desalinhamento entre áreas",w:{EFI:1,DAD:1}},
+    {t:"Excesso de esforço manual",w:{EFI:2}},
+    {t:"Dependência de pessoas específicas",w:{DEP:2}},
+    {t:"Custos de tecnologia que não param de subir",w:{CUS:2}},
+    {t:"Falta de previsibilidade",w:{CON:1,DAD:1}},
+    {t:"Crescimento desorganizado",w:{CRE:2}},
+  ]},
+
+ {key:"sono",dim:"O que tira o sono",multi:false,required:true,
+  q:"O que mais tira seu sono em relação ao crescimento da empresa?",
+  hint:"Escolha o que mais pesa hoje.",
+  choices:[
+    {t:"Perder o controle da operação",w:{CON:2,DAD:1}},
+    {t:"Aumentar custo sem ganhar eficiência",w:{CUS:2,EFI:1}},
+    {t:"Depender demais de pessoas-chave",w:{DEP:2}},
+    {t:"Não conseguir integrar áreas e processos",w:{EFI:1,DAD:1}},
+    {t:"Não sustentar o crescimento atual",w:{CRE:2,CON:1}},
+    {t:"Não ter visibilidade clara da operação",w:{DAD:2}},
+  ]},
+
+ {key:"reacao",dim:"Quando algo dá errado",multi:false,required:true,
+  q:"Quando um problema importante acontece, a sua empresa normalmente:",
+  choices:[
+    {t:"Resolve rápido e segue",w:{}},
+    {t:"Depende de pessoas específicas para resolver",w:{DEP:2}},
+    {t:"Perde tempo até entender a origem",w:{DAD:1,CON:1}},
+    {t:"Vê o problema espalhar para outras áreas",w:{CON:2}},
+    {t:"Só percebe quando já afetou cliente ou receita",w:{CON:2,SEG:1}},
+  ]},
+
+ {key:"seguranca",dim:"Controle e proteção",multi:false,required:true,
+  q:"Sobre os dados e acessos da empresa, você diria que:",
+  choices:[
+    {t:"Estão bem protegidos e controlados",w:{}},
+    {t:"Funcionam, mas tenho dúvidas sobre a proteção",w:{SEG:1}},
+    {t:"Há acessos e senhas sem muito controle",w:{SEG:2,DEP:1}},
+    {t:"Nunca paramos para olhar isso com cuidado",w:{SEG:2}},
+  ]},
+
+ {key:"dependencias",dim:"Do que a operação depende",multi:true,required:true,
+  q:"Hoje, a sua operação depende fortemente de:",
+  hint:"Pode marcar mais de uma.",
+  choices:[
+    {t:"Conhecimento que só algumas pessoas têm",w:{DEP:2}},
+    {t:"Processos manuais",w:{EFI:2}},
+    {t:"Controles e planilhas paralelas",w:{DAD:2,EFI:1}},
+    {t:"Integrações improvisadas",w:{EFI:1,DAD:1}},
+    {t:"Fornecedores descentralizados",w:{DEP:1,CON:1}},
+    {t:"Esforço operacional excessivo",w:{EFI:2,CRE:1}},
+  ]},
+
+ {key:"futuro",dim:"Projeção de crescimento",multi:false,required:true,
+  q:"Se a sua operação dobrasse de tamanho nos próximos 12 meses, hoje ela estaria preparada?",
+  hint:"Essa é a pergunta que mais revela.",
+  choices:[
+    {t:"Sim, a estrutura acompanha bem",w:{}},
+    {t:"Parcialmente, algumas áreas apertariam",w:{CRE:1,CON:1}},
+    {t:"Não com a estrutura atual",w:{CRE:2,CON:1,CUS:1}},
+    {t:"Sinceramente, não sabemos",w:{CRE:2,DAD:1,CUS:1}},
+  ]},
+];
+
+const RESP={};const WSUM={};const OBS={};let cur=0;
+const stepsWrap=document.getElementById('steps');
+STEPS.forEach(function(s,i){
+  var div=document.createElement('div');div.className='step'+(i===0?' active':'');div.dataset.idx=i;
+  var inner='<div class="qcard"><div class="dim">'+s.dim+'</div><h3>'+s.q+'</h3>';
+  if(s.hint)inner+='<div class="hint">'+s.hint+'</div>';
+  inner+='<div class="opts">';
+  s.choices.forEach(function(c,ci){
+    inner+='<div class="opt '+(s.multi?'multi':'single')+'" data-ci="'+ci+'" onclick="pick('+i+','+ci+',this,'+(s.multi?'true':'false')+')"><span class="mk"></span><span>'+c.t+'</span></div>';
+  });
+  inner+='</div>';
+  if(s.multi)inner+='<div class="multi-hint">Pode marcar mais de uma opção</div>';
+  inner+='<div class="obs"><label>Quer detalhar? (opcional, ajuda no seu relatório)</label><textarea oninput="setObs('+i+',this.value)" placeholder="Escreva o que quiser sobre este ponto..."></textarea></div>';
+  inner+='</div><div class="nav-btns">';
+  if(i>0)inner+='<button type="button" class="btn btn-prev" onclick="go('+(i-1)+')">Voltar</button>';
+  var last=i===STEPS.length-1;
+  inner+='<button type="button" class="btn btn-next" id="next_'+i+'" onclick="next('+i+')">'+(last?'Gerar meu pré-diagnóstico':'Continuar')+'</button>';
+  inner+='</div>';
+  div.innerHTML=inner;stepsWrap.appendChild(div);
+});
+
+function prog(){var p=Math.round((cur/STEPS.length)*100);document.getElementById('pbar').style.width=p+'%';document.getElementById('ppct').textContent=p+'%';}
+function go(i){document.querySelectorAll('.step').forEach(function(s){s.classList.remove('active');});document.querySelector('.step[data-idx="'+i+'"]').classList.add('active');cur=i;prog();window.scrollTo({top:0,behavior:'smooth'});}
+function showErr(t){var e=document.getElementById('errMsg');e.textContent=t;e.style.display='block';setTimeout(function(){e.style.display='none';},3000);window.scrollTo({top:0,behavior:'smooth'});}
+function pick(i,ci,el,multi){
+  var s=STEPS[i];
+  if(multi){
+    el.classList.toggle('sel');
+    if(!RESP[s.key])RESP[s.key]=[];
+    var idx=RESP[s.key].indexOf(ci);
+    if(idx>=0)RESP[s.key].splice(idx,1);else RESP[s.key].push(ci);
+  }else{
+    el.parentNode.querySelectorAll('.opt').forEach(function(o){o.classList.remove('sel');});
+    el.classList.add('sel');
+    RESP[s.key]=ci;
+  }
+}
+function setObs(i,v){OBS[STEPS[i].key]=v.trim();}
+function next(i){
+  var s=STEPS[i];var r=RESP[s.key];
+  var empty = s.multi ? (!r||r.length===0) : (r===undefined);
+  if(s.required&&empty){showErr("Escolha ao menos uma opção para continuar.");return;}
+  if(i<STEPS.length-1){go(i+1);}else{compute();submitAll();}
+}
+function compute(){
+  ["CON","DAD","DEP","SEG","EFI","CUS","CRE"].forEach(function(d){WSUM[d]=0;});
+  STEPS.forEach(function(s){
+    var r=RESP[s.key];if(r===undefined)return;
+    var idxs=Array.isArray(r)?r:[r];
+    idxs.forEach(function(ci){var w=s.choices[ci].w||{};for(var d in w){WSUM[d]=(WSUM[d]||0)+w[d];}});
+  });
+}
+function showDone(ok){
+  document.querySelector('#steps').style.display='none';
+  document.querySelector('.progress-wrap').style.display='none';
+  document.getElementById('pbar').style.width='100%';
+  document.getElementById('doneView').style.display='block';
+  if(!ok){
+    document.getElementById('doneTitle').textContent="Recebemos o seu pré-diagnóstico";
+    document.getElementById('doneLead').textContent="Tivemos uma instabilidade momentânea para processar automaticamente.";
+    document.getElementById('doneMsg').textContent="Fale com a ESPX no WhatsApp agora e garantimos a geração do seu relatório.";
+    document.getElementById('doneBadge').style.display='none';
+    document.getElementById('doneIco').style.background="#d98324";
+    document.getElementById('waFallback').classList.add('show');
+  }
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+async function submitAll(){
+  if(document.getElementById('website').value.trim()!==""){return;}
+  var btn=document.getElementById('next_'+(STEPS.length-1));btn.disabled=true;btn.textContent="Gerando...";
+  var legivel={};
+  STEPS.forEach(function(s){var r=RESP[s.key];if(r===undefined)return;var idxs=Array.isArray(r)?r:[r];legivel[s.key]=idxs.map(function(ci){return s.choices[ci].t;}).join(" | ");});
+  var payload={
+    subject:"Pré-diagnóstico recebido (LP2) - lead "+(LEAD_ID||"sem id"),
+    from_name:"ESPX - LP2 Pré-diagnóstico",
+    origem:"LP2_prediagnostico",
+    lead_id:LEAD_ID,
+    respostas:legivel,
+    pesos_dimensao:WSUM,
+    observacoes:OBS,
+    enviado_em:new Date().toISOString(),
+    pagina:location.href,
+    website:document.getElementById('website').value.trim()
+  };
+  try{
+    var res=await fetch(OK,{method:"POST",credentials:"omit",
+      headers:{"Content-Type":"application/json",Accept:"application/json","x-nada":SEC_HEADER},
+      body:JSON.stringify(payload)});
+    var data={};try{data=await res.json();}catch(e){}
+    if(res.ok && data && data.success===true){ showDone(true); }
+    else { showDone(false); }
+  }catch(e){ showDone(false); }
+}
+prog();
+</script>
+</body>
+</html>
