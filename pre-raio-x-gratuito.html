@@ -17,7 +17,7 @@
   h1,h2,h3{font-family:'IBM Plex Serif',serif;font-weight:600;line-height:1.12;letter-spacing:-.01em}
   .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--orange);font-weight:500}
   .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-  nav{padding:22px 0;border-bottom:1px solid var(--line)}
+  nav{padding:22px 0;border-tom:1px solid var(--line)}
   .nav-in{display:flex;align-items:center;justify-content:space-between}
   .logo{font-family:'IBM Plex Serif',serif;font-weight:700;font-size:1.25rem;color:#fff}
   .logo .x{color:var(--orange)}
@@ -139,8 +139,8 @@
       <div class="success" id="successView">
         <div class="ico" id="successIco">&#10003;</div>
         <h2 id="successTitle">Tudo certo!</h2>
-        <p id="successMsg">Enviamos o link do seu Pr&eacute; Raio-X para o seu WhatsApp. S&atilde;o poucas perguntas, cerca de 3 minutos, e o seu relat&oacute;rio chega em seguida.</p>
-    <!--    <a class="wa-fallback" id="waFallback" href="https://wa.me/5521967090786?text=Ol%C3%A1%2C%20fiz%20meu%20cadastro%20no%20site%20da%20ESPX%20e%20quero%20acessar%20o%20Pr%C3%A9%20Raio-X." target="_blank" rel="noopener">
+        <p id="successMsg">Enviamos o link do seu Pr&eacute; Raio-X para o seu WhatsApp. S&atilde;o poucas perguntas, cerca de 3 minutinhos.</p>
+    <!--    <a class="wa-fallback" id="waFallback" href="https://wa.me/5521967090786?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20ESPX%20Tecnologia." target="_blank" rel="noopener">
           <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C9.46 3 4.1 8.32 4.1 14.86c0 2.1.56 4.16 1.62 5.97L4 29l8.37-1.69a12.03 12.03 0 0 0 3.67.57c6.58 0 11.94-5.32 11.94-11.86S22.62 3 16.04 3z"/></svg>
           Falar com a ESPX no WhatsApp
         </a>   -->
@@ -183,7 +183,7 @@ function showSuccess(ok){
   if(ok){
     document.getElementById('successTitle').textContent="Tudo certo!";
     document.getElementById('successMsg').textContent="Enviamos o link do seu Pr\u00e9 Raio-X para o seu WhatsApp. S\u00e3o poucas perguntas, cerca de 3 minutos, e o seu relat\u00f3rio chega em seguida.";
-    document.getElementById('successNote').textContent="N\u00e3o recebeu em alguns instantes? Use o bot\u00e3o acima.";
+    document.getElementById('successNote').textContent="N\u00e3o recebeu em alguns instantes? Me chame no WhatsApp agora e liberamos o seu Pr\u00e9 Raio-X na hora.";
   }else{
     document.getElementById('successTitle').textContent="Recebemos o seu interesse";
     document.getElementById('successMsg').textContent="Tivemos uma instabilidade moment\u00e2nea para liberar o seu acesso autom\u00e1tico. Me chame no WhatsApp agora e liberamos o seu Pr\u00e9 Raio-X na hora.";
