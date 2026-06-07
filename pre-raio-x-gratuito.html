@@ -161,6 +161,8 @@ const OK="https://automation.espxtecnologia.com.br/webhook/novo";
 const TOTAL=3;let cur=0;
 const D={};
 
+const LEAD_ID = 'espx_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2,8);
+  
 function prog(){const p=Math.round((cur/TOTAL)*100);document.getElementById('pbar').style.width=p+'%';document.getElementById('ppct').textContent=p+'%';}
 function focusStep(i){const st=document.querySelector('.step[data-idx="'+i+'"]');if(!st)return;const f=st.querySelector('input:not([type=checkbox]),select');if(f){setTimeout(function(){f.focus();},120);}}
 function go(i){document.querySelectorAll('.step').forEach(function(s){s.classList.remove('active');});document.querySelector('.step[data-idx="'+i+'"]').classList.add('active');cur=i;prog();focusStep(i);}
@@ -199,6 +201,7 @@ async function submitLead(){
     subject:"Novo lead Pr\u00e9 Raio-X (LP1) - "+D.empresa,
     from_name:"ESPX - LP1 Captura",
     origem:"LP1_captura",
+    lead_id:LEAD_ID,
     nome:D.nome,empresa:D.empresa,
     telefone:D.telefone,
     consentimento_whatsapp:"sim",consentimento_data:new Date().toISOString(),
@@ -209,7 +212,7 @@ async function submitLead(){
       headers:{"Content-Type":"application/json",Accept:"application/json","x-nada":"ESPX_2026_f8K29xP4mQ7zL@"},
       body:JSON.stringify(payload)});
     var data={};try{data=await r.json();}catch(e){}
-    if(r.ok && data && data.success===true){ showSuccess(true); }
+    if(r.ok && data && data.success===true){ showSuccess(true, LEAD_ID); }
     else { showSuccess(false); }
   }catch(e){ showSuccess(false); }
 }
