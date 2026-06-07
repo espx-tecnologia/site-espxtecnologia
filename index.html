@@ -369,6 +369,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     height:54px
   }
 }
+
+/* ---- faixa de tese ---- */
+  .thesis{background:var(--navy-900);color:#fff;position:relative;overflow:hidden;text-align:center}
+  .thesis:before{content:"";position:absolute;inset:0;background:radial-gradient(680px 360px at 50% -20%,rgba(238,108,43,.13),transparent 62%)}
+  .thesis .wrap{position:relative;z-index:2;max-width:880px}
+  .thesis .mark{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:var(--orange);font-weight:500;display:block;margin-bottom:26px}
+  .thesis h2{font-family:'IBM Plex Serif',serif;font-size:clamp(1.7rem,3.4vw,2.5rem);color:#fff;line-height:1.22;letter-spacing:-.01em;font-weight:500}
+  .thesis h2 .hl{color:var(--orange-soft)}
+  .thesis p{color:#c2cedb;font-size:1.12rem;font-weight:300;margin-top:22px;max-width:60ch;margin-left:auto;margin-right:auto}
  
 </style>
 </head>
@@ -432,6 +441,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<section class="thesis">
+  <div class="wrap">
+    <span class="mark">A perspectiva ESPX</span>
+    <h2>Tecnologia tratada como <span class="hl">estrutura de crescimento e continuidade operacional</span>.</h2>
+    <p>É essa mudança de perspectiva que conecta operação, negócio e evolução de forma sustentável.</p>
+  </div>
+</section>
+  
 <section>
   <div class="wrap">
     <div class="sec-head">
@@ -522,7 +539,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="num">03 · EXPANSÃO</div>
         <h3>Evolução Estruturada</h3>
         <span class="tag">por projeto · escopo definido</span>
-        <p><strong>Com a operação estruturada, evoluímos tecnologia de forma conectada ao negócio</strong>: integrações, monitoramento, cloud, automação, inteligência artificial aplicada, governança e modernização operacional. Sempre conectando tecnologia a previsibilidade, eficiência operacional, escala e continuidade do negócio.</p>
+        <p><strong>Com a operação estruturada, a tecnologia deixa de ser custo e passa a gerar resultado</strong>: automação que libera a equipe para o que traz receita, integração que destrava vendas, dados que revelam onde está a margem, e inteligência artificial aplicada onde de fato muda o jogo. É aqui que a operação vira plataforma de crescimento, com tecnologia abrindo eficiência, escala e novas fontes de receita.</p>
       </div>
     </div>
   </div>
@@ -671,6 +688,10 @@ document.addEventListener('keydown',function(e){
   if(e.key==='Escape'){var m=document.getElementById('metodo-modal');if(m){m.classList.remove('open');document.body.style.overflow='';}}
 });
 </script>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"c246d1b5d6ff49a082df6c910c966fae","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a070913d5972ee1b',t:'MTc4MDY3NzA4Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 
 </body>
 </html>
