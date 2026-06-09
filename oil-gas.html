@@ -3,7 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ESPX · Operação Oil & Gas e Serviços Offshore</title>
+<title>Inteligência artificial e automação para Oil & Gas | Operação técnica e offshore | ESPX Tecnologia</title>
+<meta name="description" content="Como a inteligência artificial e a automação sustentam operações técnicas de óleo e gás: resposta de orçamentos críticos, previsão de ruptura de estoque, rastreabilidade de pedidos e documentação, gestão de fornecedores. Leitura operacional por segmento da ESPX Tecnologia.">
+<meta name="keywords" content="inteligência artificial para óleo e gás, automação industrial, gestão de operação técnica, rastreabilidade offshore, gestão de estoque crítico, fornecedores oil and gas, ESPX Tecnologia">
+<meta property="og:title" content="Inteligência artificial e automação para Oil & Gas | ESPX Tecnologia">
+<meta property="og:description" content="A operação atende o offshore. E os bastidores sustentam a criticidade? Como IA e automação sustentam operações técnicas, do orçamento à rastreabilidade.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -57,10 +62,13 @@
   .areas-sec{background:var(--paper)}
   .areas{display:flex;flex-direction:column;gap:18px;margin-top:44px}
   .area{background:#fff;border:1px solid var(--line-dark);border-radius:8px;overflow:hidden}
-  .area-head{display:flex;align-items:center;gap:14px;padding:20px 28px;background:var(--navy-700)}
+  .area-head{display:flex;align-items:center;gap:14px;padding:20px 28px;background:var(--navy-700);cursor:pointer;user-select:none}
   .area-head .ico{width:38px;height:38px;border-radius:8px;background:rgba(255,255,255,.08);color:var(--orange-soft);display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:1.05rem;flex-shrink:0}
-  .area-head h3{font-family:'IBM Plex Serif',serif;font-size:1.2rem;color:#fff}
-  .area-body{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  .area-head h3{font-family:'IBM Plex Serif',serif;font-size:1.2rem;color:#fff;flex:1}
+  .area-head .chev{color:var(--orange-soft);font-size:1.1rem;transition:transform .3s;flex-shrink:0}
+  .area.open .area-head .chev{transform:rotate(180deg)}
+  .area-body{display:grid;grid-template-columns:1fr 1fr;gap:0;max-height:0;overflow:hidden;transition:max-height .4s ease}
+  .area.open .area-body{max-height:650px}
   .area-side{padding:24px 28px}
   .area-side.hoje{border-right:1px solid var(--line-dark)}
   .area-side .lbl{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;margin-bottom:13px}
@@ -72,13 +80,24 @@
   .area-side.hoje li:before{content:"\2715";position:absolute;left:0;color:#a8b0b8;font-weight:700;font-size:.78rem;top:2px}
   .area-side.depois li{color:#33424f}
   .area-side.depois li:before{content:"\2713";position:absolute;left:0;color:var(--orange);font-weight:700}
-  @media(max-width:760px){.area-body{grid-template-columns:1fr}.area-side.hoje{border-right:none;border-bottom:1px solid var(--line-dark)}}
+  @media(max-width:760px){.area-body{grid-template-columns:1fr}.area-side.hoje{border-right:none;border-bottom:1px solid var(--line-dark)}.area.open .area-body{max-height:1200px}}
+
+  .ia{background:var(--navy-800);color:#eef3f8;position:relative;overflow:hidden}
+  .ia:before{content:"";position:absolute;inset:0;background:radial-gradient(620px 380px at 12% 8%,rgba(238,108,43,.12),transparent 60%)}
+  .ia .wrap{position:relative;z-index:2}
+  .ia .sec-head h2{color:#fff}.ia .sec-head p{color:#b9c6d4}
+  .ia-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
+  .ia-card{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:8px;padding:24px 24px}
+  .ia-card .ico{width:36px;height:36px;border-radius:8px;background:rgba(238,108,43,.16);color:var(--orange-soft);display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:.95rem;margin-bottom:14px}
+  .ia-card h3{font-family:'IBM Plex Sans',sans-serif;font-size:1.04rem;font-weight:600;color:#fff}
+  .ia-card p{color:#c2cedb;font-size:.94rem;margin-top:8px;font-weight:300;line-height:1.5}
+  .ia-nota{margin-top:28px;font-size:.92rem;color:#8fa0b1;font-weight:300;max-width:72ch;font-style:italic}
+  @media(max-width:760px){.ia-grid{grid-template-columns:1fr}}
 
   .invisivel{background:var(--navy-900);color:#eef3f8;position:relative;overflow:hidden}
   .invisivel:before{content:"";position:absolute;inset:0;background:radial-gradient(680px 420px at 88% 10%,rgba(238,108,43,.13),transparent 60%)}
   .invisivel .wrap{position:relative;z-index:2}
-  .invisivel .sec-head h2{color:#fff}
-  .invisivel .sec-head p{color:#b9c6d4}
+  .invisivel .sec-head h2{color:#fff}.invisivel .sec-head p{color:#b9c6d4}
   .inv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:44px;background:var(--line);border:1px solid var(--line)}
   .inv-item{background:var(--navy-900);padding:24px 24px}
   .inv-item .n{font-family:'IBM Plex Mono',monospace;color:var(--orange);font-size:.78rem;font-weight:600}
@@ -127,6 +146,10 @@
   .btn{display:inline-block;font-family:'IBM Plex Sans',sans-serif;font-weight:600;font-size:.98rem;padding:15px 30px;border-radius:3px;transition:.25s;cursor:pointer;border:1px solid transparent;margin-top:32px}
   .btn-primary{background:var(--orange);color:#fff}
   .btn-primary:hover{background:#ff7d3c;transform:translateY(-2px)}
+
+  .wa-float{position:fixed;right:22px;bottom:22px;z-index:90;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.25);transition:transform .2s,box-shadow .2s}
+  .wa-float:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 10px 28px rgba(0,0,0,.3)}
+  @media(max-width:600px){.wa-float{width:52px;height:52px;right:16px;bottom:16px}}
   @media(max-width:760px){.lhero-x{font-size:22rem}section{padding:60px 0}}
 </style>
 </head>
@@ -158,8 +181,8 @@
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">O cenário</div>
-      <h2>A empresa entrega soluções críticas. Mas a operação por trás passou a depender de <span>urgência, planilhas e conhecimento concentrado</span> para não falhar.</h2>
-      <p>A operação cresceu com clientes exigentes, demandas urgentes, fornecedores técnicos, estoque especializado e documentação sensível. Cada área resolveu o seu problema com a ferramenta que tinha à mão. O resultado é uma operação que entrega, mas que pressiona a gestão em silêncio. A ESPX lê essa operação por sete dimensões:</p>
+      <h2>Um pedido urgente do offshore, e a resposta depende do engenheiro que <span>está em campo e não atende o telefone.</span></h2>
+      <p>O orçamento trava porque o histórico de preço está na cabeça de uma pessoa, o item crítico só aparece como falta quando o pedido já está em andamento, e os certificados que o cliente exige estão espalhados entre pastas e e-mails. A empresa entrega soluções críticas, sempre entrega, mas à custa da urgência e do esforço de poucos que seguram tudo nas costas. É uma operação que funciona no improviso, e que pressiona a gestão de formas que não aparecem em relatório nenhum, justamente o tipo de operação que automação e inteligência artificial bem aplicadas transformam. A ESPX lê essa operação por sete dimensões:</p>
     </div>
     <div class="dims-inline">
       <span>Continuidade</span><span>Confiabilidade dos dados</span><span>Dependências</span><span>Segurança</span><span>Eficiência</span><span>Custo</span><span>Crescimento</span>
@@ -178,8 +201,8 @@
 
     <div class="areas">
 
-      <div class="area">
-        <div class="area-head"><div class="ico">O</div><h3>Orçamentos, pedidos e resposta comercial</h3></div>
+      <div class="area open">
+        <div class="area-head" onclick="toggleArea(this)"><div class="ico">O</div><h3>Orçamentos, pedidos e resposta comercial</h3><span class="chev">&#9662;</span></div>
         <div class="area-body">
           <div class="area-side hoje">
             <div class="lbl">Como costuma ser</div>
@@ -195,7 +218,7 @@
             <ul>
               <li>Cada orçamento segue um fluxo claro, com histórico e responsáveis visíveis</li>
               <li>Preço, fornecedor, prazo e margem deixam de depender de busca manual</li>
-              <li>Pedidos críticos ficam rastreáveis do orçamento à entrega</li>
+              <li>Pedidos críticos ficam rastreáveis do orçamento à entrega, com alerta de prazo automático</li>
               <li>A gestão enxerga oportunidades, gargalos e riscos antes de perder prazo</li>
             </ul>
           </div>
@@ -203,7 +226,7 @@
       </div>
 
       <div class="area">
-        <div class="area-head"><div class="ico">E</div><h3>Estoque técnico, peças e fornecedores</h3></div>
+        <div class="area-head" onclick="toggleArea(this)"><div class="ico">E</div><h3>Estoque técnico, peças e fornecedores</h3><span class="chev">&#9662;</span></div>
         <div class="area-body">
           <div class="area-side hoje">
             <div class="lbl">Como costuma ser</div>
@@ -218,7 +241,7 @@
             <div class="lbl">Como passa a ser</div>
             <ul>
               <li>Estoque crítico passa a ter visibilidade real e prioridade operacional</li>
-              <li>Faltas, excessos e itens de baixa rotatividade aparecem antes de virar custo</li>
+              <li>Faltas e rupturas são previstas e alertadas antes de virar urgência cara</li>
               <li>Fornecedores são acompanhados por prazo, confiabilidade e impacto na entrega</li>
               <li>A compra deixa de ser reativa e passa a sustentar margem, prazo e continuidade</li>
             </ul>
@@ -227,7 +250,7 @@
       </div>
 
       <div class="area">
-        <div class="area-head"><div class="ico">T</div><h3>Assistência técnica, reparos e qualidade</h3></div>
+        <div class="area-head" onclick="toggleArea(this)"><div class="ico">T</div><h3>Assistência técnica, reparos e qualidade</h3><span class="chev">&#9662;</span></div>
         <div class="area-body">
           <div class="area-side hoje">
             <div class="lbl">Como costuma ser</div>
@@ -251,7 +274,7 @@
       </div>
 
       <div class="area">
-        <div class="area-head"><div class="ico">#</div><h3>Documentação, rastreabilidade e decisão da gestão</h3></div>
+        <div class="area-head" onclick="toggleArea(this)"><div class="ico">#</div><h3>Documentação, rastreabilidade e decisão da gestão</h3><span class="chev">&#9662;</span></div>
         <div class="area-body">
           <div class="area-side hoje">
             <div class="lbl">Como costuma ser</div>
@@ -275,6 +298,22 @@
       </div>
 
     </div>
+  </div>
+</section>
+
+<section class="ia">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Inteligência artificial e automação aplicadas</div>
+      <h2>Por trás da evolução, inteligência artificial e automação que sustentam a criticidade.</h2>
+      <p>A ESPX não vende ferramenta nem surfa moda. Aplica inteligência artificial e automação como meio, sempre a serviço de prazo, margem e confiabilidade na operação técnica.</p>
+    </div>
+    <div class="ia-grid">
+      <div class="ia-card"><div class="ico">IA</div><h3>Previsão de ruptura de estoque</h3><p>Modelos de inteligência artificial leem consumo, recorrência e prazo de fornecedor para antecipar a falta de item crítico antes de virar compra emergencial cara ou prazo perdido.</p></div>
+      <div class="ia-card"><div class="ico">&rarr;</div><h3>Resposta e rastreabilidade automáticas</h3><p>Automação acelera a montagem de orçamentos a partir do histórico, alerta prazos de pedido e mantém cada etapa rastreável, do comercial à entrega, sem depender de cobrança manual.</p></div>
+      <div class="ia-card"><div class="ico">+</div><h3>Documentação que se organiza sozinha</h3><p>Com IA e automação, certificados, laudos e notas são classificados e vinculados ao pedido ou serviço certo, prontos na hora da cobrança, auditoria ou exigência do cliente.</p></div>
+    </div>
+    <p class="ia-nota">A tecnologia certa é a que você quase não percebe: a inteligência artificial e a automação trabalham no fundo, e o que aparece é a operação mais previsível, mais rastreável e mais barata de sustentar.</p>
   </div>
 </section>
 
@@ -314,7 +353,7 @@
       <div class="neg">
         <div class="nt">Despesa e eficiência</div>
         <h3>Menos esforço pelo mesmo resultado</h3>
-        <p>Retrabalho técnico, busca por documento, compra emergencial e conferência manual são horas pagas sem retorno. Operação eficiente reduz desperdício, urgência e custo invisível.</p>
+        <p>Retrabalho técnico, busca por documento, compra emergencial e conferência manual são horas pagas sem retorno. Com automação no lugar certo, a operação reduz desperdício, urgência e custo invisível.</p>
       </div>
 
       <div class="neg">
@@ -326,7 +365,7 @@
       <div class="neg" style="border-top-color:var(--orange);background:linear-gradient(160deg,#fff,#fbf3ec)">
         <div class="nt">Nova receita digital</div>
         <h3>Monetizar conhecimento técnico e recorrência</h3>
-        <p>A mesma operação que entrega soluções técnicas pode gerar novas frentes: portal de clientes, acompanhamento de pedidos, contratos recorrentes de manutenção, relatórios executivos, venda consultiva baseada em histórico e serviços digitais de suporte. Frentes que a empresa não conseguia estruturar sozinha, e que a tecnologia viabiliza.</p>
+        <p>A mesma operação que entrega soluções técnicas pode gerar novas frentes: portal de clientes, acompanhamento de pedidos, contratos recorrentes de manutenção, relatórios executivos e serviços digitais de suporte. Frentes que a empresa não conseguia estruturar sozinha, e que a tecnologia viabiliza.</p>
       </div>
     </div>
   </div>
@@ -352,14 +391,14 @@
         <div class="fdot">2</div>
         <div class="when">Raio-X Operacional</div>
         <h3>Enxergar a operação por inteiro</h3>
-        <p>A investigação estruturada pelas 7 dimensões, que transforma a percepção difusa de “algo está pesando” no retrato concreto da operação: relatório executivo, riscos e custos priorizados e um plano de evolução nas mãos da gestão.</p>
+        <p>A investigação estruturada pelas 7 dimensões, que transforma a percepção difusa de "algo está pesando" no retrato concreto da operação: relatório executivo, riscos e custos priorizados e um plano de evolução nas mãos da gestão.</p>
       </div>
 
       <div class="fstep">
         <div class="fdot">3</div>
         <div class="when">Fundação Operacional</div>
         <h3>Estabilizar a base</h3>
-        <p>Quando o Raio-X revela riscos estruturais, eles são tratados num esforço inicial concentrado: organizar fluxos críticos, mapear estoque e fornecedores, documentar processos, estruturar evidências, reduzir controles paralelos e dar rastreabilidade ao que hoje depende de pessoas específicas.</p>
+        <p>Quando o Raio-X revela riscos estruturais, eles são tratados num esforço inicial concentrado: organizar fluxos críticos, mapear estoque e fornecedores, documentar processos, estruturar evidências, reduzir controles paralelos e dar rastreabilidade ao que hoje depende de pessoas específicas. Quando a base já é sólida, esta etapa é dispensada.</p>
       </div>
 
       <div class="fstep">
@@ -401,10 +440,18 @@
   <div class="wrap">
     <div class="eyebrow">O próximo passo</div>
     <h2 style="margin-bottom:8px">O problema raramente é a demanda crescer. É a operação crítica continuar crescendo no improviso.</h2>
-    <p>Tudo começa por uma leitura inicial da sua operação, que transforma este retrato geral na realidade concreta da sua empresa, com riscos, prioridades e um plano nas suas mãos.</p>
-    <a href="pre-raio-x-gratuito.html" class="btn btn-primary">Quero receber meu Pré Raio-X Operacional</a>
+    <p>Tudo começa por uma leitura inicial da sua operação, sem custo, que transforma este retrato geral na realidade concreta da sua empresa, com riscos, prioridades e um direcionamento nas suas mãos.</p>
+    <a href="pre-raio-x-gratuito.html" class="btn btn-primary">Quero uma leitura inicial da minha operação</a>
   </div>
 </section>
+
+<a href="https://wa.me/5521967090786?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20Oil%20%26%20Gas%20e%20gostaria%20de%20conversar%20sobre%20a%20opera%C3%A7%C3%A3o%20da%20minha%20empresa." target="_blank" rel="noopener" class="wa-float" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor"><path d="M16.003 3.2c-7.06 0-12.8 5.74-12.8 12.8 0 2.257.59 4.46 1.71 6.4L3.2 28.8l6.57-1.72a12.74 12.74 0 0 0 6.233 1.59h.005c7.06 0 12.8-5.74 12.8-12.8 0-3.42-1.332-6.635-3.752-9.054A12.715 12.715 0 0 0 16.003 3.2zm0 23.04h-.004a10.63 10.63 0 0 1-5.418-1.483l-.388-.23-4.028 1.056 1.075-3.926-.253-.403a10.6 10.6 0 0 1-1.625-5.654c0-5.872 4.78-10.65 10.66-10.65a10.6 10.6 0 0 1 7.534 3.122 10.6 10.6 0 0 1 3.12 7.535c0 5.872-4.78 10.65-10.654 10.65zm5.842-7.976c-.32-.16-1.894-.934-2.188-1.04-.293-.107-.507-.16-.72.16-.214.32-.826 1.04-1.013 1.253-.187.214-.373.24-.693.08-.32-.16-1.352-.498-2.576-1.59-.952-.85-1.594-1.898-1.78-2.218-.187-.32-.02-.493.14-.652.144-.143.32-.373.48-.56.16-.187.213-.32.32-.533.107-.214.053-.4-.027-.56-.08-.16-.72-1.736-.987-2.376-.26-.624-.524-.54-.72-.55l-.613-.01c-.213 0-.56.08-.853.4-.293.32-1.12 1.094-1.12 2.67 0 1.574 1.146 3.096 1.306 3.31.16.213 2.256 3.445 5.466 4.83.764.33 1.36.527 1.824.674.767.244 1.464.21 2.016.127.615-.092 1.894-.774 2.16-1.522.267-.747.267-1.387.187-1.52-.08-.134-.293-.214-.613-.374z"/></svg>
+</a>
+
+<script>
+function toggleArea(head){ head.parentElement.classList.toggle('open'); }
+</script>
 
 </body>
 </html>
