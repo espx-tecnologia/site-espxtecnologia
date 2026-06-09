@@ -25,8 +25,17 @@
   .sec-head h2{font-size:clamp(1.7rem,3.2vw,2.4rem);margin:14px 0 0}
   .sec-head p{color:var(--muted);font-size:1.08rem;margin-top:16px;font-weight:300}
 
+  /* BARRA DE TOPO (padrao Pre Raio-X) */
+  .topbar{background:var(--navy-900);border-bottom:1px solid var(--line)}
+  .topbar-in{max-width:1080px;margin:0 auto;padding:22px 28px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .logo{font-family:'IBM Plex Serif',serif;font-weight:700;font-size:1.4rem;color:#fff;letter-spacing:.01em}
+  .topbar .logo .x{color:var(--orange)}
+  .topbar .logo .d{font-family:'IBM Plex Sans',sans-serif;font-weight:400;font-size:1.15rem;color:#cdd8e3;margin-left:6px}
+  .topbar .seg-tag{font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:#9fb0c0;font-weight:500}
+  @media(max-width:600px){.topbar .seg-tag{font-size:.66rem;letter-spacing:.14em}.topbar .logo{font-size:1.2rem}}
+
   /* HERO */
-  .lhero{background:var(--navy-900);color:#eef3f8;position:relative;overflow:hidden;padding:104px 0 84px}
+  .lhero{background:var(--navy-900);color:#eef3f8;position:relative;overflow:hidden;padding:72px 0 84px}
   .lhero:before{content:"";position:absolute;inset:0;background:radial-gradient(820px 460px at 82% -8%,rgba(238,108,43,.18),transparent 60%),radial-gradient(640px 540px at 4% 112%,rgba(59,110,165,.2),transparent 55%)}
   .lhero-x{position:absolute;right:-80px;top:50%;transform:translateY(-50%);font-family:'IBM Plex Serif',serif;font-weight:700;font-size:40rem;line-height:1;color:rgba(255,255,255,.025);user-select:none;pointer-events:none}
   .lhero .wrap{position:relative;z-index:2}
@@ -129,6 +138,14 @@
 </style>
 </head>
 <body>
+
+<!-- BARRA DE TOPO -->
+<div class="topbar">
+  <div class="topbar-in">
+    <span class="logo">ESP<span class="x">X</span><span class="d">Tecnologia</span></span>
+    <span class="seg-tag">Educação</span>
+  </div>
+</div>
 
 <!-- HERO -->
 <header class="lhero">
