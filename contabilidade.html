@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inteligência artificial e automação para escritórios de contabilidade | Operação contábil | ESPX Tecnologia</title>
+<meta name="description" content="Como a inteligência artificial e a automação sustentam a operação de escritórios de contabilidade em crescimento: leitura de documentos fiscais, controle de prazos e obrigações, conciliação, relacionamento com clientes. Leitura operacional por segmento da ESPX Tecnologia.">
+<meta name="keywords" content="inteligência artificial para contabilidade, automação contábil, gestão de escritório de contabilidade, leitura de documentos fiscais, controle de obrigações acessórias, conciliação automática, operação contábil, ESPX Tecnologia">
+<meta property="og:title" content="Inteligência artificial e automação para escritórios de contabilidade | ESPX Tecnologia">
+<meta property="og:description" content="A carteira de clientes cresceu. E a operação contábil consegue sustentar o volume? Como IA e automação sustentam o escritório, do documento ao prazo.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy-900:#081320;--navy-800:#0c1d30;--navy-700:#102A43;--navy-600:#173a5e;
+  --orange:#EE6C2B;--orange-soft:#f6915a;--paper:#F4F1EA;--paper-2:#ECE7DC;
+  --ink:#11202E;--muted:#5d6b78;--line:rgba(255,255,255,.10);--line-dark:rgba(17,32,46,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'IBM Plex Sans',sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'IBM Plex Serif',serif;font-weight:600;line-height:1.14;letter-spacing:-.01em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+section{padding:84px 0}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--orange);font-weight:500}
+.sec-head{max-width:64ch}
+.sec-head h2{font-size:clamp(1.7rem,3.2vw,2.4rem);margin:14px 0 0}
+.sec-head p{color:var(--muted);font-size:1.08rem;margin-top:16px;font-weight:300}
+
+.topbar{background:var(--navy-900);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1080px;margin:0 auto;padding:22px 28px;display:flex;align-items:center;justify-content:space-between}
+.topbar-left{display:flex;flex-direction:column;gap:5px}
+.back-link{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#9fb0c0;text-decoration:none;transition:.2s}
+.back-link:hover{color:var(--orange-soft)}
+.logo{font-family:'IBM Plex Serif',serif;font-weight:700;font-size:1.4rem;color:#fff}
+.logo .x{color:var(--orange)}
+.logo .d{font-family:'IBM Plex Sans',sans-serif;font-weight:400;font-size:1.1rem;color:#cdd8e3;margin-left:6px}
+.seg-tag{font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:#9fb0c0}
+@media(max-width:600px){.seg-tag{font-size:.66rem;letter-spacing:.14em}.logo{font-size:1.2rem}}
+
+.lhero{background:var(--navy-900);color:#eef3f8;position:relative;overflow:hidden;padding:72px 0 84px}
+.lhero:before{content:"";position:absolute;inset:0;background:radial-gradient(820px 460px at 82% -8%,rgba(238,108,43,.18),transparent 60%),radial-gradient(640px 540px at 4% 112%,rgba(59,110,165,.2),transparent 55%)}
+.lhero-x{position:absolute;right:-80px;top:50%;transform:translateY(-50%);font-family:'IBM Plex Serif',serif;font-weight:700;font-size:40rem;color:rgba(255,255,255,.025);pointer-events:none;user-select:none}
+.lhero .wrap{position:relative;z-index:2}
+.lhero .seg{font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:#9fb0c0}
+.lhero h1{font-size:clamp(2.1rem,4.6vw,3.3rem);color:#fff;max-width:23ch;margin-top:16px}
+.lhero h1 .accent{color:var(--orange-soft)}
+.lhero .sub{font-size:1.12rem;color:#b9c6d4;max-width:62ch;margin-top:22px;font-weight:300}
+.disclaimer{margin-top:30px;background:rgba(238,108,43,.08);border:1px solid rgba(238,108,43,.28);border-radius:8px;padding:15px 20px;max-width:72ch}
+.disclaimer p{font-size:.84rem;color:#dbe3ec;line-height:1.6;font-weight:300}
+.disclaimer b{color:var(--orange-soft)}
+
+.cenario{background:var(--paper-2)}
+.cenario h2 span{color:var(--orange)}
+.dims-inline{display:flex;flex-wrap:wrap;gap:9px;margin-top:30px}
+.dims-inline span{font-family:'IBM Plex Mono',monospace;font-size:.74rem;color:var(--navy-700);background:#fff;border:1px solid var(--line-dark);border-radius:20px;padding:8px 15px}
+.nota{margin-top:24px;font-size:.95rem;color:var(--muted);font-weight:300;max-width:70ch}
+
+.areas-sec{background:var(--paper)}
+.areas{display:flex;flex-direction:column;gap:18px;margin-top:44px}
+.area{background:#fff;border:1px solid var(--line-dark);border-radius:8px;overflow:hidden}
+.area-head{display:flex;align-items:center;gap:14px;padding:20px 28px;background:var(--navy-700);cursor:pointer;user-select:none}
+.area-head .ico{width:38px;height:38px;border-radius:8px;background:rgba(255,255,255,.08);color:var(--orange-soft);display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-weight:600;flex-shrink:0}
+.area-head h3{color:#fff;font-size:1.2rem;flex:1}
+.area-head .chev{color:var(--orange-soft);font-size:1.1rem;transition:transform .3s;flex-shrink:0}
+.area.open .area-head .chev{transform:rotate(180deg)}
+.area-body{display:grid;grid-template-columns:1fr 1fr;max-height:0;overflow:hidden;transition:max-height .4s ease}
+.area.open .area-body{max-height:600px}
+.area-side{padding:24px 28px}
+.area-side.hoje{border-right:1px solid var(--line-dark)}
+.area-side .lbl{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;margin-bottom:13px}
+.area-side.hoje .lbl{color:var(--muted)}
+.area-side.depois .lbl{color:var(--orange)}
+.area-side ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.area-side li{font-size:.95rem;padding-left:22px;position:relative;line-height:1.42}
+.area-side.hoje li:before{content:"\2715";position:absolute;left:0;color:#a8b0b8}
+.area-side.depois li:before{content:"\2713";position:absolute;left:0;color:var(--orange)}
+
+.ia{background:var(--navy-800);color:#eef3f8;position:relative;overflow:hidden}
+.ia:before{content:"";position:absolute;inset:0;background:radial-gradient(620px 380px at 12% 8%,rgba(238,108,43,.12),transparent 60%)}
+.ia .wrap{position:relative;z-index:2}
+.ia .sec-head h2{color:#fff}.ia .sec-head p{color:#b9c6d4}
+.ia-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
+.ia-card{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:8px;padding:24px}
+.ia-card .ico{width:36px;height:36px;border-radius:8px;background:rgba(238,108,43,.16);color:var(--orange-soft);display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:.95rem;margin-bottom:14px}
+.ia-card h3{font-family:'IBM Plex Sans',sans-serif;font-size:1.04rem;font-weight:600;color:#fff}
+.ia-card p{color:#c2cedb;font-size:.94rem;margin-top:8px;font-weight:300;line-height:1.5}
+.ia-nota{margin-top:28px;font-size:.92rem;color:#8fa0b1;font-weight:300;max-width:72ch;font-style:italic}
+
+.invisivel{background:var(--navy-900);color:#eef3f8;position:relative}
+.invisivel:before{content:"";position:absolute;inset:0;background:radial-gradient(680px 420px at 88% 10%,rgba(238,108,43,.13),transparent 60%)}
+.invisivel .wrap{position:relative;z-index:2}
+.invisivel h2{color:#fff}.invisivel .sec-head p{color:#b9c6d4}
+.inv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:44px;background:var(--line);border:1px solid var(--line)}
+.inv-item{background:var(--navy-900);padding:24px}
+.inv-item .n{font-family:'IBM Plex Mono',monospace;color:var(--orange);font-size:.78rem}
+.inv-item p{color:#dde6ef;margin-top:8px;font-weight:300}
+
+.negocio{background:var(--paper)}
+.neg-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:44px}
+.neg{background:#fff;border:1px solid var(--line-dark);border-top:3px solid var(--orange);border-radius:6px;padding:28px 26px}
+.neg .nt{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);font-weight:600}
+.neg h3{font-family:'IBM Plex Sans',sans-serif;font-size:1.12rem;font-weight:600;color:var(--navy-700);margin-top:10px}
+.neg p{color:var(--muted);font-size:.95rem;margin-top:10px;font-weight:300}
+
+.conduz{background:var(--paper-2)}
+.flow-steps{display:flex;flex-direction:column;margin-top:44px;position:relative}
+.flow-steps:before{content:"";position:absolute;left:25px;top:14px;bottom:14px;width:2px;background:var(--line-dark)}
+.fstep{position:relative;padding-left:74px;padding-bottom:30px}
+.fdot{position:absolute;left:13px;top:0;width:26px;height:26px;border-radius:50%;background:var(--orange);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:.74rem;display:flex;align-items:center;justify-content:center}
+.when{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);font-weight:600}
+.fstep h3{font-family:'IBM Plex Sans',sans-serif;font-size:1.16rem;font-weight:600;color:var(--navy-700);margin-top:4px}
+.fstep p{color:#33424f;font-size:.98rem;margin-top:8px;max-width:74ch}
+.free{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.62rem;text-transform:uppercase;color:var(--muted);background:var(--paper);border:1px solid var(--line-dark);border-radius:20px;padding:2px 9px;margin-left:8px}
+
+.sintese{background:var(--paper)}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:44px}
+.ba-col{border-radius:10px;padding:30px}
+.ba-antes{background:var(--paper-2);border:1px solid var(--line-dark)}
+.ba-depois{background:var(--navy-900);color:#eef3f8;position:relative;overflow:hidden}
+.ba-depois:before{content:"";position:absolute;inset:0;background:radial-gradient(360px 240px at 100% 0%,rgba(238,108,43,.18),transparent 60%)}
+.ba-depois>*{position:relative;z-index:2}
+.ba-col .lbl{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+.ba-antes .lbl{color:var(--muted)}.ba-depois .lbl{color:var(--orange-soft)}
+.ba-col h3{font-family:'IBM Plex Serif',serif;font-size:1.3rem;margin-top:8px}
+.ba-antes h3{color:var(--navy-700)}.ba-depois h3{color:#fff}
+.ba-col p{margin-top:14px;font-weight:300;line-height:1.55}
+.ba-antes p{color:#5a6873}.ba-depois p{color:#dde6ef}
+
+.lcta{background:var(--navy-900);color:#fff;text-align:center;position:relative;overflow:hidden}
+.lcta:before{content:"";position:absolute;inset:0;background:radial-gradient(620px 360px at 50% 0%,rgba(238,108,43,.16),transparent 60%)}
+.lcta .wrap{position:relative;z-index:2}
+.lcta h2{font-size:clamp(1.8rem,3.6vw,2.5rem);color:#fff;max-width:28ch;margin:14px auto 0}
+.lcta p{color:#b9c6d4;font-size:1.08rem;margin:20px auto 0;max-width:56ch;font-weight:300}
+.btn{display:inline-block;font-family:'IBM Plex Sans',sans-serif;font-weight:600;font-size:.98rem;padding:15px 30px;border-radius:3px;transition:.25s;border:1px solid transparent;margin-top:32px;text-decoration:none}
+.btn-primary{background:var(--orange);color:#fff}
+.btn-primary:hover{background:#ff7d3c;transform:translateY(-2px)}
+
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:90;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.25);transition:transform .2s,box-shadow .2s}
+.wa-float:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 10px 28px rgba(0,0,0,.3)}
+@media(max-width:600px){.wa-float{width:52px;height:52px;right:16px;bottom:16px}}
+
+@media(max-width:760px){
+  section{padding:60px 0}
+  .area-body,.neg-grid,.ba-grid,.inv-grid,.ia-grid{grid-template-columns:1fr}
+  .area.open .area-body{max-height:1100px}
+  .area-side.hoje{border-right:none;border-bottom:1px solid var(--line-dark)}
+  .lhero-x{font-size:22rem}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-in">
+    <div class="topbar-left">
+      <a href="index.html" class="back-link">&larr; Voltar ao site</a>
+      <span class="logo">ESP<span class="x">X</span><span class="d">Tecnologia</span></span>
+    </div>
+    <span class="seg-tag">Contabilidade</span>
+  </div>
+</div>
+
+<header class="lhero">
+  <div class="lhero-x">X</div>
+  <div class="wrap">
+    <div class="seg">Operação · Escritórios de contabilidade em crescimento</div>
+    <h1>A carteira de clientes cresceu. E a operação consegue sustentar o <span class="accent">volume?</span></h1>
+    <p class="sub">Conforme o escritório ganha clientes, o volume de documentos, guias, prazos e obrigações cresce mais rápido que a estrutura. A operação começa a depender de esforço, planilhas e pessoas específicas para não falhar. Esta é uma leitura de como isso costuma acontecer, e do que muda quando a operação amadurece.</p>
+    <div class="disclaimer">
+      <p><b>Leitura honesta:</b> este material descreve cenários recorrentes observados em escritórios de contabilidade e operações contábeis em crescimento. Não retrata um escritório específico nem promete resultados garantidos. O que se aplica à sua operação depende sempre do Raio-X Operacional.</p>
+    </div>
+  </div>
+</header>
+
+<section class="cenario">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">O cenário</div>
+      <h2>Fim do mês, e a equipe corre atrás dos documentos que o cliente <span>ainda não mandou, com o prazo da obrigação chegando.</span></h2>
+      <p>As notas e guias chegam por e-mail, WhatsApp e papel, cada cliente de um jeito, o controle de prazos vive numa planilha que poucos dominam, e a conferência consome as horas que deveriam ser de análise. O escritório entrega, sempre entrega, mas à custa da maratona de fim de mês e do esforço de poucos que seguram tudo nas costas. É uma operação que funciona no improviso, e que pressiona a direção de formas que não aparecem em relatório nenhum, justamente o tipo de operação que automação e inteligência artificial bem aplicadas transformam. A ESPX lê essa operação por sete dimensões:</p>
+    </div>
+    <div class="dims-inline">
+      <span>Continuidade</span><span>Confiabilidade dos dados</span><span>Dependências</span><span>Segurança</span><span>Eficiência</span><span>Custo</span><span>Crescimento</span>
+    </div>
+    <p class="nota">Cada dimensão revela onde a operação começa a perder controle. Mas é no dia a dia do escritório que a direção sente a pressão: documentos, prazos, conferência, relacionamento com o cliente e gestão.</p>
+  </div>
+</section>
+
+<section class="areas-sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Por área crítica</div>
+      <h2>O que muda quando a operação contábil amadurece.</h2>
+      <p>As áreas onde escritórios de contabilidade mais costumam sofrer. Como costuma ser hoje, e como passa a ser quando a operação amadurece.</p>
+    </div>
+    <div class="areas">
+
+      <div class="area open">
+        <div class="area-head" onclick="toggleArea(this)"><div class="ico">D</div><h3>Documentos e recebimento de clientes</h3><span class="chev">&#9662;</span></div>
+        <div class="area-body">
+          <div class="area-side hoje"><div class="lbl">Como costuma ser</div><ul>
+            <li>Notas e guias chegam por e-mail, WhatsApp e papel, cada cliente de um jeito</li>
+            <li>A equipe persegue o cliente todo mês pelos mesmos documentos</li>
+            <li>O que chegou e o que falta vive na cabeça de alguém</li>
+            <li>O lançamento depende de digitação manual e demorada</li>
+          </ul></div>
+          <div class="area-side depois"><div class="lbl">Como passa a ser</div><ul>
+            <li>O recebimento de documentos segue um fluxo único e organizado</li>
+            <li>O cliente é lembrado automaticamente do que precisa enviar</li>
+            <li>O que falta de cada cliente fica visível, sem depender de memória</li>
+            <li>A captura e o lançamento deixam de consumir as horas da equipe</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <div class="area">
+        <div class="area-head" onclick="toggleArea(this)"><div class="ico">!</div><h3>Prazos, obrigações e conformidade</h3><span class="chev">&#9662;</span></div>
+        <div class="area-body">
+          <div class="area-side hoje"><div class="lbl">Como costuma ser</div><ul>
+            <li>O controle de obrigações vive numa planilha que poucos dominam</li>
+            <li>Um prazo perdido só aparece quando a multa chega</li>
+            <li>A maratona de fim de mês é regra, não exceção</li>
+            <li>A direção descobre o gargalo tarde demais</li>
+          </ul></div>
+          <div class="area-side depois"><div class="lbl">Como passa a ser</div><ul>
+            <li>Prazos e obrigações são monitorados com alerta automático e antecedência</li>
+            <li>O risco de multa por prazo perdido cai de forma drástica</li>
+            <li>A carga de trabalho se distribui, e o fim de mês deixa de ser caos</li>
+            <li>A direção enxerga o que está em risco antes de virar problema</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <div class="area">
+        <div class="area-head" onclick="toggleArea(this)"><div class="ico">$</div><h3>Conferência, conciliação e produtividade</h3><span class="chev">&#9662;</span></div>
+        <div class="area-body">
+          <div class="area-side hoje"><div class="lbl">Como costuma ser</div><ul>
+            <li>A conferência manual consome as horas que deveriam ser de análise</li>
+            <li>O retrabalho de corrigir lançamento e conciliação é constante</li>
+            <li>Ninguém sabe ao certo a margem real por cliente</li>
+            <li>O crescimento da carteira aumenta o caos operacional</li>
+          </ul></div>
+          <div class="area-side depois"><div class="lbl">Como passa a ser</div><ul>
+            <li>A conciliação ganha automação, e a equipe foca no que exige julgamento</li>
+            <li>O retrabalho cai, e a qualidade do lançamento sobe</li>
+            <li>A direção passa a enxergar margem e esforço real por cliente</li>
+            <li>Crescer a carteira deixa de significar perder controle</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <div class="area">
+        <div class="area-head" onclick="toggleArea(this)"><div class="ico">@</div><h3>Relacionamento com o cliente e dados</h3><span class="chev">&#9662;</span></div>
+        <div class="area-body">
+          <div class="area-side hoje"><div class="lbl">Como costuma ser</div><ul>
+            <li>O cliente cobra informação que está espalhada entre sistemas e e-mails</li>
+            <li>As mesmas dúvidas são respondidas dezenas de vezes</li>
+            <li>Dados fiscais sensíveis sem controle claro de acesso</li>
+            <li>A continuidade depende do contador que conhece cada caso</li>
+          </ul></div>
+          <div class="area-side depois"><div class="lbl">Como passa a ser</div><ul>
+            <li>O cliente recebe informação e prazos de forma proativa e organizada</li>
+            <li>O repetitivo é resolvido sem consumir a equipe</li>
+            <li>Dados sensíveis com acesso controlado e em conformidade</li>
+            <li>A continuidade deixa de depender de pessoas-chave</li>
+          </ul></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="ia">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Inteligência artificial e automação aplicadas</div>
+      <h2>Por trás da evolução, inteligência artificial e automação que sustentam a operação, não a responsabilidade técnica.</h2>
+      <p>A ESPX não vende ferramenta nem surfa moda, e não substitui o julgamento do contador. Aplica inteligência artificial e automação na operação que sustenta o escritório, sempre como meio.</p>
+    </div>
+    <div class="ia-grid">
+      <div class="ia-card"><div class="ico">IA</div><h3>Leitura e classificação de documentos</h3><p>Inteligência artificial lê e classifica notas, guias e extratos que chegam em formatos diferentes, organizando por cliente e tipo e reduzindo a digitação manual que hoje consome a equipe.</p></div>
+      <div class="ia-card"><div class="ico">&rarr;</div><h3>Controle de prazos e cobrança automáticos</h3><p>Automação monitora obrigações e prazos com alerta antecipado, e cobra do cliente os documentos que faltam, sem a equipe perseguir cada um todo mês.</p></div>
+      <div class="ia-card"><div class="ico">+</div><h3>Conciliação e atendimento assistidos</h3><p>A conciliação ganha apoio de automação, e assistentes com IA respondem dúvidas recorrentes dos clientes em linguagem natural, encaminhando ao contador o que exige análise.</p></div>
+    </div>
+    <p class="ia-nota">A tecnologia certa é a que você quase não percebe: a inteligência artificial e a automação sustentam a operação no fundo, enquanto a responsabilidade técnica, essa, continua sendo do contador.</p>
+  </div>
+</section>
+
+<section class="invisivel">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">O que não aparece nos relatórios</div>
+      <h2>Boa parte do desgaste operacional é invisível, e custa caro.</h2>
+      <p>São perdas silenciosas que consomem margem, produtividade e capacidade de crescimento.</p>
+    </div>
+    <div class="inv-grid">
+      <div class="inv-item"><div class="n">01</div><p>As horas perseguindo o cliente pelos documentos todo mês.</p></div>
+      <div class="inv-item"><div class="n">02</div><p>O retrabalho de conferência e correção de lançamento.</p></div>
+      <div class="inv-item"><div class="n">03</div><p>A operação que só anda porque uma pessoa conhece cada cliente.</p></div>
+      <div class="inv-item"><div class="n">04</div><p>O risco de multa por um prazo que dependeu da memória de alguém.</p></div>
+      <div class="inv-item"><div class="n">05</div><p>A margem por cliente que ninguém calcula de verdade.</p></div>
+      <div class="inv-item"><div class="n">06</div><p>O risco com dados fiscais sensíveis que ninguém mapeou.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="negocio">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Por que isso importa para o negócio</div>
+      <h2>Operação contábil não é só backoffice. É o que sustenta a margem e abre novas receitas.</h2>
+      <p>Cada gargalo operacional impacta diretamente produtividade, faturamento e capacidade de crescer a carteira. Não em teoria, no caixa do fim do mês.</p>
+    </div>
+    <div class="neg-grid">
+      <div class="neg"><div class="nt">Receita</div><h3>Receita que entra, e que não escapa</h3><p>Capacidade de atender mais clientes com a mesma equipe, menos cliente perdido por atraso ou erro, e relacionamento que retém. A operação influencia diretamente quanto entra.</p></div>
+      <div class="neg"><div class="nt">Despesa e eficiência</div><h3>Menos esforço pelo mesmo resultado</h3><p>Digitação manual, conferência e perseguição de documento são horas pagas sem retorno. Com automação no lugar certo, a equipe rende mais sem precisar crescer junto com a carteira.</p></div>
+      <div class="neg"><div class="nt">Margem e crescimento</div><h3>Crescer a carteira sem inflar a estrutura</h3><p>Quando cada novo cliente exige mais horas manuais, a margem encolhe. Uma operação estruturada permite crescer a carteira sem contratar na mesma proporção, e é aí que o crescimento vira lucro.</p></div>
+      <div class="neg" style="border-top-color:var(--orange);background:linear-gradient(160deg,#fff,#fbf3ec)"><div class="nt">Nova receita digital</div><h3>Do fiscal ao consultivo</h3><p>Com a operação eficiente, sobra tempo para o que paga mais: portal do cliente, painéis gerenciais, consultoria fiscal e financeira, BPO e serviços recorrentes de maior valor. Frentes que o escritório não conseguia estruturar sozinho, e que a tecnologia viabiliza.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="conduz">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Como a ESPX conduz essa virada</div>
+      <h2>Primeiro a clareza. Depois a base estável. Então a evolução contínua.</h2>
+      <p>O caminho não tem prazo fixo de transformação: cada escritório evolui no seu ritmo. O que existe é uma sequência, conduzida sem vender ferramenta e sem projeto desconectado.</p>
+    </div>
+    <div class="flow-steps">
+      <div class="fstep"><div class="fdot">1</div><div class="when">Leitura inicial da operação<span class="free">sem custo</span></div><h3>Uma primeira leitura do escritório</h3><p>Uma conversa inicial para entender a operação contábil, o volume, os gargalos percebidos, os fluxos invisíveis e a maturidade operacional atual. A direção sai com uma primeira leitura e as hipóteses prioritárias, sem compromisso.</p></div>
+      <div class="fstep"><div class="fdot">2</div><div class="when">Raio-X Operacional</div><h3>Enxergar a operação por inteiro</h3><p>A investigação estruturada pelas 7 dimensões, transformando a percepção difusa de "algo está pesando" em clareza executiva: riscos, gargalos, dependências e prioridades reais nas mãos da direção.</p></div>
+      <div class="fstep"><div class="fdot">3</div><div class="when">Fundação Operacional</div><h3>Estabilizar a base</h3><p>Organização dos fluxos críticos, recebimento e controle de documentos, rastreabilidade de prazos, integração entre sistemas e redução das dependências invisíveis. A operação para de depender de esforço e de sorte. Quando a base já é sólida, esta etapa é dispensada.</p></div>
+      <div class="fstep"><div class="fdot">4</div><div class="when">Continuidade Operacional</div><h3>Evoluir de forma contínua e perceptível</h3><p>Acompanhamento próximo, evolução por ciclos, coordenação estratégica e sustentação operacional do crescimento da carteira. A operação deixa de andar no improviso e passa a evoluir com direção.</p></div>
+    </div>
+    <p style="margin-top:36px;font-size:.95rem;color:var(--muted);font-weight:300;max-width:70ch;border-left:2px solid var(--orange);padding-left:18px">A ESPX conduz um número limitado de operações ao mesmo tempo, para garantir profundidade na leitura e continuidade real da evolução de cada cliente.</p>
+  </div>
+</section>
+
+<section class="sintese">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Aonde isso leva</div>
+      <h2>O mesmo escritório, com a operação amadurecida.</h2>
+    </div>
+    <div class="ba-grid">
+      <div class="ba-col ba-antes"><div class="lbl">No início</div><h3>A operação que pesa</h3><p>A equipe persegue documentos, o fim de mês é maratona, prazos vivem no limite, a conferência consome as horas de análise e crescer a carteira significa mais pressão. O escritório se equilibra no esforço de poucos.</p></div>
+      <div class="ba-col ba-depois"><div class="lbl">Com a operação madura</div><h3>A operação que sustenta</h3><p>A direção volta a conduzir o escritório com previsibilidade, rastreabilidade e visão executiva. Documentos, prazos, conciliação e relacionamento ganham estrutura. Crescer a carteira deixa de aumentar o improviso e passa a ampliar capacidade.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="lcta">
+  <div class="wrap">
+    <div class="eyebrow">O próximo passo</div>
+    <h2 style="margin-bottom:8px">O problema raramente é o escritório crescer. É a operação continuar crescendo no improviso.</h2>
+    <p>Tudo começa por uma leitura inicial da sua operação, sem custo, que transforma este cenário geral na realidade concreta do seu escritório, com riscos, prioridades e um direcionamento nas suas mãos.</p>
+    <a href="pre-raio-x-gratuito.html" class="btn btn-primary">Quero uma leitura inicial da minha operação</a>
+  </div>
+</section>
+
+<a href="https://wa.me/5521967090786?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20Contabilidade%20e%20gostaria%20de%20conversar%20sobre%20a%20opera%C3%A7%C3%A3o%20do%20meu%20escrit%C3%B3rio." target="_blank" rel="noopener" class="wa-float" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor"><path d="M16.003 3.2c-7.06 0-12.8 5.74-12.8 12.8 0 2.257.59 4.46 1.71 6.4L3.2 28.8l6.57-1.72a12.74 12.74 0 0 0 6.233 1.59h.005c7.06 0 12.8-5.74 12.8-12.8 0-3.42-1.332-6.635-3.752-9.054A12.715 12.715 0 0 0 16.003 3.2zm0 23.04h-.004a10.63 10.63 0 0 1-5.418-1.483l-.388-.23-4.028 1.056 1.075-3.926-.253-.403a10.6 10.6 0 0 1-1.625-5.654c0-5.872 4.78-10.65 10.66-10.65a10.6 10.6 0 0 1 7.534 3.122 10.6 10.6 0 0 1 3.12 7.535c0 5.872-4.78 10.65-10.654 10.65zm5.842-7.976c-.32-.16-1.894-.934-2.188-1.04-.293-.107-.507-.16-.72.16-.214.32-.826 1.04-1.013 1.253-.187.214-.373.24-.693.08-.32-.16-1.352-.498-2.576-1.59-.952-.85-1.594-1.898-1.78-2.218-.187-.32-.02-.493.14-.652.144-.143.32-.373.48-.56.16-.187.213-.32.32-.533.107-.214.053-.4-.027-.56-.08-.16-.72-1.736-.987-2.376-.26-.624-.524-.54-.72-.55l-.613-.01c-.213 0-.56.08-.853.4-.293.32-1.12 1.094-1.12 2.67 0 1.574 1.146 3.096 1.306 3.31.16.213 2.256 3.445 5.466 4.83.764.33 1.36.527 1.824.674.767.244 1.464.21 2.016.127.615-.092 1.894-.774 2.16-1.522.267-.747.267-1.387.187-1.52-.08-.134-.293-.214-.613-.374z"/></svg>
+</a>
+
+<script>
+function toggleArea(head){ head.parentElement.classList.toggle('open'); }
+</script>
+
+</body>
+</html>
