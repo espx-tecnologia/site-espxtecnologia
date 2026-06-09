@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inteligência artificial e automação para distribuidoras | Operação de distribuição B2B | ESPX Tecnologia</title>
+<meta name="description" content="Como a inteligência artificial e a automação sustentam a operação de distribuidoras e empresas B2B: previsão de demanda e ruptura de estoque, rastreabilidade de pedidos, organização da força de vendas, margem por operação. Leitura operacional por segmento da ESPX Tecnologia.">
+<meta name="keywords" content="inteligência artificial para distribuidoras, automação para distribuição, previsão de demanda, ruptura de estoque, gestão de distribuidora, operação logística B2B, portal de pedidos B2B, ESPX Tecnologia">
+<meta property="og:title" content="Inteligência artificial e automação para distribuidoras | ESPX Tecnologia">
+<meta property="og:description" content="A distribuidora cresceu. E a operação consegue sustentar a margem? Como IA e automação sustentam a distribuição, do pedido ao estoque.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy-900:#081320;--navy-800:#0c1d30;--navy-700:#102A43;--navy-600:#173a5e;
+  --orange:#EE6C2B;--orange-soft:#f6915a;--paper:#F4F1EA;--paper-2:#ECE7DC;
+  --ink:#11202E;--muted:#5d6b78;--line:rgba(255,255,255,.10);--line-dark:rgba(17,32,46,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'IBM Plex Sans',sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'IBM Plex Serif',serif;font-weight:600;line-height:1.14;letter-spacing:-.01em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+section{padding:84px 0}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--orange);font-weight:500}
+.sec-head{max-width:64ch}
+.sec-head h2{font-size:clamp(1.7rem,3.2vw,2.4rem);margin:14px 0 0}
+.sec-head p{color:var(--muted);font-size:1.08rem;margin-top:16px;font-weight:300}
+
+.topbar{background:var(--navy-900);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1080px;margin:0 auto;padding:22px 28px;display:flex;align-items:center;justify-content:space-between}
+.topbar-left{display:flex;flex-direction:column;gap:5px}
+.back-link{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#9fb0c0;text-decoration:none;transition:.2s}
+.back-link:hover{color:var(--orange-soft)}
+.logo{font-family:'IBM Plex Serif',serif;font-weight:700;font-size:1.4rem;color:#fff}
+.logo .x{color:var(--orange)}
+.logo .d{font-family:'IBM Plex Sans',sans-serif;font-weight:400;font-size:1.1rem;color:#cdd8e3;margin-left:6px}
+.seg-tag{font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:#9fb0c0}
+@media(max-width:600px){.seg-tag{font-size:.66rem;letter-spacing:.14em}.logo{font-size:1.2rem}}
+
+.lhero{background:var(--navy-900);color:#eef3f8;position:relative;overflow:hidden;padding:72px 0 84px}
+.lhero:before{content:"";position:absolute;inset:0;background:radial-gradient(820px 460px at 82% -8%,rgba(238,108,43,.18),transparent 60%),radial-gradient(640px 540px at 4% 112%,rgba(59,110,165,.2),transparent 55%)}
+.lhero-x{position:absolute;right:-80px;top:50%;transform:translateY(-50%);font-family:'IBM Plex Serif',serif;font-weight:700;font-size:40rem;color:rgba(255,255,255,.025);pointer-events:none;user-select:none}
+.lhero .wrap{position:relative;z-index:2}
+.lhero .seg{font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:#9fb0c0}
+.lhero h1{font-size:clamp(2.1rem,4.6vw,3.3rem);color:#fff;max-width:22ch;margin-top:16px}
+.lhero h1 .accent{color:var(--orange-soft)}
+.lhero .sub{font-size:1.12rem;color:#b9c6d4;max-width:62ch;margin-top:22px;font-weight:300}
+.disclaimer{margin-top:30px;background:rgba(238,108,43,.08);border:1px solid rgba(238,108,43,.28);border-radius:8px;padding:15px 20px;max-width:72ch}
+.disclaimer p{font-size:.84rem;color:#dbe3ec;line-height:1.6;font-weight:300}
+.disclaimer b{color:var(--orange-soft)}
+
+.cenario{background:var(--paper-2)}
+.cenario h2 span{color:var(--orange)}
+.dims-inline{display:flex;flex-wrap:wrap;gap:9px;margin-top:30px}
+.dims-inline span{font-family:'IBM Plex Mono',monospace;font-size:.74rem;color:var(--navy-700);background:#fff;border:1px solid var(--line-dark);border-radius:20px;padding:8px 15px}
+.nota{margin-top:24px;font-size:.95rem;color:var(--muted);font-weight:300;max-width:70ch}
+
+.areas-sec{background:var(--paper)}
+.areas{display:flex;flex-direction:column;gap:18px;margin-top:44px}
+.area{background:#fff;border:1px solid var(--line-dark);border-radius:8px;overflow:hidden}
+.area-head{display:flex;align-items:center;gap:14px;padding:20px 28px;background:var(--navy-700);cursor:pointer;user-select:none}
+.area-head .ico{width:38px;height:38px;border-radius:8px;background:rgba(255,255,255,.08);color:var(--orange-soft);display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-weight:600;flex-shrink:0}
+.area-head h3{color:#fff;font-size:1.2rem;flex:1}
+.area-head .chev{color:var(--orange-soft);font-size:1.1rem;transition:transform .3s;flex-shrink:0}
+.area.open .area-head .chev{transform:rotate(180deg)}
+.area-body{display:grid;grid-template-columns:1fr 1fr;max-height:0;overflow:hidden;transition:max-height .4s ease}
+.area.open .area-body{max-height:600px}
+.area-side{padding:24px 28px}
+.area-side.hoje{border-right:1px solid var(--line-dark)}
+.area-side .lbl{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;margin-bottom:13px}
+.area-side.hoje .lbl{color:var(--muted)}
+.area-side.depois .lbl{color:var(--orange)}
+.area-side ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.area-side li{font-size:.95rem;padding-left:22px;position:relative;line-height:1.42}
+.area-side.hoje li:before{content:"\2715";position:absolute;left:0;color:#a8b0b8}
+.area-side.depois li:before{content:"\2713";position:absolute;left:0;color:var(--orange)}
+
+.ia{background:var(--navy-800);color:#eef3f8;position:relative;overflow:hidden}
+.ia:before{content:"";position:absolute;inset:0;background:radial-gradient(620px 380px at 12% 8%,rgba(238,108,43,.12),transparent 60%)}
+.ia .wrap{position:relative;z-index:2}
+.ia .sec-head h2{color:#fff}.ia .sec-head p{color:#b9c6d4}
+.ia-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
+.ia-card{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:8px;padding:24px}
+.ia-card .ico{width:36px;height:36px;border-radius:8px;background:rgba(238,108,43,.16);color:var(--orange-soft);display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:.95rem;margin-bottom:14px}
+.ia-card h3{font-family:'IBM Plex Sans',sans-serif;font-size:1.04rem;font-weight:600;color:#fff}
+.ia-card p{color:#c2cedb;font-size:.94rem;margin-top:8px;font-weight:300;line-height:1.5}
+.ia-nota{margin-top:28px;font-size:.92rem;color:#8fa0b1;font-weight:300;max-width:72ch;font-style:italic}
+
+.invisivel{background:var(--navy-900);color:#eef3f8;position:relative}
+.invisivel:before{content:"";position:absolute;inset:0;background:radial-gradient(680px 420px at 88% 10%,rgba(238,108,43,.13),transparent 60%)}
+.invisivel .wrap{position:relative;z-index:2}
+.invisivel h2{color:#fff}.invisivel .sec-head p{color:#b9c6d4}
+.inv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:44px;background:var(--line);border:1px solid var(--line)}
+.inv-item{background:var(--navy-900);padding:24px}
+.inv-item .n{font-family:'IBM Plex Mono',monospace;color:var(--orange);font-size:.78rem}
+.inv-item p{color:#dde6ef;margin-top:8px;font-weight:300}
+
+.negocio{background:var(--paper)}
+.neg-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:44px}
+.neg{background:#fff;border:1px solid var(--line-dark);border-top:3px solid var(--orange);border-radius:6px;padding:28px 26px}
+.neg .nt{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);font-weight:600}
+.neg h3{font-family:'IBM Plex Sans',sans-serif;font-size:1.12rem;font-weight:600;color:var(--navy-700);margin-top:10px}
+.neg p{color:var(--muted);font-size:.95rem;margin-top:10px;font-weight:300}
+
+.conduz{background:var(--paper-2)}
+.flow-steps{display:flex;flex-direction:column;margin-top:44px;position:relative}
+.flow-steps:before{content:"";position:absolute;left:25px;top:14px;bottom:14px;width:2px;background:var(--line-dark)}
+.fstep{position:relative;padding-left:74px;padding-bottom:30px}
+.fdot{position:absolute;left:13px;top:0;width:26px;height:26px;border-radius:50%;background:var(--orange);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:.74rem;display:flex;align-items:center;justify-content:center}
+.when{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);font-weight:600}
+.fstep h3{font-family:'IBM Plex Sans',sans-serif;font-size:1.16rem;font-weight:600;color:var(--navy-700);margin-top:4px}
+.fstep p{color:#33424f;font-size:.98rem;margin-top:8px;max-width:74ch}
+.free{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.62rem;text-transform:uppercase;color:var(--muted);background:var(--paper);border:1px solid var(--line-dark);border-radius:20px;padding:2px 9px;margin-left:8px}
+
+.sintese{background:var(--paper)}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:44px}
+.ba-col{border-radius:10px;padding:30px}
+.ba-antes{background:var(--paper-2);border:1px solid var(--line-dark)}
+.ba-depois{background:var(--navy-900);color:#eef3f8;position:relative;overflow:hidden}
+.ba-depois:before{content:"";position:absolute;inset:0;background:radial-gradient(360px 240px at 100% 0%,rgba(238,108,43,.18),transparent 60%)}
+.ba-depois>*{position:relative;z-index:2}
+.ba-col .lbl{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+.ba-antes .lbl{color:var(--muted)}.ba-depois .lbl{color:var(--orange-soft)}
+.ba-col h3{font-family:'IBM Plex Serif',serif;font-size:1.3rem;margin-top:8px}
+.ba-antes h3{color:var(--navy-700)}.ba-depois h3{color:#fff}
+.ba-col p{margin-top:14px;font-weight:300;line-height:1.55}
+.ba-antes p{color:#5a6873}.ba-depois p{color:#dde6ef}
+
+.lcta{background:var(--navy-900);color:#fff;text-align:center;position:relative;overflow:hidden}
+.lcta:before{content:"";position:absolute;inset:0;background:radial-gradient(620px 360px at 50% 0%,rgba(238,108,43,.16),transparent 60%)}
+.lcta .wrap{position:relative;z-index:2}
+.lcta h2{font-size:clamp(1.8rem,3.6vw,2.5rem);color:#fff;max-width:27ch;margin:14px auto 0}
+.lcta p{color:#b9c6d4;font-size:1.08rem;margin:20px auto 0;max-width:56ch;font-weight:300}
+.btn{display:inline-block;font-family:'IBM Plex Sans',sans-serif;font-weight:600;font-size:.98rem;padding:15px 30px;border-radius:3px;transition:.25s;border:1px solid transparent;margin-top:32px;text-decoration:none}
+.btn-primary{background:var(--orange);color:#fff}
+.btn-primary:hover{background:#ff7d3c;transform:translateY(-2px)}
+
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:90;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.25);transition:transform .2s,box-shadow .2s}
+.wa-float:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 10px 28px rgba(0,0,0,.3)}
+@media(max-width:600px){.wa-float{width:52px;height:52px;right:16px;bottom:16px}}
+
+@media(max-width:760px){
+  section{padding:60px 0}
+  .area-body,.neg-grid,.ba-grid,.inv-grid,.ia-grid{grid-template-columns:1fr}
+  .area.open .area-body{max-height:1100px}
+  .area-side.hoje{border-right:none;border-bottom:1px solid var(--line-dark)}
+  .lhero-x{font-size:22rem}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-in">
+    <div class="topbar-left">
+      <a href="index.html" class="back-link">&larr; Voltar ao site</a>
+      <span class="logo">ESP<span class="x">X</span><span class="d">Tecnologia</span></span>
+    </div>
+    <span class="seg-tag">Distribuição B2B</span>
+  </div>
+</div>
+
+<header class="lhero">
+  <div class="lhero-x">X</div>
+  <div class="wrap">
+    <div class="seg">Operação · Distribuição B2B e Supply</div>
+    <h1>A distribuidora cresceu. E a operação consegue sustentar a <span class="accent">margem?</span></h1>
+    <p class="sub">Conforme a operação ganha clientes, vendedores, estoque, pedidos e filiais, a estrutura começa a depender de esforço manual, urgência e pessoas específicas para não falhar. Esta é uma leitura de como isso costuma acontecer, e do que muda quando a operação amadurece.</p>
+    <div class="disclaimer">
+      <p><b>Leitura honesta:</b> este material descreve cenários recorrentes observados em distribuidoras, operações logísticas e empresas B2B em crescimento. Não retrata uma empresa específica nem promete resultados garantidos. O que se aplica à sua operação depende sempre do Raio-X Operacional.</p>
+    </div>
+  </div>
+</header>
+
+<section class="cenario">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">O cenário</div>
+      <h2>O vendedor fechou um pedido grande. E ninguém sabe ao certo se <span>tem produto no estoque para entregar.</span></h2>
+      <p>O pedido entrou pelo WhatsApp, o estoque do sistema não bate com a prateleira, a compra corre atrás na urgência e o cliente liga para saber quando chega. A distribuidora vende bem, sempre vende, mas à custa de planilhas paralelas e do esforço de poucos que seguram tudo nas costas. É uma operação que entrega, mas que pressiona margem e prazo em silêncio, justamente o tipo de operação que automação e inteligência artificial bem aplicadas transformam. A ESPX lê essa operação por sete dimensões:</p>
+    </div>
+    <div class="dims-inline">
+      <span>Continuidade</span><span>Confiabilidade dos dados</span><span>Dependências</span><span>Segurança</span><span>Eficiência</span><span>Custo</span><span>Crescimento</span>
+    </div>
+    <p class="nota">Cada dimensão revela onde a operação está mais frágil. Mas é nas áreas do dia a dia que a direção sente a pressão: estoque, pedidos, logística, vendedores, financeiro e margem.</p>
+  </div>
+</section>
+
+<section class="areas-sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Por área crítica</div>
+      <h2>O que muda nas áreas que sustentam a distribuição.</h2>
+      <p>As áreas onde operações de distribuição mais costumam doer. Como costuma ser hoje, e como passa a ser quando a operação amadurece.</p>
+    </div>
+    <div class="areas">
+
+      <div class="area open">
+        <div class="area-head" onclick="toggleArea(this)"><div class="ico">P</div><h3>Pedidos, vendedores e atendimento</h3><span class="chev">&#9662;</span></div>
+        <div class="area-body">
+          <div class="area-side hoje"><div class="lbl">Como costuma ser</div><ul>
+            <li>Pedidos chegam por múltiplos canais e se perdem entre setores</li>
+            <li>O vendedor depende do WhatsApp para acompanhar tudo</li>
+            <li>O cliente precisa ligar para saber status</li>
+            <li>O comercial vende sem enxergar estoque ou prazo real</li>
+          </ul></div>
+          <div class="area-side depois"><div class="lbl">Como passa a ser</div><ul>
+            <li>Pedidos seguem fluxo claro e rastreável</li>
+            <li>O cliente recebe atualização automática de status, sem precisar ligar</li>
+            <li>O comercial vende enxergando estoque e prazo reais</li>
+            <li>Vendas deixam de gerar conflito operacional</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <div class="area">
+        <div class="area-head" onclick="toggleArea(this)"><div class="ico">E</div><h3>Estoque, ruptura e compras</h3><span class="chev">&#9662;</span></div>
+        <div class="area-body">
+          <div class="area-side hoje"><div class="lbl">Como costuma ser</div><ul>
+            <li>O estoque parece correto até o pedido chegar</li>
+            <li>Compras acontecem em cima da urgência</li>
+            <li>Itens parados e itens faltando convivem ao mesmo tempo</li>
+            <li>As filiais trabalham com informações diferentes</li>
+          </ul></div>
+          <div class="area-side depois"><div class="lbl">Como passa a ser</div><ul>
+            <li>O estoque passa a ser realmente confiável</li>
+            <li>Ruptura e excesso são previstos e alertados antes de virar prejuízo</li>
+            <li>Compras deixam de operar no improviso</li>
+            <li>A gestão ganha visão consolidada entre unidades</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <div class="area">
+        <div class="area-head" onclick="toggleArea(this)"><div class="ico">$</div><h3>Financeiro, margem e faturamento</h3><span class="chev">&#9662;</span></div>
+        <div class="area-body">
+          <div class="area-side hoje"><div class="lbl">Como costuma ser</div><ul>
+            <li>A margem real varia dependendo da planilha usada</li>
+            <li>O financeiro fecha diferente dependendo de quem montou</li>
+            <li>Custos invisíveis corroem resultado silenciosamente</li>
+            <li>Ninguém sabe exatamente onde a operação perde dinheiro</li>
+          </ul></div>
+          <div class="area-side depois"><div class="lbl">Como passa a ser</div><ul>
+            <li>A direção passa a enxergar margem real por operação</li>
+            <li>O fechamento deixa de depender de interpretação manual</li>
+            <li>Custos invisíveis passam a ser identificados cedo</li>
+            <li>Decisão financeira ganha clareza e velocidade</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <div class="area">
+        <div class="area-head" onclick="toggleArea(this)"><div class="ico">#</div><h3>Dados e decisão da gestão</h3><span class="chev">&#9662;</span></div>
+        <div class="area-body">
+          <div class="area-side hoje"><div class="lbl">Como costuma ser</div><ul>
+            <li>Cada setor trabalha com um número diferente</li>
+            <li>Indicadores dependem de planilhas manuais</li>
+            <li>As decisões chegam atrasadas</li>
+            <li>O crescimento aumenta o caos operacional</li>
+          </ul></div>
+          <div class="area-side depois"><div class="lbl">Como passa a ser</div><ul>
+            <li>A operação ganha visão executiva unificada</li>
+            <li>Os números passam a conversar entre si</li>
+            <li>Indicadores ficam acessíveis em tempo real</li>
+            <li>Crescer deixa de significar perder controle</li>
+          </ul></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="ia">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Inteligência artificial e automação aplicadas</div>
+      <h2>Por trás da evolução, inteligência artificial e automação que protegem a margem.</h2>
+      <p>A ESPX não vende ferramenta nem surfa moda. Aplica inteligência artificial e automação como meio, sempre a serviço de margem, prazo e continuidade na operação de distribuição.</p>
+    </div>
+    <div class="ia-grid">
+      <div class="ia-card"><div class="ico">IA</div><h3>Previsão de demanda e ruptura</h3><p>Modelos de inteligência artificial leem histórico, sazonalidade e giro para antecipar o que vai faltar e o que vai sobrar, reduzindo ruptura de venda e capital parado em estoque ao mesmo tempo.</p></div>
+      <div class="ia-card"><div class="ico">&rarr;</div><h3>Pedido e status automáticos</h3><p>Automação registra o pedido em fluxo único, atualiza o cliente sobre o status e dispara reposição e recompra no momento certo, sem depender de alguém lembrar.</p></div>
+      <div class="ia-card"><div class="ico">+</div><h3>Roteirização e logística assistidas</h3><p>Inteligência aplicada apoia a separação e a roteirização de entregas, otimizando rota, carga e prazo, e reduzindo custo de frete e atraso.</p></div>
+    </div>
+    <p class="ia-nota">A tecnologia certa é a que você quase não percebe: a inteligência artificial e a automação trabalham no fundo, e o que aparece é a operação mais previsível, mais rastreável e mais barata de sustentar.</p>
+  </div>
+</section>
+
+<section class="invisivel">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">O que não aparece nos relatórios</div>
+      <h2>Boa parte da operação invisível é o que corrói margem todos os dias.</h2>
+      <p>São desgastes silenciosos que não aparecem claramente no ERP, mas pesam no caixa, na equipe e no crescimento.</p>
+    </div>
+    <div class="inv-grid">
+      <div class="inv-item"><div class="n">01</div><p>O pedido perdido porque ninguém enxergou o gargalo a tempo.</p></div>
+      <div class="inv-item"><div class="n">02</div><p>O retrabalho de corrigir informação entre sistemas diferentes.</p></div>
+      <div class="inv-item"><div class="n">03</div><p>A operação que só funciona porque algumas pessoas sabem como fazer.</p></div>
+      <div class="inv-item"><div class="n">04</div><p>O estoque parado que virou dinheiro invisível.</p></div>
+      <div class="inv-item"><div class="n">05</div><p>As horas perdidas conferindo dados que deveriam ser confiáveis.</p></div>
+      <div class="inv-item"><div class="n">06</div><p>A margem que escorre silenciosamente pela desorganização operacional.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="negocio">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Por que isso importa para o negócio</div>
+      <h2>Operação não é custo de tecnologia. É o que sustenta a margem e abre novas receitas.</h2>
+      <p>Cada fragilidade operacional impacta diretamente venda, estoque, prazo e resultado financeiro. Não em teoria, no caixa do fim do mês.</p>
+    </div>
+    <div class="neg-grid">
+      <div class="neg"><div class="nt">Receita</div><h3>Receita que entra, e que não escapa</h3><p>Pedido rastreável, vendedor organizado e estoque confiável aumentam conversão e reduzem perda silenciosa de venda. A operação influencia diretamente quanto entra.</p></div>
+      <div class="neg"><div class="nt">Despesa e eficiência</div><h3>Menos esforço pelo mesmo resultado</h3><p>Retrabalho, urgência, conferência manual e compra emergencial são custo sem retorno. Com automação no lugar certo, a despesa para de crescer junto com o volume.</p></div>
+      <div class="neg"><div class="nt">Margem e crescimento</div><h3>Crescer sem que o custo cresça junto</h3><p>Quando o crescimento aumenta o caos, a margem encolhe. Uma operação estruturada permite crescer sem inflar a estrutura, e é aí que o crescimento vira lucro, não só volume.</p></div>
+      <div class="neg" style="border-top-color:var(--orange);background:linear-gradient(160deg,#fff,#fbf3ec)"><div class="nt">Nova receita digital</div><h3>Transformar operação em vantagem competitiva</h3><p>Portal de pedidos B2B, recompra automática, catálogo digital, acompanhamento de entrega e inteligência comercial passam a gerar valor percebido e novas receitas. Frentes que a empresa não conseguia estruturar sozinha, e que a tecnologia viabiliza.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="conduz">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Como a ESPX conduz essa virada</div>
+      <h2>Primeiro a clareza. Depois a base estável. Então a evolução contínua.</h2>
+      <p>O caminho não tem prazo fixo de transformação: cada operação evolui no seu ritmo. O que existe é uma sequência, conduzida sem vender ferramenta e sem projeto desconectado.</p>
+    </div>
+    <div class="flow-steps">
+      <div class="fstep"><div class="fdot">1</div><div class="when">Leitura inicial da operação<span class="free">sem custo</span></div><h3>Uma primeira leitura, para entender o momento</h3><p>Uma conversa inicial para entender como pedidos, estoque, vendedores, financeiro e logística se relacionam na prática. A gestão sai com uma primeira leitura e as hipóteses prioritárias, sem compromisso.</p></div>
+      <div class="fstep"><div class="fdot">2</div><div class="when">Raio-X Operacional</div><h3>Enxergar a operação por inteiro</h3><p>A investigação estruturada pelas 7 dimensões, transformando a percepção difusa de "algo está pesando" em clareza executiva: riscos, gargalos, custos invisíveis e prioridades reais nas mãos da gestão.</p></div>
+      <div class="fstep"><div class="fdot">3</div><div class="when">Fundação Operacional</div><h3>Estabilizar a base</h3><p>Organização dos fluxos críticos, integração entre áreas, rastreabilidade operacional, visibilidade executiva e redução de dependências. A operação para de depender de esforço e de sorte. Quando a base já é sólida, esta etapa é dispensada.</p></div>
+      <div class="fstep"><div class="fdot">4</div><div class="when">Continuidade Operacional</div><h3>Evoluir de forma contínua e perceptível</h3><p>Acompanhamento próximo, evolução por ciclos, coordenação de fornecedores e melhorias visíveis. A operação deixa de andar no improviso e passa a evoluir com direção.</p></div>
+    </div>
+    <p style="margin-top:36px;font-size:.95rem;color:var(--muted);font-weight:300;max-width:70ch;border-left:2px solid var(--orange);padding-left:18px">A ESPX conduz um número limitado de operações ao mesmo tempo, para garantir profundidade na leitura e continuidade real da evolução de cada cliente.</p>
+  </div>
+</section>
+
+<section class="sintese">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Aonde isso leva</div>
+      <h2>A mesma distribuidora, com a operação amadurecida.</h2>
+    </div>
+    <div class="ba-grid">
+      <div class="ba-col ba-antes"><div class="lbl">No início</div><h3>A operação que pesa</h3><p>A direção apaga incêndios diariamente. Estoque surpreende, pedidos se perdem, vendedores dependem de WhatsApp, o financeiro não fecha igual e crescer significa mais caos operacional. A distribuidora se equilibra no esforço de poucos.</p></div>
+      <div class="ba-col ba-depois"><div class="lbl">Com a operação madura</div><h3>A operação que sustenta</h3><p>A empresa ganha previsibilidade, rastreabilidade, clareza operacional e visão executiva em tempo real. Crescer deixa de aumentar o improviso e passa a ampliar capacidade.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="lcta">
+  <div class="wrap">
+    <div class="eyebrow">O próximo passo</div>
+    <h2 style="margin-bottom:8px">O problema raramente é a distribuidora crescer. É a operação continuar crescendo no improviso.</h2>
+    <p>Tudo começa por uma leitura inicial da sua operação, sem custo, que transforma este cenário geral na realidade concreta da sua empresa, com riscos, prioridades e um direcionamento nas suas mãos.</p>
+    <a href="pre-raio-x-gratuito.html" class="btn btn-primary">Quero uma leitura inicial da minha operação</a>
+  </div>
+</section>
+
+<a href="https://wa.me/5521967090786?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20Distribui%C3%A7%C3%A3o%20B2B%20e%20gostaria%20de%20conversar%20sobre%20a%20opera%C3%A7%C3%A3o%20da%20minha%20empresa." target="_blank" rel="noopener" class="wa-float" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor"><path d="M16.003 3.2c-7.06 0-12.8 5.74-12.8 12.8 0 2.257.59 4.46 1.71 6.4L3.2 28.8l6.57-1.72a12.74 12.74 0 0 0 6.233 1.59h.005c7.06 0 12.8-5.74 12.8-12.8 0-3.42-1.332-6.635-3.752-9.054A12.715 12.715 0 0 0 16.003 3.2zm0 23.04h-.004a10.63 10.63 0 0 1-5.418-1.483l-.388-.23-4.028 1.056 1.075-3.926-.253-.403a10.6 10.6 0 0 1-1.625-5.654c0-5.872 4.78-10.65 10.66-10.65a10.6 10.6 0 0 1 7.534 3.122 10.6 10.6 0 0 1 3.12 7.535c0 5.872-4.78 10.65-10.654 10.65zm5.842-7.976c-.32-.16-1.894-.934-2.188-1.04-.293-.107-.507-.16-.72.16-.214.32-.826 1.04-1.013 1.253-.187.214-.373.24-.693.08-.32-.16-1.352-.498-2.576-1.59-.952-.85-1.594-1.898-1.78-2.218-.187-.32-.02-.493.14-.652.144-.143.32-.373.48-.56.16-.187.213-.32.32-.533.107-.214.053-.4-.027-.56-.08-.16-.72-1.736-.987-2.376-.26-.624-.524-.54-.72-.55l-.613-.01c-.213 0-.56.08-.853.4-.293.32-1.12 1.094-1.12 2.67 0 1.574 1.146 3.096 1.306 3.31.16.213 2.256 3.445 5.466 4.83.764.33 1.36.527 1.824.674.767.244 1.464.21 2.016.127.615-.092 1.894-.774 2.16-1.522.267-.747.267-1.387.187-1.52-.08-.134-.293-.214-.613-.374z"/></svg>
+</a>
+
+<script>
+function toggleArea(head){ head.parentElement.classList.toggle('open'); }
+</script>
+
+</body>
+</html>
