@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESPX · Operação de Clínicas e Centros de Saúde</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-900:#081320;--navy-800:#0c1d30;--navy-700:#102A43;--navy-600:#173a5e;
+    --blue-400:#3b6ea5;--orange:#EE6C2B;--orange-soft:#f6915a;--paper:#F4F1EA;
+    --paper-2:#ECE7DC;--ink:#11202E;--muted:#5d6b78;--line:rgba(255,255,255,.10);
+    --line-dark:rgba(17,32,46,.12)
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'IBM Plex Sans',sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3{font-family:'IBM Plex Serif',serif;font-weight:600;line-height:1.14;letter-spacing:-.01em}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--orange);font-weight:500}
+  section{padding:84px 0}
+  .sec-head{max-width:64ch}
+  .sec-head h2{font-size:clamp(1.7rem,3.2vw,2.4rem);margin:14px 0 0}
+  .sec-head p{color:var(--muted);font-size:1.08rem;margin-top:16px;font-weight:300}
+
+  /* BARRA DE TOPO */
+  .topbar{background:var(--navy-900);border-bottom:1px solid var(--line)}
+  .topbar-in{max-width:1080px;margin:0 auto;padding:22px 28px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .logo{font-family:'IBM Plex Serif',serif;font-weight:700;font-size:1.4rem;color:#fff;letter-spacing:.01em}
+  .topbar-left{display:flex;flex-direction:column;gap:5px}
+  .topbar .back-link{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#9fb0c0;text-decoration:none;transition:color .2s}
+  .topbar .back-link:hover{color:var(--orange-soft)}
+  .topbar .logo .x{color:var(--orange)}
+  .topbar .logo .d{font-family:'IBM Plex Sans',sans-serif;font-weight:400;font-size:1.15rem;color:#cdd8e3;margin-left:6px}
+  .topbar .seg-tag{font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:#9fb0c0;font-weight:500}
+  @media(max-width:600px){.topbar .seg-tag{font-size:.66rem;letter-spacing:.14em}.topbar .logo{font-size:1.2rem}}
+
+  /* HERO */
+  .lhero{background:var(--navy-900);color:#eef3f8;position:relative;overflow:hidden;padding:72px 0 84px}
+  .lhero:before{content:"";position:absolute;inset:0;background:radial-gradient(820px 460px at 82% -8%,rgba(238,108,43,.18),transparent 60%),radial-gradient(640px 540px at 4% 112%,rgba(59,110,165,.2),transparent 55%)}
+  .lhero-x{position:absolute;right:-80px;top:50%;transform:translateY(-50%);font-family:'IBM Plex Serif',serif;font-weight:700;font-size:40rem;line-height:1;color:rgba(255,255,255,.025);user-select:none;pointer-events:none}
+  .lhero .wrap{position:relative;z-index:2}
+  .lhero .seg{font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:#9fb0c0}
+  .lhero h1{font-size:clamp(2.1rem,4.6vw,3.3rem);color:#fff;max-width:21ch;margin:16px 0 0}
+  .lhero h1 .accent{color:var(--orange-soft)}
+  .lhero .sub{font-size:1.12rem;color:#b9c6d4;max-width:62ch;margin:22px 0 0;font-weight:300}
+  .disclaimer{margin-top:30px;background:rgba(238,108,43,.08);border:1px solid rgba(238,108,43,.28);border-radius:8px;padding:15px 20px;max-width:72ch}
+  .disclaimer p{font-size:.84rem;color:#dbe3ec;line-height:1.6;font-weight:300}
+  .disclaimer b{color:var(--orange-soft);font-weight:600}
+
+  /* CENARIO */
+  .cenario{background:var(--paper-2)}
+  .cenario .sec-head h2 span{color:var(--orange)}
+  .dims-inline{display:flex;flex-wrap:wrap;gap:9px;margin-top:30px}
+  .dims-inline span{font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.04em;color:var(--navy-700);background:#fff;border:1px solid var(--line-dark);border-radius:20px;padding:8px 15px}
+  .cenario .nota{margin-top:24px;font-size:.95rem;color:var(--muted);font-weight:300;max-width:70ch}
+
+  /* AREAS CRITICAS */
+  .areas-sec{background:var(--paper)}
+  .areas{display:flex;flex-direction:column;gap:18px;margin-top:44px}
+  .area{background:#fff;border:1px solid var(--line-dark);border-radius:8px;overflow:hidden}
+  .area-head{display:flex;align-items:center;gap:14px;padding:20px 28px;background:var(--navy-700)}
+  .area-head .ico{width:38px;height:38px;border-radius:8px;background:rgba(255,255,255,.08);color:var(--orange-soft);display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:1.05rem;flex-shrink:0}
+  .area-head h3{font-family:'IBM Plex Serif',serif;font-size:1.2rem;color:#fff}
+  .area-body{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  .area-side{padding:24px 28px}
+  .area-side.hoje{border-right:1px solid var(--line-dark)}
+  .area-side .lbl{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;margin-bottom:13px}
+  .area-side.hoje .lbl{color:var(--muted)}
+  .area-side.depois .lbl{color:var(--orange)}
+  .area-side ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+  .area-side li{font-size:.95rem;padding-left:22px;position:relative;line-height:1.42}
+  .area-side.hoje li{color:#5a6873}
+  .area-side.hoje li:before{content:"\2715";position:absolute;left:0;color:#a8b0b8;font-weight:700;font-size:.78rem;top:2px}
+  .area-side.depois li{color:#33424f}
+  .area-side.depois li:before{content:"\2713";position:absolute;left:0;color:var(--orange);font-weight:700}
+  @media(max-width:760px){.area-body{grid-template-columns:1fr}.area-side.hoje{border-right:none;border-bottom:1px solid var(--line-dark)}}
+
+  /* O INVISIVEL */
+  .invisivel{background:var(--navy-900);color:#eef3f8;position:relative;overflow:hidden}
+  .invisivel:before{content:"";position:absolute;inset:0;background:radial-gradient(680px 420px at 88% 10%,rgba(238,108,43,.13),transparent 60%)}
+  .invisivel .wrap{position:relative;z-index:2}
+  .invisivel .sec-head h2{color:#fff}
+  .invisivel .sec-head p{color:#b9c6d4}
+  .inv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:44px;background:var(--line);border:1px solid var(--line)}
+  .inv-item{background:var(--navy-900);padding:24px 24px}
+  .inv-item .n{font-family:'IBM Plex Mono',monospace;color:var(--orange);font-size:.78rem;font-weight:600}
+  .inv-item p{color:#dde6ef;font-size:.97rem;margin-top:8px;font-weight:300}
+  @media(max-width:760px){.inv-grid{grid-template-columns:1fr}}
+
+  /* RESULTADO DE NEGOCIO */
+  .negocio{background:var(--paper)}
+  .neg-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:44px}
+  .neg{background:#fff;border:1px solid var(--line-dark);border-top:3px solid var(--orange);border-radius:6px;padding:28px 26px}
+  .neg .nt{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);font-weight:600}
+  .neg h3{font-family:'IBM Plex Sans',sans-serif;font-size:1.12rem;font-weight:600;color:var(--navy-700);margin-top:10px}
+  .neg p{color:var(--muted);font-size:.95rem;margin-top:10px;font-weight:300;line-height:1.5}
+  @media(max-width:760px){.neg-grid{grid-template-columns:1fr}}
+
+  /* CONDUZ */
+  .conduz{background:var(--paper-2)}
+  .flow-steps{display:flex;flex-direction:column;gap:0;margin-top:44px;position:relative}
+  .flow-steps:before{content:"";position:absolute;left:25px;top:14px;bottom:14px;width:2px;background:var(--line-dark)}
+  .fstep{position:relative;padding-left:74px;padding-bottom:30px}
+  .fstep:last-child{padding-bottom:0}
+  .fdot{position:absolute;left:13px;top:0;width:26px;height:26px;border-radius:50%;background:var(--orange);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:.74rem;font-weight:600;display:flex;align-items:center;justify-content:center;z-index:2}
+  .fstep .when{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);font-weight:600}
+  .fstep h3{font-family:'IBM Plex Sans',sans-serif;font-size:1.16rem;font-weight:600;color:var(--navy-700);margin-top:4px}
+  .fstep p{color:#33424f;font-size:.98rem;margin-top:8px;max-width:74ch}
+  .fstep .free{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--paper);border:1px solid var(--line-dark);border-radius:20px;padding:2px 9px;margin-left:8px;vertical-align:middle}
+
+  /* SINTESE */
+  .sintese{background:var(--paper)}
+  .ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:44px}
+  .ba-col{border-radius:10px;padding:30px}
+  .ba-antes{background:var(--paper-2);border:1px solid var(--line-dark)}
+  .ba-depois{background:var(--navy-900);color:#eef3f8;position:relative;overflow:hidden}
+  .ba-depois:before{content:"";position:absolute;inset:0;background:radial-gradient(360px 240px at 100% 0%,rgba(238,108,43,.18),transparent 60%)}
+  .ba-depois>*{position:relative;z-index:2}
+  .ba-col .lbl{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+  .ba-antes .lbl{color:var(--muted)}.ba-depois .lbl{color:var(--orange-soft)}
+  .ba-col h3{font-family:'IBM Plex Serif',serif;font-size:1.3rem;margin-top:8px}
+  .ba-antes h3{color:var(--navy-700)}.ba-depois h3{color:#fff}
+  .ba-col p{font-size:1rem;margin-top:14px;font-weight:300;line-height:1.55}
+  .ba-antes p{color:#5a6873}.ba-depois p{color:#dde6ef}
+  @media(max-width:760px){.ba-grid{grid-template-columns:1fr}}
+
+  /* CTA */
+  .lcta{background:var(--navy-900);color:#fff;text-align:center;position:relative;overflow:hidden}
+  .lcta:before{content:"";position:absolute;inset:0;background:radial-gradient(620px 360px at 50% 0%,rgba(238,108,43,.16),transparent 60%)}
+  .lcta .wrap{position:relative;z-index:2}
+  .lcta h2{font-size:clamp(1.8rem,3.6vw,2.5rem);color:#fff;max-width:26ch;margin:14px auto 0}
+  .lcta p{color:#b9c6d4;font-size:1.08rem;margin:20px auto 0;max-width:56ch;font-weight:300}
+  .btn{display:inline-block;font-family:'IBM Plex Sans',sans-serif;font-weight:600;font-size:.98rem;padding:15px 30px;border-radius:3px;transition:.25s;cursor:pointer;border:1px solid transparent;margin-top:32px}
+  .btn-primary{background:var(--orange);color:#fff}
+  .btn-primary:hover{background:#ff7d3c;transform:translateY(-2px)}
+
+  @media(max-width:760px){.lhero-x{font-size:22rem}section{padding:60px 0}}
+</style>
+</head>
+<body>
+
+<!-- BARRA DE TOPO -->
+<div class="topbar">
+  <div class="topbar-in">
+    <div class="topbar-left">
+      <a href="index.html" class="back-link">&larr; Voltar ao site</a>
+      <span class="logo">ESP<span class="x">X</span><span class="d">Tecnologia</span></span>
+    </div>
+    <span class="seg-tag">Saúde</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="lhero">
+  <div class="lhero-x">X</div>
+  <div class="wrap">
+    <div class="seg">Operação · Clínicas e centros de saúde</div>
+    <h1>A clínica cresceu. E a operação que cuida dos <span class="accent">bastidores?</span></h1>
+    <p class="sub">Conforme a clínica ganha pacientes, profissionais e unidades, a operação que a sustenta começa a pesar de formas que raramente aparecem num relatório. Esta é uma leitura de como isso costuma acontecer, por área, e de como a operação muda quando amadurece.</p>
+    <div class="disclaimer">
+      <p><b>Leitura honesta:</b> este material descreve cenários recorrentes observados em clínicas e centros de saúde em crescimento, incluindo operações com atendimento contínuo. Não retrata uma operação específica nem promete resultados garantidos. O que se aplica à sua clínica depende sempre do Raio-X Operacional.</p>
+    </div>
+  </div>
+</header>
+
+<!-- CENARIO -->
+<section class="cenario">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">O cenário</div>
+      <h2>O atendimento é bom. Mas a operação por trás passou a depender de <span>esforço e de pessoas específicas</span> para não falhar.</h2>
+      <p>A clínica foi adicionando profissionais, especialidades e sistemas ao longo do tempo, e cada área resolveu o seu problema com a ferramenta que tinha à mão. O resultado é uma operação que atende bem, mas que pressiona a gestão em silêncio. A ESPX lê essa operação por sete dimensões:</p>
+    </div>
+    <div class="dims-inline">
+      <span>Continuidade</span><span>Confiabilidade dos dados</span><span>Dependências</span><span>Segurança</span><span>Eficiência</span><span>Custo</span><span>Crescimento</span>
+    </div>
+    <p class="nota">Cada dimensão revela onde a operação está mais frágil. Mas é nas áreas do dia a dia que a gestão sente a pressão. É por elas que esta leitura começa.</p>
+  </div>
+</section>
+
+<!-- AREAS CRITICAS -->
+<section class="areas-sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Por área crítica</div>
+      <h2>O que muda em cada área que tira o sono da gestão.</h2>
+      <p>As áreas onde a operação de uma clínica mais costuma doer. Como costuma ser hoje, e como passa a ser quando a operação amadurece.</p>
+    </div>
+    <div class="areas">
+
+      <div class="area">
+        <div class="area-head"><div class="ico">A</div><h3>Agenda, escalas e atendimento</h3></div>
+        <div class="area-body">
+          <div class="area-side hoje">
+            <div class="lbl">Como costuma ser</div>
+            <ul>
+              <li>A agenda muda dependendo de quem está na recepção naquele dia</li>
+              <li>Faltas e remarcações abrem buracos que ninguém preenche a tempo</li>
+              <li>Em operação contínua, a escala de plantão depende de combinação informal</li>
+              <li>A ocupação real dos profissionais nunca está clara</li>
+            </ul>
+          </div>
+          <div class="area-side depois">
+            <div class="lbl">Como passa a ser</div>
+            <ul>
+              <li>A agenda segue um padrão, não a memória de quem está no turno</li>
+              <li>Faltas são antecipadas e os horários, melhor aproveitados</li>
+              <li>A escala fica organizada e visível, sem depender de combinação de boca</li>
+              <li>A gestão enxerga a ocupação e a produtividade de cada agenda</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="area">
+        <div class="area-head"><div class="ico">$</div><h3>Faturamento, convênios e recebimentos</h3></div>
+        <div class="area-body">
+          <div class="area-side hoje">
+            <div class="lbl">Como costuma ser</div>
+            <ul>
+              <li>Glosas de convênio que só aparecem quando o dinheiro não entra</li>
+              <li>O faturamento fecha diferente dependendo de quem o monta</li>
+              <li>Particular, convênio e repasse de profissionais se misturam</li>
+              <li>O valor a receber nunca está claro em tempo real</li>
+            </ul>
+          </div>
+          <div class="area-side depois">
+            <div class="lbl">Como passa a ser</div>
+            <ul>
+              <li>As glosas ficam visíveis cedo, quando ainda dá para contestar</li>
+              <li>O faturamento segue um processo, não a interpretação de cada um</li>
+              <li>Cada origem de receita fica clara e separada</li>
+              <li>A gestão enxerga o que vai entrar, com confiança</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="area">
+        <div class="area-head"><div class="ico">+</div><h3>Prontuário, dados e estoque</h3></div>
+        <div class="area-body">
+          <div class="area-side hoje">
+            <div class="lbl">Como costuma ser</div>
+            <ul>
+              <li>Informação do paciente espalhada entre sistemas e papéis</li>
+              <li>Dados clínicos sensíveis sem controle claro de acesso</li>
+              <li>Estoque de insumos e medicamentos controlado no olho ou em planilha</li>
+              <li>Ninguém sabe ao certo o que vence, o que falta ou o que sobra</li>
+            </ul>
+          </div>
+          <div class="area-side depois">
+            <div class="lbl">Como passa a ser</div>
+            <ul>
+              <li>A informação do paciente fica centralizada e confiável</li>
+              <li>Dados sensíveis com acesso controlado e em conformidade</li>
+              <li>O estoque tem visibilidade real, com alerta de validade e reposição</li>
+              <li>Menos perda por vencimento e menos falta na hora crítica</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="area">
+        <div class="area-head"><div class="ico">#</div><h3>Dados e decisão da gestão</h3></div>
+        <div class="area-body">
+          <div class="area-side hoje">
+            <div class="lbl">Como costuma ser</div>
+            <ul>
+              <li>Ninguém sabe ao certo qual relatório está correto</li>
+              <li>Decisões esperam a planilha que alguém precisa montar</li>
+              <li>Não há visão consolidada de receita, ocupação e custos</li>
+              <li>Abrir especialidade, unidade ou turno vira decisão no escuro</li>
+            </ul>
+          </div>
+          <div class="area-side depois">
+            <div class="lbl">Como passa a ser</div>
+            <ul>
+              <li>Um número só, confiável, para toda a clínica</li>
+              <li>Os indicadores que importam, atualizados e à mão</li>
+              <li>Visão clara de receita, ocupação, glosas e custos</li>
+              <li>Decisões de crescimento tomadas com segurança</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- O INVISIVEL -->
+<section class="invisivel">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">O que não aparece nos relatórios</div>
+      <h2>Boa parte da operação é invisível para a gestão, e custa caro.</h2>
+      <p>São desgastes que não entram em nenhuma planilha, mas corroem margem, tempo e tranquilidade todos os dias.</p>
+    </div>
+    <div class="inv-grid">
+      <div class="inv-item"><div class="n">01</div><p>As glosas de convênio que se perdem por falta de acompanhamento.</p></div>
+      <div class="inv-item"><div class="n">02</div><p>Os horários ociosos que poderiam ter sido preenchidos.</p></div>
+      <div class="inv-item"><div class="n">03</div><p>A operação que só anda porque uma pessoa específica está presente.</p></div>
+      <div class="inv-item"><div class="n">04</div><p>Os insumos e medicamentos perdidos por vencimento ou descontrole.</p></div>
+      <div class="inv-item"><div class="n">05</div><p>O retrabalho de lançar a mesma informação em vários sistemas.</p></div>
+      <div class="inv-item"><div class="n">06</div><p>O risco com dados sensíveis de pacientes que ninguém mapeou.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTADO DE NEGOCIO -->
+<section class="negocio">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Por que isso importa para o negócio</div>
+      <h2>Operação não é custo de tecnologia. É o que sustenta a margem e abre novas receitas.</h2>
+      <p>Cada fragilidade operacional tem um efeito direto no resultado, e cada evolução pode abrir caminho novo de faturamento. Não em teoria, no caixa do fim do mês.</p>
+    </div>
+    <div class="neg-grid">
+      <div class="neg">
+        <div class="nt">Receita</div>
+        <h3>Receita que entra, e que não escapa</h3>
+        <p>Glosa contestada a tempo é receita recuperada. Horário ocioso preenchido é faturamento que não se perde. Paciente bem acompanhado é paciente que retorna. A operação influencia diretamente quanto entra.</p>
+      </div>
+      <div class="neg">
+        <div class="nt">Despesa e eficiência</div>
+        <h3>Menos esforço pelo mesmo resultado</h3>
+        <p>Retrabalho, conferência manual e digitação dupla são horas pagas sem retorno. Insumo perdido por vencimento é dinheiro no lixo. Operação eficiente é despesa que para de crescer junto com a clínica.</p>
+      </div>
+      <div class="neg">
+        <div class="nt">Margem e crescimento</div>
+        <h3>Crescer sem que o custo cresça junto</h3>
+        <p>Quando cada nova especialidade, unidade ou turno exige mais esforço manual, a margem encolhe à medida que a clínica cresce. Uma operação estruturada permite crescer sem inflar a estrutura, e é aí que o crescimento vira lucro, não só faturamento.</p>
+      </div>
+      <div class="neg" style="border-top-color:var(--orange);background:linear-gradient(160deg,#fff,#fbf3ec)">
+        <div class="nt">Nova receita digital</div>
+        <h3>Atender e faturar além das quatro paredes</h3>
+        <p>A mesma operação que cuida pode gerar receita nova em formato digital: teleatendimento e telemedicina, programas de acompanhamento contínuo, pacotes de prevenção e serviços por assinatura. Frentes que a clínica não conseguia estruturar sozinha, e que a tecnologia viabiliza.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONDUZ -->
+<section class="conduz">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Como a ESPX conduz essa virada</div>
+      <h2>Primeiro a clareza. Depois a base estável. Então a evolução contínua.</h2>
+      <p>O caminho não tem prazo fixo de transformação: cada clínica evolui no seu ritmo. O que existe é uma sequência, conduzida sem vender ferramenta e sem projeto desconectado.</p>
+    </div>
+    <div class="flow-steps">
+      <div class="fstep">
+        <div class="fdot">1</div>
+        <div class="when">Leitura inicial da operação<span class="free">sem custo</span></div>
+        <h3>Uma primeira leitura, para entender o momento</h3>
+        <p>Uma conversa para entender o momento da clínica e dizer, com honestidade, se faz sentido aprofundar. A gestão sai com uma primeira leitura e as hipóteses prioritárias, sem compromisso.</p>
+      </div>
+      <div class="fstep">
+        <div class="fdot">2</div>
+        <div class="when">Raio-X Operacional</div>
+        <h3>Enxergar a operação por inteiro</h3>
+        <p>A investigação estruturada pelas 7 dimensões, que transforma a percepção difusa de "algo está pesando" no retrato concreto da clínica: relatório executivo, riscos e custos priorizados e um plano de evolução nas mãos da gestão.</p>
+      </div>
+      <div class="fstep">
+        <div class="fdot">3</div>
+        <div class="when">Fundação Operacional</div>
+        <h3>Estabilizar a base</h3>
+        <p>Quando o Raio-X revela riscos estruturais, eles são tratados num esforço inicial concentrado: organizar acessos a dados sensíveis, documentar processos críticos, fazer os sistemas conversarem, dar visibilidade ao estoque. A operação para de depender de esforço e de sorte. Quando a base já é sólida, esta etapa é dispensada.</p>
+      </div>
+      <div class="fstep">
+        <div class="fdot">4</div>
+        <div class="when">Continuidade Operacional</div>
+        <h3>Evoluir de forma contínua e perceptível</h3>
+        <p>Com a base estável, a ESPX atua como uma camada contínua de evolução conduzida: acompanhamento próximo, priorização do que importa, coordenação dos fornecedores e melhorias visíveis a cada ciclo. A operação deixa de andar no improviso e passa a evoluir com direção.</p>
+      </div>
+    </div>
+    <p style="margin-top:36px;font-size:.95rem;color:var(--muted);font-weight:300;max-width:70ch;border-left:2px solid var(--orange);padding-left:18px">A ESPX conduz um número limitado de operações ao mesmo tempo, para garantir profundidade na leitura e continuidade real da evolução de cada cliente.</p>
+  </div>
+</section>
+
+<!-- SINTESE -->
+<section class="sintese">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Aonde isso leva</div>
+      <h2>A mesma clínica, com a operação amadurecida.</h2>
+    </div>
+    <div class="ba-grid">
+      <div class="ba-col ba-antes">
+        <div class="lbl">No início</div>
+        <h3>A operação que pesa</h3>
+        <p>A gestão apaga incêndios que não deveriam chegar até ela. As decisões esperam planilhas atrasadas, as glosas escapam, o estoque surpreende, e crescer assusta, porque a estrutura já está no limite. A clínica se equilibra no esforço de poucas pessoas.</p>
+      </div>
+      <div class="ba-col ba-depois">
+        <div class="lbl">Com a operação madura</div>
+        <h3>A operação que sustenta</h3>
+        <p>A gestão volta a conduzir a clínica, com números confiáveis e visão em tempo real. As agendas rendem, as glosas são contestadas, o estoque não surpreende, e crescer vira decisão estratégica, não risco. A clínica ganha tranquilidade para o próximo passo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="lcta">
+  <div class="wrap">
+    <div class="eyebrow">O próximo passo</div>
+    <h2 style="margin-bottom:8px">O problema raramente é a clínica crescer. É a operação continuar crescendo no improviso.</h2>
+    <p>Tudo começa por uma leitura inicial da sua operação, que transforma este retrato geral na realidade concreta da sua clínica, com riscos, prioridades e um plano nas suas mãos.</p>
+    <a href="pre-raio-x-gratuito.html" class="btn btn-primary">Quero receber meu Pré Raio-X Operacional</a>
+  </div>
+</section>
+
+</body>
+</html>
