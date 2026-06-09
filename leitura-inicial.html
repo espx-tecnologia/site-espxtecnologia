@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pré Raio-X Operacional Gratuito | ESPX Tecnologia</title>
-<meta name="description" content="Receba gratuitamente um pré-diagnóstico da operação da sua empresa, ligado às 7 dimensões que sustentam o crescimento com previsibilidade. Em poucos minutos no seu WhatsApp.">
+<title>Leitura inicial da operação | ESPX Tecnologia</title>
+<meta name="description" content="Solicite uma leitura inicial da operação para entender pontos de tensão, crescimento, previsibilidade e continuidade com a ESPX Tecnologia.">
 <meta name="robots" content="index, follow">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><rect width='120' height='120' rx='26' fill='%23102A43'/><text x='60' y='84' font-size='74' font-weight='700' fill='%23EE6C2B' text-anchor='middle' font-family='Georgia,serif'>X</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -79,25 +79,71 @@
   .whatsapp-float::before{content:"Fale com Thiego Bastos";position:absolute;right:72px;background:#102A43;color:#fff;font-size:.82rem;padding:8px 12px;border-radius:8px;white-space:nowrap;opacity:0;transform:translateX(6px);pointer-events:none;transition:.2s ease;box-shadow:0 8px 20px rgba(0,0,0,.18)}
   .whatsapp-float:hover::before{opacity:1;transform:none}
   @media(max-width:820px){.whatsapp-float::before{display:none}.whatsapp-float{right:16px;bottom:16px;width:54px;height:54px}}
+
+.choice-grid{display:flex;flex-direction:column;gap:14px;margin-top:24px}
+.choice-card{display:flex;gap:14px;align-items:flex-start;padding:18px;border:1px solid var(--line-dark);border-radius:12px;background:var(--paper);cursor:pointer;transition:.2s}
+.choice-card:hover{border-color:var(--orange);background:#fff}
+.choice-card input{width:18px;height:18px;margin-top:2px;accent-color:var(--orange)}
+.choice-card strong{display:block;color:var(--navy-700);font-size:1rem}
+.choice-card span{display:block;margin-top:6px;color:var(--muted);font-size:.9rem;line-height:1.5}
+
+
+.choice-card.recommended{
+  border-color:rgba(238,108,43,.55);
+  background:linear-gradient(160deg,#fff,#fff7f1);
+  box-shadow:0 18px 40px -28px rgba(238,108,43,.8);
+}
+.choice-card em{
+  display:inline-block;
+  font-family:'IBM Plex Mono',monospace;
+  font-style:normal;
+  font-size:.62rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#fff;
+  background:var(--orange);
+  border-radius:999px;
+  padding:4px 9px;
+  margin-bottom:8px;
+}
+.choice-card small{
+  display:block;
+  margin-top:8px;
+  color:#6b7783;
+  font-size:.82rem;
+  line-height:1.45;
+}
+
+
+.success-extra{
+  margin-top:18px;
+  color:#7b8794;
+  font-size:.9rem;
+  line-height:1.6;
+  max-width:560px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
 </style>
 </head>
 <body>
 <nav><div class="wrap nav-in">
   <div class="logo">ESP<span class="x">X</span> <span class="desc">Tecnologia</span></div>
-  <div class="nav-tag">Pré Raio-X Operacional</div>
+  <div style="display:flex;align-items:center;gap:18px"><a href="index.html" style="font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#9fb0c0;text-decoration:none">← Voltar ao site</a><div class="nav-tag">Leitura inicial da operação</div></div>
 </div></nav>
 
 <header class="hero">
   <div class="hero-x">X</div>
   <div class="wrap hero-grid">
     <div>
-      <div class="eyebrow rv d1">Pré Raio-X Operacional Gratuito</div>
+      <div class="eyebrow rv d1">Leitura inicial da operação</div>
       <h1 class="rv d2">Sua operação está pronta para sustentar o <span class="accent">próximo nível de crescimento?</span></h1>
-      <p class="sub rv d3">Receba gratuitamente um Pré Raio-X da operação da sua empresa, conectado às 7 dimensões que normalmente começam a gerar desgaste, perda de eficiência e dependências invisíveis conforme a empresa cresce. Direto no seu WhatsApp, em poucos minutos.</p>
+      <p class="sub rv d3">Inicie uma leitura inicial para entendermos o que hoje tira previsibilidade da sua operação, consome energia da liderança e pode limitar o crescimento se continuar sustentado no improviso.</p>
       <ul class="benefits rv d4">
-        <li>Um retrato inicial dos pontos de atenção da sua operação</li>
-        <li>Análise nas 7 dimensões que sustentam crescimento com previsibilidade</li>
-        <li>Pela ótica de quem sustentou operações de missão crítica de grande escala</li>
+        <li>Entendimento inicial do que mais tira o sono da liderança</li>
+        <li>Leitura dos sinais que impactam crescimento, margem e continuidade</li>
+        <li>Conduzido com olhar executivo sobre operação, crescimento e continuidade</li>
       </ul>
       <div class="trust rv d5"><strong>ESPX Tecnologia</strong> · Thiego Bastos · 20+ anos sustentando operações críticas e continuidade de negócio</div>
     </div>
@@ -119,28 +165,78 @@
         <div class="step" data-idx="1">
           <div class="qn">Passo 2 de 3</div>
           <h2>Qual empresa est&aacute; vivendo esse momento de crescimento?</h2>
-          <div class="qhint">A empresa que vamos analisar no seu Pr&eacute; Raio-X.</div>
+          <div class="qhint">A empresa que vamos analisar no sua leitura inicial.</div>
           <div class="ip"><input type="text" id="empresa" autocomplete="organization" placeholder="Nome da empresa" onkeydown="if(event.key==='Enter')next(1)"></div>
           <div class="nav-btns"><button type="button" class="btn btn-prev" onclick="go(0)">Voltar</button><button type="button" class="btn btn-next" onclick="next(1)">Continuar</button></div>
         </div>
 
+        
         <div class="step" data-idx="2">
-          <div class="qn">Passo 3 de 3</div>
+          <div class="qn">Passo 3 de 4</div>
           <h2>Qual o seu WhatsApp?</h2>
-          <div class="qhint">&Eacute; onde voc&ecirc; vai receber o seu Pr&eacute; Raio-X.</div>
+          <div class="qhint">É por onde normalmente iniciamos a leitura inicial da operação.</div>
           <div class="ip">
             <input type="tel" id="telefone" autocomplete="tel" inputmode="tel" placeholder="(21) 99999-9999" onkeydown="if(event.key==='Enter')next(2)">
-            <label class="consent"><input type="checkbox" id="consent"><span>Autorizo a ESPX a entrar em contato e enviar o Pr&eacute; Raio-X e comunicados por WhatsApp.</span></label>
           </div>
-          <div class="nav-btns"><button type="button" class="btn btn-prev" onclick="go(1)">Voltar</button><button type="button" class="btn btn-next" id="finalBtn" onclick="next(2)">Receber meu Pr&eacute; Raio-X</button></div>
+          <div class="nav-btns">
+            <button type="button" class="btn btn-prev" onclick="go(1)">Voltar</button>
+            <button type="button" class="btn btn-next" onclick="next(2)">Continuar</button>
+          </div>
+        </div>
+
+        <div class="step" data-idx="3">
+          <div class="qn">Passo 4 de 4</div>
+          <h2>Como prefere iniciar essa leitura?</h2>
+          <div class="qhint">A ideia é entendermos o que hoje mais pesa na operação e escolher o melhor próximo passo para personalizar a atuação.</div>
+
+          <div class="choice-grid">
+            <label class="choice-card recommended">
+              <input type="radio" name="continuidade" value="reuniao" checked>
+              <div>
+                <em>Recomendado pela ESPX</em>
+                <strong>Conversa executiva de 20 minutos</strong>
+                <span>O caminho que normalmente gera mais clareza logo no início. Uma conversa rápida para entendermos os pontos de tensão, crescimento e desgaste invisível da operação.</span>
+                <small>Ideal para operações que já sentem aumento de complexidade, dependência de pessoas-chave ou dificuldade de enxergar prioridades.</small>
+              </div>
+            </label>
+
+            <label class="choice-card">
+              <input type="radio" name="continuidade" value="whatsapp">
+              <div>
+                <strong>Conversa rápida pelo WhatsApp</strong>
+                <span>Uma forma mais leve e direta de iniciar a leitura da operação e identificar os primeiros sinais de tensão operacional.</span>
+                <small>Boa opção quando você quer começar de forma simples, sem agenda formal neste momento.</small>
+              </div>
+            </label>
+
+            <label class="choice-card">
+              <input type="radio" name="continuidade" value="formulario">
+              <div>
+                <strong>Leitura estruturada da operação</strong>
+                <span>Você recebe um formulário executivo para aprofundar como a operação funciona hoje, o que mais consome energia da liderança e quais pontos começam a limitar crescimento, previsibilidade e continuidade.</span>
+                <small>Após o preenchimento, a ESPX realiza uma leitura inicial e retorna com uma visão executiva preliminar da operação.</small>
+              </div>
+            </label>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" id="consent">
+            <span>Autorizo a ESPX a entrar em contato para conduzir a leitura inicial da operação conforme a opção escolhida.</span>
+          </label>
+
+          <div class="nav-btns">
+            <button type="button" class="btn btn-prev" onclick="go(2)">Voltar</button>
+            <button type="button" class="btn btn-next" id="finalBtn" onclick="next(3)">Solicitar leitura inicial</button>
+          </div>
         </div>
       </div>
 
       <div class="success" id="successView">
+
         <div class="ico" id="successIco">&#10003;</div>
         <h2 id="successTitle">Tudo certo!</h2>
-        <p id="successMsg">Enviamos o link do seu Pr&eacute; Raio-X para o seu WhatsApp. S&atilde;o poucas perguntas, cerca de 3 minutinhos.</p>
-    <!--    <a class="wa-fallback" id="waFallback" href="https://wa.me/5521967090786?text=Olá,%20vim%20pelo%20Pré%20Raio-X%20da%20ESPX%20Tecnologia%20e%20gostaria%20de%20continuar%20a%20conversa." target="_blank" rel="noopener">
+        <p id="successMsg">Enviamos o solicitação de leitura inicial para o seu WhatsApp. S&atilde;o poucas perguntas, cerca de 3 minutinhos.</p>
+    <!--    <a class="wa-fallback" id="waFallback" href="https://wa.me/5521967090786?text=Olá,%20vim%20pela%20Leitura%20Inicial%20da%20ESPX%20Tecnologia%20e%20gostaria%20de%20conversar%20sobre%20a%20minha%20operação." target="_blank" rel="noopener">
           <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C9.46 3 4.1 8.32 4.1 14.86c0 2.1.56 4.16 1.62 5.97L4 29l8.37-1.69a12.03 12.03 0 0 0 3.67.57c6.58 0 11.94-5.32 11.94-11.86S22.62 3 16.04 3z"/></svg>
           Falar com a ESPX no WhatsApp
         </a>   -->
@@ -152,13 +248,13 @@
 
 <footer><div class="wrap">ESPX Tecnologia &middot; Especialistas em multiplicar resultados &middot; Niter&oacute;i, RJ</div></footer>
 
-<a class="whatsapp-float" href="https://wa.me/5521967090786?text=Olá,%20vim%20pelo%20Pré%20Raio-X%20da%20ESPX%20Tecnologia%20e%20gostaria%20de%20continuar%20a%20conversa." target="_blank" rel="noopener noreferrer" aria-label="Falar com a ESPX pelo WhatsApp">
+<a class="whatsapp-float" href="https://wa.me/5521967090786?text=Olá,%20vim%20pela%20Leitura%20Inicial%20da%20ESPX%20Tecnologia%20e%20gostaria%20de%20conversar%20sobre%20a%20minha%20operação." target="_blank" rel="noopener noreferrer" aria-label="Falar com a ESPX pelo WhatsApp">
   <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C9.46 3 4.1 8.32 4.1 14.86c0 2.1.56 4.16 1.62 5.97L4 29l8.37-1.69a12.03 12.03 0 0 0 3.67.57c6.58 0 11.94-5.32 11.94-11.86S22.62 3 16.04 3zm0 22.78c-1.18 0-2.34-.19-3.45-.58l-.5-.18-4.97 1 1.02-4.82-.25-.5a9.72 9.72 0 0 1-1.12-4.53c0-5.38 4.42-9.76 9.86-9.76s9.86 4.38 9.86 9.76-4.42 9.61-10.45 9.61zm5.4-7.32c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.48-.9-.8-1.5-1.78-1.67-2.08-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.48s1.08 2.88 1.23 3.08c.15.2 2.12 3.22 5.13 4.52.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35z"/></svg>
 </a>
 
 <script>
 const OK="https://automation.espxtecnologia.com.br/webhook/novo";
-const TOTAL=3;let cur=0;
+const TOTAL=4;let cur=0;
 const D={};
 
 const LEAD_ID = 'espx_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2,8);
@@ -168,42 +264,80 @@ function focusStep(i){const st=document.querySelector('.step[data-idx="'+i+'"]')
 function go(i){document.querySelectorAll('.step').forEach(function(s){s.classList.remove('active');});document.querySelector('.step[data-idx="'+i+'"]').classList.add('active');cur=i;prog();focusStep(i);}
 function showErr(t){var e=document.getElementById('errMsg');e.textContent=t;e.style.display='block';setTimeout(function(){e.style.display='none';},3500);}
 
+
 function next(i){
-  if(i===0){D.nome=document.getElementById('nome').value.trim();if(D.nome.split(" ").filter(Boolean).length<2){showErr("Informe nome e sobrenome.");return;}go(1);}
-  else if(i===1){D.empresa=document.getElementById('empresa').value.trim();if(D.empresa.length<2){showErr("Informe o nome da empresa.");return;}go(2);}
+  if(i===0){
+    D.nome=document.getElementById('nome').value.trim();
+    if(D.nome.split(" ").filter(Boolean).length<2){showErr("Informe nome e sobrenome.");return;}
+    go(1);
+  }
+  else if(i===1){
+    D.empresa=document.getElementById('empresa').value.trim();
+    if(D.empresa.length<2){showErr("Informe o nome da empresa.");return;}
+    go(2);
+  }
   else if(i===2){
-    D.telefone=document.getElementById('telefone').value.trim();var digits=D.telefone.replace(/\D/g,'');
-    if(digits.length<10||digits.length>11){showErr("Informe um WhatsApp v\u00e1lido com DDD.");return;}
+    D.telefone=document.getElementById('telefone').value.trim();
+    var digits=D.telefone.replace(/\D/g,'');
+    if(digits.length<10||digits.length>11){showErr("Informe um WhatsApp válido com DDD.");return;}
+    go(3);
+  }
+  else if(i===3){
+    const opt=document.querySelector('input[name="continuidade"]:checked');
+    if(!opt){showErr("Escolha como prefere continuar.");return;}
     if(!document.getElementById('consent').checked){showErr("Autorize o contato para continuar.");return;}
+    D.preferencia_contato=opt.value;
     submitLead();
   }
 }
 
+
+
+
 function showSuccess(ok){
   document.getElementById('formView').style.display='none';
   document.getElementById('successView').style.display='block';
+
+  var pref = D.preferencia_contato || "reuniao";
+  var title = "Solicitação recebida!";
+  var msg = "";
+  var note = "";
+
+  if(pref==="reuniao"){
+    msg = "A ESPX entrará em contato pelo WhatsApp para combinar as melhores opções de horário para uma conversa executiva de 20 minutos sobre a operação.";
+    note = "O objetivo dessa conversa é entender os principais pontos de tensão, crescimento e desgaste invisível da operação antes de qualquer direcionamento.";
+  }else if(pref==="whatsapp"){
+    msg = "A ESPX iniciará uma conversa rápida pelo WhatsApp para entender os primeiros sinais de tensão operacional e os pontos que hoje mais consomem energia da liderança.";
+    note = "A partir dessa leitura inicial, definimos juntos os próximos passos mais adequados para a operação.";
+  }else if(pref==="formulario"){
+    msg = "Você receberá um formulário executivo para aprofundarmos como a operação funciona hoje, os principais desafios percebidos pela liderança e os sinais que começam a limitar crescimento, previsibilidade e continuidade.";
+    note = "Após o preenchimento, a ESPX realizará uma leitura inicial da operação e retornará com uma visão executiva preliminar antes dos próximos passos.";
+  }
+
   if(ok){
-    document.getElementById('successTitle').textContent="Tudo certo!";
-    document.getElementById('successMsg').textContent="Enviamos o link do seu Pr\u00e9 Raio-X para o seu WhatsApp. S\u00e3o poucas perguntas, cerca de 3 minutinhos.";
-    document.getElementById('successNote').textContent="Se n\u00e3o recebeu em alguns minutos? Me chame no WhatsApp e liberamos o seu Pr\u00e9 Raio-X.";
+    document.getElementById('successTitle').textContent = title;
+    document.getElementById('successMsg').textContent = msg;
+    document.getElementById('successNote').textContent = note;
   }else{
-    document.getElementById('successTitle').textContent="Recebemos o seu interesse";
-    document.getElementById('successMsg').textContent="Tivemos uma instabilidade moment\u00e2nea para liberar o seu acesso autom\u00e1tico. Me chame no WhatsApp agora e liberamos o seu Pr\u00e9 Raio-X.";
-    document.getElementById('successNote').textContent="Atendimento no mesmo dia.";
+    document.getElementById('successTitle').textContent = "Recebemos o seu interesse";
+    document.getElementById('successMsg').textContent = "Tivemos uma instabilidade momentânea no envio automático. Me chame no WhatsApp e damos continuidade à leitura inicial da sua operação.";
+    document.getElementById('successNote').textContent = "Cada operação possui sinais, prioridades e ritmos diferentes de crescimento. Por isso, a ESPX inicia sempre pela leitura do cenário atual antes de qualquer direcionamento.";
     document.getElementById('successIco').style.background="#d98324";
   }
 }
+
+
 
 async function submitLead(){
   if(document.getElementById('website').value.trim()!==""){return;}
   var btn=document.getElementById('finalBtn');btn.disabled=true;btn.textContent="Enviando...";
   var payload={
-    subject:"Novo lead Pr\u00e9 Raio-X (LP1) - "+D.empresa,
-    from_name:"ESPX - LP1 Captura",
-    origem:"LP1_captura",
+    subject:"Novo lead Leitura inicial - "+D.empresa,
+    from_name:"ESPX - Leitura inicial da operação",
+    origem:"LP_leitura_inicial_operacao",
     lead_id:LEAD_ID,
     nome:D.nome,empresa:D.empresa,
-    telefone:D.telefone,
+    telefone:D.telefone, preferencia_contato:D.preferencia_contato,
     consentimento_whatsapp:"sim",consentimento_data:new Date().toISOString(),
     pagina:location.href,website:document.getElementById('website').value.trim()
   };
@@ -218,5 +352,6 @@ async function submitLead(){
 }
 prog();focusStep(0);
 </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"c246d1b5d6ff49a082df6c910c966fae","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
