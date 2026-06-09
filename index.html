@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -622,6 +624,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .logo-sub{font-size:.6rem}
 }
 
+
+/* ---- refinamento UX do carrossel de operações ---- */
+.ops-mobile-controls{display:none;align-items:center;justify-content:center;gap:14px;margin-top:8px;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:#8b9bab}
+.ops-mobile-controls button{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.07);color:#fff;font-size:1rem}
+.ops-dots{display:flex;justify-content:center;gap:7px;margin-top:16px}
+.ops-dots button{width:7px;height:7px;border-radius:50%;border:none;background:rgba(255,255,255,.25);transition:.25s}
+.ops-dots button.active{width:22px;border-radius:999px;background:var(--orange)}
+.ops-card{min-height:430px}.ops-card h3{max-width:13ch}
+@media(max-width:860px){.ops-mobile-controls{display:flex}.ops-dots{display:flex}.ops-track{padding-bottom:18px}}
+@media(max-width:430px){.ops-card{min-width:86vw;max-width:86vw;padding:26px;min-height:430px}}
+
 </style>
 </head>
 <body>
@@ -646,6 +659,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <a class="nav-dd-item" href="educacao.html"><strong>Educação</strong><span>A escola cresceu. A operação acompanhou?</span></a>
               <a class="nav-dd-item" href="saude.html"><strong>Saúde</strong><span>Agenda, atendimento, convênios e dados.</span></a>
               <a class="nav-dd-item" href="imobiliario.html"><strong>Imobiliário</strong><span>Contratos, locações, repasses e WhatsApp.</span></a>
+              <a class="nav-dd-item" href="distribuicao-supply.html"><strong>Distribuição &amp; Supply</strong><span>Estoque, pedidos, logística e margem.</span></a>
+              <a class="nav-dd-item" href="juridico.html"><strong>Jurídico</strong><span>Prazos, clientes, documentos e previsibilidade.</span></a>
+              <a class="nav-dd-item" href="multiunidades.html"><strong>Multiunidades</strong><span>Padronização, indicadores e expansão com controle.</span></a>
               <a class="nav-dd-item" href="oil-gas.html"><strong>Oil &amp; Gas</strong><span>Continuidade, risco e operações críticas.</span></a>
             </div>
           </div>
@@ -654,7 +670,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="#continuidade" class="nav-link">Continuidade</a>
       </div>
       <button type="button" class="nav-mobile-toggle" aria-label="Abrir menu" onclick="toggleMobileMenu()"><span></span></button>
-      <a href="pre-raio-x-gratuito.html" class="nav-cta">Pré Raio-X →</a>
+      <a href="pre-raio-x-gratuito.html" class="nav-cta">Leitura inicial →</a>
     </div>
   </div>
 </nav>
@@ -665,6 +681,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="educacao.html"><strong>Educação</strong><span>A escola cresceu. A operação acompanhou?</span></a>
     <a href="saude.html"><strong>Saúde</strong><span>Agenda, atendimento, convênios e dados.</span></a>
     <a href="imobiliario.html"><strong>Imobiliário</strong><span>Contratos, locações, repasses e WhatsApp.</span></a>
+    <a href="distribuicao-supply.html"><strong>Distribuição &amp; Supply</strong><span>Estoque, pedidos, logística e margem.</span></a>
+    <a href="juridico.html"><strong>Jurídico</strong><span>Prazos, clientes, documentos e previsibilidade.</span></a>
+    <a href="multiunidades.html"><strong>Multiunidades</strong><span>Padronização, indicadores e expansão com controle.</span></a>
     <a href="oil-gas.html"><strong>Oil &amp; Gas</strong><span>Continuidade, risco e operações críticas.</span></a>
   </div>
   <div class="mp-links">
@@ -683,7 +702,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="pre-raio-x-gratuito.html" class="btn btn-primary">Quero entender os pontos invisíveis da minha operação</a>
       <a href="#raiox" class="btn btn-ghost">Como funciona</a>
     </div>
-    <div class="hero-micro rv d5">Sem compromisso · Pré Raio-X operacional · Retorno rápido e executivo</div>
+    <div class="hero-micro rv d5">Sem compromisso · Leitura inicial da operação · Retorno rápido e executivo</div>
   </div>
 </header>
 
@@ -839,7 +858,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div style="margin-top:36px">
-      <a href="pre-raio-x-gratuito.html" class="btn btn-primary">Quero receber meu Pré Raio-X Operacional</a>
+      <a href="pre-raio-x-gratuito.html" class="btn btn-primary">Quero uma leitura inicial da minha operação</a>
       <button type="button" class="btn-method" onclick="document.getElementById('metodo-modal').classList.add('open');document.body.style.overflow='hidden';">O Método</button>
     </div>
   </div>
@@ -864,54 +883,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="ops-carousel-shell">
       <button class="ops-hover-zone left" type="button" aria-label="Ver operação anterior" onmouseenter="startOpsAuto(-1)" onmouseleave="stopOpsAuto()" onclick="moveOps(-1)"><span class="ops-arrow">←</span></button>
       <button class="ops-hover-zone right" type="button" aria-label="Ver próxima operação" onmouseenter="startOpsAuto(1)" onmouseleave="stopOpsAuto()" onclick="moveOps(1)"><span class="ops-arrow">→</span></button>
+      
       <div class="ops-track" id="opsTrack">
-      <a class="ops-card" href="educacao.html">
-        <span class="ops-index">01 · Educação</span>
-        <h3>Operações educacionais</h3>
-        <p>A escola cresceu. Matrículas, mensalidades, comunicação e dados ainda sustentam o próximo nível?</p>
-        <ul>
-          <li>Matrícula e rematrícula sem mutirão</li>
-          <li>Mensalidades e inadimplência com visibilidade</li>
-          <li>Comunicação com famílias sem dispersão</li>
-        </ul>
-        <span class="ops-enter">Entrar nesta operação</span>
-      </a>
+        <a class="ops-card" href="educacao.html" data-operation="Educação"><span class="ops-index">Educação</span><h3>Operações educacionais</h3><p>A escola cresceu. Matrículas, mensalidades, comunicação e dados ainda sustentam o próximo nível?</p><ul><li>Matrícula e rematrícula sem mutirão</li><li>Mensalidades e inadimplência com visibilidade</li><li>Comunicação com famílias sem dispersão</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
+        <a class="ops-card" href="saude.html" data-operation="Saúde"><span class="ops-index">Saúde</span><h3>Operações de saúde</h3><p>Clínicas crescem, agendas lotam, equipes se multiplicam e a gestão começa a depender de esforço invisível.</p><ul><li>Agenda, atendimento e confirmação</li><li>Faturamento, convênios e glosas</li><li>Dados clínicos e operação administrativa</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
+        <a class="ops-card" href="imobiliario.html" data-operation="Imobiliário"><span class="ops-index">Imobiliário</span><h3>Operações imobiliárias</h3><p>Contratos, locações, vistorias, repasses e atendimento começam a rodar em fluxos paralelos e pouco rastreáveis.</p><ul><li>Locação, vistoria e contratos</li><li>Financeiro, repasses e cobrança</li><li>WhatsApp como operação paralela</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
+        <a class="ops-card" href="distribuicao-supply.html" data-operation="Distribuição & Supply"><span class="ops-index">Distribuição &amp; Supply</span><h3>Operações de distribuição</h3><p>Pedidos, estoque, compras, logística e entregas começam a pressionar margem quando a operação cresce sem integração.</p><ul><li>Estoque, compras e ruptura</li><li>Pedidos, separação e entregas</li><li>Margem pressionada por retrabalho</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
+        <a class="ops-card" href="juridico.html" data-operation="Jurídico"><span class="ops-index">Jurídico</span><h3>Operações jurídicas</h3><p>Escritórios crescem, carteiras aumentam e prazos, documentos, clientes e financeiro passam a depender de controle rigoroso.</p><ul><li>Prazos, documentos e responsáveis</li><li>Atendimento e jornada do cliente</li><li>Gestão financeira e previsibilidade</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
+        <a class="ops-card" href="multiunidades.html" data-operation="Multiunidades"><span class="ops-index">Multiunidades</span><h3>Operações multiunidades</h3><p>A empresa abre novas unidades, mas cada uma começa a operar de um jeito, com dados, processos e padrões difíceis de comparar.</p><ul><li>Padronização entre unidades</li><li>Indicadores consolidados e comparáveis</li><li>Expansão sem aumento do descontrole</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
+        <a class="ops-card" href="oil-gas.html" data-operation="Oil & Gas"><span class="ops-index">Oil &amp; Gas</span><h3>Operações críticas</h3><p>Ambientes críticos exigem continuidade, rastreabilidade, fornecedores coordenados e dados confiáveis para decidir.</p><ul><li>Continuidade e risco operacional</li><li>Fornecedores e dependências críticas</li><li>Indicadores executivos e rastreabilidade</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
+      </div>
+      <div class="ops-mobile-controls" aria-label="Controle mobile dos cenários operacionais"><button type="button" onclick="moveOps(-1)" aria-label="Operação anterior">←</button><span>Arraste para explorar</span><button type="button" onclick="moveOps(1)" aria-label="Próxima operação">→</button></div>
+      <div class="ops-dots" id="opsDots" aria-hidden="true"></div>
 
-      <a class="ops-card" href="saude.html">
-        <span class="ops-index">02 · Saúde</span>
-        <h3>Operações de saúde</h3>
-        <p>Clínicas crescem, agendas lotam, equipes se multiplicam e a gestão começa a depender de esforço invisível.</p>
-        <ul>
-          <li>Agenda, atendimento e confirmação</li>
-          <li>Faturamento, convênios e glosas</li>
-          <li>Dados clínicos e operação administrativa</li>
-        </ul>
-        <span class="ops-enter">Entrar nesta operação</span>
-      </a>
-
-      <a class="ops-card" href="imobiliario.html">
-        <span class="ops-index">03 · Imobiliário</span>
-        <h3>Operações imobiliárias</h3>
-        <p>Atendimento, contratos, locações, vistorias e repasses começam a rodar em fluxos paralelos e pouco rastreáveis.</p>
-        <ul>
-          <li>Locação, vistoria e contratos</li>
-          <li>Financeiro, repasses e cobrança</li>
-          <li>WhatsApp como operação paralela</li>
-        </ul>
-        <span class="ops-enter">Entrar nesta operação</span>
-      </a>
-
-      <a class="ops-card" href="oil-gas.html">
-        <span class="ops-index">04 · Oil &amp; Gas</span>
-        <h3>Operações críticas</h3>
-        <p>Ambientes críticos exigem continuidade, rastreabilidade, fornecedores coordenados e dados confiáveis para decidir.</p>
-        <ul>
-          <li>Continuidade e risco operacional</li>
-          <li>Fornecedores e dependências críticas</li>
-          <li>Indicadores executivos e rastreabilidade</li>
-        </ul>
-        <span class="ops-enter">Entrar nesta operação</span>
-      </a>
     </div>
   </div>
 </section>
@@ -952,11 +936,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2>Vamos olhar sua operação juntos.</h2>
     <p>Uma conversa de 20 minutos é suficiente para eu entender seu momento e você sentir se faz sentido. Sem pitch, sem compromisso. Uma conversa de quem entende de operação.</p>
     <div class="hero-cta">
-      <a href="pre-raio-x-gratuito.html" class="btn btn-primary">Quero receber meu Pré Raio-X Operacional</a>
+      <a href="pre-raio-x-gratuito.html" class="btn btn-primary">Quero uma leitura inicial da minha operação</a>
     </div>
     <div class="contacts">
       <a href="https://wa.me/5521967090786">WhatsApp · (21) 96709-0786</a>
-      <a href="mailto:thiegobastos@espxtecnologia.com.br">thiegobastos@espxtecnologia.com.br</a>
+      <a href="/cdn-cgi/l/email-protection#afdbc7c6cac8c0cdcedcdbc0dcefcadcdfd7dbcaccc1c0c3c0c8c6ce81ccc0c281cddd"><span class="__cf_email__" data-cfemail="1c687475797b737e7d6f68736f5c796f6c6468797f727370737b757d327f7371327e6e">[email&#160;protected]</span></a>
       <a href="https://www.linkedin.com/in/thiegobastos" target="_blank" rel="noopener">linkedin.com/in/thiegobastos</a>
     </div>
   </div>
@@ -1031,24 +1015,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </a>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 document.addEventListener('keydown',function(e){
   if(e.key==='Escape'){var m=document.getElementById('metodo-modal');if(m){m.classList.remove('open');document.body.style.overflow='';}}
 });
 </script>
 
+
+
+
 <script>
-function moveOps(direction){
-  const track = document.getElementById('opsTrack');
-  if(!track) return;
-  const card = track.querySelector('.ops-card');
-  if(!card) return;
-  const gap = 24;
-  track.scrollBy({
-    left: direction * (card.offsetWidth + gap),
-    behavior: 'smooth'
-  });
-}
+(function(){
+  let opsAutoTimer=null, opsInitialized=false;
+  function getTrack(){return document.getElementById('opsTrack')}
+  function getStep(){const t=getTrack(); if(!t) return 0; const c=t.querySelector('.ops-card'); if(!c) return 0; const s=window.getComputedStyle(t); const g=parseFloat(s.columnGap||s.gap||'24')||24; return c.offsetWidth+g}
+  function shuffleOnce(){const t=getTrack(); if(!t||opsInitialized) return; const cards=Array.from(t.querySelectorAll('.ops-card')); for(let i=cards.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1)); [cards[i],cards[j]]=[cards[j],cards[i]]} cards.forEach(c=>t.appendChild(c)); t.scrollLeft=0; opsInitialized=true}
+  function buildDots(){const t=getTrack(), d=document.getElementById('opsDots'); if(!t||!d) return; d.innerHTML=''; Array.from(t.querySelectorAll('.ops-card')).forEach(function(card,index){const b=document.createElement('button'); b.type='button'; b.setAttribute('aria-label','Ir para '+(card.dataset.operation||'operação')); b.addEventListener('click',function(){t.scrollTo({left:index*getStep(),behavior:'smooth'}); setTimeout(updateDots,260)}); d.appendChild(b)}); updateDots()}
+  function updateDots(){const t=getTrack(), d=document.getElementById('opsDots'), step=getStep(); if(!t||!d||!step) return; const active=Math.max(0,Math.min(d.children.length-1,Math.round(t.scrollLeft/step))); Array.from(d.children).forEach((dot,i)=>dot.classList.toggle('active',i===active))}
+  window.moveOps=function(direction){const t=getTrack(), step=getStep(); if(!t||!step) return; const max=t.scrollWidth-t.clientWidth; const end=t.scrollLeft>=max-10; const start=t.scrollLeft<=10; if(direction>0&&end){t.scrollTo({left:0,behavior:'smooth'})}else if(direction<0&&start){t.scrollTo({left:max,behavior:'smooth'})}else{t.scrollBy({left:direction*step,behavior:'smooth'})} setTimeout(updateDots,300)}
+  window.startOpsAuto=function(direction){window.stopOpsAuto(); opsAutoTimer=window.setInterval(()=>window.moveOps(direction),850)}
+  window.stopOpsAuto=function(){if(opsAutoTimer){window.clearInterval(opsAutoTimer); opsAutoTimer=null}}
+  document.addEventListener('DOMContentLoaded',function(){shuffleOnce(); buildDots(); const t=getTrack(); if(t){t.addEventListener('scroll',()=>window.requestAnimationFrame(updateDots),{passive:true})}})
+})();
 </script>
 
 <script>
@@ -1071,5 +1059,6 @@ document.querySelectorAll('#mobilePanel a').forEach(function(a){
 });
 </script>
 
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"c246d1b5d6ff49a082df6c910c966fae","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
