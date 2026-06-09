@@ -29,6 +29,9 @@
   .topbar{background:var(--navy-900);border-bottom:1px solid var(--line)}
   .topbar-in{max-width:1080px;margin:0 auto;padding:22px 28px;display:flex;align-items:center;justify-content:space-between}
   .topbar .logo{font-family:'IBM Plex Serif',serif;font-weight:700;font-size:1.4rem;color:#fff;letter-spacing:.01em}
+  .topbar-left{display:flex;flex-direction:column;gap:5px}
+  .topbar .back-link{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#9fb0c0;text-decoration:none;transition:color .2s}
+  .topbar .back-link:hover{color:var(--orange-soft)}
   .topbar .logo .x{color:var(--orange)}
   .topbar .logo .d{font-family:'IBM Plex Sans',sans-serif;font-weight:400;font-size:1.15rem;color:#cdd8e3;margin-left:6px}
   .topbar .seg-tag{font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:#9fb0c0;font-weight:500}
@@ -89,7 +92,7 @@
 
   /* RESULTADO DE NEGOCIO */
   .negocio{background:var(--paper)}
-  .neg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+  .neg-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:44px}
   .neg{background:#fff;border:1px solid var(--line-dark);border-top:3px solid var(--orange);border-radius:6px;padding:28px 26px}
   .neg .nt{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);font-weight:600}
   .neg h3{font-family:'IBM Plex Sans',sans-serif;font-size:1.12rem;font-weight:600;color:var(--navy-700);margin-top:10px}
@@ -142,7 +145,10 @@
 <!-- BARRA DE TOPO -->
 <div class="topbar">
   <div class="topbar-in">
-    <span class="logo">ESP<span class="x">X</span><span class="d">Tecnologia</span></span>
+    <div class="topbar-left">
+      <a href="index.html" class="back-link">&larr; Voltar ao site</a>
+      <span class="logo">ESP<span class="x">X</span><span class="d">Tecnologia</span></span>
+    </div>
     <span class="seg-tag">Educação</span>
   </div>
 </div>
@@ -309,8 +315,8 @@
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">Por que isso importa para o negócio</div>
-      <h2>Operação não é custo de tecnologia. É o que define a margem da escola.</h2>
-      <p>Cada fragilidade operacional tem um efeito direto no resultado. Não em teoria, no caixa do fim do mês.</p>
+      <h2>Operação não é custo de tecnologia. É o que sustenta a margem e abre novas receitas.</h2>
+      <p>Cada fragilidade operacional tem um efeito direto no resultado, e cada evolução pode abrir caminho novo de faturamento. Não em teoria, no caixa do fim do mês.</p>
     </div>
     <div class="neg-grid">
       <div class="neg">
@@ -327,6 +333,11 @@
         <div class="nt">Margem e crescimento</div>
         <h3>Crescer sem que o custo cresça junto</h3>
         <p>Quando cada nova unidade ou turma exige mais esforço manual, a margem encolhe à medida que a escola cresce. Uma operação estruturada permite crescer sem inflar a estrutura, e é aí que o crescimento vira lucro, não só faturamento.</p>
+      </div>
+      <div class="neg" style="border-top-color:var(--orange);background:linear-gradient(160deg,#fff,#fbf3ec)">
+        <div class="nt">Nova receita digital</div>
+        <h3>Monetizar o que a escola já sabe fazer</h3>
+        <p>A mesma operação que ensina pode gerar receita nova em formato digital: cursos preparatórios para ENEM e vestibular, conteúdo complementar, matérias e materiais vendáveis online. Frentes que a escola não conseguia estruturar sozinha, e que a tecnologia viabiliza. É a evolução abrindo faturamento onde antes não havia.</p>
       </div>
     </div>
   </div>
@@ -363,7 +374,7 @@
         <div class="fdot">4</div>
         <div class="when">Continuidade Operacional</div>
         <h3>Evoluir de forma contínua e perceptível</h3>
-        <p>Com a base estável, a ESPX atua como uma camada contínua de evolução conduzida: acompanhamento, priorização, coordenação de fornecedores e melhorias visíveis a cada ciclo. A operação melhora de forma perceptível, e a escola ganha capacidade de crescer sem aumentar o descontrole.</p>
+        <p>Com a base estável, a ESPX atua como uma camada contínua de evolução conduzida: acompanhamento próximo, priorização do que importa, coordenação dos fornecedores e melhorias visíveis a cada ciclo. A operação deixa de andar no improviso e passa a evoluir com direção.</p>
       </div>
     </div>
     <p style="margin-top:36px;font-size:.95rem;color:var(--muted);font-weight:300;max-width:70ch;border-left:2px solid var(--orange);padding-left:18px">A ESPX conduz um número limitado de operações ao mesmo tempo, para garantir profundidade na leitura e continuidade real da evolução de cada cliente.</p>
