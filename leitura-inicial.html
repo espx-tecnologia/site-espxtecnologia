@@ -125,6 +125,17 @@
   margin-right:auto;
 }
 
+
+.company-step{margin-top:20px}
+.company-step input{margin-top:0}
+.scenario-block{margin-top:18px}
+.scenario-label{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);font-weight:600}
+.scenario-hint{color:var(--muted);font-size:.86rem;line-height:1.45;margin-top:5px}
+.scenario-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}
+.scenario-chip{border:1px solid var(--line-dark);background:var(--paper);color:var(--navy-700);border-radius:999px;padding:8px 12px;font-family:'IBM Plex Sans',sans-serif;font-size:.86rem;cursor:pointer;transition:.18s}
+.scenario-chip:hover{border-color:var(--orange);background:#fff}
+.scenario-chip.active{background:var(--navy-700);border-color:var(--navy-700);color:#fff;box-shadow:0 10px 24px -18px rgba(16,42,67,.7)}
+
 </style>
 </head>
 <body>
@@ -155,18 +166,35 @@
         <input type="text" id="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
         <div class="step active" data-idx="0">
-          <div class="qn">Passo 1 de 3</div>
+          <div class="qn">Passo 1 de 4</div>
           <h2>Qual &eacute; o seu nome completo?</h2>
-          <div class="qhint">Nome e sobrenome. Leva menos de 1 minuto.</div>
+          <div class="qhint">Começamos por algumas informações básicas da operação.</div>
           <div class="ip"><input type="text" id="nome" autocomplete="name" placeholder="Seu nome completo" onkeydown="if(event.key==='Enter')next(0)"></div>
           <div class="nav-btns"><button type="button" class="btn btn-next" onclick="next(0)">Continuar</button></div>
         </div>
 
         <div class="step" data-idx="1">
-          <div class="qn">Passo 2 de 3</div>
-          <h2>Qual empresa est&aacute; vivendo esse momento de crescimento?</h2>
-          <div class="qhint">A empresa que vamos analisar no sua leitura inicial.</div>
-          <div class="ip"><input type="text" id="empresa" autocomplete="organization" placeholder="Nome da empresa" onkeydown="if(event.key==='Enter')next(1)"></div>
+          <div class="qn">Passo 2 de 4</div>
+          <h2>Qual operação vamos considerar nesta leitura inicial?</h2>
+          <div class="qhint">Informe a empresa e escolha o cenário operacional que mais se aproxima da realidade atual.</div>
+          <div class="ip company-step">
+            <input type="text" id="empresa" autocomplete="organization" placeholder="Nome da empresa" onkeydown="if(event.key==='Enter')next(1)">
+            <div class="scenario-block">
+              <div class="scenario-label">Cenário operacional</div>
+              <div class="scenario-hint">Ajuda a ESPX a contextualizar melhor os sinais de crescimento, continuidade e desgaste operacional.</div>
+              <div class="scenario-chips" role="radiogroup" aria-label="Cenário operacional">
+                <button type="button" class="scenario-chip" data-value="educacao" onclick="selectScenario(this)">Educação</button>
+                <button type="button" class="scenario-chip" data-value="saude" onclick="selectScenario(this)">Saúde</button>
+                <button type="button" class="scenario-chip" data-value="imobiliario" onclick="selectScenario(this)">Imobiliário</button>
+                <button type="button" class="scenario-chip" data-value="juridico" onclick="selectScenario(this)">Jurídico</button>
+                <button type="button" class="scenario-chip" data-value="multiunidades" onclick="selectScenario(this)">Multiunidades</button>
+                <button type="button" class="scenario-chip" data-value="distribuicao_supply" onclick="selectScenario(this)">Distribuição &amp; Supply</button>
+                <button type="button" class="scenario-chip" data-value="operacoes_criticas" onclick="selectScenario(this)">Operações críticas</button>
+                <button type="button" class="scenario-chip" data-value="outro" onclick="selectScenario(this)">Outro cenário</button>
+              </div>
+              <input type="hidden" id="cenario_operacional" value="">
+            </div>
+          </div>
           <div class="nav-btns"><button type="button" class="btn btn-prev" onclick="go(0)">Voltar</button><button type="button" class="btn btn-next" onclick="next(1)">Continuar</button></div>
         </div>
 
@@ -235,7 +263,7 @@
 
         <div class="ico" id="successIco">&#10003;</div>
         <h2 id="successTitle">Tudo certo!</h2>
-        <p id="successMsg">Enviamos o solicitação de leitura inicial para o seu WhatsApp. S&atilde;o poucas perguntas, cerca de 3 minutinhos.</p>
+        <p id="successMsg">Recebemos sua solicitação de leitura inicial da operação.</p>
     <!--    <a class="wa-fallback" id="waFallback" href="https://wa.me/5521967090786?text=Olá,%20vim%20pela%20Leitura%20Inicial%20da%20ESPX%20Tecnologia%20e%20gostaria%20de%20conversar%20sobre%20a%20minha%20operação." target="_blank" rel="noopener">
           <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C9.46 3 4.1 8.32 4.1 14.86c0 2.1.56 4.16 1.62 5.97L4 29l8.37-1.69a12.03 12.03 0 0 0 3.67.57c6.58 0 11.94-5.32 11.94-11.86S22.62 3 16.04 3z"/></svg>
           Falar com a ESPX no WhatsApp
@@ -262,6 +290,15 @@ const LEAD_ID = 'espx_' + Date.now().toString(36) + '_' + Math.random().toString
 function prog(){const p=Math.round((cur/TOTAL)*100);document.getElementById('pbar').style.width=p+'%';document.getElementById('ppct').textContent=p+'%';}
 function focusStep(i){const st=document.querySelector('.step[data-idx="'+i+'"]');if(!st)return;const f=st.querySelector('input:not([type=checkbox]),select');if(f){setTimeout(function(){f.focus();},120);}}
 function go(i){document.querySelectorAll('.step').forEach(function(s){s.classList.remove('active');});document.querySelector('.step[data-idx="'+i+'"]').classList.add('active');cur=i;prog();focusStep(i);}
+
+function selectScenario(btn){
+  document.querySelectorAll('.scenario-chip').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+  document.getElementById('cenario_operacional').value = btn.dataset.value || '';
+  D.cenario_operacional = btn.dataset.value || '';
+  D.cenario_operacional_label = btn.textContent.trim();
+}
+
 function showErr(t){var e=document.getElementById('errMsg');e.textContent=t;e.style.display='block';setTimeout(function(){e.style.display='none';},3500);}
 
 
@@ -273,7 +310,11 @@ function next(i){
   }
   else if(i===1){
     D.empresa=document.getElementById('empresa').value.trim();
+    D.cenario_operacional=document.getElementById('cenario_operacional').value.trim();
+    const activeScenario=document.querySelector('.scenario-chip.active');
+    D.cenario_operacional_label=activeScenario ? activeScenario.textContent.trim() : "";
     if(D.empresa.length<2){showErr("Informe o nome da empresa.");return;}
+    if(!D.cenario_operacional){showErr("Escolha o cenário operacional mais próximo da sua realidade.");return;}
     go(2);
   }
   else if(i===2){
@@ -337,7 +378,7 @@ async function submitLead(){
     origem:"LP_leitura_inicial_operacao",
     lead_id:LEAD_ID,
     nome:D.nome,empresa:D.empresa,
-    telefone:D.telefone, preferencia_contato:D.preferencia_contato,
+    telefone:D.telefone, preferencia_contato:D.preferencia_contato, cenario_operacional:D.cenario_operacional, cenario_operacional_label:D.cenario_operacional_label,
     consentimento_whatsapp:"sim",consentimento_data:new Date().toISOString(),
     pagina:location.href,website:document.getElementById('website').value.trim()
   };
@@ -352,6 +393,7 @@ async function submitLead(){
 }
 prog();focusStep(0);
 </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"c246d1b5d6ff49a082df6c910c966fae","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"c246d1b5d6ff49a082df6c910c966fae","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
