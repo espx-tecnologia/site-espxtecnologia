@@ -69,6 +69,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 </script>
 
+<!-- Schema.org · Operações atendidas (ItemList) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Operações em crescimento atendidas pela ESPX Tecnologia",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Operação de Educação","url":"https://www.espxtecnologia.com.br/educacao.html"},
+    {"@type":"ListItem","position":2,"name":"Operação de Saúde","url":"https://www.espxtecnologia.com.br/saude.html"},
+    {"@type":"ListItem","position":3,"name":"Operação Imobiliária","url":"https://www.espxtecnologia.com.br/imobiliario.html"},
+    {"@type":"ListItem","position":4,"name":"Operação de Distribuição e Supply","url":"https://www.espxtecnologia.com.br/distribuicao-supply.html"},
+    {"@type":"ListItem","position":5,"name":"Operação Jurídica","url":"https://www.espxtecnologia.com.br/juridico.html"},
+    {"@type":"ListItem","position":6,"name":"Operação Multiunidades","url":"https://www.espxtecnologia.com.br/multiunidades.html"},
+    {"@type":"ListItem","position":7,"name":"Operação Oil & Gas","url":"https://www.espxtecnologia.com.br/oil-gas.html"},
+    {"@type":"ListItem","position":8,"name":"Operação de Contabilidade","url":"https://www.espxtecnologia.com.br/contabilidade.html"}
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -601,7 +620,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .nav-mobile-toggle span:before,.nav-mobile-toggle span:after{content:"";position:absolute;left:0;width:18px;height:2px;background:#fff;transition:.2s}
 .nav-mobile-toggle span:before{top:-6px}.nav-mobile-toggle span:after{top:6px}
 .nav-mobile-toggle:hover{background:rgba(238,108,43,.16);border-color:rgba(238,108,43,.5)}
-.mobile-panel{display:none;position:fixed;left:0;right:0;top:66px;z-index:49;background:rgba(8,19,32,.98);border-bottom:1px solid var(--line);box-shadow:0 24px 70px rgba(0,0,0,.35);padding:18px 28px 24px;backdrop-filter:blur(16px)}
+.mobile-panel{display:none;position:fixed;left:0;right:0;top:66px;z-index:49;background:rgba(8,19,32,.98);border-bottom:1px solid var(--line);box-shadow:0 24px 70px rgba(0,0,0,.35);padding:18px 28px 24px;backdrop-filter:blur(16px);max-height:calc(100vh - 66px);overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
 .mobile-panel.open{display:block;animation:rise .28s ease forwards}
 .mobile-panel .mp-title{font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:12px}
 .mobile-panel .mp-grid{display:grid;grid-template-columns:1fr;gap:8px}
@@ -881,8 +900,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="ops-carousel-shell">
-      <button class="ops-hover-zone left" type="button" aria-label="Ver operação anterior" onmouseenter="startOpsAuto(-1)" onmouseleave="stopOpsAuto()" onclick="moveOps(-1)"><span class="ops-arrow">←</span></button>
-      <button class="ops-hover-zone right" type="button" aria-label="Ver próxima operação" onmouseenter="startOpsAuto(1)" onmouseleave="stopOpsAuto()" onclick="moveOps(1)"><span class="ops-arrow">→</span></button>
+      <button class="ops-hover-zone left" type="button" aria-label="Ver operação anterior" onclick="moveOps(-1)"><span class="ops-arrow">←</span></button>
+      <button class="ops-hover-zone right" type="button" aria-label="Ver próxima operação" onclick="moveOps(1)"><span class="ops-arrow">→</span></button>
       
       <div class="ops-track" id="opsTrack">
         <a class="ops-card" href="educacao.html" data-operation="Educação"><span class="ops-index">Educação</span><h3>Operações educacionais</h3><p>A escola cresceu. Matrículas, mensalidades, comunicação e dados ainda sustentam o próximo nível?</p><ul><li>Matrícula e rematrícula sem mutirão</li><li>Mensalidades e inadimplência com visibilidade</li><li>Comunicação com famílias sem dispersão</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
@@ -892,7 +911,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a class="ops-card" href="juridico.html" data-operation="Jurídico"><span class="ops-index">Jurídico</span><h3>Operações jurídicas</h3><p>Escritórios crescem, carteiras aumentam e prazos, documentos, clientes e financeiro passam a depender de controle rigoroso.</p><ul><li>Prazos, documentos e responsáveis</li><li>Atendimento e jornada do cliente</li><li>Gestão financeira e previsibilidade</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
         <a class="ops-card" href="multiunidades.html" data-operation="Multiunidades"><span class="ops-index">Multiunidades</span><h3>Operações multiunidades</h3><p>A empresa abre novas unidades, mas cada uma começa a operar de um jeito, com dados, processos e padrões difíceis de comparar.</p><ul><li>Padronização entre unidades</li><li>Indicadores consolidados e comparáveis</li><li>Expansão sem aumento do descontrole</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
         <a class="ops-card" href="oil-gas.html" data-operation="Oil & Gas"><span class="ops-index">Oil &amp; Gas</span><h3>Operações críticas</h3><p>Ambientes críticos exigem continuidade, rastreabilidade, fornecedores coordenados e dados confiáveis para decidir.</p><ul><li>Continuidade e risco operacional</li><li>Fornecedores e dependências críticas</li><li>Indicadores executivos e rastreabilidade</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
-        <a class="ops-card" href="contabilidade.html" data-operation="Contabilidade"><span class="ops-index">Contabilidade</span><h3>Operações contábeis</h3><p>exigem previsibilidade, rastreabilidade, conformidade e fluxo confiável de informações para sustentar decisões, prazos e crescimento sem depender do improviso.</p><ul><li>Continuidade e risco operacional</li><li>Dependência de pessoas e processos críticos</li><li>Indicadores executivos e rastreabilidade</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
+        <a class="ops-card" href="contabilidade.html" data-operation="Contabilidade"><span class="ops-index">Contabilidade</span><h3>Operações contábeis</h3><p>A carteira de clientes cresceu, e documentos, prazos e obrigações passam a depender de esforço e improviso para não falhar.</p><ul><li>Recebimento de documentos e clientes</li><li>Prazos, obrigações e conformidade</li><li>Conferência, conciliação e produtividade</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
       </div>
       <div class="ops-mobile-controls" aria-label="Controle mobile dos cenários operacionais"><button type="button" onclick="moveOps(-1)" aria-label="Operação anterior">←</button><span>Arraste para explorar</span><button type="button" onclick="moveOps(1)" aria-label="Próxima operação">→</button></div>
       <div class="ops-dots" id="opsDots" aria-hidden="true"></div>
@@ -1033,8 +1052,8 @@ document.addEventListener('keydown',function(e){
   function shuffleOnce(){const t=getTrack(); if(!t||opsInitialized) return; const cards=Array.from(t.querySelectorAll('.ops-card')); for(let i=cards.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1)); [cards[i],cards[j]]=[cards[j],cards[i]]} cards.forEach(c=>t.appendChild(c)); t.scrollLeft=0; opsInitialized=true}
   function buildDots(){const t=getTrack(), d=document.getElementById('opsDots'); if(!t||!d) return; d.innerHTML=''; Array.from(t.querySelectorAll('.ops-card')).forEach(function(card,index){const b=document.createElement('button'); b.type='button'; b.setAttribute('aria-label','Ir para '+(card.dataset.operation||'operação')); b.addEventListener('click',function(){t.scrollTo({left:index*getStep(),behavior:'smooth'}); setTimeout(updateDots,260)}); d.appendChild(b)}); updateDots()}
   function updateDots(){const t=getTrack(), d=document.getElementById('opsDots'), step=getStep(); if(!t||!d||!step) return; const active=Math.max(0,Math.min(d.children.length-1,Math.round(t.scrollLeft/step))); Array.from(d.children).forEach((dot,i)=>dot.classList.toggle('active',i===active))}
-  window.moveOps=function(direction){const t=getTrack(), step=getStep(); if(!t||!step) return; const max=t.scrollWidth-t.clientWidth; const end=t.scrollLeft>=max-10; const start=t.scrollLeft<=10; if(direction>0&&end){t.scrollTo({left:0,behavior:'smooth'})}else if(direction<0&&start){t.scrollTo({left:max,behavior:'smooth'})}else{t.scrollBy({left:direction*step,behavior:'smooth'})} setTimeout(updateDots,300)}
-  window.startOpsAuto=function(direction){window.stopOpsAuto(); opsAutoTimer=window.setInterval(()=>window.moveOps(direction),850)}
+  window.moveOps=function(direction){const t=getTrack(), step=getStep(); if(!t||!step) return; const max=t.scrollWidth-t.clientWidth; const target=Math.max(0,Math.min(max,t.scrollLeft+direction*step)); t.scrollTo({left:target,behavior:'smooth'}); setTimeout(updateDots,300)}
+  window.startOpsAuto=function(){};
   window.stopOpsAuto=function(){if(opsAutoTimer){window.clearInterval(opsAutoTimer); opsAutoTimer=null}}
   document.addEventListener('DOMContentLoaded',function(){shuffleOnce(); buildDots(); const t=getTrack(); if(t){t.addEventListener('scroll',()=>window.requestAnimationFrame(updateDots),{passive:true})}})
 })();
@@ -1060,6 +1079,5 @@ document.querySelectorAll('#mobilePanel a').forEach(function(a){
 });
 </script>
 
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"c246d1b5d6ff49a082df6c910c966fae","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
