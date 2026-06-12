@@ -142,8 +142,7 @@
 const OK="https://automation.espxtecnologia.com.br/webhook/coleta";
 const SEC_HEADER="ESPX_2026_f8K29xP4mQ7zL@";
 const params=new URLSearchParams(location.search);
-const INBOUND_LEAD_ID=params.get('lead')||params.get('id')||'';
-const LEAD_ID=INBOUND_LEAD_ID || ('espx_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2,8));
+const LEAD_ID='espx_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2,8);
 // ==================================================
 
 const STEPS=[
@@ -407,8 +406,7 @@ function trackingData(){
     utm_term:params.get('utm_term')||'',
     referrer:document.referrer||'',
     pagina:location.href,
-    path:location.pathname,
-    lead_id_herdado:INBOUND_LEAD_ID?true:false
+    path:location.pathname
   };
 }
 
@@ -454,7 +452,6 @@ async function submitAll(){
 
   var payload={
     lead_id:LEAD_ID,
-    lead_id_entrada:INBOUND_LEAD_ID,
     origem:'coleta_guiada_leitura_inicial',
 
     nome:CONTACT.nome,
@@ -503,6 +500,7 @@ async function submitAll(){
 
 prog();
 </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"c246d1b5d6ff49a082df6c910c966fae","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"c246d1b5d6ff49a082df6c910c966fae","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"c246d1b5d6ff49a082df6c910c966fae","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
