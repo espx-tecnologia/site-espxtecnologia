@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pré Raio-X Operacional Gratuito | ESPX Tecnologia</title>
+<title>Coleta guiada da leitura inicial | ESPX Tecnologia</title>
 <meta name="robots" content="noindex">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><rect width='120' height='120' rx='26' fill='%23102A43'/><text x='60' y='84' font-size='74' font-weight='700' fill='%23EE6C2B' text-anchor='middle' font-family='Georgia,serif'>X</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,16 +14,22 @@
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:'IBM Plex Sans',sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
   h1,h2,h3{font-family:'IBM Plex Serif',serif;line-height:1.15;letter-spacing:-.01em}
-  .wrap{max-width:680px;margin:0 auto;padding:0 22px}
-  .top{background:var(--navy-d);color:#fff;padding:30px 0 28px}
-  .top .logo{font-family:'IBM Plex Serif',serif;font-weight:700;font-size:1.2rem}
-  .top .logo .x{color:var(--orange)}
-  .top .logo .desc{font-family:'IBM Plex Sans',sans-serif;font-weight:400;font-size:.9rem;color:#b9c6d4}
-  .top h1{font-size:1.55rem;color:#fff;margin-top:16px}
-  .top .sub{color:#b9c6d4;font-size:.95rem;margin-top:8px;font-weight:300}
-  .method-frame{display:flex;gap:12px;align-items:flex-start;margin-top:20px;background:rgba(238,108,43,.08);border:1px solid rgba(238,108,43,.25);border-radius:10px;padding:15px 17px}
+  .wrap{max-width:720px;margin:0 auto;padding:0 22px}
+  .top{background:var(--navy-d);color:#fff;padding:30px 0 30px;position:relative;overflow:hidden}
+  .top:before{content:"";position:absolute;inset:0;background:radial-gradient(720px 360px at 82% -10%,rgba(238,108,43,.18),transparent 62%),radial-gradient(620px 480px at 0% 110%,rgba(59,110,165,.18),transparent 58%)}
+  .top .wrap{position:relative;z-index:2}
+  .topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:18px}
+  .logo{font-family:'IBM Plex Serif',serif;font-weight:700;font-size:1.2rem;color:#fff}
+  .logo .x{color:var(--orange)}
+  .logo .desc{font-family:'IBM Plex Sans',sans-serif;font-weight:400;font-size:.9rem;color:#b9c6d4}
+  .back-link{font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#9fb0c0;text-decoration:none;white-space:nowrap}
+  .back-link:hover{color:var(--orange-soft)}
+  .top h1{font-size:clamp(1.65rem,4.6vw,2.25rem);color:#fff;margin-top:16px;max-width:15ch}
+  .top .sub{color:#b9c6d4;font-size:1rem;margin-top:10px;font-weight:300;max-width:58ch}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);font-weight:600}
+  .method-frame{display:flex;gap:12px;align-items:flex-start;margin-top:22px;background:rgba(238,108,43,.08);border:1px solid rgba(238,108,43,.25);border-radius:12px;padding:16px 17px}
   .method-frame .badge{font-family:'IBM Plex Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);font-weight:600;border:1px solid var(--orange);border-radius:20px;padding:4px 10px;white-space:nowrap;flex-shrink:0;margin-top:2px}
-  .method-frame p{color:#cdd8e3;font-size:.86rem;margin:0;line-height:1.55}
+  .method-frame p{color:#cdd8e3;font-size:.88rem;margin:0;line-height:1.55}
   .method-frame strong{color:#fff;font-weight:500}
   .privacy{display:flex;gap:10px;align-items:flex-start;margin-top:14px;padding:0 2px}
   .privacy .lock{color:var(--orange-soft);font-size:.95rem;flex-shrink:0;margin-top:1px}
@@ -33,28 +39,29 @@
   .progress-wrap .wrap{display:flex;align-items:center;gap:14px}
   .ptrack{flex:1;height:8px;background:var(--paper-2);border-radius:5px;overflow:hidden}
   .ptrack>i{display:block;height:100%;width:0;background:var(--orange);border-radius:5px;transition:width .4s ease}
-  .ppct{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:.82rem;color:var(--navy);min-width:38px;text-align:right}
+  .ppct{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:.8rem;color:var(--navy);min-width:72px;text-align:right;white-space:nowrap}
   main{padding:28px 0 60px}
   .step{display:none}
-  .step.active{display:block;animation:fade .4s ease}
+  .step.active{display:block;animation:fade .35s ease}
   @keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-  .qcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;margin-bottom:16px;box-shadow:0 12px 30px -24px rgba(16,42,67,.4)}
+  .qcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;margin-bottom:16px;box-shadow:0 14px 34px -26px rgba(16,42,67,.45)}
   .qcard .dim{font-family:'IBM Plex Mono',monospace;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);font-weight:600}
-  .qcard h3{font-family:'IBM Plex Sans',sans-serif;font-size:1.2rem;font-weight:600;margin-top:8px;color:var(--navy);line-height:1.3}
-  .qcard .hint{font-size:.85rem;color:var(--muted);margin-top:6px}
+  .qcard h3{font-family:'IBM Plex Sans',sans-serif;font-size:1.24rem;font-weight:600;margin-top:8px;color:var(--navy);line-height:1.32}
+  .qcard .hint{font-size:.88rem;color:var(--muted);margin-top:7px}
   .opts{margin-top:18px;display:flex;flex-direction:column;gap:9px}
-  .opt{display:flex;align-items:center;gap:12px;padding:15px 16px;border:1px solid var(--line);border-radius:9px;cursor:pointer;background:var(--soft);transition:.15s;font-size:.97rem;min-height:54px}
-  .opt:hover{border-color:var(--orange)}
-  .opt.sel{border-color:var(--orange);background:#fdf3ec}
-  .opt .mk{width:22px;height:22px;border-radius:6px;border:2px solid var(--line);flex-shrink:0;transition:.15s;position:relative}
+  .opt{display:flex;align-items:flex-start;gap:12px;padding:15px 16px;border:1px solid var(--line);border-radius:10px;cursor:pointer;background:var(--soft);transition:.15s;font-size:.97rem;min-height:54px}
+  .opt:hover{border-color:var(--orange);background:#fff}
+  .opt.sel{border-color:var(--orange);background:#fff7f1;box-shadow:0 14px 28px -24px rgba(238,108,43,.8)}
+  .opt .mk{width:22px;height:22px;border-radius:6px;border:2px solid var(--line);flex-shrink:0;transition:.15s;position:relative;margin-top:1px;background:#fff}
   .opt.sel .mk{border-color:var(--orange);background:var(--orange)}
   .opt.sel .mk:after{content:"\2713";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.82rem;font-weight:700}
   .opt.single .mk{border-radius:50%}
   .opt.single.sel .mk:after{content:"";inset:5px;border-radius:50%;background:#fff}
+  .opt span.txt{display:block;line-height:1.38;color:#23313d}
   .multi-hint{font-size:.78rem;color:var(--orange);font-family:'IBM Plex Mono',monospace;margin-top:13px;letter-spacing:.02em}
   .obs{margin-top:15px}
   .obs label{font-size:.74rem;color:var(--muted);font-family:'IBM Plex Mono',monospace;letter-spacing:.03em}
-  .obs textarea{width:100%;font-family:'IBM Plex Sans',sans-serif;font-size:.96rem;color:var(--ink);background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin-top:7px;min-height:52px;line-height:1.5;resize:vertical;transition:.15s}
+  .obs textarea{width:100%;font-family:'IBM Plex Sans',sans-serif;font-size:.96rem;color:var(--ink);background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin-top:7px;min-height:58px;line-height:1.5;resize:vertical;transition:.15s}
   .obs textarea:focus{outline:none;border-color:var(--orange);background:#fff;box-shadow:0 0 0 3px rgba(238,108,43,.1)}
   .nav-btns{display:flex;justify-content:space-between;gap:12px;margin-top:4px}
   .btn{font-family:'IBM Plex Sans',sans-serif;font-weight:600;font-size:1rem;padding:15px 26px;border-radius:8px;cursor:pointer;border:1px solid transparent;transition:.2s}
@@ -68,29 +75,48 @@
   .done .ico{width:70px;height:70px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:2.2rem;margin:0 auto 20px}
   .done h2{color:var(--navy);font-size:1.5rem}
   .done .lead{color:var(--ink);margin-top:14px;font-size:1.05rem;font-weight:500}
-  .done p{color:var(--muted);margin-top:10px;font-size:.98rem;max-width:52ch;margin-left:auto;margin-right:auto}
+  .done p{color:var(--muted);margin-top:10px;font-size:.98rem;max-width:54ch;margin-left:auto;margin-right:auto}
   .done .badge{display:inline-block;margin-top:20px;font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);border:1px solid var(--orange);border-radius:20px;padding:8px 16px}
-  .done .wa-fallback{display:none;align-items:center;gap:9px;margin:22px auto 0;background:#25D366;color:#fff;font-weight:600;font-size:.95rem;padding:13px 22px;border-radius:8px;transition:.2s;width:fit-content}
+  .done .wa-fallback{display:none;align-items:center;gap:9px;margin:22px auto 0;background:#25D366;color:#fff;font-weight:600;font-size:.95rem;padding:13px 22px;border-radius:8px;transition:.2s;width:fit-content;text-decoration:none}
   .done .wa-fallback.show{display:inline-flex}
   .done .wa-fallback svg{width:20px;height:20px;fill:currentColor}
   .hp{position:absolute;left:-9999px;opacity:0}
   .lgpd-foot{text-align:center;color:var(--muted);font-size:.78rem;padding:18px 0 50px;line-height:1.6}
+  @media(max-width:720px){.topbar{align-items:flex-start;flex-direction:column}.back-link{font-size:.64rem}.method-frame{display:block}.method-frame .badge{display:inline-block;margin-bottom:10px}.qcard{padding:22px}.btn{width:100%}.nav-btns{flex-direction:column}.btn-next{margin-left:0}}
+
+  .contact-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:20px}
+  .field label{display:block;font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);font-weight:600;margin-bottom:7px}
+  .field input{width:100%;font-family:'IBM Plex Sans',sans-serif;font-size:1rem;color:var(--ink);background:var(--soft);border:1px solid var(--line);border-radius:9px;padding:14px 13px;transition:.15s}
+  .field input:focus{outline:none;border-color:var(--orange);background:#fff;box-shadow:0 0 0 3px rgba(238,108,43,.1)}
+  .field small{display:block;color:var(--muted);font-size:.8rem;margin-top:5px;line-height:1.4}
+  .scenario-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+  .scenario-chip{border:1px solid var(--line);background:var(--soft);color:var(--navy);border-radius:999px;padding:8px 12px;font-family:'IBM Plex Sans',sans-serif;font-size:.86rem;cursor:pointer;transition:.18s}
+  .scenario-chip:hover{border-color:var(--orange);background:#fff}
+  .scenario-chip.active{background:var(--navy);border-color:var(--navy);color:#fff}
+  .other-scenario{display:none;margin-top:10px}
+  .other-scenario.show{display:block}
+  .contact-note{background:#fff7f1;border:1px solid rgba(238,108,43,.25);border-radius:10px;padding:13px 14px;color:#5f6872;font-size:.88rem;margin-top:14px}
+
 </style>
 </head>
 <body>
 <div class="top"><div class="wrap">
-  <div class="logo">ESP<span class="x">X</span> <span class="desc">Tecnologia</span></div>
-  <h1>Pr&eacute; Raio-X Operacional</h1>
-  <p class="sub">Poucas perguntas, cerca de 3 minutos.</p>
-  <div class="method-frame">
-    <span class="badge">7 dimens&otilde;es</span>
-    <p>Empresas em crescimento normalmente n&atilde;o percebem os sinais de desgaste operacional at&eacute; que eles afetem <strong>margem, efici&ecirc;ncia e capacidade de evolu&ccedil;&atilde;o</strong>. As pr&oacute;ximas perguntas analisam os pontos que sustentam continuidade, crescimento e previsibilidade da sua opera&ccedil;&atilde;o.</p>
+  <div class="topbar">
+    <a href="index.html" class="back-link">&larr; Voltar ao site</a>
+    <span class="logo">ESP<span class="x">X</span> <span class="desc">Tecnologia</span></span>
   </div>
-  <div class="privacy"><span class="lock">&#128274;</span><p><strong>Ambiente seguro.</strong> Suas respostas servem apenas para gerar o seu relat&oacute;rio. N&atilde;o compartilhamos com terceiros nem vendemos seus dados, e voc&ecirc; pode pedir a exclus&atilde;o quando quiser. Tratamento conforme a LGPD.</p></div>
+  <div class="eyebrow">Leitura Inicial Operacional</div>
+  <h1>Uma coleta guiada das tensões invisíveis da sua operação.</h1>
+  <p class="sub">Responda algumas escolhas estratégicas, sem cadastro inicial. Ao final, você informa para onde enviamos sua leitura preliminar.</p>
+  <div class="method-frame">
+    <span class="badge">Método ESPX</span>
+    <p>As respostas geram uma visão preliminar por dimensões internas como <strong>continuidade, dados, dependências, eficiência, custos, segurança e capacidade de crescimento</strong>, mantendo a experiência leve e executiva.</p>
+  </div>
+  <div class="privacy"><span class="lock">&#128274;</span><p><strong>Ambiente seguro.</strong> Suas respostas servem apenas para gerar sua leitura inicial. Não compartilhamos com terceiros nem vendemos seus dados. Tratamento conforme a LGPD.</p></div>
 </div></div>
 
 <div class="progress-wrap"><div class="wrap">
-  <div class="ptrack"><i id="pbar"></i></div><div class="ppct" id="ppct">0%</div>
+  <div class="ptrack"><i id="pbar"></i></div><div class="ppct" id="ppct">1 de 5</div>
 </div></div>
 
 <main><div class="wrap">
@@ -99,16 +125,16 @@
   <div id="steps"></div>
   <div class="done" id="doneView">
     <div class="ico" id="doneIco">&#10003;</div>
-    <h2 id="doneTitle">Seu pr&eacute;-diagn&oacute;stico foi registrado.</h2>
-    <p class="lead" id="doneLead">Empresas em crescimento costumam apresentar gargalos invis&iacute;veis antes que eles virem problemas vis&iacute;veis.</p>
-    <p id="doneMsg">Vamos analisar os sinais identificados na sua opera&ccedil;&atilde;o e preparar uma leitura inicial dos principais pontos de aten&ccedil;&atilde;o. Seu relat&oacute;rio chega no WhatsApp em breve.</p>
-    <div class="badge" id="doneBadge">Analisando os sinais da sua opera&ccedil;&atilde;o</div>
-<!--     <a class="wa-fallback" id="waFallback" href="https://wa.me/5521967090786?text=Ol%C3%A1%2C%20conclu%C3%AD%20meu%20pr%C3%A9-diagn%C3%B3stico%20no%20site%20da%20ESPX%20e%20quero%20receber%20o%20relat%C3%B3rio." target="_blank" rel="noopener">
+    <h2 id="doneTitle">Sua leitura guiada foi registrada.</h2>
+    <p class="lead" id="doneLead">Agora vamos cruzar os sinais para gerar uma visão preliminar da sua operação.</p>
+    <p id="doneMsg">A ESPX analisará as tensões marcadas, os pontos de maior dor e os comentários opcionais para indicar caminhos iniciais antes do Raio-X Operacional completo.</p>
+    <div class="badge" id="doneBadge">Analisando tensões invisíveis da operação</div>
+    <a class="wa-fallback" id="waFallback" href="https://wa.me/5521967090786?text=Ol%C3%A1%2C%20conclu%C3%AD%20meu%20Pr%C3%A9%20Raio-X%20Operacional%20no%20site%20da%20ESPX%20e%20quero%20receber%20minha%20leitura." target="_blank" rel="noopener">
       <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C9.46 3 4.1 8.32 4.1 14.86c0 2.1.56 4.16 1.62 5.97L4 29l8.37-1.69a12.03 12.03 0 0 0 3.67.57c6.58 0 11.94-5.32 11.94-11.86S22.62 3 16.04 3z"/></svg>
       Falar com a ESPX no WhatsApp
-    </a> -->
-  </div>    
-  <div class="lgpd-foot">Seus dados s&atilde;o tratados conforme a LGPD e usados somente para a gera&ccedil;&atilde;o do seu pr&eacute;-diagn&oacute;stico.</div>
+    </a>
+  </div>
+  <div class="lgpd-foot">Seus dados são tratados conforme a LGPD e usados somente para geração da sua leitura preliminar.</div>
 </div></main>
 
 <script>
@@ -116,188 +142,377 @@
 const OK="https://automation.espxtecnologia.com.br/webhook/coleta";
 const SEC_HEADER="ESPX_2026_f8K29xP4mQ7zL@";
 const params=new URLSearchParams(location.search);
-const LEAD_ID=params.get('lead')||params.get('id')||'';
+const INBOUND_LEAD_ID=params.get('lead')||params.get('id')||'';
+const LEAD_ID=INBOUND_LEAD_ID || ('espx_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2,8));
 // ==================================================
 
-/*
-  7 perguntas. Projetivas (descrever, nao confessar). Pesos OCULTOS por dimensao (w), 0 a 2.
-  Dimensoes: CON DAD DEP SEG EFI CUS CRE.
-  P1 pessoas (porte operacional). P2 e P6 multipla escolha. Demais, unica.
-  Custo coberto em P2 (opcao nova) e P7 (peso oculto), alem do sono.
-*/
 const STEPS=[
- {key:"pessoas",dim:"Porte operacional",multi:false,required:true,
-  q:"Hoje, aproximadamente quantas pessoas participam da operação da sua empresa?",
-  hint:"Ajuda a contextualizar a leitura do seu pré-diagnóstico.",
+ {key:"energia",dim:"Energia operacional",multi:true,required:true,
+  q:"Hoje, o que mais consome energia da liderança ou da operação?",
+  hint:"Marque tudo que aparece com frequência. Operações reais quase nunca têm uma causa só.",
+  obs:"Quer contextualizar onde isso mais aparece? (opcional)",
   choices:[
-    {t:"Até 5 pessoas",w:{}},
-    {t:"6 a 20 pessoas",w:{CON:1}},
-    {t:"21 a 50 pessoas",w:{DEP:1,CRE:1}},
-    {t:"51 a 100 pessoas",w:{DEP:1,CRE:1,CON:1}},
-    {t:"Mais de 100 pessoas",w:{DEP:1,CRE:1,CON:1}},
+    {t:"Retrabalho e correções constantes",w:{EFI:2,DAD:1}},
+    {t:"Sensação de estar sempre apagando incêndio",w:{CON:2,EFI:1}},
+    {t:"Excesso de esforço manual",w:{EFI:2,CUS:1}},
+    {t:"Áreas que não se alinham direito",w:{DAD:1,EFI:1}},
+    {t:"Sistemas que não conversam como deveriam",w:{DAD:2,EFI:1}},
+    {t:"Dependência de pessoas específicas",w:{DEP:2,CON:1}},
+    {t:"Falta de visibilidade para decidir",w:{DAD:2}},
+    {t:"Crescimento acontecendo no improviso",w:{CRE:2,CON:1}}
   ]},
 
- {key:"energia",dim:"Operação",multi:true,required:true,
-  q:"Hoje, o que mais consome energia da sua operação?",
-  hint:"Pode marcar mais de uma. Seja honesto, é o que mais ajuda no seu retrato.",
+ {key:"sono",dim:"O que tira o sono",multi:true,required:true,
+  q:"Se nada mudar nos próximos 12 meses, o que mais preocupa você?",
+  hint:"Essa pergunta ajuda a diferenciar incômodo operacional de risco real para o negócio.",
+  obs:"Quer explicar o que mais preocupa? (opcional)",
   choices:[
-    {t:"Retrabalho e correções",w:{EFI:2,DAD:1}},
-    {t:"Desalinhamento entre áreas",w:{EFI:1,DAD:1}},
-    {t:"Excesso de esforço manual",w:{EFI:2}},
-    {t:"Dependência de pessoas específicas",w:{DEP:2}},
-    {t:"Custos de tecnologia que não param de subir",w:{CUS:2}},
-    {t:"Falta de previsibilidade",w:{CON:1,DAD:1}},
-    {t:"Crescimento desorganizado",w:{CRE:2}},
-  ]},
-
- {key:"sono",dim:"O que tira o sono",multi:false,required:true,
-  q:"O que mais tira seu sono em relação ao crescimento da empresa?",
-  hint:"Escolha o que mais pesa hoje.",
-  choices:[
-    {t:"Perder o controle da operação",w:{CON:2,DAD:1}},
+    {t:"Perder controle conforme a empresa cresce",w:{CRE:2,CON:1}},
     {t:"Aumentar custo sem ganhar eficiência",w:{CUS:2,EFI:1}},
-    {t:"Depender demais de pessoas-chave",w:{DEP:2}},
-    {t:"Não conseguir integrar áreas e processos",w:{EFI:1,DAD:1}},
-    {t:"Não sustentar o crescimento atual",w:{CRE:2,CON:1}},
-    {t:"Não ter visibilidade clara da operação",w:{DAD:2}},
+    {t:"Ficar refém de pessoas-chave",w:{DEP:2}},
+    {t:"Falhas começarem a impactar cliente ou receita",w:{CON:2,SEG:1}},
+    {t:"Não saber onde a operação realmente está travando",w:{DAD:2}},
+    {t:"Não conseguir escalar sem aumentar muito o esforço",w:{CRE:2,EFI:1}},
+    {t:"Decidir com dados pouco confiáveis",w:{DAD:2}},
+    {t:"Crescer e perder margem no caminho",w:{CUS:2,EFI:1,CRE:1}}
   ]},
 
- {key:"reacao",dim:"Quando algo dá errado",multi:false,required:true,
-  q:"Quando um problema importante acontece, a sua empresa normalmente:",
+ {key:"perda",dim:"Tempo, dinheiro e margem",multi:true,required:true,
+  q:"Onde você sente que a empresa mais perde tempo, dinheiro ou margem hoje?",
+  hint:"Pense no que, se fosse resolvido, liberaria tempo da equipe, reduziria custo ou melhoraria previsibilidade.",
+  obs:"Quer dar um exemplo real? (opcional)",
   choices:[
-    {t:"Resolve rápido e segue",w:{}},
-    {t:"Depende de pessoas específicas para resolver",w:{DEP:2}},
-    {t:"Perde tempo até entender a origem",w:{DAD:1,CON:1}},
-    {t:"Vê o problema espalhar para outras áreas",w:{CON:2}},
-    {t:"Só percebe quando já afetou cliente ou receita",w:{CON:2,SEG:1}},
+    {t:"Processos manuais repetitivos",w:{EFI:2,CUS:1}},
+    {t:"Planilhas e controles paralelos",w:{DAD:2,EFI:1}},
+    {t:"Conferências, revisões e correções",w:{EFI:2,DAD:1}},
+    {t:"Comunicação espalhada em muitos lugares",w:{EFI:1,DAD:1}},
+    {t:"Ferramentas pagas que não geram clareza",w:{CUS:2,DAD:1}},
+    {t:"Pedidos, demandas ou tarefas sem rastreabilidade",w:{CON:1,DAD:1}},
+    {t:"Fornecedores ou parceiros difíceis de coordenar",w:{DEP:1,CON:1}},
+    {t:"Tempo da liderança preso em problemas operacionais",w:{EFI:2,CRE:1}}
   ]},
 
- {key:"seguranca",dim:"Controle e proteção",multi:false,required:true,
-  q:"Sobre os dados e acessos da empresa, você diria que:",
+ {key:"quebra",dim:"Capacidade de crescimento",multi:true,required:true,
+  q:"Se a operação dobrasse de tamanho amanhã, o que provavelmente começaria a quebrar primeiro?",
+  hint:"Essa pergunta costuma revelar a diferença entre crescer e sustentar crescimento.",
+  obs:"Quer explicar o que você acha que não aguentaria? (opcional)",
   choices:[
-    {t:"Estão bem protegidos e controlados",w:{}},
-    {t:"Funcionam, mas tenho dúvidas sobre a proteção",w:{SEG:1}},
-    {t:"Há acessos e senhas sem muito controle",w:{SEG:2,DEP:1}},
-    {t:"Nunca paramos para olhar isso com cuidado",w:{SEG:2}},
+    {t:"Atendimento ou relacionamento com clientes",w:{CON:1,CRE:1}},
+    {t:"Gestão de prazos, demandas ou entregas",w:{EFI:1,CON:1}},
+    {t:"Controle financeiro, cobrança ou repasses",w:{DAD:1,CUS:1,CON:1}},
+    {t:"Indicadores e visão de resultado",w:{DAD:2}},
+    {t:"Capacidade da equipe atual",w:{CRE:2,EFI:1}},
+    {t:"Sistemas, integrações ou infraestrutura",w:{CON:2,EFI:1}},
+    {t:"Padronização entre áreas ou unidades",w:{CRE:2,DAD:1}},
+    {t:"Provavelmente não sabemos onde quebraria",w:{DAD:2,CRE:1,CON:1}}
   ]},
 
- {key:"dependencias",dim:"Do que a operação depende",multi:true,required:true,
-  q:"Hoje, a sua operação depende fortemente de:",
-  hint:"Pode marcar mais de uma.",
+ {key:"prioridade",dim:"Prioridade executiva",multi:true,required:true,
+  q:"Se pudesse resolver algumas frentes agora, quais trariam mais ganho para a empresa?",
+  hint:"Escolha as frentes que mais destravariam tempo, dinheiro, controle ou crescimento.",
+  obs:"Quer indicar uma prioridade que não apareceu nas opções? (opcional)",
   choices:[
-    {t:"Conhecimento que só algumas pessoas têm",w:{DEP:2}},
-    {t:"Processos manuais",w:{EFI:2}},
-    {t:"Controles e planilhas paralelas",w:{DAD:2,EFI:1}},
-    {t:"Integrações improvisadas",w:{EFI:1,DAD:1}},
-    {t:"Fornecedores descentralizados",w:{DEP:1,CON:1}},
-    {t:"Esforço operacional excessivo",w:{EFI:2,CRE:1}},
-  ]},
-
- {key:"futuro",dim:"Projeção de crescimento",multi:false,required:true,
-  q:"Se a sua operação dobrasse de tamanho nos próximos 12 meses, hoje ela estaria preparada?",
-  hint:"Essa é a pergunta que mais revela.",
-  choices:[
-    {t:"Sim, a estrutura acompanha bem",w:{}},
-    {t:"Parcialmente, algumas áreas apertariam",w:{CRE:1,CON:1}},
-    {t:"Não com a estrutura atual",w:{CRE:2,CON:1,CUS:1}},
-    {t:"Sinceramente, não sabemos",w:{CRE:2,DAD:1,CUS:1}},
-  ]},
+    {t:"Reduzir retrabalho e esforço manual",w:{EFI:2,CUS:1}},
+    {t:"Confiar mais nos dados para decidir",w:{DAD:2}},
+    {t:"Organizar processos e responsáveis",w:{EFI:1,DEP:1}},
+    {t:"Diminuir dependência de pessoas específicas",w:{DEP:2}},
+    {t:"Integrar melhor sistemas e áreas",w:{DAD:1,EFI:1}},
+    {t:"Melhorar continuidade e reduzir risco de parada",w:{CON:2}},
+    {t:"Controlar custos e eliminar desperdícios",w:{CUS:2}},
+    {t:"Preparar a operação para crescer com menos caos",w:{CRE:2,CON:1}}
+  ]}
 ];
 
-const RESP={};const WSUM={};const OBS={};let cur=0;
+const RESP={};
+const WSUM={};
+const OBS={};
+const CONTACT={};
+let cur=0;
+const TOTAL_STEPS=STEPS.length+1;
 const stepsWrap=document.getElementById('steps');
+
 STEPS.forEach(function(s,i){
-  var div=document.createElement('div');div.className='step'+(i===0?' active':'');div.dataset.idx=i;
+  var div=document.createElement('div');
+  div.className='step'+(i===0?' active':'');
+  div.dataset.idx=i;
   var inner='<div class="qcard"><div class="dim">'+s.dim+'</div><h3>'+s.q+'</h3>';
   if(s.hint)inner+='<div class="hint">'+s.hint+'</div>';
   inner+='<div class="opts">';
   s.choices.forEach(function(c,ci){
-    inner+='<div class="opt '+(s.multi?'multi':'single')+'" data-ci="'+ci+'" onclick="pick('+i+','+ci+',this,'+(s.multi?'true':'false')+')"><span class="mk"></span><span>'+c.t+'</span></div>';
+    inner+='<div class="opt '+(s.multi?'multi':'single')+'" data-ci="'+ci+'" onclick="pick('+i+','+ci+',this,'+(s.multi?'true':'false')+')"><span class="mk"></span><span class="txt">'+c.t+'</span></div>';
   });
   inner+='</div>';
   if(s.multi)inner+='<div class="multi-hint">Pode marcar mais de uma opção</div>';
-  inner+='<div class="obs"><label>Quer detalhar? (opcional, ajuda no seu relatório)</label><textarea oninput="setObs('+i+',this.value)" placeholder="Escreva o que quiser sobre este ponto..."></textarea></div>';
+  inner+='<div class="obs"><label>'+(s.obs||'Quer detalhar? (opcional)')+'</label><textarea oninput="setObs('+i+',this.value)" placeholder="Escreva aqui apenas se quiser contextualizar melhor..."></textarea></div>';
   inner+='</div><div class="nav-btns">';
   if(i>0)inner+='<button type="button" class="btn btn-prev" onclick="go('+(i-1)+')">Voltar</button>';
-  var last=i===STEPS.length-1;
-  inner+='<button type="button" class="btn btn-next" id="next_'+i+'" onclick="next('+i+')">'+(last?'Gerar meu pré-diagnóstico':'Continuar')+'</button>';
+  inner+='<button type="button" class="btn btn-next" onclick="next('+i+')">Continuar</button>';
   inner+='</div>';
-  div.innerHTML=inner;stepsWrap.appendChild(div);
+  div.innerHTML=inner;
+  stepsWrap.appendChild(div);
 });
 
-function prog(){var p=Math.round((cur/STEPS.length)*100);document.getElementById('pbar').style.width=p+'%';document.getElementById('ppct').textContent=p+'%';}
-function go(i){document.querySelectorAll('.step').forEach(function(s){s.classList.remove('active');});document.querySelector('.step[data-idx="'+i+'"]').classList.add('active');cur=i;prog();window.scrollTo({top:0,behavior:'smooth'});}
-function showErr(t){var e=document.getElementById('errMsg');e.textContent=t;e.style.display='block';setTimeout(function(){e.style.display='none';},3000);window.scrollTo({top:0,behavior:'smooth'});}
+function buildContactStep(){
+  var i=STEPS.length;
+  var div=document.createElement('div');
+  div.className='step';
+  div.dataset.idx=i;
+  div.innerHTML=`
+    <div class="qcard">
+      <div class="dim">Recebimento da leitura</div>
+      <h3>Para onde enviamos sua leitura preliminar?</h3>
+      <div class="hint">Agora que você já sinalizou as tensões da operação, precisamos dos dados mínimos para enviar a leitura e manter a rastreabilidade comercial.</div>
+      <div class="contact-grid">
+        <div class="field">
+          <label>Nome completo *</label>
+          <input type="text" id="nome" autocomplete="name" placeholder="Seu nome completo">
+        </div>
+        <div class="field">
+          <label>WhatsApp *</label>
+          <input type="tel" id="telefone" autocomplete="tel" inputmode="tel" placeholder="(21) 99999-9999">
+          <small>Usaremos esse canal para enviar a leitura preliminar e combinar o próximo passo, se fizer sentido.</small>
+        </div>
+        <div class="field">
+          <label>Empresa *</label>
+          <input type="text" id="empresa" autocomplete="organization" placeholder="Nome da empresa">
+        </div>
+        <div class="field">
+          <label>Cenário da operação *</label>
+          <div class="scenario-chips" role="radiogroup" aria-label="Cenário operacional">
+            <button type="button" class="scenario-chip" data-value="educacao" onclick="selectScenario(this)">Educação</button>
+            <button type="button" class="scenario-chip" data-value="saude" onclick="selectScenario(this)">Saúde</button>
+            <button type="button" class="scenario-chip" data-value="imobiliario" onclick="selectScenario(this)">Imobiliário</button>
+            <button type="button" class="scenario-chip" data-value="juridico" onclick="selectScenario(this)">Jurídico</button>
+            <button type="button" class="scenario-chip" data-value="multiunidades" onclick="selectScenario(this)">Multiunidades</button>
+            <button type="button" class="scenario-chip" data-value="distribuicao_supply" onclick="selectScenario(this)">Distribuição & Supply</button>
+            <button type="button" class="scenario-chip" data-value="operacoes_criticas" onclick="selectScenario(this)">Operações críticas</button>
+            <button type="button" class="scenario-chip" data-value="contabilidade" onclick="selectScenario(this)">Contabilidade</button>
+            <button type="button" class="scenario-chip" data-value="outro" onclick="selectScenario(this)">Outro cenário</button>
+          </div>
+          <div class="other-scenario" id="otherScenarioBox"><input type="text" id="cenario_outro" placeholder="Descreva o cenário da operação"></div>
+          <input type="hidden" id="cenario_operacional" value="">
+          <input type="hidden" id="cenario_operacional_label" value="">
+        </div>
+        <div class="field">
+          <label>E-mail</label>
+          <input type="email" id="email" autocomplete="email" placeholder="seunome@empresa.com.br (opcional)">
+        </div>
+      </div>
+      <div class="contact-note">A leitura inicial não substitui o Raio-X Operacional completo. Ela organiza os primeiros sinais para indicar caminhos e priorizar uma conversa executiva com mais clareza.</div>
+    </div>
+    <div class="nav-btns">
+      <button type="button" class="btn btn-prev" onclick="go(${STEPS.length-1})">Voltar</button>
+      <button type="button" class="btn btn-next" id="finalBtn" onclick="finishContact()">Receber minha leitura preliminar</button>
+    </div>`;
+  stepsWrap.appendChild(div);
+}
+buildContactStep();
+
+function prog(){
+  var p=Math.round(((cur+1)/TOTAL_STEPS)*100);
+  document.getElementById('pbar').style.width=p+'%';
+  document.getElementById('ppct').textContent=(cur+1)+' de '+TOTAL_STEPS;
+}
+
+function scrollToActiveStep(){
+  var active=document.querySelector('.step.active');
+  if(!active)return;
+  var offset=92;
+  var y=active.getBoundingClientRect().top+window.pageYOffset-offset;
+  window.scrollTo({top:Math.max(0,y),behavior:'smooth'});
+}
+
+function go(i){
+  document.querySelectorAll('.step').forEach(function(s){s.classList.remove('active');});
+  document.querySelector('.step[data-idx="'+i+'"]').classList.add('active');
+  cur=i;
+  prog();
+  setTimeout(scrollToActiveStep,40);
+}
+
+function showErr(t){
+  var e=document.getElementById('errMsg');
+  e.textContent=t;
+  e.style.display='block';
+  setTimeout(function(){e.style.display='none';},3600);
+  var y=e.getBoundingClientRect().top+window.pageYOffset-90;
+  window.scrollTo({top:Math.max(0,y),behavior:'smooth'});
+}
+
 function pick(i,ci,el,multi){
   var s=STEPS[i];
   if(multi){
     el.classList.toggle('sel');
     if(!RESP[s.key])RESP[s.key]=[];
     var idx=RESP[s.key].indexOf(ci);
-    if(idx>=0)RESP[s.key].splice(idx,1);else RESP[s.key].push(ci);
+    if(idx>=0)RESP[s.key].splice(idx,1);
+    else RESP[s.key].push(ci);
   }else{
     el.parentNode.querySelectorAll('.opt').forEach(function(o){o.classList.remove('sel');});
     el.classList.add('sel');
     RESP[s.key]=ci;
   }
 }
+
 function setObs(i,v){OBS[STEPS[i].key]=v.trim();}
+
 function next(i){
-  var s=STEPS[i];var r=RESP[s.key];
-  var empty = s.multi ? (!r||r.length===0) : (r===undefined);
-  if(s.required&&empty){showErr("Escolha ao menos uma opção para continuar.");return;}
-  if(i<STEPS.length-1){go(i+1);}else{compute();submitAll();}
+  var s=STEPS[i];
+  var r=RESP[s.key];
+  var empty=s.multi?(!r||r.length===0):(r===undefined);
+  if(s.required&&empty){showErr('Escolha ao menos uma opção para continuar.');return;}
+  go(i+1);
 }
+
+function selectScenario(btn){
+  document.querySelectorAll('.scenario-chip').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+  document.getElementById('cenario_operacional').value=btn.dataset.value||'';
+  document.getElementById('cenario_operacional_label').value=btn.textContent.trim();
+  var box=document.getElementById('otherScenarioBox');
+  if(btn.dataset.value==='outro'){box.classList.add('show');setTimeout(function(){document.getElementById('cenario_outro').focus();},80);}else{box.classList.remove('show');document.getElementById('cenario_outro').value='';}
+}
+
+function collectContact(){
+  CONTACT.nome=document.getElementById('nome').value.trim();
+  CONTACT.telefone=document.getElementById('telefone').value.trim();
+  CONTACT.empresa=document.getElementById('empresa').value.trim();
+  CONTACT.email=document.getElementById('email').value.trim();
+  CONTACT.cenario_operacional=document.getElementById('cenario_operacional').value.trim();
+  CONTACT.cenario_operacional_label=document.getElementById('cenario_operacional_label').value.trim();
+  var outro=document.getElementById('cenario_outro').value.trim();
+  if(CONTACT.cenario_operacional==='outro' && outro){
+    CONTACT.cenario_operacional='outro_'+outro.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'_').replace(/^_|_$/g,'');
+    CONTACT.cenario_operacional_label=outro;
+  }
+}
+
+function finishContact(){
+  collectContact();
+  var digits=CONTACT.telefone.replace(/\D/g,'');
+  if(CONTACT.nome.split(' ').filter(Boolean).length<2){showErr('Informe nome e sobrenome para enviarmos a leitura.');return;}
+  if(digits.length<10||digits.length>11){showErr('Informe um WhatsApp válido com DDD.');return;}
+  if(CONTACT.empresa.length<2){showErr('Informe o nome da empresa.');return;}
+  if(!CONTACT.cenario_operacional){showErr('Escolha o cenário operacional mais próximo.');return;}
+  if(CONTACT.email && !/^\S+@\S+\.\S+$/.test(CONTACT.email)){showErr('Informe um e-mail válido ou deixe em branco.');return;}
+  compute();
+  submitAll();
+}
+
 function compute(){
-  ["CON","DAD","DEP","SEG","EFI","CUS","CRE"].forEach(function(d){WSUM[d]=0;});
+  ['CON','DAD','DEP','SEG','EFI','CUS','CRE'].forEach(function(d){WSUM[d]=0;});
   STEPS.forEach(function(s){
-    var r=RESP[s.key];if(r===undefined)return;
+    var r=RESP[s.key];
+    if(r===undefined)return;
     var idxs=Array.isArray(r)?r:[r];
-    idxs.forEach(function(ci){var w=s.choices[ci].w||{};for(var d in w){WSUM[d]=(WSUM[d]||0)+w[d];}});
+    idxs.forEach(function(ci){
+      var w=s.choices[ci].w||{};
+      for(var d in w){WSUM[d]=(WSUM[d]||0)+w[d];}
+    });
   });
 }
+
+function topDimensions(){
+  return Object.entries(WSUM).sort(function(a,b){return b[1]-a[1];}).filter(function(x){return x[1]>0;}).slice(0,3).map(function(x){return x[0];});
+}
+
+function trackingData(){
+  return {
+    utm_source:params.get('utm_source')||'',
+    utm_medium:params.get('utm_medium')||'',
+    utm_campaign:params.get('utm_campaign')||'',
+    utm_content:params.get('utm_content')||'',
+    utm_term:params.get('utm_term')||'',
+    referrer:document.referrer||'',
+    pagina:location.href,
+    path:location.pathname,
+    lead_id_herdado:INBOUND_LEAD_ID?true:false
+  };
+}
+
 function showDone(ok){
   document.querySelector('#steps').style.display='none';
   document.querySelector('.progress-wrap').style.display='none';
   document.getElementById('pbar').style.width='100%';
   document.getElementById('doneView').style.display='block';
-  if(!ok){
-    document.getElementById('doneTitle').textContent="Recebemos o seu pré-diagnóstico";
-    document.getElementById('doneLead').textContent="Tivemos uma instabilidade momentânea para processar automaticamente.";
-    document.getElementById('doneMsg').textContent="Me chame no WhatsApp agora e garantimos a geração do seu relatório.";
+  if(ok){
+    var tops=topDimensions();
+    var map={CON:'continuidade',DAD:'dados e visibilidade',DEP:'dependências críticas',SEG:'segurança',EFI:'eficiência operacional',CUS:'custos e desperdícios',CRE:'capacidade de crescimento'};
+    var txt=tops.map(function(k){return map[k]||k;}).join(', ');
+    if(txt){document.getElementById('doneLead').textContent='Os sinais iniciais apontam maior concentração em: '+txt+'.';}
+    document.getElementById('doneMsg').textContent='Vamos preparar sua leitura preliminar e enviar pelo WhatsApp informado.';
+  }else{
+    document.getElementById('doneTitle').textContent='Recebemos o seu interesse';
+    document.getElementById('doneLead').textContent='Tivemos uma instabilidade momentânea para processar automaticamente.';
+    document.getElementById('doneMsg').textContent='Me chame no WhatsApp agora e garantimos a continuidade da sua leitura preliminar.';
     document.getElementById('doneBadge').style.display='none';
-    document.getElementById('doneIco').style.background="#d98324";
+    document.getElementById('doneIco').style.background='#d98324';
     document.getElementById('waFallback').classList.add('show');
   }
-  window.scrollTo({top:0,behavior:'smooth'});
+  setTimeout(function(){
+    var done=document.getElementById('doneView');
+    if(done){
+      done.setAttribute('tabindex','-1');
+      done.scrollIntoView({behavior:'smooth',block:'start'});
+      done.focus({preventScroll:true});
+    }
+  },80);
 }
+
 async function submitAll(){
-  if(document.getElementById('website').value.trim()!==""){return;}
-  var btn=document.getElementById('next_'+(STEPS.length-1));btn.disabled=true;btn.textContent="Gerando...";
+  if(document.getElementById('website').value.trim()!==''){return;}
+  var btn=document.getElementById('finalBtn');
+  btn.disabled=true;
+  btn.textContent='Enviando...';
   var legivel={};
-  STEPS.forEach(function(s){var r=RESP[s.key];if(r===undefined)return;var idxs=Array.isArray(r)?r:[r];legivel[s.key]=idxs.map(function(ci){return s.choices[ci].t;}).join(" | ");});
+  STEPS.forEach(function(s){
+    var r=RESP[s.key];
+    if(r===undefined)return;
+    var idxs=Array.isArray(r)?r:[r];
+    legivel[s.key]=idxs.map(function(ci){return s.choices[ci].t;}).join(' | ');
+  });
   var payload={
-    subject:"Pré-diagnóstico recebido (LP2) - lead "+(LEAD_ID||"sem id"),
-    from_name:"ESPX - LP2 Pré-diagnóstico",
-    origem:"LP2_prediagnostico",
+    subject:'Leitura inicial guiada recebida - '+CONTACT.empresa,
+    from_name:'ESPX - Coleta Guiada da Leitura Inicial',
+    origem:'coleta_guiada_leitura_inicial',
     lead_id:LEAD_ID,
+    lead_id_entrada:INBOUND_LEAD_ID,
+    nome:CONTACT.nome,
+    telefone:CONTACT.telefone,
+    email:CONTACT.email,
+    empresa:CONTACT.empresa,
+    cenario_operacional:CONTACT.cenario_operacional,
+    cenario_operacional_label:CONTACT.cenario_operacional_label,
     respostas:legivel,
     pesos_dimensao:WSUM,
+    dimensoes_top:topDimensions(),
     observacoes:OBS,
+    tracking:trackingData(),
+    consentimento_whatsapp:'sim',
     enviado_em:new Date().toISOString(),
     pagina:location.href,
     website:document.getElementById('website').value.trim()
   };
   try{
-    var res=await fetch(OK,{method:"POST",credentials:"omit",
-      headers:{"Content-Type":"application/json",Accept:"application/json","x-nada":SEC_HEADER},
+    var res=await fetch(OK,{method:'POST',credentials:'omit',
+      headers:{'Content-Type':'application/json',Accept:'application/json','x-nada':SEC_HEADER},
       body:JSON.stringify(payload)});
     var data={};try{data=await res.json();}catch(e){}
-    if(res.ok && data && data.success===true){ showDone(true); }
-    else { showDone(false); }
-  }catch(e){ showDone(false); }
+    if(res.ok && data && data.success===true){showDone(true);}else{showDone(false);}
+  }catch(e){showDone(false);}
 }
+
+(function prefill(){
+  const map={nome:'nome',telefone:'telefone',empresa:'empresa',email:'email'};
+  Object.keys(map).forEach(function(k){
+    const v=params.get(k)||'';
+    const el=document.getElementById(map[k]);
+    if(v&&el)el.value=v;
+  });
+})();
+
 prog();
 </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"c246d1b5d6ff49a082df6c910c966fae","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
