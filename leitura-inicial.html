@@ -220,6 +220,9 @@
 .scenario-chip{border:1px solid var(--line-dark);background:var(--paper);color:var(--navy-700);border-radius:999px;padding:8px 12px;font-family:'IBM Plex Sans',sans-serif;font-size:.86rem;cursor:pointer;transition:.18s}
 .scenario-chip:hover{border-color:var(--orange);background:#fff}
 .scenario-chip.active{background:var(--navy-700);border-color:var(--navy-700);color:#fff;box-shadow:0 10px 24px -18px rgba(16,42,67,.7)}
+.other-scenario-wrap{display:none;margin-top:12px}
+.other-scenario-wrap.open{display:block}
+.other-scenario-wrap input{margin-top:0}
 
 </style>
 </head>
@@ -284,6 +287,9 @@
                 <button type="button" class="scenario-chip" data-value="outro" onclick="selectScenario(this)">Outro cenário</button>
               </div>
               <input type="hidden" id="cenario_operacional" value="">
+              <div class="other-scenario-wrap" id="outroCenarioWrap">
+                <input type="text" id="outro_cenario_operacional" placeholder="Descreva o cenário da sua operação" autocomplete="off" oninput="syncOtherScenario()" onkeydown="if(event.key==='Enter')next(1)">
+              </div>
             </div>
           </div>
           <div class="nav-btns"><button type="button" class="btn btn-prev" onclick="go(0)">Voltar</button><button type="button" class="btn btn-next" onclick="next(1)">Continuar</button></div>
@@ -385,9 +391,35 @@ function go(i){document.querySelectorAll('.step').forEach(function(s){s.classLis
 function selectScenario(btn){
   document.querySelectorAll('.scenario-chip').forEach(function(b){b.classList.remove('active');});
   btn.classList.add('active');
-  document.getElementById('cenario_operacional').value = btn.dataset.value || '';
-  D.cenario_operacional = btn.dataset.value || '';
-  D.cenario_operacional_label = btn.textContent.trim();
+
+  const value = btn.dataset.value || '';
+  const label = btn.textContent.trim();
+  const otherWrap = document.getElementById('outroCenarioWrap');
+  const otherInput = document.getElementById('outro_cenario_operacional');
+
+  if(value === 'outro'){
+    otherWrap.classList.add('open');
+    const typed = otherInput.value.trim();
+    document.getElementById('cenario_operacional').value = typed || label;
+    D.cenario_operacional = typed || label;
+    D.cenario_operacional_label = label;
+    setTimeout(function(){otherInput.focus();},80);
+  }else{
+    otherWrap.classList.remove('open');
+    otherInput.value = '';
+    document.getElementById('cenario_operacional').value = value;
+    D.cenario_operacional = value;
+    D.cenario_operacional_label = label;
+  }
+}
+
+function syncOtherScenario(){
+  const activeScenario = document.querySelector('.scenario-chip.active');
+  if(!activeScenario || activeScenario.dataset.value !== 'outro') return;
+  const typed = document.getElementById('outro_cenario_operacional').value.trim();
+  document.getElementById('cenario_operacional').value = typed || 'Outro cenário';
+  D.cenario_operacional = typed || 'Outro cenário';
+  D.cenario_operacional_label = 'Outro cenário';
 }
 
 function showErr(t){var e=document.getElementById('errMsg');e.textContent=t;e.style.display='block';setTimeout(function(){e.style.display='none';},3500);}
@@ -401,11 +433,24 @@ function next(i){
   }
   else if(i===1){
     D.empresa=document.getElementById('empresa').value.trim();
-    D.cenario_operacional=document.getElementById('cenario_operacional').value.trim();
     const activeScenario=document.querySelector('.scenario-chip.active');
-    D.cenario_operacional_label=activeScenario ? activeScenario.textContent.trim() : "";
+    const selectedValue=activeScenario ? (activeScenario.dataset.value || '') : '';
+    const selectedLabel=activeScenario ? activeScenario.textContent.trim() : '';
+    const otherTyped=document.getElementById('outro_cenario_operacional').value.trim();
+
     if(D.empresa.length<2){showErr("Informe o nome da empresa.");return;}
-    if(!D.cenario_operacional){showErr("Escolha o cenário operacional mais próximo da sua realidade.");return;}
+    if(!selectedValue){showErr("Escolha o cenário operacional mais próximo da sua realidade.");return;}
+
+    if(selectedValue === 'outro'){
+      D.cenario_operacional = otherTyped || selectedLabel;
+      D.cenario_operacional_label = selectedLabel;
+      document.getElementById('cenario_operacional').value = D.cenario_operacional;
+    }else{
+      D.cenario_operacional = selectedValue;
+      D.cenario_operacional_label = selectedLabel;
+      document.getElementById('cenario_operacional').value = selectedValue;
+    }
+
     go(2);
   }
   else if(i===2){
@@ -470,6 +515,7 @@ async function submitLead(){
     lead_id:LEAD_ID,
     nome:D.nome,empresa:D.empresa,
     telefone:D.telefone, preferencia_contato:D.preferencia_contato, cenario_operacional:D.cenario_operacional, cenario_operacional_label:D.cenario_operacional_label,
+    outro_cenario_operacional:document.getElementById('outro_cenario_operacional').value.trim(),
     consentimento_whatsapp:"sim",consentimento_data:new Date().toISOString(),
     pagina:location.href,website:document.getElementById('website').value.trim()
   };
@@ -484,6 +530,7 @@ async function submitLead(){
 }
 prog();focusStep(0);
 </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"c246d1b5d6ff49a082df6c910c966fae","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"c246d1b5d6ff49a082df6c910c966fae","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"c246d1b5d6ff49a082df6c910c966fae","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
