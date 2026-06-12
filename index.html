@@ -628,6 +628,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .mobile-panel a span{display:block;color:#9fb0c0;font-size:.78rem;margin-top:3px;line-height:1.35}
 .mobile-panel .mp-links{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
 .mobile-panel .mp-links a{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;text-align:center}
+.mobile-panel .mp-main{margin-bottom:14px}
+.mobile-panel .mp-feature{border-color:rgba(238,108,43,.38);background:rgba(238,108,43,.10)}
+.mobile-panel .mp-feature strong{color:#fff;font-size:.98rem}
+.mobile-panel .mp-offer-grid{grid-template-columns:1fr 1fr;margin-bottom:16px}
+.mobile-panel .mp-accordion{width:100%;display:flex;align-items:center;justify-content:space-between;border:1px solid rgba(255,255,255,.13);border-radius:10px;padding:13px 14px;background:rgba(255,255,255,.055);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;margin-top:6px}
+.mobile-panel .mp-accordion:after{content:'+';color:var(--orange);font-size:1rem;letter-spacing:0}
+.mobile-panel .mp-accordion.open:after{content:'–'}
+.mobile-panel .mp-ops{display:none;margin-top:8px}
+.mobile-panel .mp-ops.open{display:grid}
 @media(max-width:860px){
   .nav-mobile-toggle{display:flex}
   .nav-actions{gap:8px}
@@ -652,6 +661,49 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 @media(max-width:860px){.ops-mobile-controls{display:flex}.ops-dots{display:flex}.ops-track{padding-bottom:18px}}
 @media(max-width:430px){.ops-card{min-width:86vw;max-width:86vw;padding:26px;min-height:430px}}
 
+
+/* ---- ESPX Home 3.0 additions ---- */
+.signal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:54px;background:var(--line-dark);border:1px solid var(--line-dark)}
+.signal{background:var(--paper);padding:30px 28px;min-height:190px}
+.signal .mk{font-family:'IBM Plex Mono',monospace;color:var(--orange);font-size:.8rem;font-weight:600}
+.signal h3{font-family:'IBM Plex Sans',sans-serif;font-weight:600;font-size:1.06rem;letter-spacing:0;margin-top:8px}
+.signal p{color:var(--muted);font-size:.96rem;margin-top:8px}
+.delivery{background:var(--paper)}
+.delivery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:46px}
+.delivery-card{background:#fff;border:1px solid var(--line-dark);border-radius:8px;padding:28px;transition:.25s}
+.delivery-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px rgba(16,42,67,.38)}
+.delivery-card .ic{font-family:'IBM Plex Mono',monospace;color:var(--orange);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase}
+.delivery-card h3{font-family:'IBM Plex Sans',sans-serif;font-size:1.08rem;font-weight:600;margin-top:10px}
+.delivery-card p{color:var(--muted);font-size:.94rem;margin-top:12px}
+.delivery-note{margin-top:28px;background:var(--navy-700);color:#fff;border-radius:8px;padding:24px 28px;font-family:'IBM Plex Serif',serif;font-size:1.2rem;line-height:1.45}
+.delivery-note strong{color:var(--orange-soft);font-weight:600}
+.proof-bridge{background:var(--navy-900);color:#eef3f8;position:relative;overflow:hidden}
+.proof-bridge:before{content:"";position:absolute;inset:0;background:radial-gradient(740px 420px at 86% 0%,rgba(238,108,43,.14),transparent 62%)}
+.proof-bridge .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:center}
+.proof-bridge h2{color:#fff;font-size:clamp(1.8rem,3.4vw,2.5rem);margin-top:14px}
+.proof-bridge p{color:#c2cedb;font-size:1.08rem;font-weight:300;margin-top:18px}
+.proof-card{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:8px;padding:30px}
+.proof-card .name{font-family:'IBM Plex Serif',serif;color:#fff;font-size:1.45rem}
+.proof-card .role{color:#9fb0c0;margin-top:4px}
+.proof-card ul{list-style:none;margin-top:22px;display:flex;flex-direction:column;gap:12px}
+.proof-card li{color:#cdd8e3;font-size:.94rem;padding-left:20px;position:relative}
+.proof-card li:before{content:"→";position:absolute;left:0;color:var(--orange)}
+.link-arrow{display:inline-flex;margin-top:24px;font-family:'IBM Plex Mono',monospace;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--orange-soft);border-bottom:1px solid rgba(238,108,43,.45);padding-bottom:3px}
+.link-arrow:after{content:" →";transition:.2s}.link-arrow:hover:after{transform:translateX(4px)}
+.ops-card h3{max-width:14ch}
+@media(max-width:860px){
+  .signal-grid,.delivery-grid,.proof-bridge .wrap{grid-template-columns:1fr}
+  .signal{min-height:auto}
+  .delivery-grid{gap:14px}
+}
+
+
+
+/* ---- menu 3.1: mesma arquitetura no desktop e mobile ---- */
+@media(min-width:861px){
+  .nav-menu{gap:15px}
+  .nav-link,.nav-drop-trigger{font-size:.66rem;letter-spacing:.12em}
+}
 </style>
 </head>
 <body>
@@ -668,14 +720,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="nav-actions">
       <div class="nav-menu" aria-label="Navegação principal">
+        <a href="sobre-espx.html" class="nav-link">Sobre</a>
+        <a href="#problema" class="nav-link">Problema</a>
+        <a href="#como-funciona" class="nav-link">Método</a>
+        <a href="#entrega-pratica" class="nav-link">Entrega</a>
+        <a href="#raiox" class="nav-link">Raio-X</a>
+        <a href="#continuidade" class="nav-link">Continuidade</a>
         <div class="nav-drop">
           <button type="button" class="nav-drop-trigger">Operações</button>
           <div class="nav-dropdown" role="menu" aria-label="Operações em crescimento">
-            <div class="nav-dd-title">Operações em crescimento</div>
+            <div class="nav-dd-title">Escolha uma operação</div>
             <div class="nav-dd-grid">
-              <a class="nav-dd-item" href="educacao.html"><strong>Educação</strong><span>A escola cresceu. A operação acompanhou?</span></a>
-              <a class="nav-dd-item" href="saude.html"><strong>Saúde</strong><span>Agenda, atendimento, convênios e dados.</span></a>
-              <a class="nav-dd-item" href="imobiliario.html"><strong>Imobiliário</strong><span>Contratos, locações, repasses e WhatsApp.</span></a>
+              <a class="nav-dd-item" href="educacao.html"><strong>Educação</strong><span>Quando a escola cresce, a operação começa a depender de esforço invisível.</span></a>
+              <a class="nav-dd-item" href="saude.html"><strong>Saúde</strong><span>Agenda, atendimento, convênios e dados sob pressão.</span></a>
+              <a class="nav-dd-item" href="imobiliario.html"><strong>Imobiliário</strong><span>Contratos, repasses e WhatsApp em fluxos paralelos.</span></a>
               <a class="nav-dd-item" href="distribuicao-supply.html"><strong>Distribuição &amp; Supply</strong><span>Estoque, pedidos, logística e margem.</span></a>
               <a class="nav-dd-item" href="juridico.html"><strong>Jurídico</strong><span>Prazos, clientes, documentos e previsibilidade.</span></a>
               <a class="nav-dd-item" href="multiunidades.html"><strong>Multiunidades</strong><span>Padronização, indicadores e expansão com controle.</span></a>
@@ -684,8 +742,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
         </div>
-        <a href="#raiox" class="nav-link">Método</a>
-        <a href="#continuidade" class="nav-link">Continuidade</a>
       </div>
       <button type="button" class="nav-mobile-toggle" aria-label="Abrir menu" onclick="toggleMobileMenu()"><span></span></button>
       <a href="leitura-inicial.html" class="nav-cta">Leitura inicial →</a>
@@ -694,20 +750,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </nav>
 
 <div class="mobile-panel" id="mobilePanel">
-  <div class="mp-title">Operações em crescimento</div>
-  <div class="mp-grid">
-    <a href="educacao.html"><strong>Educação</strong><span>A escola cresceu. A operação acompanhou?</span></a>
-    <a href="saude.html"><strong>Saúde</strong><span>Agenda, atendimento, convênios e dados.</span></a>
+  <div class="mp-title">Navegação</div>
+  <div class="mp-links mp-offer-grid">
+    <a href="sobre-espx.html">Sobre</a>
+    <a href="#problema">Problema</a>
+    <a href="#como-funciona">Método</a>
+    <a href="#entrega-pratica">Entrega</a>
+    <a href="#raiox">Raio-X</a>
+    <a href="#continuidade">Continuidade</a>
+  </div>
+
+  <button type="button" class="mp-accordion" id="mobileOpsToggle" onclick="toggleMobileOps()">Operações</button>
+  <div class="mp-grid mp-ops" id="mobileOpsMenu">
+    <a href="educacao.html"><strong>Educação</strong><span>Quando a escola cresce, a operação começa a depender de esforço invisível.</span></a>
+    <a href="saude.html"><strong>Saúde</strong><span>Agendas, atendimento, convênios e dados sob pressão.</span></a>
     <a href="imobiliario.html"><strong>Imobiliário</strong><span>Contratos, locações, repasses e WhatsApp.</span></a>
     <a href="distribuicao-supply.html"><strong>Distribuição &amp; Supply</strong><span>Estoque, pedidos, logística e margem.</span></a>
     <a href="juridico.html"><strong>Jurídico</strong><span>Prazos, clientes, documentos e previsibilidade.</span></a>
     <a href="multiunidades.html"><strong>Multiunidades</strong><span>Padronização, indicadores e expansão com controle.</span></a>
     <a href="oil-gas.html"><strong>Oil &amp; Gas</strong><span>Continuidade, risco e operações críticas.</span></a>
     <a href="contabilidade.html"><strong>Contabilidade</strong><span>Documentos, obrigações, prazos e clientes.</span></a>
-  </div>
-  <div class="mp-links">
-    <a href="#raiox">Método</a>
-    <a href="#continuidade">Continuidade</a>
   </div>
 </div>
 
@@ -716,12 +778,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="eyebrow rv d1">Estrutura operacional para crescer</div>
     <h1 class="rv d2">Sua empresa cresceu. Sua <span class="accent">operação</span> sustenta o próximo nível?</h1>
-    <p class="sub rv d3">Crescer não é só vender mais: é a sua operação sustentar eficiência, margem e continuidade enquanto a complexidade aumenta. Eu estruturo operações de empresas em crescimento para que elas sustentem o próximo nível com mais previsibilidade e menos esforço, com a senioridade de quem manteve operações críticas de pé por mais de 20 anos.</p>
+    <p class="sub rv d3">Crescer não é apenas vender mais. É garantir que sistemas, pessoas, processos, dados e decisões sustentem o aumento da complexidade sem perda de controle, margem ou continuidade. A ESPX estrutura operações de empresas em crescimento tratando tecnologia como estrutura essencial do negócio.</p>
     <div class="hero-cta rv d4">
-      <a href="leitura-inicial.html" class="btn btn-primary">Quero entender os pontos invisíveis da minha operação</a>
-      <a href="#raiox" class="btn btn-ghost">Como funciona</a>
+      <a href="leitura-inicial.html" class="btn btn-primary">Quero uma leitura inicial da minha operação</a>
+      <a href="#como-funciona" class="btn btn-ghost">Como funciona</a>
     </div>
-    <div class="hero-micro rv d5">Sem compromisso · Leitura inicial da operação · Retorno rápido e executivo</div>
+    <div class="hero-micro rv d5">Sem compromisso · Conversa executiva · Retorno rápido</div>
   </div>
 </header>
 
@@ -737,33 +799,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<section class="problem">
+<section class="problem" id="problema">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">O problema real</div>
-      <h2>O problema não é falta de tecnologia. É crescimento mais rápido do que a estrutura que o sustenta.</h2>
-      <p>Poucas empresas percebem o momento em que a operação começa a perder eficiência. Elas percebem depois: quando o crescimento pesa, o time sobrecarrega, a margem encolhe e tudo passa a exigir esforço demais para funcionar. O desgaste é silencioso, vai corroendo previsibilidade, eficiência e caixa antes de virar um problema visível. Quando fica visível, já custou caro.</p>
+      <div class="eyebrow">A tensão silenciosa</div>
+      <h2>O problema raramente começa como crise.</h2>
+      <p>Ele começa silenciosamente. Quando a empresa cresce mais rápido do que a estrutura operacional que sustenta esse crescimento, a operação começa a perder previsibilidade antes que alguém perceba.</p>
     </div>
-    <div class="pain-grid">
-      <div class="pain"><span class="mk">01</span><h3>O sistema falha e a operação sente imediatamente</h3><p>Instabilidades e indisponibilidades impactam faturamento, atendimento e operação sem previsibilidade ou antecipação do problema.</p></div>
-      <div class="pain"><span class="mk">02</span><h3>Os dados deixam de gerar confiança</h3><p>Relatórios diferentes mostram números diferentes. Decisões importantes passam a depender de interpretação, não de clareza operacional.</p></div>
-      <div class="pain"><span class="mk">03</span><h3>Processos manuais consomem tempo e margem</h3><p>Retrabalho, integrações inexistentes e atividades repetitivas fazem equipes qualificadas gastarem energia em tarefas operacionais.</p></div>
-      <div class="pain"><span class="mk">04</span><h3>A operação depende do conhecimento de poucas pessoas</h3><p>Conhecimento crítico concentrado em colaboradores específicos gera dependência operacional e risco para continuidade do negócio.</p></div>
-      <div class="pain"><span class="mk">05</span><h3>Fornecedores atuam sem coordenação central</h3><p>Infraestrutura, sistemas, cloud, suporte e parceiros operam de forma isolada, sem uma visão integrada da operação como um todo.</p></div>
-      <div class="pain"><span class="mk">06</span><h3>Falta liderança de tecnologia, e contratar um sai caro demais</h3><p>A empresa precisa de visão estratégica, governança e continuidade operacional, mas estruturar uma liderança sênior full-time nem sempre faz sentido no momento atual.</p></div>
+    <div class="signal-grid">
+      <div class="signal"><span class="mk">01</span><h3>A operação começa a depender de pessoas específicas</h3><p>O conhecimento fica concentrado. O negócio vira refém do improviso.</p></div>
+      <div class="signal"><span class="mk">02</span><h3>Os dados deixam de gerar confiança</h3><p>Cada área passa a trabalhar com números diferentes, e decisões importantes perdem segurança.</p></div>
+      <div class="signal"><span class="mk">03</span><h3>O crescimento aumenta o esforço operacional</h3><p>Mais clientes não deveriam significar mais caos, retrabalho e desgaste do time.</p></div>
+      <div class="signal"><span class="mk">04</span><h3>Sistemas, fornecedores e processos deixam de conversar</h3><p>A empresa cresce, mas a operação fragmenta em rotinas paralelas e pouco rastreáveis.</p></div>
+      <div class="signal"><span class="mk">05</span><h3>O dono volta para a operação</h3><p>Problemas que não deveriam chegar até ele passam a consumir energia diária.</p></div>
+      <div class="signal"><span class="mk">06</span><h3>A empresa cresce sem clareza do que sustenta esse crescimento</h3><p>E isso aumenta risco, custo invisível e perda de controle silenciosamente.</p></div>
     </div>
   </div>
 </section>
 
-<section class="thesis">
+<section class="thesis" id="perspectiva">
   <div class="wrap">
     <span class="mark">A perspectiva ESPX</span>
     <h2>Tecnologia tratada como <span class="hl">estrutura de crescimento e continuidade operacional</span>.</h2>
-    <p>É essa mudança de perspectiva que conecta operação, negócio e evolução de forma sustentável.</p>
+    <p>A ESPX conecta operação, sistemas, processos, pessoas, integrações, riscos e evolução do negócio em uma estrutura mais previsível, sustentável e preparada para crescer.</p>
   </div>
 </section>
-  
-<section>
+
+<section id="para-quem">
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">Para quem é</div>
@@ -774,9 +836,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h3>É para você se…</h3>
         <ul>
           <li>Sua empresa está crescendo e a operação não acompanha a mesma velocidade.</li>
-          <li>A tecnologia já é crítica para vender e operar, mas ninguém sênior cuida dela de ponta a ponta.</li>
-          <li>Você é o dono e hoje apaga incêndios de operação que não deveriam chegar até você.</li>
-          <li>Quer previsibilidade, dados confiáveis e custo sob controle, não mais um sistema novo.</li>
+          <li>A tecnologia já é crítica para vender e operar, mas ninguém cuida dela de ponta a ponta.</li>
+          <li>Você ainda depende de esforço, improviso e pessoas-chave.</li>
+          <li>Quer previsibilidade, dados confiáveis e continuidade.</li>
         </ul>
       </div>
       <div class="fit-card fit-no">
@@ -784,7 +846,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <ul>
           <li>Você procura suporte técnico reativo para abrir e fechar chamados.</li>
           <li>Quer apenas comprar uma ferramenta ou uma automação isolada.</li>
-          <li>Já tem uma estrutura de tecnologia madura e liderança sênior consolidada.</li>
+          <li>Já possui uma estrutura de tecnologia madura e liderança sênior consolidada.</li>
           <li>Busca apenas o menor preço, sem considerar o impacto na operação.</li>
         </ul>
       </div>
@@ -792,70 +854,85 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<section class="founder">
+<section class="ops-growth" id="operacoes-em-crescimento">
+  <div class="ops-growth-x">X</div>
   <div class="wrap">
-    <div class="founder-top">
-      <div>
-        <div class="eyebrow">Quem conduz</div>
-        <h2>Quem vai cuidar da sua operação já cuidou de operações que não podiam parar.</h2>
-        <p class="lead">Mais de duas décadas na <strong>interseção entre tecnologia, continuidade e crescimento de negócios</strong>. Atuação em ambientes corporativos de grande porte, com elevado volume transacional e operação que não podia parar. Segmentos de <strong>oil & gas, varejo digital, fidelidade e tecnologia,</strong> incluindo operações ligadas aos <strong>Jogos Olímpicos Rio 2016</strong>. Liderança de equipes multidisciplinares, sempre <strong>conectando tecnologia a eficiência, margem e sustentação de receita recorrente</strong>.</p>
-        <div class="orgs">
-          <div class="lbl">Trajetória construída em operações ligadas a</div>
-          <div class="row">
-            <span>Petrobras</span> · <span>Ipiranga (KMV | Abastece Aí)</span> · <span>Rio 2016</span><span>CSP Tech · TO Brasil · ISH · Stefanini · Spassu · TIVIT · Atos Origin</span>
-          </div>
-        </div>
+    <div class="ops-head">
+      <div class="sec-head">
+        <div class="eyebrow">Operações em crescimento</div>
+        <h2>Toda operação em crescimento começa a sentir tensões invisíveis.</h2>
+        <p>Escolha o cenário operacional que mais se parece com o momento da sua empresa.</p>
       </div>
-      <div class="cred-card">
-        <div class="cred-head">
-          <img class="cred-photo" src="thiego.jpg" alt="Thiego Bastos, fundador da ESPX">
-          <div>
-            <div class="who">Fundador · ESPX</div>
-            <div class="name">Thiego Bastos</div>
-            <div class="role">Liderança de Operações Críticas e Continuidade de Negócio</div>
-          </div>
-        </div>
-        <div class="cred-list">
-          <div class="item">Operações de missão crítica nos segmentos de oil &amp; gas, varejo digital, fidelidade e tecnologia</div>
-          <div class="item">Ambientes de alta disponibilidade com elevado volume transacional e exigência contínua de continuidade operacional</div>
-          <div class="item">Liderança de equipes multidisciplinares com 90+ profissionais e múltiplos coordenadores diretos</div>
-          <div class="item">Tecnologia conectada a continuidade, eficiência e sustentação de receita recorrente</div>
-        </div>
-        <div class="certs">
-          <span>Governança de Tecnologia</span><span>Continuidade Operacional</span><span>Gestão Ágil</span><span>Cloud</span><span>ITIL</span><span>COBIT</span><span>MBA · AI, Data Science e Big Data</span>
-        </div>
+      <div class="ops-nav">
+        <button class="ops-arrow" type="button" onclick="moveOps(-1)" aria-label="Operação anterior">←</button>
+        <button class="ops-arrow" type="button" onclick="moveOps(1)" aria-label="Próxima operação">→</button>
+      </div>
+    </div>
+
+    <div class="ops-carousel-shell">
+      <button class="ops-hover-zone left" type="button" aria-label="Ver operação anterior" onclick="moveOps(-1)"><span class="ops-arrow">←</span></button>
+      <button class="ops-hover-zone right" type="button" aria-label="Ver próxima operação" onclick="moveOps(1)"><span class="ops-arrow">→</span></button>
+
+      <div class="ops-track" id="opsTrack">
+        <a class="ops-card" href="educacao.html" data-operation="Educação"><span class="ops-index">Educação</span><h3>Operações educacionais</h3><p>Quando a escola cresce, a operação começa a depender de esforço invisível.</p><ul><li>Matrícula e rematrícula sem mutirão</li><li>Mensalidades e inadimplência com visibilidade</li><li>Comunicação com famílias sem dispersão</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
+        <a class="ops-card" href="saude.html" data-operation="Saúde"><span class="ops-index">Saúde</span><h3>Operações de saúde</h3><p>Clínicas crescem. Agendas, atendimento e operação começam a perder previsibilidade.</p><ul><li>Agenda, atendimento e confirmação</li><li>Faturamento, convênios e glosas</li><li>Dados clínicos e operação administrativa</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
+        <a class="ops-card" href="imobiliario.html" data-operation="Imobiliário"><span class="ops-index">Imobiliário</span><h3>Operações imobiliárias</h3><p>Contratos, atendimento e repasses começam a rodar em fluxos paralelos difíceis de controlar.</p><ul><li>Locação, vistoria e contratos</li><li>Financeiro, repasses e cobrança</li><li>WhatsApp como operação paralela</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
+        <a class="ops-card" href="distribuicao-supply.html" data-operation="Distribuição & Supply"><span class="ops-index">Distribuição &amp; Supply</span><h3>Operações de distribuição</h3><p>Pedidos, estoque, compras, logística e entregas começam a pressionar margem.</p><ul><li>Estoque, compras e ruptura</li><li>Pedidos, separação e entregas</li><li>Margem pressionada por retrabalho</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
+        <a class="ops-card" href="juridico.html" data-operation="Jurídico"><span class="ops-index">Jurídico</span><h3>Operações jurídicas</h3><p>Carteiras aumentam e prazos, documentos, clientes e financeiro passam a depender de controle rigoroso.</p><ul><li>Prazos, documentos e responsáveis</li><li>Atendimento e jornada do cliente</li><li>Gestão financeira e previsibilidade</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
+        <a class="ops-card" href="multiunidades.html" data-operation="Multiunidades"><span class="ops-index">Multiunidades</span><h3>Operações multiunidades</h3><p>Expandir unidades sem padronização transforma crescimento em complexidade operacional.</p><ul><li>Padronização entre unidades</li><li>Indicadores consolidados e comparáveis</li><li>Expansão sem aumento do descontrole</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
+        <a class="ops-card" href="oil-gas.html" data-operation="Oil & Gas"><span class="ops-index">Oil &amp; Gas</span><h3>Operações críticas</h3><p>Ambientes críticos exigem continuidade, rastreabilidade, fornecedores coordenados e dados confiáveis.</p><ul><li>Continuidade e risco operacional</li><li>Fornecedores e dependências críticas</li><li>Indicadores executivos e rastreabilidade</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
+        <a class="ops-card" href="contabilidade.html" data-operation="Contabilidade"><span class="ops-index">Contabilidade</span><h3>Operações contábeis</h3><p>A carteira cresce. Prazos, documentos e produtividade começam a depender de esforço manual.</p><ul><li>Recebimento de documentos e clientes</li><li>Prazos, obrigações e conformidade</li><li>Conferência, conciliação e produtividade</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
+      </div>
+      <div class="ops-mobile-controls" aria-label="Controle mobile dos cenários operacionais"><button type="button" onclick="moveOps(-1)" aria-label="Operação anterior">←</button><span>Arraste para explorar</span><button type="button" onclick="moveOps(1)" aria-label="Próxima operação">→</button></div>
+      <div class="ops-dots" id="opsDots" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<section id="como-funciona">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Como funciona</div>
+      <h2>Primeiro entendemos a operação. Depois estruturamos continuidade. Então evoluímos com previsibilidade.</h2>
+      <p>Sem projeto desconectado, sem vender ferramenta. Primeiro a clareza, depois a estrutura contínua e, quando fizer sentido, a evolução.</p>
+    </div>
+    <div class="how-grid">
+      <div class="step">
+        <div class="num">01 · RAIO-X</div>
+        <h3>Raio-X Operacional</h3>
+        <span class="tag">2 a 3 semanas · escopo fechado</span>
+        <p>Diagnóstico executivo para revelar riscos invisíveis, gargalos, dependências críticas e prioridades reais da operação.</p>
+      </div>
+      <div class="step">
+        <div class="num">02 · CONTINUIDADE</div>
+        <h3>Continuidade Operacional</h3>
+        <span class="tag">mensal · visão executiva contínua</span>
+        <p>Atuação contínua conectando operação, fornecedores, tecnologia, dados e decisões para sustentar previsibilidade e continuidade.</p>
+      </div>
+      <div class="step">
+        <div class="num">03 · EVOLUÇÃO</div>
+        <h3>Evolução Estruturada</h3>
+        <span class="tag">por projeto · escopo definido</span>
+        <p>Com a operação organizada, a tecnologia passa a abrir eficiência, escala, automação, dados confiáveis e IA aplicada ao negócio.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section>
+<section class="delivery" id="entrega-pratica">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">Como funciona</div>
-      <h2>Primeiro entendemos a operação. Depois estruturamos continuidade. Então evoluímos com previsibilidade.</h2>
-      <p>Sem projeto desconectado, sem vender ferramenta. Primeiro a clareza, depois a estrutura contínua e, quando fizer sentido, a expansão.</p>
+      <div class="eyebrow">Como a ESPX entrega</div>
+      <h2>A atuação se adapta ao momento da operação.</h2>
+      <p>A ESPX não vende apenas projetos, ferramentas ou horas técnicas isoladas. A entrega é estruturada conforme a maturidade, criticidade e necessidade real da empresa.</p>
     </div>
-    <div class="how-grid">
-      <div class="step">
-        <div class="num">01 · ENTRADA</div>
-        <h3>Raio-X Operacional</h3>
-        <span class="tag">2 a 3 semanas · escopo fechado</span>
-        <p>Um diagnóstico executivo da operação, identificando <strong>riscos invisíveis, gargalos, dependências, custos ocultos e prioridades reais do negócio</strong>. Você sai com clareza sobre o que precisa ser estruturado.</p>
-      </div>
-      <div class="step">
-        <div class="num">02 · RECORRÊNCIA</div>
-        <h3>Continuidade Operacional</h3>
-        <span class="tag">mensal · visão executiva contínua</span>
-        <p><strong>Atuação contínua</strong> na sustentação da operação, organizando fornecedores, acompanhando riscos, apoiando decisões e mantendo <strong>previsibilidade operacional</strong> sem a necessidade de uma estrutura executiva full-time.</p>
-      </div>
-      <div class="step">
-        <div class="num">03 · EXPANSÃO</div>
-        <h3>Evolução Estruturada</h3>
-        <span class="tag">por projeto · escopo definido</span>
-        <p><strong>Com a operação estruturada, a tecnologia deixa de ser custo e passa a gerar resultado</strong>: automação que libera a equipe para o que traz receita, integração que destrava vendas, dados que revelam onde está a margem, e inteligência artificial aplicada onde de fato muda o jogo. É aqui que a operação vira plataforma de crescimento, com tecnologia abrindo eficiência, escala e novas fontes de receita.</p>
-      </div>
+    <div class="delivery-grid">
+      <div class="delivery-card"><div class="ic">Estratégia</div><h3>Coordenação Executiva Operacional</h3><p>Visão contínua sobre prioridades, riscos, fornecedores e sustentação da operação.</p></div>
+      <div class="delivery-card"><div class="ic">Especialistas</div><h3>Especialistas sob demanda</h3><p>Profissionais especializados ativados conforme a necessidade da operação.</p></div>
+      <div class="delivery-card"><div class="ic">Squad</div><h3>Estrutura multidisciplinar coordenada</h3><p>Infraestrutura, cloud, dados, automação, segurança e integrações sob uma única visão executiva.</p></div>
+      <div class="delivery-card"><div class="ic">Ciclos</div><h3>Base de esforço planejada</h3><p>Ciclos organizados com prioridades, escopo e entregas claras.</p></div>
     </div>
+    <div class="delivery-note">Você não contrata pessoas soltas. <strong>Você ganha uma estrutura coordenada</strong> para sustentar e evoluir a operação.</div>
   </div>
 </section>
 
@@ -868,7 +945,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="offer-box">
       <div class="eyebrow ob-eyebrow">Diagnóstico executivo</div>
       <h3>Onde sua operação perde eficiência hoje, e o que precisa ser estruturado para a empresa crescer com mais previsibilidade e menos esforço.</h3>
-      <p class="desc">O Raio-X Operacional revela onde a sua operação começa a perder previsibilidade, eficiência e continuidade conforme a empresa cresce. Dependências invisíveis, gargalos silenciosos e desperdícios que normalmente só aparecem quando já afetaram margem, esforço e crescimento. Uma leitura executiva da operação, pela ótica de quem sustentou operações críticas que não podiam parar.</p>
+      <p class="desc">Uma leitura executiva para revelar dependências invisíveis, gargalos silenciosos, riscos operacionais e desperdícios que normalmente só aparecem quando já afetaram margem, esforço e crescimento.</p>
       <div class="offer-meta">
         <div class="m"><div class="k">Prazo</div><div class="v">2 a 3 semanas</div></div>
         <div class="m"><div class="k">Formato</div><div class="v">Escopo fechado</div></div>
@@ -878,72 +955,54 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div style="margin-top:36px">
       <a href="leitura-inicial.html" class="btn btn-primary">Quero uma leitura inicial da minha operação</a>
-      <button type="button" class="btn-method" onclick="document.getElementById('metodo-modal').classList.add('open');document.body.style.overflow='hidden';">O Método</button>
+      <button type="button" class="btn-method" onclick="document.getElementById('metodo-modal').classList.add('open');document.body.style.overflow='hidden';">Ver o método</button>
     </div>
   </div>
 </section>
-
-
-<section class="ops-growth" id="operacoes-em-crescimento">
-  <div class="ops-growth-x">X</div>
-  <div class="wrap">
-    <div class="ops-head">
-      <div class="sec-head">
-        <div class="eyebrow">Operações em crescimento</div>
-        <h2>Escolha a operação que mais se parece com a sua.</h2>
-        <p>Cada segmento cresce de uma forma. Mas as tensões operacionais aparecem antes de virarem perda de margem, retrabalho ou risco de continuidade.</p>
-      </div>
-      <div class="ops-nav">
-        <button class="ops-arrow" type="button" onclick="moveOps(-1)" aria-label="Operação anterior">←</button>
-        <button class="ops-arrow" type="button" onclick="moveOps(1)" aria-label="Próxima operação">→</button>
-      </div>
-    </div>
-
-    <div class="ops-carousel-shell">
-      <button class="ops-hover-zone left" type="button" aria-label="Ver operação anterior" onclick="moveOps(-1)"><span class="ops-arrow">←</span></button>
-      <button class="ops-hover-zone right" type="button" aria-label="Ver próxima operação" onclick="moveOps(1)"><span class="ops-arrow">→</span></button>
-      
-      <div class="ops-track" id="opsTrack">
-        <a class="ops-card" href="educacao.html" data-operation="Educação"><span class="ops-index">Educação</span><h3>Operações educacionais</h3><p>A escola cresceu. Matrículas, mensalidades, comunicação e dados ainda sustentam o próximo nível?</p><ul><li>Matrícula e rematrícula sem mutirão</li><li>Mensalidades e inadimplência com visibilidade</li><li>Comunicação com famílias sem dispersão</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
-        <a class="ops-card" href="saude.html" data-operation="Saúde"><span class="ops-index">Saúde</span><h3>Operações de saúde</h3><p>Clínicas crescem, agendas lotam, equipes se multiplicam e a gestão começa a depender de esforço invisível.</p><ul><li>Agenda, atendimento e confirmação</li><li>Faturamento, convênios e glosas</li><li>Dados clínicos e operação administrativa</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
-        <a class="ops-card" href="imobiliario.html" data-operation="Imobiliário"><span class="ops-index">Imobiliário</span><h3>Operações imobiliárias</h3><p>Contratos, locações, vistorias, repasses e atendimento começam a rodar em fluxos paralelos e pouco rastreáveis.</p><ul><li>Locação, vistoria e contratos</li><li>Financeiro, repasses e cobrança</li><li>WhatsApp como operação paralela</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
-        <a class="ops-card" href="distribuicao-supply.html" data-operation="Distribuição & Supply"><span class="ops-index">Distribuição &amp; Supply</span><h3>Operações de distribuição</h3><p>Pedidos, estoque, compras, logística e entregas começam a pressionar margem quando a operação cresce sem integração.</p><ul><li>Estoque, compras e ruptura</li><li>Pedidos, separação e entregas</li><li>Margem pressionada por retrabalho</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
-        <a class="ops-card" href="juridico.html" data-operation="Jurídico"><span class="ops-index">Jurídico</span><h3>Operações jurídicas</h3><p>Escritórios crescem, carteiras aumentam e prazos, documentos, clientes e financeiro passam a depender de controle rigoroso.</p><ul><li>Prazos, documentos e responsáveis</li><li>Atendimento e jornada do cliente</li><li>Gestão financeira e previsibilidade</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
-        <a class="ops-card" href="multiunidades.html" data-operation="Multiunidades"><span class="ops-index">Multiunidades</span><h3>Operações multiunidades</h3><p>A empresa abre novas unidades, mas cada uma começa a operar de um jeito, com dados, processos e padrões difíceis de comparar.</p><ul><li>Padronização entre unidades</li><li>Indicadores consolidados e comparáveis</li><li>Expansão sem aumento do descontrole</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
-        <a class="ops-card" href="oil-gas.html" data-operation="Oil & Gas"><span class="ops-index">Oil &amp; Gas</span><h3>Operações críticas</h3><p>Ambientes críticos exigem continuidade, rastreabilidade, fornecedores coordenados e dados confiáveis para decidir.</p><ul><li>Continuidade e risco operacional</li><li>Fornecedores e dependências críticas</li><li>Indicadores executivos e rastreabilidade</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
-        <a class="ops-card" href="contabilidade.html" data-operation="Contabilidade"><span class="ops-index">Contabilidade</span><h3>Operações contábeis</h3><p>A carteira de clientes cresceu, e documentos, prazos e obrigações passam a depender de esforço e improviso para não falhar.</p><ul><li>Recebimento de documentos e clientes</li><li>Prazos, obrigações e conformidade</li><li>Conferência, conciliação e produtividade</li></ul><span class="ops-enter">Entrar nesta operação</span></a>
-      </div>
-      <div class="ops-mobile-controls" aria-label="Controle mobile dos cenários operacionais"><button type="button" onclick="moveOps(-1)" aria-label="Operação anterior">←</button><span>Arraste para explorar</span><button type="button" onclick="moveOps(1)" aria-label="Próxima operação">→</button></div>
-      <div class="ops-dots" id="opsDots" aria-hidden="true"></div>
-
-    </div>
-  </div>
-</section>
-
 
 <section class="anchor" id="continuidade">
   <div class="wrap anchor-in">
     <div>
-      <div class="eyebrow">Por que Continuidade Operacional</div>
-      <h2>Maturidade operacional antes de precisar expandir a estrutura interna.</h2>
-      <p>Muitas empresas em crescimento já precisam de visão executiva, previsibilidade e sustentação sobre a operação antes mesmo de precisarem montar uma estrutura de liderança completa. A Continuidade Operacional leva essa camada estratégica para dentro da operação, conectando tecnologia, negócio e crescimento, sem a complexidade de expandir o time agora.</p>
+      <div class="eyebrow">Continuidade Operacional</div>
+      <h2>Maturidade operacional antes de expandir a estrutura interna.</h2>
+      <p>Muitas empresas já precisam de visão executiva, previsibilidade e sustentação operacional antes de estruturar uma liderança interna completa. A Continuidade Operacional ESPX leva essa camada estratégica para dentro da empresa sem aumentar complexidade desnecessária.</p>
     </div>
     <div class="compare">
-      <div class="r"><span class="lab">Suporte reativo, abre e fecha chamado</span><span class="val">resolve sintoma, sem visão de operação</span></div>
-      <div class="r"><span class="lab">Consultoria que diagnostica e vai embora</span><span class="val">aponta, mas não sustenta no tempo</span></div>
-      <div class="r"><span class="lab">Estruturar uma liderança interna agora</span><span class="val">complexidade e custo antes da hora</span></div>
-      <div class="r hi"><span class="lab">Continuidade Operacional ESPX</span><span class="val">visão executiva contínua para sustentar crescimento e operação</span></div>
+      <div class="r"><span class="lab">Suporte reativo</span><span class="val">resolve sintomas</span></div>
+      <div class="r"><span class="lab">Consultoria pontual</span><span class="val">aponta e vai embora</span></div>
+      <div class="r"><span class="lab">Estrutura interna agora</span><span class="val">complexidade antes da hora</span></div>
+      <div class="r hi"><span class="lab">Continuidade Operacional ESPX</span><span class="val">visão executiva contínua para sustentar crescimento</span></div>
     </div>
   </div>
 </section>
 
-  <section class="horizon">
+<section class="proof-bridge">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Sobre a ESPX</div>
+      <h2>A ESPX nasce da experiência prática em operações que não podiam parar.</h2>
+      <p>Uma visão construída ao longo de mais de duas décadas sustentando operações críticas, ambientes de alta exigência e negócios onde continuidade não era opcional.</p>
+      <a href="sobre-espx.html" class="link-arrow">Conheça a história da ESPX</a>
+    </div>
+    <div class="proof-card">
+      <div class="name">Thiego Bastos</div>
+      <div class="role">Fundador · Operações Críticas e Continuidade de Negócio</div>
+      <ul>
+        <li>Experiência prática em ambientes de missão crítica.</li>
+        <li>Tecnologia conectada a eficiência, margem e continuidade.</li>
+        <li>Visão construída entre operação, negócio e crescimento.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="horizon">
   <div class="horizon-x">X</div>
   <div class="wrap">
     <div class="eyebrow">Aonde isso leva</div>
     <h2>Quando a operação sustenta, a tecnologia passa a abrir crescimento.</h2>
-    <p class="lead">Com a operação mais estruturada e previsível, a tecnologia deixa de ser apenas sustentação e passa a revelar caminhos de evolução: <strong>automações que reduzem esforço</strong>, <strong>integrações que destravam fluxos</strong>, <strong>dados que mostram onde a margem está sendo pressionada</strong> e inteligência artificial aplicada onde realmente faz sentido para o negócio.</p>
-    <p class="close">É nesse ponto que a operação deixa de apenas acompanhar o crescimento e passa a sustentar eficiência, escala e novas oportunidades com mais clareza.</p>
+    <p class="lead">Com a operação mais estruturada, a tecnologia deixa de ser apenas sustentação e passa a revelar oportunidades reais de eficiência, automação, integração, inteligência operacional e escala.</p>
+    <p class="close">É nesse ponto que a operação deixa de apenas acompanhar o crescimento e passa a sustentar novas oportunidades com mais clareza.</p>
     <div class="tag-row">
       <span>Automação</span><span>Integração</span><span>Dados</span><span>IA aplicada</span><span>Escala</span>
     </div>
@@ -954,7 +1013,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="eyebrow">Próximo passo</div>
     <h2>Vamos olhar sua operação juntos.</h2>
-    <p>Uma conversa de 20 minutos é suficiente para eu entender seu momento e você sentir se faz sentido. Sem pitch, sem compromisso. Uma conversa de quem entende de operação.</p>
+    <p>Uma conversa inicial é suficiente para entender seu momento e identificar se existe uma oportunidade real de estruturar sua operação para crescer com mais previsibilidade.</p>
     <div class="hero-cta">
       <a href="leitura-inicial.html" class="btn btn-primary">Quero uma leitura inicial da minha operação</a>
     </div>
@@ -1064,6 +1123,12 @@ function toggleMobileMenu(){
   const panel=document.getElementById('mobilePanel');
   if(panel) panel.classList.toggle('open');
 }
+function toggleMobileOps(){
+  const ops=document.getElementById('mobileOpsMenu');
+  const btn=document.getElementById('mobileOpsToggle');
+  if(ops) ops.classList.toggle('open');
+  if(btn) btn.classList.toggle('open');
+}
 document.addEventListener('click',function(e){
   const panel=document.getElementById('mobilePanel');
   if(!panel) return;
@@ -1079,5 +1144,6 @@ document.querySelectorAll('#mobilePanel a').forEach(function(a){
 });
 </script>
 
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0a98c11cb76d4ad',t:'MTc4MTI3NDU2MA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"c246d1b5d6ff49a082df6c910c966fae","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
