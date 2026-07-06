@@ -705,6 +705,135 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .nav-menu{gap:15px}
   .nav-link,.nav-drop-trigger{font-size:.66rem;letter-spacing:.12em}
 }
+
+
+/* ---- Como funciona + Produtos ESPX · ajuste PRD ---- */
+.method-loop{background:var(--paper)}
+.how-grid-compact{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+  margin-top:44px;
+}
+.method-card{
+  position:relative;
+  min-height:245px;
+  border-radius:24px;
+  padding:28px;
+  overflow:hidden;
+}
+.method-card:before{
+  content:attr(data-num);
+  position:absolute;
+  right:18px;
+  top:12px;
+  font-family:'IBM Plex Serif',serif;
+  font-size:5rem;
+  color:rgba(16,42,67,.045);
+  line-height:1;
+}
+.method-card .num{
+  font-family:'IBM Plex Mono',monospace;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  font-size:.7rem;
+  color:var(--orange);
+  font-weight:600;
+}
+.method-card h3{
+  font-family:'IBM Plex Sans',sans-serif;
+  font-size:1.25rem;
+  letter-spacing:0;
+  margin-top:12px;
+}
+.method-card p{
+  color:var(--muted);
+  font-size:.94rem;
+  margin-top:12px;
+}
+.products-section{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(160deg,var(--navy-800),var(--navy-900));
+  color:#eef3f8;
+}
+.products-section:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(760px 440px at 88% 8%,rgba(238,108,43,.14),transparent 60%),
+    radial-gradient(640px 520px at 4% 104%,rgba(59,110,165,.16),transparent 55%);
+}
+.products-section .wrap{position:relative;z-index:2}
+.products-section .sec-head h2{color:#fff}
+.products-section .sec-head p{color:#c2cedb}
+.products-x{
+  position:absolute;
+  right:-70px;
+  bottom:-150px;
+  font-family:'IBM Plex Serif',serif;
+  font-weight:700;
+  font-size:32rem;
+  line-height:1;
+  color:rgba(255,255,255,.022);
+  user-select:none;
+  pointer-events:none;
+}
+.products-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:44px;
+}
+.product-card{
+  position:relative;
+  min-height:300px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:28px;
+  padding:30px;
+  background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
+  overflow:hidden;
+  transition:.25s ease;
+}
+.product-card:hover{transform:translateY(-6px);border-color:rgba(238,108,43,.36)}
+.product-card:after{
+  content:"";
+  position:absolute;
+  right:-80px;
+  bottom:-80px;
+  width:220px;
+  height:220px;
+  border:1px solid rgba(238,108,43,.16);
+  border-radius:50%;
+}
+.product-card .label{
+  font-family:'IBM Plex Mono',monospace;
+  color:var(--orange-soft);
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-size:.7rem;
+}
+.product-card h3{
+  font-family:'IBM Plex Sans',sans-serif;
+  color:#fff;
+  font-size:1.32rem;
+  margin-top:12px;
+  letter-spacing:0;
+}
+.product-card p{
+  color:#bac8d5;
+  font-weight:300;
+  margin-top:14px;
+}
+@media(max-width:980px){
+  .how-grid-compact,.products-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .how-grid-compact,.products-grid{grid-template-columns:1fr}
+  .method-card,.product-card{border-radius:22px;padding:24px;min-height:auto}
+}
+
 </style>
 </head>
 <body>
@@ -727,6 +856,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="#entrega-pratica" class="nav-link">Entrega</a>
         <a href="#raiox" class="nav-link">Raio-X</a>
         <a href="#continuidade" class="nav-link">Continuidade</a>
+        <a href="#produtos" class="nav-link">Produtos</a>
         <div class="nav-drop">
           <button type="button" class="nav-drop-trigger">Operações</button>
           <div class="nav-dropdown" role="menu" aria-label="Operações em crescimento">
@@ -759,6 +889,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="#entrega-pratica">Entrega</a>
     <a href="#raiox">Raio-X</a>
     <a href="#continuidade">Continuidade</a>
+    <a href="#produtos">Produtos</a>
   </div>
 
   <button type="button" class="mp-accordion" id="mobileOpsToggle" onclick="toggleMobileOps()">Operações</button>
@@ -890,39 +1021,69 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<section id="como-funciona">
+<section id="como-funciona" class="method-loop">
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">Como funciona</div>
-      <h2>Primeiro entendemos a operação. Depois estruturamos continuidade. Então evoluímos com previsibilidade.</h2>
+      <h2>Compreender primeiro. Sustentar depois. Evoluir com direção.</h2>
       <p>Sem projeto desconectado, sem vender ferramenta. Primeiro a clareza, depois a estrutura contínua e, quando fizer sentido, a evolução.</p>
     </div>
-    <div class="how-grid">
-      <div class="step">
-        <div class="num">01 · RAIO-X</div>
+
+    <div class="how-grid how-grid-compact">
+      <div class="step method-card" data-num="01">
+        <div class="num">Raio-X</div>
         <h3>Compreender</h3>
-        <span class="tag">2 a 3 semanas · escopo fechado</span>
         <p>Identificamos tensões, riscos, dependências e oportunidades antes de qualquer decisão.</p>
       </div>
-      <div class="step">
-        <div class="num">02 · CONTINUIDADE OPERACIONAL</div>
+
+      <div class="step method-card" data-num="02">
+        <div class="num">Continuidade</div>
         <h3>Sustentar</h3>
-        <span class="tag">mensal · visão executiva contínua</span>
         <p>Atuamos como parceiro contínuo na sustentação, organização e evolução da estrutura tecnológica.</p>
       </div>
-      <div class="step">
-        <div class="num">03 · EVOLUÇÃO ESTRUTURADA</div>
+
+      <div class="step method-card" data-num="03">
+        <div class="num">Projetos</div>
         <h3>Evoluir</h3>
-        <span class="tag">por projeto · escopo definido</span>
-        <p>Com a operação organizada, a tecnologia passa a abrir eficiência, escala, com dados confiáveis e IA e automações aplicadas ao negócio.</p>
+        <p>Conduzimos integrações, automações, dados, segurança, infraestrutura, IA e mudanças necessárias ao negócio.</p>
       </div>
- <div class="step">
-        <div class="num">04 · PRODUTOS X</div>
+
+      <div class="step method-card" data-num="04">
+        <div class="num">Produtos</div>
         <h3>Multiplicar</h3>
-        <span class="tag">mensal · pacotes</span>
         <p>Transformamos padrões encontrados em operações reais em soluções escaláveis da ESPX.</p>
       </div>
-     
+    </div>
+  </div>
+</section>
+
+<section class="products-section" id="produtos">
+  <div class="products-x">X</div>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Produtos ESPX</div>
+      <h2>Nem toda solução nasce de uma ideia. Algumas nascem da experiência.</h2>
+      <p>Produtos ESPX são criados a partir de padrões observados em operações reais. Eles existem para tornar recorrente aquilo que antes dependia apenas de análise pontual.</p>
+    </div>
+
+    <div class="products-grid">
+      <article class="product-card">
+        <div class="label">BOP</div>
+        <h3>Business Operational Platform</h3>
+        <p>Visibilidade sobre fluxos, dependências, tensões e sustentação operacional tecnológica.</p>
+      </article>
+
+      <article class="product-card">
+        <div class="label">Potencial</div>
+        <h3>Visibilidade Econômica</h3>
+        <p>Clareza sobre margens, custos, preços, formas de recebimento e resultado real da operação.</p>
+      </article>
+
+      <article class="product-card">
+        <div class="label">Radar</div>
+        <h3>Inteligência Territorial</h3>
+        <p>Leitura de demandas, agentes, influência e oportunidades de ação em territórios e municípios.</p>
+      </article>
     </div>
   </div>
 </section>
