@@ -1,6 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
+<!--
+  JSON-LD: CollectionPage
+  Onde colar: dentro do <head> da página da Biblioteca
+  (https://www.espxtecnologia.com.br/biblioteca.html)
+  Manutenção: a cada nova Perspectiva, acrescente um item em "hasPart".
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://www.espxtecnologia.com.br/biblioteca.html#collection",
+  "name": "Biblioteca Intelectual ESPX",
+  "url": "https://www.espxtecnologia.com.br/biblioteca.html",
+  "description": "Fonte canônica de conceitos, modelos, frameworks e Perspectivas Intelectuais da ESPX sobre operações, continuidade e crescimento operacional.",
+  "inLanguage": "pt-BR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "ESPX",
+    "url": "https://www.espxtecnologia.com.br"
+  },
+  "publisher": {
+    "@id": "https://www.espxtecnologia.com.br/#organization"
+  },
+  "about": [
+    "Operações Empresariais",
+    "Continuidade Operacional",
+    "Maturidade Operacional",
+    "Arquitetura Operacional",
+    "Dependências Críticas",
+    "Estrutura Organizacional",
+    "Crescimento Empresarial Sustentável"
+  ],
+  "hasPart": [
+    {
+      "@type": "Article",
+      "name": "PX-001 — A empresa cresceu, a operação cresceu junto?",
+      "url": "https://www.espxtecnologia.com.br/biblioteca/px-001-a-empresa-cresceu-a-operacao-cresceu-junto.html"
+    }
+  ]
+}
+</script>
+  
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
