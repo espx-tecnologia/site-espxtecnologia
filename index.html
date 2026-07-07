@@ -88,6 +88,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 </script>
 
+<!-- Schema.org · Biblioteca Intelectual ESPX -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWorkSeries",
+  "name": "Biblioteca Intelectual ESPX",
+  "url": "https://www.espxtecnologia.com.br/biblioteca.html",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ESPX Tecnologia",
+    "url": "https://www.espxtecnologia.com.br/"
+  },
+  "description": "Perspectivas, modelos e perguntas executivas para ampliar a compreensão sobre operações, crescimento e continuidade operacional.",
+  "inLanguage": "pt-BR",
+  "about": [
+    "Operação",
+    "Continuidade Operacional",
+    "Maturidade Operacional",
+    "Estrutura Invisível",
+    "Tecnologia como estrutura de crescimento"
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -882,6 +906,182 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 }
 
+
+/* ---- Biblioteca Intelectual ESPX · entrada estável da Home ---- */
+.library-home{
+  background:var(--paper);
+  position:relative;
+  overflow:hidden;
+}
+.library-home:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(620px 360px at 88% 0%,rgba(238,108,43,.10),transparent 62%),
+    radial-gradient(620px 420px at 0% 104%,rgba(59,110,165,.10),transparent 60%);
+  pointer-events:none;
+}
+.library-home .wrap{position:relative;z-index:2}
+.library-home-in{
+  display:grid;
+  grid-template-columns:1.04fr .96fr;
+  gap:42px;
+  align-items:center;
+}
+.library-home h2{
+  font-size:clamp(1.8rem,3.4vw,2.55rem);
+  max-width:13ch;
+}
+.library-home p{
+  color:var(--muted);
+  font-size:1.06rem;
+  font-weight:300;
+  margin-top:18px;
+  max-width:58ch;
+}
+.library-panel{
+  background:#fff;
+  border:1px solid var(--line-dark);
+  border-radius:18px;
+  padding:34px;
+  box-shadow:0 24px 70px -42px rgba(16,42,67,.42);
+  position:relative;
+  overflow:hidden;
+}
+.library-panel:before{
+  content:"";
+  position:absolute;
+  right:-86px;
+  bottom:-86px;
+  width:220px;
+  height:220px;
+  border:1px solid rgba(238,108,43,.18);
+  border-radius:50%;
+}
+.library-panel>*{position:relative;z-index:2}
+.library-panel .library-label{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.68rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--orange);
+  font-weight:600;
+}
+.library-panel h3{
+  font-family:'IBM Plex Serif',serif;
+  font-size:1.65rem;
+  color:var(--navy-700);
+  margin-top:12px;
+}
+.library-panel .library-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:22px;
+}
+.library-panel .library-links span{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.68rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--muted);
+  border:1px solid var(--line-dark);
+  border-radius:999px;
+  padding:6px 10px;
+}
+.library-cta{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:26px;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.74rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--orange);
+  font-weight:600;
+  border-bottom:1px solid rgba(238,108,43,.36);
+  padding-bottom:4px;
+}
+.library-cta:after{content:"→";transition:.22s}
+.library-cta:hover:after{transform:translateX(4px)}
+
+/* ---- Notificação institucional da Biblioteca ---- */
+.library-notice{
+  position:fixed;
+  left:24px;
+  bottom:24px;
+  z-index:9998;
+  width:min(360px,calc(100vw - 48px));
+  background:rgba(8,19,32,.96);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:16px;
+  box-shadow:0 24px 70px rgba(0,0,0,.34);
+  padding:18px 18px 16px;
+  backdrop-filter:blur(16px);
+  transform:translateY(16px);
+  opacity:0;
+  pointer-events:none;
+  transition:.35s ease;
+}
+.library-notice.show{
+  transform:none;
+  opacity:1;
+  pointer-events:auto;
+}
+.library-notice .ln-k{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.64rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--orange-soft);
+  font-weight:600;
+}
+.library-notice h3{
+  font-family:'IBM Plex Serif',serif;
+  font-size:1.14rem;
+  color:#fff;
+  margin-top:6px;
+}
+.library-notice p{
+  color:#b9c6d4;
+  font-size:.9rem;
+  line-height:1.45;
+  margin-top:6px;
+}
+.library-notice .ln-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-top:12px;
+}
+.library-notice a{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.68rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--orange-soft);
+  font-weight:600;
+}
+.library-notice button{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.18);
+  color:#fff;
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  cursor:pointer;
+}
+.library-notice button:hover{background:var(--orange);border-color:var(--orange)}
+@media(max-width:860px){
+  .library-home-in{grid-template-columns:1fr}
+  .library-panel{padding:28px}
+  .library-notice{left:16px;right:16px;bottom:84px;width:auto}
+}
+
 </style>
 </head>
 <body>
@@ -901,6 +1101,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="#sobre" class="nav-link">Sobre</a>
         <a href="#problema" class="nav-link">Problema</a>
         <a href="#perspectiva" class="nav-link">Perspectiva</a>
+        <a href="biblioteca.html" class="nav-link">Biblioteca</a>
         <a href="#como-funciona" class="nav-link">Como funciona</a>
         <a href="#raiox" class="nav-link">Raio-X</a>
         <a href="#continuidade" class="nav-link">Continuidade</a>
@@ -934,6 +1135,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="#sobre">Sobre</a>
     <a href="#problema">Problema</a>
     <a href="#perspectiva">Perspectiva</a>
+    <a href="biblioteca.html">Biblioteca</a>
     <a href="#entrega-pratica">Entrega</a>
     <a href="#raiox">Raio-X</a>
     <a href="#continuidade">Continuidade</a>
@@ -952,6 +1154,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="contabilidade.html"><strong>Contabilidade</strong><span>Documentos, obrigações, prazos e clientes.</span></a>
   </div>
 </div>
+
+<aside class="library-notice" id="libraryNotice" aria-label="Biblioteca Intelectual ESPX">
+  <div class="ln-k">Biblioteca Intelectual ESPX</div>
+  <h3>Perspectivas para compreender operações em crescimento.</h3>
+  <p>Uma nova área institucional da ESPX para reunir publicações, modelos e perguntas executivas sobre operação, estrutura e continuidade.</p>
+  <div class="ln-row">
+    <a href="biblioteca.html">Acessar Biblioteca</a>
+    <button type="button" onclick="dismissLibraryNotice()" aria-label="Fechar aviso">×</button>
+  </div>
+</aside>
 
 <header class="hero">
   <div class="hero-x">X</div>
@@ -1001,6 +1213,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span class="mark">A perspectiva ESPX</span>
     <h2>Tecnologia tratada como <span class="hl">estrutura de crescimento e continuidade operacional</span>.</h2>
     <p>A ESPX conecta operação, sistemas, processos, pessoas, integrações, riscos e evolução do negócio em uma estrutura mais previsível, sustentável e preparada para crescer.</p>
+  </div>
+</section>
+
+<section class="library-home" id="biblioteca" aria-labelledby="biblioteca-title">
+  <div class="wrap">
+    <div class="library-home-in">
+      <div>
+        <div class="eyebrow">Biblioteca Intelectual ESPX</div>
+        <h2 id="biblioteca-title">Perspectivas para pensar operações em crescimento.</h2>
+        <p>A Biblioteca reúne publicações, modelos e perguntas executivas desenvolvidas para ampliar a compreensão sobre operação, estrutura, continuidade e capacidade de evolução.</p>
+        <p>É uma entrada permanente para quem quer compreender melhor a própria operação antes de decidir por ferramentas, automações ou projetos.</p>
+        <a class="library-cta" href="biblioteca.html">Acessar Biblioteca Intelectual</a>
+      </div>
+      <div class="library-panel" aria-label="Sobre a Biblioteca Intelectual ESPX">
+        <div class="library-label">Publicações permanentes</div>
+        <h3>Conteúdo para ampliar repertório executivo, não para vender tecnologia.</h3>
+        <p>As Perspectivas da Biblioteca funcionam como uma camada de pensamento da ESPX: tornam visíveis relações, dependências e estruturas que sustentam o crescimento.</p>
+        <div class="library-links" aria-label="Temas da Biblioteca">
+          <span>Operação</span>
+          <span>Estrutura</span>
+          <span>Continuidade</span>
+          <span>Maturidade</span>
+          <span>Dependências</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1327,6 +1565,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </a>
 
+
+<script>
+function dismissLibraryNotice(){
+  var notice=document.getElementById('libraryNotice');
+  if(notice){notice.classList.remove('show');}
+  try{localStorage.setItem('espxLibraryNoticeDismissed','1');}catch(e){}
+}
+document.addEventListener('DOMContentLoaded',function(){
+  var notice=document.getElementById('libraryNotice');
+  if(!notice) return;
+  var dismissed=false;
+  try{dismissed=localStorage.getItem('espxLibraryNoticeDismissed')==='1';}catch(e){}
+  if(!dismissed){
+    window.setTimeout(function(){notice.classList.add('show');},900);
+  }
+});
+</script>
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 document.addEventListener('keydown',function(e){
   if(e.key==='Escape'){var m=document.getElementById('metodo-modal');if(m){m.classList.remove('open');document.body.style.overflow='';}}
@@ -1379,5 +1634,6 @@ document.querySelectorAll('#mobilePanel a').forEach(function(a){
 
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0a98c11cb76d4ad',t:'MTc4MTI3NDU2MA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"c246d1b5d6ff49a082df6c910c966fae","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"c246d1b5d6ff49a082df6c910c966fae","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a1729fe5ee287ec3',t:'MTc4MzM4MzAxMA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a1729fe5ee287ec3',t:'MTc4MzM4MzAxMA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"c246d1b5d6ff49a082df6c910c966fae","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a1799a301bc1ad4a',t:'MTc4MzQ1NjE3Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
