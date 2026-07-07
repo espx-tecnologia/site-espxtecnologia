@@ -1,0 +1,21 @@
+{
+  "organization": "ESPX",
+  "library": "Biblioteca Intelectual ESPX",
+  "url": "https://www.espxtecnologia.com.br/biblioteca.html",
+  "language": "pt-BR",
+  "updated": "AAAA-MM-DD",
+  "perspectives": [
+    {
+      "code": "PX-001",
+      "title": "A empresa cresceu, a operação cresceu junto?",
+      "url": "https://www.espxtecnologia.com.br/biblioteca/px-001-a-empresa-cresceu-a-operacao-cresceu-junto.html",
+      "summary": "Por que crescimento comercial sem crescimento estrutural gera tensão operacional.",
+      "topics": [
+        "Operações Empresariais",
+        "Maturidade Operacional",
+        "Continuidade Operacional",
+        "Estrutura Invisível"
+      ]
+    }
+  ]
+}
