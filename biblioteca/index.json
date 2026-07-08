@@ -1,21 +1,87 @@
 {
-  "organization": "ESPX",
+  "organization": "ESPX Tecnologia",
+
   "library": "Biblioteca Intelectual ESPX",
+
+  "version": "1.0.0",
+
   "url": "https://www.espxtecnologia.com.br/biblioteca.html",
+
   "language": "pt-BR",
-  "updated": "2026-07-07",
+
+  "updated": "2026-07-08",
+
+  "total_perspectives": 2,
+
+  "concepts": [
+
+    "Estrutura Invisível",
+
+    "Descompasso Operacional",
+
+    "Vantagem Operacional",
+
+    "Paradoxo da Abundância",
+
+    "Camada Visível",
+
+    "Camada Profunda"
+
+  ],
+
   "perspectives": [
+
     {
       "code": "PX-001",
+
       "title": "A empresa cresceu, a operação cresceu junto?",
+
       "url": "https://www.espxtecnologia.com.br/biblioteca/px-001-a-empresa-cresceu-a-operacao-cresceu-junto.html",
+
       "summary": "Por que crescimento comercial sem crescimento estrutural gera tensão operacional.",
+
       "topics": [
+
         "Operações Empresariais",
+
         "Maturidade Operacional",
+
         "Continuidade Operacional",
-        "Estrutura Invisível"
+
+        "Estrutura Invisível",
+
+        "Descompasso Operacional"
+
+      ]
+    },
+
+    {
+      "code": "PX-002",
+
+      "title": "O problema não é falta de tecnologia.",
+
+      "url": "https://www.espxtecnologia.com.br/biblioteca/px-002-o-problema-nao-e-falta-de-tecnologia.html",
+
+      "summary": "Quando a tecnologia deixa de ser diferencial, a vantagem competitiva migra para a capacidade da empresa de transformar tecnologia em operação.",
+
+      "topics": [
+
+        "Vantagem Operacional",
+
+        "Paradoxo da Abundância",
+
+        "Maturidade Operacional",
+
+        "Tecnologia",
+
+        "Operação",
+
+        "Camada Visível",
+
+        "Camada Profunda"
+
       ]
     }
+
   ]
 }
