@@ -1,87 +1,72 @@
 {
   "organization": "ESPX Tecnologia",
-
   "library": "Biblioteca Intelectual ESPX",
-
+  "description": "Coleção oficial de Perspectivas Intelectuais da ESPX sobre operações empresariais, continuidade operacional, maturidade operacional e tecnologia tratada como estrutura de crescimento.",
   "version": "1.0.0",
-
+  "current_release": "PX-003",
   "url": "https://www.espxtecnologia.com.br/biblioteca.html",
-
   "language": "pt-BR",
-
+  "license": "© ESPX Tecnologia",
   "updated": "2026-07-08",
-
-  "total_perspectives": 2,
+  "total_perspectives": 3,
 
   "concepts": [
-
     "Estrutura Invisível",
-
     "Descompasso Operacional",
-
     "Vantagem Operacional",
-
     "Paradoxo da Abundância",
-
     "Camada Visível",
-
-    "Camada Profunda"
-
+    "Camada Profunda",
+    "Dependência Invisível",
+    "Entidades Operacionais",
+    "Tensões Operacionais",
+    "Tensões Invisíveis"
   ],
 
   "perspectives": [
-
     {
       "code": "PX-001",
-
       "title": "A empresa cresceu, a operação cresceu junto?",
-
       "url": "https://www.espxtecnologia.com.br/biblioteca/px-001-a-empresa-cresceu-a-operacao-cresceu-junto.html",
-
       "summary": "Por que crescimento comercial sem crescimento estrutural gera tensão operacional.",
-
       "topics": [
-
         "Operações Empresariais",
-
         "Maturidade Operacional",
-
         "Continuidade Operacional",
-
         "Estrutura Invisível",
-
         "Descompasso Operacional"
-
       ]
     },
-
     {
       "code": "PX-002",
-
       "title": "O problema não é falta de tecnologia.",
-
       "url": "https://www.espxtecnologia.com.br/biblioteca/px-002-o-problema-nao-e-falta-de-tecnologia.html",
-
       "summary": "Quando a tecnologia deixa de ser diferencial, a vantagem competitiva migra para a capacidade da empresa de transformar tecnologia em operação.",
-
       "topics": [
-
         "Vantagem Operacional",
-
         "Paradoxo da Abundância",
-
         "Maturidade Operacional",
-
         "Tecnologia",
-
         "Operação",
-
         "Camada Visível",
-
         "Camada Profunda"
-
+      ]
+    },
+    {
+      "code": "PX-003",
+      "title": "Toda operação depende de alguém.",
+      "url": "https://www.espxtecnologia.com.br/biblioteca/px-003-toda-operacao-depende-de-alguem.html",
+      "summary": "O risco não está em depender de pessoas. Está em não enxergar as dependências invisíveis que sustentam a operação.",
+      "topics": [
+        "Dependência Invisível",
+        "Continuidade Operacional",
+        "Maturidade Operacional",
+        "Entidades Operacionais",
+        "Tensões Operacionais",
+        "Tensões Invisíveis",
+        "Conhecimento Tácito",
+        "Operação"
       ]
     }
-
   ]
 }
