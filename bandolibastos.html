@@ -1,0 +1,669 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Direito da Saúde | Bandoli Bastos Advocacia</title>
+  <meta name="description" content="Orientação jurídica humanizada em Direito da Saúde para situações envolvendo planos de saúde e acesso ao SUS. Bandoli Bastos Advocacia, desde 2006.">
+  <meta name="theme-color" content="#3c0907">
+  <meta property="og:title" content="Justiça que acolhe, direito que protege vidas.">
+  <meta property="og:description" content="Direito da Saúde para quem enfrenta negativas de planos de saúde ou dificuldades de acesso pelo SUS.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="bandolibastos/logo-bandoli-bastos.png">
+  <style>
+    :root{
+      --wine:#3c0907;
+      --wine-2:#521410;
+      --wine-3:#240504;
+      --gold:#d8b887;
+      --gold-2:#ead7b5;
+      --cream:#fbf8f2;
+      --white:#fff;
+      --ink:#241a18;
+      --muted:#6f625f;
+      --line:#e9dfd3;
+      --green:#187b4b;
+      --shadow:0 24px 70px rgba(60,9,7,.12);
+      --radius:28px;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--white);line-height:1.6}
+    body.nav-open{overflow:hidden}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    button,input,select,textarea{font:inherit}
+    button{cursor:pointer}
+    .container{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--wine);font-weight:800;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:34px;height:1px;background:var(--gold)}
+    h1,h2,h3{margin:0;line-height:1.08;letter-spacing:-.035em}
+    h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(3rem,7vw,6.6rem);font-weight:500}
+    h2{font-size:clamp(2.1rem,4.2vw,4.2rem)}
+    h3{font-size:1.2rem}
+    p{margin:0}
+    .lead{font-size:clamp(1.05rem,1.9vw,1.3rem);color:var(--muted);max-width:720px}
+    .btn{border:0;border-radius:999px;padding:15px 22px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;gap:10px;transition:.25s ease;min-height:54px}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--wine);color:#fff;box-shadow:0 14px 36px rgba(60,9,7,.25)}
+    .btn-primary:hover{background:var(--wine-2)}
+    .btn-light{background:#fff;color:var(--wine)}
+    .btn-outline{border:1px solid rgba(255,255,255,.35);color:#fff;background:transparent}
+    .btn-gold{background:var(--gold);color:var(--wine-3)}
+    .skip-link{position:absolute;left:-999px;top:0;background:#fff;padding:12px;z-index:100}
+    .skip-link:focus{left:12px;top:12px}
+
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(16px);border-bottom:1px solid rgba(60,9,7,.08)}
+    .nav{height:84px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{width:68px;height:68px;object-fit:contain}
+    .brand strong{font-family:Georgia,serif;font-size:1.05rem;color:var(--wine);line-height:1.1}
+    .brand span{display:block;font:700 .62rem/1.2 Inter,sans-serif;letter-spacing:.25em;margin-top:5px}
+    .menu{display:flex;align-items:center;gap:24px;font-size:.92rem;font-weight:700}
+    .menu a:not(.btn):hover{color:var(--wine)}
+    .menu-toggle{display:none;border:0;background:none;width:44px;height:44px;font-size:1.5rem;color:var(--wine)}
+
+    .hero{position:relative;overflow:hidden;background:
+      radial-gradient(circle at 85% 20%,rgba(216,184,135,.25),transparent 28%),
+      linear-gradient(145deg,#fff 0%,#fff 58%,#faf4eb 100%)}
+    .hero:after{content:"BB";position:absolute;right:-70px;bottom:-180px;font:700 27rem/1 Georgia,serif;color:rgba(60,9,7,.025);pointer-events:none}
+    .hero-grid{min-height:760px;display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:center;padding:70px 0 85px;position:relative;z-index:1}
+    .hero h1{color:var(--wine);max-width:860px}
+    .hero h1 em{font-style:normal;color:var(--gold)}
+    .hero-copy{display:grid;gap:24px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .trust-row{display:flex;gap:22px;flex-wrap:wrap;color:var(--muted);font-size:.9rem}
+    .trust-row span{display:flex;align-items:center;gap:8px}
+    .trust-row b{color:var(--wine)}
+    .hero-panel{background:var(--wine);color:#fff;padding:34px;border-radius:36px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .hero-panel:before{content:"";position:absolute;width:280px;height:280px;border-radius:50%;background:rgba(216,184,135,.12);right:-120px;top:-110px}
+    .hero-logo{width:180px;margin:0 auto 28px;filter:drop-shadow(0 8px 18px rgba(0,0,0,.16))}
+    .choice-title{font-size:1.35rem;text-align:center;margin-bottom:18px}
+    .choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .choice{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:20px;border-radius:20px;text-align:left;color:#fff;transition:.2s}
+    .choice:hover{background:#fff;color:var(--wine);transform:translateY(-2px)}
+    .choice b{display:block;font-size:1.05rem;margin-bottom:4px}
+    .choice small{opacity:.8}
+
+    section{padding:105px 0}
+    .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:42px}
+    .section-head p{max-width:620px;color:var(--muted)}
+    .problems{background:var(--cream)}
+    .card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .problem-card{border:1px solid var(--line);background:#fff;border-radius:22px;padding:24px;min-height:180px;display:flex;flex-direction:column;justify-content:space-between;transition:.25s ease}
+    .problem-card:hover{border-color:var(--gold);transform:translateY(-5px);box-shadow:0 16px 40px rgba(60,9,7,.08)}
+    .icon{width:46px;height:46px;border-radius:15px;background:var(--gold-2);display:grid;place-items:center;color:var(--wine);font-size:1.35rem}
+    .problem-card p{font-size:.92rem;color:var(--muted)}
+
+    .welcome-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}
+    .quote-card{background:var(--wine);color:#fff;padding:48px;border-radius:34px;position:relative;min-height:430px;display:flex;flex-direction:column;justify-content:end;overflow:hidden}
+    .quote-card:before{content:"“";font:400 13rem/1 Georgia,serif;position:absolute;top:-15px;left:25px;color:rgba(216,184,135,.25)}
+    .quote-card strong{font-family:Georgia,serif;font-size:2.4rem;line-height:1.15;color:var(--gold-2)}
+    .welcome-copy{display:grid;gap:22px}
+    .welcome-copy ul{list-style:none;padding:0;margin:0;display:grid;gap:13px}
+    .welcome-copy li{display:flex;gap:12px;align-items:flex-start}
+    .welcome-copy li:before{content:"✓";width:26px;height:26px;flex:0 0 26px;border-radius:50%;background:var(--gold-2);color:var(--wine);display:grid;place-items:center;font-weight:900}
+
+    .paths{background:var(--wine);color:#fff}
+    .paths .eyebrow{color:var(--gold-2)}
+    .paths .section-head p{color:rgba(255,255,255,.7)}
+    .path-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .path-card{border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);border-radius:28px;padding:34px}
+    .path-card h3{font-size:1.7rem;margin:15px 0 10px;color:var(--gold-2)}
+    .path-card>p{color:rgba(255,255,255,.72)}
+    .steps{display:grid;gap:12px;margin-top:25px}
+    .step{display:grid;grid-template-columns:42px 1fr;gap:13px;align-items:start;background:rgba(255,255,255,.06);border-radius:16px;padding:14px}
+    .step b{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:var(--wine)}
+    .step span{font-size:.93rem;color:rgba(255,255,255,.85)}
+
+    .form-section{background:linear-gradient(180deg,#fff,#fbf8f2)}
+    .form-shell{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}
+    .form-intro{position:sticky;top:120px;display:grid;gap:18px}
+    .form-box{background:#fff;border:1px solid var(--line);border-radius:32px;padding:32px;box-shadow:var(--shadow)}
+    .progress{display:flex;gap:8px;margin-bottom:28px}
+    .progress span{height:6px;flex:1;border-radius:99px;background:#eee5dc;transition:.25s}
+    .progress span.active{background:var(--wine)}
+    .form-step{display:none}
+    .form-step.active{display:block;animation:fade .25s ease}
+    @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+    .form-step h3{font-size:1.6rem;margin-bottom:18px}
+    .options{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .option{border:1px solid var(--line);border-radius:16px;padding:16px;background:#fff;text-align:left;font-weight:700;transition:.2s}
+    .option:hover,.option.selected{border-color:var(--wine);background:#fff8f4;color:var(--wine)}
+    .fields{display:grid;gap:14px}
+    label{display:grid;gap:7px;font-weight:800;font-size:.9rem}
+    input,textarea{width:100%;border:1px solid #d9cdc2;border-radius:14px;padding:14px;background:#fff;color:var(--ink);outline:none}
+    input:focus,textarea:focus{border-color:var(--wine);box-shadow:0 0 0 4px rgba(60,9,7,.08)}
+    textarea{min-height:110px;resize:vertical}
+    .consent{display:flex;gap:10px;align-items:flex-start;font-size:.82rem;color:var(--muted)}
+    .consent input{width:auto;margin-top:4px}
+    .form-actions{display:flex;justify-content:space-between;gap:12px;margin-top:24px}
+    .btn-back{background:#f3ece5;color:var(--wine)}
+    .form-note{font-size:.82rem;color:var(--muted);margin-top:16px}
+    .success{display:none;text-align:center;padding:28px}
+    .success.active{display:block}
+    .success .icon{margin:0 auto 18px;background:#e4f4ea;color:var(--green)}
+    .success.error .icon{background:#fbe8e6;color:#9f2d25}
+    .success-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+    .btn[disabled]{opacity:.65;cursor:not-allowed;transform:none}
+
+    .about{overflow:hidden}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+    .about-image{position:relative;background:var(--cream);border-radius:36px;overflow:hidden;min-height:630px;box-shadow:var(--shadow)}
+    .about-image img{width:100%;height:100%;object-fit:cover;object-position:center}
+    .about-badge{position:absolute;left:26px;bottom:26px;background:var(--wine);color:#fff;border-radius:20px;padding:18px 22px}
+    .about-badge b{font-size:1.5rem;color:var(--gold-2)}
+    .about-copy{display:grid;gap:20px}
+    .about-copy .signature{font-family:Georgia,serif;font-size:1.5rem;color:var(--wine)}
+    details{border-bottom:1px solid var(--line);padding:17px 0}
+    summary{cursor:pointer;font-weight:800;list-style:none;display:flex;justify-content:space-between;gap:20px}
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"+";color:var(--wine);font-size:1.4rem}
+    details[open] summary:after{content:"–"}
+    details p{color:var(--muted);padding:12px 30px 0 0}
+
+    .how{background:var(--cream)}
+    .how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .how-card{background:#fff;border-radius:22px;padding:26px;border:1px solid var(--line)}
+    .how-card .n{font-family:Georgia,serif;font-size:3rem;color:var(--gold)}
+    .how-card h3{margin:8px 0}
+    .how-card p{color:var(--muted);font-size:.92rem}
+
+    .faq-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:70px}
+    .faq-intro{display:grid;gap:18px;align-content:start}
+
+    .final-cta{padding:0 0 105px}
+    .final-box{background:linear-gradient(135deg,var(--wine-3),var(--wine));color:#fff;border-radius:38px;padding:62px;display:flex;justify-content:space-between;gap:40px;align-items:center;position:relative;overflow:hidden}
+    .final-box:after{content:"BB";position:absolute;right:-30px;bottom:-95px;font:700 14rem/1 Georgia,serif;color:rgba(255,255,255,.04)}
+    .final-box h2{max-width:760px;color:var(--gold-2)}
+    .final-box p{color:rgba(255,255,255,.75);margin-top:14px;max-width:660px}
+
+    footer{background:#1f0504;color:rgba(255,255,255,.74);padding:62px 0 28px}
+    .footer-grid{display:grid;grid-template-columns:1.25fr .75fr .75fr;gap:40px}
+    footer .brand strong{color:var(--gold-2)}
+    footer h3{color:#fff;margin-bottom:14px}
+    footer ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+    .legal{border-top:1px solid rgba(255,255,255,.12);margin-top:38px;padding-top:22px;font-size:.8rem;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .placeholder{color:var(--gold-2);font-style:italic}
+    .whatsapp-float{position:fixed;right:20px;bottom:20px;z-index:45;background:#1a8f56;color:#fff;border-radius:999px;padding:15px 18px;box-shadow:0 14px 34px rgba(0,0,0,.2);font-weight:900;display:flex;align-items:center;gap:9px}
+
+    @media(max-width:980px){
+      .menu{position:fixed;inset:84px 0 auto 0;background:#fff;padding:24px;display:none;flex-direction:column;align-items:stretch;box-shadow:0 20px 30px rgba(0,0,0,.08)}
+      .menu.open{display:flex}.menu-toggle{display:block}
+      .hero-grid,.welcome-grid,.form-shell,.about-grid,.faq-grid{grid-template-columns:1fr}
+      .hero-grid{min-height:auto;padding:55px 0 70px}.hero-panel{max-width:650px}
+      .card-grid,.how-grid{grid-template-columns:repeat(2,1fr)}
+      .form-intro{position:static}.about-image{min-height:520px}.footer-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:680px){
+      .container{width:min(100% - 28px,var(--max))}
+      section{padding:78px 0}.nav{height:72px}.menu{inset:72px 0 auto 0}.brand img{width:56px;height:56px}.brand strong{font-size:.88rem}
+      h1{font-size:clamp(2.75rem,14vw,4.5rem)}.hero-grid{gap:34px}.hero-actions{display:grid}.hero-actions .btn{width:100%}
+      .choice-grid,.path-grid,.options,.card-grid,.how-grid{grid-template-columns:1fr}
+      .section-head{display:grid;align-items:start}.quote-card{min-height:330px;padding:32px}.quote-card strong{font-size:2rem}
+      .path-card,.form-box{padding:24px}.about-image{min-height:430px}.final-box{padding:38px 26px;display:grid}.footer-grid{grid-template-columns:1fr}
+      .whatsapp-float span{display:none}.whatsapp-float{width:58px;height:58px;padding:0;justify-content:center;font-size:1.25rem}
+    }
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LegalService",
+    "name":"Bandoli Bastos Advocacia",
+    "description":"Atuação humanizada em Direito da Saúde e Direito do Consumidor.",
+    "foundingDate":"2006",
+    "areaServed":"BR",
+    "slogan":"Justiça que acolhe, direito que protege vidas."
+  }
+  </script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#inicio" aria-label="Bandoli Bastos Advocacia - início">
+      <img src="bandolibastos/logo-bandoli-bastos.png" alt="Logo Bandoli Bastos Advocacia">
+      <strong>BANDOLI BASTOS<span>ADVOCACIA</span></strong>
+    </a>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="menu" aria-label="Navegação principal">
+      <a href="#ajuda">Como ajudamos</a>
+      <a href="#caminhos">Plano e SUS</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#historia">Nossa história</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a class="btn btn-primary" href="#analise">Solicitar análise inicial</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+  <section class="hero" id="inicio">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Direito da Saúde · Desde 2006</span>
+        <h1>Justiça que acolhe. <em>Direito que protege vidas.</em></h1>
+        <p class="lead">Quando um tratamento, medicamento, cirurgia ou atendimento de saúde é negado ou não disponibilizado, o tempo importa. Orientamos pessoas que enfrentam dificuldades com planos de saúde ou com o SUS.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#analise">Solicitar análise inicial do meu caso →</a>
+          <a class="btn btn-back" href="#caminhos">Entender os caminhos</a>
+        </div>
+        <div class="trust-row" aria-label="Informações de confiança">
+          <span><b>Desde 2006</b> em defesa de direitos</span>
+          <span><b>OAB/RJ 145711</b></span>
+          <span><b>Atendimento humanizado</b></span>
+        </div>
+      </div>
+      <aside class="hero-panel" aria-label="Escolha seu caminho">
+        <img class="hero-logo" src="bandolibastos/logo-bandoli-bastos.png" alt="">
+        <h2 class="choice-title">Qual situação mais se aproxima da sua?</h2>
+        <div class="choice-grid">
+          <button class="choice path-select" data-path="Plano de saúde">
+            <b>Tenho plano de saúde</b>
+            <small>Negativa, cobertura, cirurgia, medicamento, home care ou reembolso.</small>
+          </button>
+          <button class="choice path-select" data-path="SUS">
+            <b>Dependo do SUS</b>
+            <small>Falta de vaga, medicamento, cirurgia, tratamento ou atendimento especializado.</small>
+          </button>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="problems" id="ajuda">
+    <div class="container">
+      <div class="section-head">
+        <div><span class="eyebrow">Reconheça sua situação</span><h2>Como podemos ajudar?</h2></div>
+        <p>Escolha o tema mais próximo do que está acontecendo. Cada situação exige análise individual da urgência e dos documentos disponíveis.</p>
+      </div>
+      <div class="card-grid">
+        <a class="problem-card problem-select" data-problem="Tratamento negado" href="#analise"><span class="icon">✚</span><div><h3>Tratamento negado</h3><p>Quando um cuidado indicado não é autorizado ou disponibilizado.</p></div></a>
+        <a class="problem-card problem-select" data-problem="Medicamento" href="#analise"><span class="icon">◉</span><div><h3>Medicamento</h3><p>Inclusive medicamentos de alto custo ou para condições raras.</p></div></a>
+        <a class="problem-card problem-select" data-problem="Cirurgia ou internação" href="#analise"><span class="icon">⌁</span><div><h3>Cirurgia ou internação</h3><p>Demora, recusa ou falta de estrutura para o procedimento necessário.</p></div></a>
+        <a class="problem-card problem-select" data-problem="Home care" href="#analise"><span class="icon">⌂</span><div><h3>Home care</h3><p>Atendimento domiciliar indicado e não autorizado.</p></div></a>
+        <a class="problem-card problem-select" data-problem="Exame" href="#analise"><span class="icon">⌕</span><div><h3>Exames e terapias</h3><p>Exames, terapias ou tratamento continuado sem acesso adequado.</p></div></a>
+        <a class="problem-card problem-select" data-problem="Tratamento infantil" href="#analise"><span class="icon">♡</span><div><h3>Tratamento infantil</h3><p>Proteção do cuidado necessário a crianças e adolescentes.</p></div></a>
+        <a class="problem-card problem-select" data-problem="Falta de vaga" href="#analise"><span class="icon">▣</span><div><h3>Falta de vaga no SUS</h3><p>Ausência de vaga, demora excessiva ou falta de atendimento especializado.</p></div></a>
+        <a class="problem-card problem-select" data-problem="Outro" href="#analise"><span class="icon">＋</span><div><h3>Outra situação</h3><p>Conte o que aconteceu para que a equipe compreenda o contexto inicial.</p></div></a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container welcome-grid">
+      <div class="quote-card"><strong>Você não precisa enfrentar uma dificuldade de saúde sozinho.</strong></div>
+      <div class="welcome-copy">
+        <span class="eyebrow">Acolhimento antes de tudo</span>
+        <h2>Primeiro, compreendemos o que aconteceu.</h2>
+        <p class="lead">A falta de acesso a um tratamento gera medo, desgaste e insegurança. Nosso trabalho começa com uma escuta cuidadosa, sem juridiquês e sem promessas fáceis.</p>
+        <ul>
+          <li>Análise da situação, da urgência e dos documentos já existentes.</li>
+          <li>Orientação clara sobre os próximos passos possíveis.</li>
+          <li>Atuação individualizada para situações envolvendo plano de saúde ou SUS.</li>
+        </ul>
+        <a class="btn btn-primary" href="#analise">Quero explicar o meu caso</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="paths" id="caminhos">
+    <div class="container">
+      <div class="section-head">
+        <div><span class="eyebrow">Dois caminhos, o mesmo direito</span><h2>Plano de saúde e SUS.</h2></div>
+        <p>A proteção à saúde não se limita a quem possui plano. A página foi construída para acolher também quem depende integralmente do sistema público.</p>
+      </div>
+      <div class="path-grid">
+        <article class="path-card">
+          <span class="icon">P</span><h3>Quando há plano de saúde</h3>
+          <p>Negativas de cobertura, procedimentos, internações, medicamentos, terapias, home care e outras limitações devem ser avaliadas conforme o contrato, a indicação médica e o caso concreto.</p>
+          <div class="steps">
+            <div class="step"><b>1</b><span>Você informa o que foi solicitado e o que foi negado.</span></div>
+            <div class="step"><b>2</b><span>A documentação e a urgência são analisadas.</span></div>
+            <div class="step"><b>3</b><span>O caminho jurídico adequado é explicado com clareza.</span></div>
+          </div>
+        </article>
+        <article class="path-card">
+          <span class="icon">S</span><h3>Quando o atendimento depende do SUS</h3>
+          <p>Falta de vaga, espera excessiva, ausência de medicamento, cirurgia ou atendimento especializado também podem exigir providências para proteger o acesso à saúde.</p>
+          <div class="steps">
+            <div class="step"><b>1</b><span>Você relata onde buscou atendimento e qual foi a resposta recebida.</span></div>
+            <div class="step"><b>2</b><span>A necessidade médica e os registros disponíveis são verificados.</span></div>
+            <div class="step"><b>3</b><span>A equipe orienta sobre as medidas possíveis para o caso.</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-section" id="analise">
+    <div class="container form-shell">
+      <div class="form-intro">
+        <span class="eyebrow">Análise inicial</span>
+        <h2>Conte o essencial em poucos passos.</h2>
+        <p class="lead">O formulário organiza as informações iniciais para que a conversa no WhatsApp seja mais objetiva e acolhedora.</p>
+        <p><strong>Importante:</strong> o envio não cria automaticamente uma relação profissional e não representa garantia de resultado. Cada caso depende de avaliação individual.</p>
+      </div>
+      <form class="form-box" id="leadForm" novalidate>
+        <div class="progress" aria-label="Progresso do formulário"><span class="active"></span><span></span><span></span><span></span><span></span></div>
+        <div class="form-step active" data-step="0">
+          <h3>Quem precisa do atendimento?</h3>
+          <div class="options" data-field="pessoa">
+            <button type="button" class="option">Eu</button><button type="button" class="option">Meu filho ou filha</button>
+            <button type="button" class="option">Meu pai ou minha mãe</button><button type="button" class="option">Outro familiar</button>
+            <button type="button" class="option">Outra pessoa</button>
+          </div>
+        </div>
+        <div class="form-step" data-step="1">
+          <h3>Onde está a dificuldade?</h3>
+          <div class="options" data-field="origem">
+            <button type="button" class="option">Plano de saúde</button><button type="button" class="option">SUS</button>
+            <button type="button" class="option">Hospital ou clínica</button><button type="button" class="option">Ainda não sei</button>
+          </div>
+        </div>
+        <div class="form-step" data-step="2">
+          <h3>Qual é o problema principal?</h3>
+          <div class="options" data-field="problema">
+            <button type="button" class="option">Medicamento</button><button type="button" class="option">Cirurgia ou internação</button>
+            <button type="button" class="option">Home care</button><button type="button" class="option">Exame</button>
+            <button type="button" class="option">Terapia ou tratamento</button><button type="button" class="option">Falta de vaga</button>
+            <button type="button" class="option">Demora excessiva</button><button type="button" class="option">Outro</button>
+          </div>
+        </div>
+        <div class="form-step" data-step="3">
+          <h3>A situação é urgente?</h3>
+          <div class="options" data-field="urgencia">
+            <button type="button" class="option">Sim</button><button type="button" class="option">Não</button><button type="button" class="option">Não sei avaliar</button>
+          </div>
+        </div>
+        <div class="form-step" data-step="4">
+          <h3>Como podemos falar com você?</h3>
+          <div class="fields">
+            <label>Nome completo<input name="nome" autocomplete="name" required></label>
+            <label>WhatsApp<input name="telefone" inputmode="tel" autocomplete="tel" placeholder="(00) 00000-0000" required></label>
+            <label>Cidade/UF<input name="cidade" autocomplete="address-level2" required></label>
+            <label>Breve descrição <span style="font-weight:400;color:var(--muted)">(opcional)</span><textarea name="descricao" placeholder="Conte em poucas linhas o que aconteceu."></textarea></label>
+            <label class="consent"><input type="checkbox" name="consentimento" required><span>Autorizo o contato sobre esta solicitação e declaro ciência de que os dados enviados serão utilizados para a análise inicial do atendimento.</span></label>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn btn-back" id="prevBtn" style="visibility:hidden">← Voltar</button>
+          <button type="button" class="btn btn-primary" id="nextBtn">Continuar →</button>
+        </div>
+        <p class="form-note" id="formMessage" role="alert"></p>
+        <div class="success" id="successBox" aria-live="polite">
+          <span class="icon" id="resultIcon">✓</span>
+          <h3 id="resultTitle">Solicitação enviada.</h3>
+          <p id="resultText">Recebemos suas informações. Nossa equipe dará continuidade ao atendimento pelos dados informados.</p>
+          <div class="success-actions" id="resultActions"></div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="about" id="historia">
+    <div class="container about-grid">
+      <div class="about-image">
+        <img src="bandolibastos/dra-carla-apresentacao.png" alt="Apresentação institucional da Bandoli Bastos Advocacia e da Dra. Carla">
+        <div class="about-badge"><b>Desde 2006</b><br>Direito com acolhimento e humanidade.</div>
+      </div>
+      <div class="about-copy">
+        <span class="eyebrow">Nossa história</span>
+        <h2>Conheça quem estará ao seu lado.</h2>
+        <p class="lead">A história da Dra. Carla Maria Bandoli Bastos Marques Braga, OAB/RJ 145711, é marcada por dedicação, empatia e propósito.</p>
+        <p>Antes de fundar o escritório, atuou como advogada e servidora pública nas Prefeituras de Macaé e Rio das Ostras. Foi no contato próximo com a dor e a esperança das pessoas que nasceu a decisão de construir uma advocacia capaz de proteger direitos fundamentais sem perder a humanidade.</p>
+        <p>Em 2006, nasce a Bandoli Bastos Advocacia, com atuação em Direito da Saúde e Direito do Consumidor e uma missão clara: ouvir, orientar e cuidar de cada caso com respeito.</p>
+        <p class="signature">“Justiça que acolhe, direito que protege vidas.”</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="how" id="como-funciona">
+    <div class="container">
+      <div class="section-head"><div><span class="eyebrow">Um processo simples</span><h2>Como funciona o primeiro atendimento.</h2></div><p>Sem formulários intermináveis e sem exposição desnecessária. Coletamos apenas o essencial para compreender a situação inicial.</p></div>
+      <div class="how-grid">
+        <article class="how-card"><span class="n">01</span><h3>Conte o que aconteceu</h3><p>Escolha a situação e informe os dados essenciais.</p></article>
+        <article class="how-card"><span class="n">02</span><h3>Organize o contato</h3><p>O formulário prepara uma mensagem clara para o WhatsApp.</p></article>
+        <article class="how-card"><span class="n">03</span><h3>Análise inicial</h3><p>A equipe compreende o contexto e pode solicitar documentos.</p></article>
+        <article class="how-card"><span class="n">04</span><h3>Próximos passos</h3><p>Você recebe orientação sobre os caminhos possíveis para o caso.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="duvidas">
+    <div class="container faq-grid">
+      <div class="faq-intro"><span class="eyebrow">Perguntas frequentes</span><h2>Informação clara também acolhe.</h2><p class="lead">As respostas abaixo são gerais. A orientação adequada depende dos documentos, da indicação médica e das circunstâncias de cada pessoa.</p></div>
+      <div>
+        <details><summary>O plano de saúde pode negar um tratamento?</summary><p>Existem situações em que uma negativa pode ser questionada, especialmente quando há indicação médica e necessidade comprovada. É importante guardar a solicitação, o relatório médico e a negativa, preferencialmente por escrito.</p></details>
+        <details><summary>O SUS pode ser obrigado a fornecer medicamento ou tratamento?</summary><p>Em determinadas circunstâncias, a falta de acesso pode ser discutida juridicamente. A análise considera a necessidade médica, a urgência, os registros de atendimento e a disponibilidade de alternativas.</p></details>
+        <details><summary>Preciso ter a negativa por escrito?</summary><p>A negativa escrita ajuda a demonstrar o que ocorreu. Quando ela não existe, outros registros, protocolos e comunicações podem ser relevantes. A equipe orientará quais documentos reunir.</p></details>
+        <details><summary>É possível pedir uma medida urgente?</summary><p>Alguns casos podem justificar pedido de urgência, mas a decisão depende das provas apresentadas e da avaliação judicial. Nenhum resultado ou prazo pode ser garantido antecipadamente.</p></details>
+        <details><summary>Quais documentos devo separar?</summary><p>Em geral: documentos pessoais, cartão do plano ou SUS, relatório e prescrição médica, exames, protocolos, pedidos, negativas e comprovantes de tentativas de atendimento.</p></details>
+        <details><summary>O atendimento pode ser realizado à distância?</summary><p><span class="placeholder">CONFIRMAR COM O ESCRITÓRIO:</span> inserir aqui a abrangência real do atendimento remoto e as regiões atendidas.</p></details>
+        <details><summary>Meus dados ficam protegidos?</summary><p>Os dados devem ser usados somente para compreender a solicitação e viabilizar o contato, conforme a política de privacidade do escritório. A versão publicada deverá incluir o texto jurídico definitivo dessa política.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container final-box">
+      <div><h2>Quando a saúde não pode esperar, o primeiro passo é buscar orientação.</h2><p>Conte o essencial do seu caso. A equipe dará continuidade ao atendimento com cuidado e clareza.</p></div>
+      <a class="btn btn-gold" href="#analise">Solicitar análise inicial →</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="#inicio"><img src="bandolibastos/logo-bandoli-bastos.png" alt=""><strong>BANDOLI BASTOS<span>ADVOCACIA</span></strong></a>
+        <p style="margin-top:16px;max-width:460px">Justiça que acolhe, direito que protege vidas. Atuação humanizada em Direito da Saúde e Direito do Consumidor.</p>
+      </div>
+      <div><h3>Contato</h3><ul><li class="placeholder">WhatsApp: (22)99284-9922</li><li class="placeholder">E-mail: contato.bandolibastos@gmail.com</li><li class="placeholder">Endereço: Rod. Amaral Peixoto, 871 - Centro, Barra de São João | Segundo Piso</li></ul></div>
+      <div><h3>Institucional</h3><ul><li>Desde 2006</li><li>OAB/RJ 145711</li><li><a href="#">Política de Privacidade</a></li><li><a href="#">Termos de Uso</a></li></ul></div>
+    </div>
+    <div class="legal">
+      <span>© <span id="year"></span> Bandoli Bastos Advocacia.</span>
+      <span>
+        Desenvolvido em parceria com
+        <a href="https://www.espxtecnologia.com.br"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="color:var(--gold-2);font-weight:700;">
+          ESPX Tecnologia
+        </a>
+      </span>
+      <span>Conteúdo informativo. Não representa promessa de resultado.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="#analise" aria-label="Iniciar atendimento pelo WhatsApp">◉ <span>Iniciar atendimento</span></a>
+
+<script>
+  // CONFIGURAÇÃO DE PRODUÇÃO
+  // Informe abaixo a URL pública do Webhook de produção do n8n.
+  // O endpoint deve aceitar POST com JSON e responder com status HTTP 2xx em caso de sucesso.
+  const N8N_ENDPOINT = "https://SEU-ENDPOINT-N8N-AQUI";
+  const WHATSAPP_NUMBER = "5522992849922";
+
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+  menuToggle.addEventListener('click',()=>{
+    const open = menu.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded',String(open));
+    document.body.classList.toggle('nav-open',open);
+  });
+  document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>{
+    menu.classList.remove('open'); document.body.classList.remove('nav-open'); menuToggle.setAttribute('aria-expanded','false');
+  }));
+
+  const form = document.getElementById('leadForm');
+  const steps = [...document.querySelectorAll('.form-step')];
+  const bars = [...document.querySelectorAll('.progress span')];
+  const nextBtn = document.getElementById('nextBtn');
+  const prevBtn = document.getElementById('prevBtn');
+  const msg = document.getElementById('formMessage');
+  const successBox = document.getElementById('successBox');
+  const resultIcon = document.getElementById('resultIcon');
+  const resultTitle = document.getElementById('resultTitle');
+  const resultText = document.getElementById('resultText');
+  const resultActions = document.getElementById('resultActions');
+  let current = 0;
+  const data = {pessoa:'',origem:'',problema:'',urgencia:''};
+
+  function showStep(index){
+    current = index;
+    steps.forEach((s,i)=>s.classList.toggle('active',i===index));
+    bars.forEach((b,i)=>b.classList.toggle('active',i<=index));
+    prevBtn.style.visibility = index===0 ? 'hidden' : 'visible';
+    nextBtn.textContent = index===steps.length-1 ? 'Enviar solicitação →' : 'Continuar →';
+    msg.textContent='';
+  }
+
+  document.querySelectorAll('.options').forEach(group=>{
+    group.querySelectorAll('.option').forEach(btn=>btn.addEventListener('click',()=>{
+      group.querySelectorAll('.option').forEach(b=>b.classList.remove('selected'));
+      btn.classList.add('selected');
+      data[group.dataset.field]=btn.textContent.trim();
+      msg.textContent='';
+    }));
+  });
+
+  document.querySelectorAll('.path-select').forEach(btn=>btn.addEventListener('click',()=>{
+    data.origem=btn.dataset.path;
+    const group=document.querySelector('[data-field="origem"]');
+    group.querySelectorAll('.option').forEach(b=>b.classList.toggle('selected',b.textContent.trim()===data.origem));
+    document.getElementById('analise').scrollIntoView({behavior:'smooth'});
+  }));
+  document.querySelectorAll('.problem-select').forEach(a=>a.addEventListener('click',()=>{
+    const value=a.dataset.problem;
+    data.problema=value;
+    const group=document.querySelector('[data-field="problema"]');
+    group.querySelectorAll('.option').forEach(b=>b.classList.toggle('selected',b.textContent.trim()===value || (value==='Tratamento negado' && b.textContent.includes('tratamento'))));
+  }));
+
+  function showResult({success, title, text, whatsappUrl=''}) {
+    steps[current].style.display='none';
+    document.querySelector('.progress').style.display='none';
+    document.querySelector('.form-actions').style.display='none';
+    msg.style.display='none';
+
+    successBox.classList.toggle('error', !success);
+    resultIcon.textContent = success ? '✓' : '!';
+    resultTitle.textContent = title;
+    resultText.textContent = text;
+    resultActions.innerHTML = '';
+
+    if (!success && whatsappUrl) {
+      const link = document.createElement('a');
+      link.className = 'btn btn-primary';
+      link.href = whatsappUrl;
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.textContent = 'Enviar pelo WhatsApp';
+      resultActions.appendChild(link);
+
+      const retry = document.createElement('button');
+      retry.type = 'button';
+      retry.className = 'btn btn-back';
+      retry.textContent = 'Tentar novamente';
+      retry.addEventListener('click', () => {
+        successBox.classList.remove('active', 'error');
+        steps[current].style.display = '';
+        document.querySelector('.progress').style.display = '';
+        document.querySelector('.form-actions').style.display = '';
+        msg.style.display = '';
+      });
+      resultActions.appendChild(retry);
+    }
+
+    successBox.classList.add('active');
+  }
+
+  nextBtn.addEventListener('click', async ()=>{
+    const requiredKey=['pessoa','origem','problema','urgencia'][current];
+    if(current<4 && !data[requiredKey]){msg.textContent='Selecione uma opção para continuar.';return;}
+    if(current<steps.length-1){showStep(current+1);return;}
+
+    const fd=new FormData(form);
+    const nome=(fd.get('nome')||'').trim();
+    const telefone=(fd.get('telefone')||'').trim();
+    const cidade=(fd.get('cidade')||'').trim();
+    const descricao=(fd.get('descricao')||'').trim();
+    const consentimento=fd.get('consentimento');
+    if(!nome || !telefone || !cidade || !consentimento){msg.textContent='Preencha nome, WhatsApp, cidade e marque o consentimento.';return;}
+
+    const whatsappText=`Olá, meu nome é ${nome}. Preciso de orientação sobre ${data.problema}. A situação envolve ${data.origem}. Quem precisa do atendimento é: ${data.pessoa}. Urgência informada: ${data.urgencia}. Cidade/UF: ${cidade}.${descricao ? ` Breve descrição: ${descricao}` : ''}`;
+    const whatsappUrl=`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappText)}`;
+
+    const payload={
+      origemFormulario:'Landing Page Direito da Saúde',
+      nome,
+      telefone,
+      cidade,
+      descricao,
+      pessoa:data.pessoa,
+      origemAtendimento:data.origem,
+      problema:data.problema,
+      urgencia:data.urgencia,
+      consentimento:true,
+      pagina:window.location.href,
+      enviadoEm:new Date().toISOString()
+    };
+
+    const originalText=nextBtn.textContent;
+    nextBtn.disabled=true;
+    nextBtn.textContent='Enviando...';
+    msg.textContent='';
+
+    try{
+      if(!N8N_ENDPOINT || N8N_ENDPOINT.includes('SEU-ENDPOINT')){
+        throw new Error('Endpoint do n8n ainda não configurado.');
+      }
+
+      const response=await fetch(N8N_ENDPOINT,{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify(payload)
+      });
+
+      if(!response.ok){
+        throw new Error(`Falha no envio: HTTP ${response.status}`);
+      }
+
+      showResult({
+        success:true,
+        title:'Solicitação enviada com sucesso.',
+        text:'Recebemos suas informações. Nossa equipe dará continuidade ao atendimento pelos dados informados.'
+      });
+      form.reset();
+    }catch(error){
+      console.error('Erro ao enviar formulário:',error);
+      showResult({
+        success:false,
+        title:'Não foi possível enviar agora.',
+        text:'Tivemos uma dificuldade no envio automático. Você pode encaminhar as mesmas informações pelo WhatsApp.',
+        whatsappUrl
+      });
+    }finally{
+      nextBtn.disabled=false;
+      nextBtn.textContent=originalText;
+    }
+  });
+
+  prevBtn.addEventListener('click',()=>{if(current>0)showStep(current-1)});
+  document.querySelector('input[name="telefone"]').addEventListener('input',e=>{
+    let v=e.target.value.replace(/\D/g,'').slice(0,11);
+    if(v.length>6)v=v.replace(/^(\d{2})(\d{5})(\d{0,4}).*/, '($1) $2-$3');
+    else if(v.length>2)v=v.replace(/^(\d{2})(\d{0,5})/, '($1) $2');
+    e.target.value=v;
+  });
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
