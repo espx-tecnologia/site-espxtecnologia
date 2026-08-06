@@ -139,8 +139,8 @@
 
 <script>
 // ===================== CONFIG =====================
-const OK="https://automation.espxtecnologia.com.br/webhook/coleta";
-const SEC_HEADER="ESPX_2026_f8K29xP4mQ7zL@";
+const OK="https://automation.espxtecnologia.com.br/webhook/coleta_guiada";
+const SEC_HEADER="Venha!ESPX2026_99zZf8K29xP4mQ7zL@!";
 const params=new URLSearchParams(location.search);
 const LEAD_ID='espx_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2,8);
 // ==================================================
@@ -482,7 +482,7 @@ async function submitAll(){
   };
   try{
     var res=await fetch(OK,{method:'POST',credentials:'omit',
-      headers:{'Content-Type':'application/json',Accept:'application/json','x-nada':SEC_HEADER},
+      headers:{'Content-Type':'application/json',Accept:'application/json','x-virus':SEC_HEADER},
       body:JSON.stringify(payload)});
     var data={};try{data=await res.json();}catch(e){}
     if(res.ok && data && data.success===true){showDone(true);}else{showDone(false);}
