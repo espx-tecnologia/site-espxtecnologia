@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>UNAX Serviços | Chamou UNAX, tá resolvido</title>
+<meta name="description" content="Montagem, desmontagem e higienização para a sua casa na Região dos Lagos. Profissionais qualificados, com mais de 10 anos de atuação. Escolha o dia e confirme no WhatsApp.">
+<meta name="theme-color" content="#EE6C2B">
+
+<meta property="og:title" content="UNAX Serviços | Chamou UNAX, tá resolvido">
+<meta property="og:description" content="Montagem, desmontagem e higienização com profissionais qualificados na Região dos Lagos.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23EE6C2B'/%3E%3Cpath d='M9 9l14 14M23 9L9 23' stroke='%23fff' stroke-width='4.5' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<style>
+/* ============================================================
+   MARCA UNAX
+   As cores vêm do universo da rede (verde, rosa, magenta, amarelo)
+   e o X carrega o laranja da tecnologia. Fundo claro, cor na ação.
+   ============================================================ */
+:root{
+  --verde:#79BC3F;
+  --rosa:#EC0F8C;
+  --roxo:#B02A8F;
+  --amarelo:#F9A825;
+  --laranja:#EE6C2B;
+  --laranja-escuro:#D25718;
+
+  --tinta:#1E2430;
+  --tinta-suave:#5A6472;
+  --branco:#FFFFFF;
+  --creme:#FFF7EF;
+  --creme-linha:#F2E2D3;
+  --linha:#E6E9EC;
+
+  --zap:#128C4A;
+  --zap-escuro:#0E7440;
+
+  --display:"Baloo 2","Trebuchet MS",sans-serif;
+  --corpo:"IBM Plex Sans","Segoe UI",Arial,sans-serif;
+  --mono:"IBM Plex Mono","Courier New",monospace;
+
+  --raio:14px;
+  --raio-g:24px;
+  --max:1140px;
+  --sombra:0 2px 4px rgba(30,36,48,.05),0 16px 40px rgba(30,36,48,.09);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--branco);color:var(--tinta);font-family:var(--corpo);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a,button,summary{-webkit-tap-highlight-color:rgba(238,108,43,.18)}
+/* âncoras param abaixo do cabeçalho fixo, nunca escondidas atrás dele */
+section[id]{scroll-margin-top:78px}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);line-height:1.12;letter-spacing:-.01em;margin:0}
+h1{font-size:clamp(2.15rem,6.4vw,3.7rem);font-weight:800}
+h2{font-size:clamp(1.7rem,4.4vw,2.6rem);font-weight:800}
+h3{font-size:1.18rem;font-weight:700}
+p{margin:0}
+
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
+.secao{padding:66px 0}
+.olho{font-family:var(--mono);font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--laranja);display:block;margin-bottom:12px}
+.olho-claro{color:#FFB98C}
+
+/* ---------- Botões ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--corpo);font-weight:700;font-size:1.03rem;padding:16px 28px;border-radius:99px;border:2px solid transparent;text-decoration:none;cursor:pointer;transition:transform .12s ease,background .15s ease,border-color .15s ease;min-height:58px;text-align:center}
+.btn:active{transform:translateY(1px)}
+.btn-laranja{background:var(--laranja);color:#fff;border-color:var(--laranja);box-shadow:0 6px 0 rgba(210,87,24,.35)}
+.btn-laranja:hover{background:var(--laranja-escuro);border-color:var(--laranja-escuro)}
+.btn-zap{background:var(--zap);color:#fff;border-color:var(--zap);box-shadow:0 6px 0 rgba(14,116,64,.32)}
+.btn-zap:hover{background:var(--zap-escuro);border-color:var(--zap-escuro)}
+.btn-linha{background:var(--branco);color:var(--tinta);border-color:var(--linha)}
+.btn-linha:hover{border-color:var(--laranja);color:var(--laranja)}
+.btn-bloco{width:100%}
+.btn[aria-disabled="true"]{opacity:.45;box-shadow:none}
+.zap-icone{width:21px;height:21px;flex:none;fill:currentColor}
+:focus-visible{outline:3px solid var(--roxo);outline-offset:3px;border-radius:8px}
+
+/* ---------- Logotipo ---------- */
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-blocos{display:flex;gap:3px;flex:none}
+.bloco{width:30px;height:34px;border-radius:7px;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:1.22rem;color:#fff;line-height:1;padding-bottom:2px}
+.bloco:nth-child(1){background:var(--verde)}
+.bloco:nth-child(2){background:var(--rosa)}
+.bloco:nth-child(3){background:var(--roxo)}
+.bloco:nth-child(4){background:var(--laranja)}
+.logo-slogan{font-family:var(--mono);font-size:.6rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta-suave);line-height:1.3;display:none}
+@media(min-width:520px){.logo-slogan{display:block}}
+
+.topo{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--linha)}
+.topo-int{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 20px;max-width:var(--max);margin:0 auto}
+.topo-acao{display:none}
+@media(min-width:880px){.topo-acao{display:inline-flex;padding:12px 22px;min-height:48px;font-size:.95rem}}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;background:linear-gradient(170deg,var(--creme) 0%,#FFFDFB 62%);border-bottom:1px solid var(--creme-linha)}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(6px);opacity:.16;pointer-events:none}
+.hero::before{width:340px;height:340px;background:var(--rosa);top:-120px;right:-90px}
+.hero::after{width:260px;height:260px;background:var(--verde);bottom:-130px;left:-80px}
+.hero-grade{position:relative;display:grid;gap:36px;padding:46px 0 58px}
+@media(min-width:920px){.hero-grade{grid-template-columns:1.05fr .85fr;align-items:center;padding:70px 0 80px;gap:52px}}
+.hero h1 .destaque{color:var(--laranja)}
+.hero-texto{font-size:1.11rem;color:var(--tinta-suave);margin-top:20px;max-width:34em}
+.hero-botoes{display:flex;flex-direction:column;gap:12px;margin-top:30px}
+@media(min-width:560px){.hero-botoes{flex-direction:row}}
+.selo-anos{display:inline-flex;align-items:center;gap:10px;background:var(--branco);border:1px solid var(--creme-linha);border-radius:99px;padding:6px 18px 6px 6px;margin-bottom:20px;font-size:.92rem;font-weight:500;box-shadow:0 3px 10px rgba(30,36,48,.05)}
+.selo-anos b{font-family:var(--display);background:var(--verde);color:#fff;border-radius:99px;padding:5px 13px;font-size:.9rem;font-weight:800}
+.selos{display:flex;flex-wrap:wrap;gap:9px 22px;margin-top:30px;padding-top:24px;border-top:1px solid var(--creme-linha)}
+.selo{display:flex;align-items:center;gap:9px;font-size:.94rem;font-weight:500}
+.selo svg{width:20px;height:20px;flex:none;stroke:var(--verde);fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+
+.conversa{background:var(--branco);border:1px solid var(--linha);border-radius:var(--raio-g);box-shadow:var(--sombra);padding:20px;max-width:400px;margin:0 auto;width:100%}
+.conversa-topo{display:flex;align-items:center;gap:11px;padding-bottom:14px;border-bottom:1px solid var(--linha);margin-bottom:16px}
+.conversa-bola{width:40px;height:40px;border-radius:11px;background:var(--laranja);display:grid;place-items:center;flex:none;font-family:var(--display);font-weight:800;color:#fff;font-size:1.2rem;line-height:1}
+.conversa-nome{font-weight:600;font-size:.95rem;line-height:1.2}
+.conversa-nome span{display:block;font-size:.76rem;color:var(--zap);font-weight:500}
+.bolha{padding:12px 15px;border-radius:16px;font-size:.93rem;line-height:1.5;margin-bottom:10px;max-width:88%}
+.bolha-eu{background:#DCF8C6;border-bottom-right-radius:4px;margin-left:auto}
+.bolha-eles{background:var(--creme);border-bottom-left-radius:4px}
+.bolha b{font-weight:600}
+.bolha-hora{display:block;font-size:.68rem;color:var(--tinta-suave);text-align:right;margin-top:4px}
+
+/* ---------- Faixa de números ---------- */
+.numeros{background:var(--tinta)}
+.numeros-grade{display:grid;gap:2px;background:rgba(255,255,255,.12)}
+@media(min-width:700px){.numeros-grade{grid-template-columns:repeat(3,1fr)}}
+.numero{background:var(--tinta);padding:30px 24px;text-align:center;color:#fff}
+.numero b{display:block;font-family:var(--display);font-size:2.15rem;font-weight:800;line-height:1}
+.numero:nth-child(1) b{color:var(--verde)}
+.numero:nth-child(2) b{color:var(--rosa)}
+.numero:nth-child(3) b{color:var(--amarelo)}
+.numero span{display:block;font-size:.92rem;color:#A9B3C0;margin-top:9px}
+
+/* ---------- Catálogo ---------- */
+.catalogo{background:var(--branco)}
+.catalogo-nota{font-size:.93rem;color:var(--tinta-suave);margin-top:10px}
+.catalogo-topo{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;justify-content:space-between;margin:26px 0 22px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{font-family:var(--corpo);font-size:.92rem;font-weight:600;padding:11px 18px;border-radius:99px;border:2px solid var(--linha);background:var(--branco);cursor:pointer;min-height:46px}
+.chip:hover{border-color:var(--laranja)}
+.chip[aria-pressed="true"]{background:var(--laranja);color:#fff;border-color:var(--laranja)}
+.setas{display:none;gap:8px}
+@media(min-width:820px){.setas{display:flex}}
+.seta{width:48px;height:48px;border-radius:50%;border:2px solid var(--linha);background:var(--branco);cursor:pointer;display:grid;place-items:center}
+.seta:hover{border-color:var(--laranja)}
+.seta svg{width:19px;height:19px;stroke:var(--tinta);fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+
+.trilho{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 20px 22px;margin:0 -20px;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.trilho::-webkit-scrollbar{display:none}
+.servico{scroll-snap-align:start;flex:0 0 262px;background:var(--branco);border:1px solid var(--linha);border-radius:var(--raio-g);padding:24px 22px;display:flex;flex-direction:column;min-height:300px;box-shadow:0 2px 10px rgba(30,36,48,.04)}
+@media(min-width:560px){.servico{flex-basis:286px}}
+.servico-icone{width:54px;height:54px;border-radius:15px;display:grid;place-items:center;margin-bottom:16px}
+.servico-icone svg{width:27px;height:27px;stroke:#fff;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.cor-0 .servico-icone{background:var(--verde)}
+.cor-1 .servico-icone{background:var(--rosa)}
+.cor-2 .servico-icone{background:var(--roxo)}
+.cor-3 .servico-icone{background:var(--amarelo)}
+.servico h3{font-size:1.1rem}
+.servico p{font-size:.93rem;color:var(--tinta-suave);margin-top:8px;flex:1}
+.tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:.63rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:5px 11px;border-radius:99px;margin-bottom:14px;align-self:flex-start}
+.tag-ativo{background:#E7F6E9;color:#1E7A34}
+.tag-breve{background:#FDEEE3;color:var(--laranja)}
+.tag svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.servico-acao{margin-top:18px;width:100%;min-height:50px;padding:12px 18px;font-size:.96rem;border-radius:99px;font-weight:700;font-family:var(--corpo);cursor:pointer;border:2px solid transparent;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.acao-agendar{background:var(--laranja);color:#fff}
+.acao-agendar:hover{background:var(--laranja-escuro)}
+.acao-avisar{background:transparent;color:var(--tinta-suave);border-color:var(--linha)}
+.acao-avisar:hover{border-color:var(--roxo);color:var(--roxo)}
+.servico-breve{background:#FBFAF8;border-style:dashed;border-color:var(--creme-linha);box-shadow:none}
+.servico-breve .servico-icone{opacity:.42}
+.servico-breve h3{color:var(--tinta-suave)}
+
+/* ---------- Como funciona ---------- */
+.como{background:var(--creme);border-top:1px solid var(--creme-linha);border-bottom:1px solid var(--creme-linha)}
+.passos{display:grid;gap:16px;margin-top:34px}
+@media(min-width:820px){.passos{grid-template-columns:repeat(4,1fr)}}
+.passo{background:var(--branco);padding:26px 22px;border-radius:var(--raio-g);border:1px solid var(--creme-linha)}
+.passo-num{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;font-family:var(--display);font-weight:800;font-size:1.02rem;color:#fff;margin-bottom:13px}
+.passo:nth-child(1) .passo-num{background:var(--verde)}
+.passo:nth-child(2) .passo-num{background:var(--rosa)}
+.passo:nth-child(3) .passo-num{background:var(--roxo)}
+.passo:nth-child(4) .passo-num{background:var(--laranja)}
+.passo h3{font-size:1.06rem;margin-bottom:7px}
+.passo p{font-size:.94rem;color:var(--tinta-suave)}
+.aviso{display:flex;gap:14px;align-items:flex-start;margin-top:22px;padding:20px 22px;background:var(--branco);border-radius:var(--raio-g);border-left:6px solid var(--roxo)}
+.aviso svg{width:24px;height:24px;flex:none;stroke:var(--roxo);fill:none;stroke-width:2.2;stroke-linecap:round;margin-top:1px}
+.aviso p{font-size:.97rem}
+.aviso b{color:var(--roxo)}
+
+/* ---------- Agendamento ---------- */
+.agendar{background:var(--tinta);color:#fff}
+.agendar h2{color:#fff}
+.agendar-sub{color:#A9B3C0;margin-top:16px;font-size:1.05rem;max-width:38em}
+.ficha{background:var(--branco);color:var(--tinta);border-radius:var(--raio-g);margin-top:34px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.32)}
+.ficha-grade{display:grid}
+@media(min-width:940px){.ficha-grade{grid-template-columns:1.25fr .95fr}}
+.ficha-form{padding:28px 24px 32px}
+@media(min-width:640px){.ficha-form{padding:36px 34px 40px}}
+.campo{margin-bottom:30px}
+.campo:last-of-type{margin-bottom:0}
+.campo-titulo{display:flex;align-items:center;gap:11px;margin-bottom:14px}
+.campo-num{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--creme);color:var(--laranja);font-family:var(--display);font-weight:800;font-size:.92rem;flex:none}
+.campo-titulo h3{font-size:1.06rem}
+label.rotulo{display:block;font-size:.88rem;font-weight:600;margin-bottom:7px;color:var(--tinta-suave)}
+.entrada,select.entrada{width:100%;padding:14px 15px;font-family:var(--corpo);font-size:1rem;color:var(--tinta);border:2px solid var(--linha);border-radius:var(--raio);background:var(--branco);min-height:54px}
+.entrada:focus{border-color:var(--laranja);outline:none}
+select.entrada{appearance:none;background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235A6472' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
+.dupla{display:grid;gap:12px}
+@media(min-width:520px){.dupla{grid-template-columns:1fr 1fr}}
+
+.cal{border:2px solid var(--linha);border-radius:var(--raio);padding:14px}
+.cal-topo{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px}
+.cal-mes{font-family:var(--display);font-weight:700;font-size:1.1rem;text-transform:capitalize}
+.cal-nav{width:42px;height:42px;border-radius:11px;border:2px solid var(--linha);background:var(--branco);cursor:pointer;display:grid;place-items:center}
+.cal-nav:hover:not([disabled]){border-color:var(--laranja)}
+.cal-nav[disabled]{opacity:.3;cursor:not-allowed}
+.cal-nav svg{width:18px;height:18px;stroke:var(--tinta);fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.cal-semana,.cal-dias{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal-semana span{text-align:center;font-family:var(--mono);font-size:.68rem;font-weight:600;color:var(--tinta-suave);padding:6px 0}
+.cal-dia{aspect-ratio:1;min-height:44px;border:none;background:var(--branco);border-radius:11px;cursor:pointer;font-family:var(--corpo);font-size:.97rem;font-weight:500;color:var(--tinta)}
+.cal-dia:hover:not(:disabled){background:var(--creme)}
+.cal-dia[disabled]{color:#C6CCD3;cursor:not-allowed}
+.cal-dia.vazio{visibility:hidden}
+.cal-dia[aria-pressed="true"]{background:var(--laranja);color:#fff;font-weight:700}
+.cal-nota{font-size:.82rem;color:var(--tinta-suave);margin-top:12px}
+
+.horarios{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:9px}
+.hora{padding:14px 8px;border:2px solid var(--linha);border-radius:99px;background:var(--branco);cursor:pointer;font-family:var(--corpo);font-size:.97rem;font-weight:500;min-height:52px}
+.hora:hover{border-color:var(--laranja)}
+.hora[aria-pressed="true"]{border-color:var(--laranja);background:#FDEEE3;font-weight:700;color:var(--laranja-escuro)}
+
+.ficha-envio{background:var(--creme);border-top:1px solid var(--creme-linha);padding:28px 24px 32px}
+@media(min-width:640px){.ficha-envio{padding:36px 30px 40px}}
+@media(min-width:940px){.ficha-envio{border-top:none;border-left:1px solid var(--creme-linha)}}
+.envio-titulo{font-family:var(--mono);font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta-suave);margin-bottom:14px}
+.previa{background:#DCF8C6;border-radius:16px;border-bottom-right-radius:4px;padding:16px 18px;font-size:.93rem;line-height:1.6;white-space:pre-wrap;word-break:break-word;min-height:150px}
+.previa .falta{color:#7B8794;font-style:italic}
+.envio-nota{font-size:.87rem;color:var(--tinta-suave);margin-top:14px}
+#envio-btn{margin-top:18px}
+#envio-status{font-size:.88rem;font-weight:600;margin-top:12px;text-align:center;min-height:1.4em}
+.envio-alt{display:block;text-align:center;font-size:.9rem;margin-top:16px;color:var(--tinta-suave)}
+.envio-alt a{color:var(--laranja);font-weight:700}
+
+/* ---------- Confiança ---------- */
+.confianca{background:var(--branco)}
+.confianca-grade{display:grid;gap:22px;margin-top:36px}
+@media(min-width:700px){.confianca-grade{grid-template-columns:repeat(2,1fr);gap:26px 40px}}
+.conf-item{display:flex;gap:16px;align-items:flex-start}
+.conf-icone{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;flex:none}
+.conf-item:nth-child(1) .conf-icone{background:#EAF6E0}
+.conf-item:nth-child(2) .conf-icone{background:#FDE6F2}
+.conf-item:nth-child(3) .conf-icone{background:#F5E5F2}
+.conf-item:nth-child(4) .conf-icone{background:#FDEEE3}
+.conf-item:nth-child(1) .conf-icone svg{stroke:var(--verde)}
+.conf-item:nth-child(2) .conf-icone svg{stroke:var(--rosa)}
+.conf-item:nth-child(3) .conf-icone svg{stroke:var(--roxo)}
+.conf-item:nth-child(4) .conf-icone svg{stroke:var(--laranja)}
+.conf-icone svg{width:23px;height:23px;fill:none;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
+.conf-item p{font-size:.96rem;color:var(--tinta-suave);margin-top:5px}
+
+.depoimentos{display:grid;gap:16px;margin-top:38px}
+@media(min-width:760px){.depoimentos{grid-template-columns:repeat(3,1fr)}}
+.depo{background:var(--creme);border:1px solid var(--creme-linha);border-radius:var(--raio-g);padding:24px 22px}
+.estrelas{display:flex;gap:3px;margin-bottom:12px}
+.estrelas svg{width:17px;height:17px;fill:var(--amarelo)}
+.depo p{font-size:.96rem}
+.depo cite{display:block;font-style:normal;font-weight:700;font-size:.9rem;margin-top:14px}
+.depo cite span{display:block;font-weight:400;color:var(--tinta-suave);font-size:.85rem}
+
+/* ---------- FAQ ---------- */
+.duvidas{background:var(--creme);border-top:1px solid var(--creme-linha)}
+.faq{margin-top:32px;border-top:1px solid var(--creme-linha)}
+.faq details{border-bottom:1px solid var(--creme-linha)}
+.faq summary{padding:20px 40px 20px 0;cursor:pointer;font-weight:600;font-size:1.03rem;position:relative;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:8px;top:26px;width:11px;height:11px;border-right:3px solid var(--laranja);border-bottom:3px solid var(--laranja);transform:rotate(45deg);transition:transform .18s ease}
+.faq details[open] summary::after{transform:rotate(-135deg);top:30px}
+.faq p{padding:0 0 22px;color:var(--tinta-suave);font-size:.98rem;max-width:60em}
+
+/* ---------- Chamada final ---------- */
+.final{background:var(--laranja);color:#fff;text-align:center;position:relative;overflow:hidden}
+.final h2{color:#fff;max-width:15em;margin:0 auto}
+.final p{color:#FFE3D0;margin-top:16px;max-width:34em;margin-left:auto;margin-right:auto}
+.final .btn{margin-top:28px;background:#fff;color:var(--laranja-escuro);border-color:#fff;box-shadow:0 6px 0 rgba(0,0,0,.16)}
+.final .btn:hover{background:#FFF3EB}
+
+/* ---------- Rodapé ---------- */
+.rodape{background:var(--tinta);color:#93A0B0;font-size:.92rem;padding:52px 0 108px}
+@media(min-width:880px){.rodape{padding-bottom:52px}}
+.rodape-grade{display:grid;gap:30px}
+@media(min-width:760px){.rodape-grade{grid-template-columns:1.3fr 1fr 1fr}}
+.rodape h4{font-family:var(--display);font-size:1.06rem;color:#fff;margin:0 0 12px;font-weight:700}
+.rodape a{color:#93A0B0;text-decoration:none}
+.rodape a:hover{color:#fff;text-decoration:underline}
+.rodape ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px}
+.rodape .bloco{width:26px;height:29px;font-size:1rem;border-radius:6px}
+.rodape-parceria{margin-top:38px;padding-top:26px;border-top:1px solid #2E3849;display:flex;flex-wrap:wrap;gap:14px 26px;align-items:center;justify-content:space-between;font-size:.85rem}
+.rodape-parceria b{color:#fff;font-weight:600}
+.rodape-parceria a{color:#fff;text-decoration:underline}
+.rodape-parceria .risca{color:var(--laranja);font-weight:700}
+
+/* ---------- Barra fixa ---------- */
+.barra-fixa{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--branco);border-top:1px solid var(--linha);padding:10px 16px calc(10px + env(safe-area-inset-bottom));box-shadow:0 -6px 24px rgba(30,36,48,.12)}
+@media(min-width:880px){.barra-fixa{display:none}}
+
+/* ---------- Ajustes finos de tela pequena ---------- */
+@media(max-width:640px){
+  body{font-size:16.5px}
+  .secao{padding:48px 0}
+  .hero-grade{padding:34px 0 44px}
+  .wrap{padding:0 16px}
+  .trilho{padding:4px 16px 22px;margin:0 -16px}
+  .ficha-form,.ficha-envio{padding-left:20px;padding-right:20px}
+  .btn{font-size:1rem;padding:15px 22px}
+  .numero{padding:24px 20px}
+  .numero b{font-size:1.9rem}
+  .passos{gap:12px}
+  /* a barra fixa não pode encobrir o fim do painel de envio */
+  .ficha-envio{padding-bottom:26px}
+  .agendar{padding-bottom:96px}
+}
+@media(max-width:360px){
+  .bloco{width:27px;height:31px;font-size:1.08rem}
+  .servico{flex-basis:238px}
+  .horarios{grid-template-columns:repeat(auto-fill,minmax(84px,1fr))}
+}
+/* celular deitado: cabeçalho fixo não pode comer a tela */
+@media(max-height:520px) and (orientation:landscape){
+  .topo{position:static}
+  section[id]{scroll-margin-top:12px}
+}
+
+.revela{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.revela.visivel{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .revela{opacity:1;transform:none;transition:none}
+  .btn,.faq summary::after{transition:none}
+  .trilho{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="topo-int">
+    <a href="#" class="logo" aria-label="UNAX Serviços, página inicial">
+      <span class="logo-blocos" aria-hidden="true">
+        <span class="bloco">U</span><span class="bloco">N</span><span class="bloco">A</span><span class="bloco">X</span>
+      </span>
+      <span class="logo-slogan">Chamou UNAX,<br>tá resolvido</span>
+    </a>
+    <a href="#agendar" class="btn btn-laranja topo-acao">Agendar serviço</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grade">
+      <div>
+        <span class="selo-anos"><b>+10 anos</b> atendendo a Região dos Lagos</span>
+        <h1>Chamou UNAX,<br><span class="destaque">tá resolvido.</span></h1>
+        <p class="hero-texto">
+          Montagem, desmontagem e higienização na sua casa, feitas por profissionais qualificados e de confiança.
+          Você escolhe o dia e o horário aqui. Uma pessoa do atendimento confirma com você no WhatsApp.
+        </p>
+        <div class="hero-botoes">
+          <a href="#agendar" class="btn btn-laranja">Escolher dia e horário</a>
+          <a href="#catalogo" class="btn btn-linha">Ver todos os serviços</a>
+        </div>
+        <div class="selos">
+          <span class="selo"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Profissional identificado</span>
+          <span class="selo"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Valor combinado antes</span>
+          <span class="selo"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Atendimento na região toda</span>
+        </div>
+      </div>
+
+      <div class="conversa" aria-hidden="true">
+        <div class="conversa-topo">
+          <div class="conversa-bola">X</div>
+          <div class="conversa-nome">Atendimento UNAX<span>online agora</span></div>
+        </div>
+        <div class="bolha bolha-eu">
+          Olá! Quero agendar <b>montagem de móveis</b> para <b>quinta, dia 4</b>, às <b>14:00</b>.
+          <span class="bolha-hora">09:41</span>
+        </div>
+        <div class="bolha bolha-eles">
+          Oi! Temos equipe livre nesse horário. O montador é o Rafael, chega entre 14h e 14h30. Posso confirmar?
+          <span class="bolha-hora">09:42</span>
+        </div>
+        <div class="bolha bolha-eu" style="max-width:62%">
+          Pode confirmar 👍
+          <span class="bolha-hora">09:42</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NÚMEROS -->
+  <section class="numeros">
+    <div class="numeros-grade">
+      <div class="numero"><b>+10 anos</b><span>de estrada na Região dos Lagos</span></div>
+      <div class="numero"><b id="num-cidades">9</b><span>cidades atendidas todos os dias</span></div>
+      <div class="numero"><b>Equipe própria</b><span>profissionais treinados e identificados</span></div>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO -->
+  <section class="secao catalogo" id="catalogo">
+    <div class="wrap">
+      <div class="revela">
+        <span class="olho">Nossos serviços</span>
+        <h2>Tudo que a sua casa precisa,<br>com gente de confiança.</h2>
+        <p class="catalogo-nota">Arraste para o lado e veja o que já está disponível e o que vem chegando.</p>
+      </div>
+
+      <div class="catalogo-topo revela">
+        <div class="chips" role="group" aria-label="Filtrar serviços">
+          <button type="button" class="chip" data-filtro="ativos" aria-pressed="true">Disponíveis agora</button>
+          <button type="button" class="chip" data-filtro="breve" aria-pressed="false">Em breve</button>
+          <button type="button" class="chip" data-filtro="todos" aria-pressed="false">Ver todos</button>
+        </div>
+        <div class="setas">
+          <button type="button" class="seta" id="seta-esq" aria-label="Ver serviços anteriores"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button type="button" class="seta" id="seta-dir" aria-label="Ver próximos serviços"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="trilho" id="trilho"></div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="secao como" id="como-funciona">
+    <div class="wrap">
+      <div class="revela">
+        <span class="olho">Como funciona</span>
+        <h2>Quatro passos. Sem complicação.</h2>
+      </div>
+
+      <div class="passos revela">
+        <div class="passo">
+          <span class="passo-num">1</span>
+          <h3>Você escolhe</h3>
+          <p>Marque o serviço, o dia e o horário que ficam bons para você aqui no site.</p>
+        </div>
+        <div class="passo">
+          <span class="passo-num">2</span>
+          <h3>Envia no WhatsApp</h3>
+          <p>Seu pedido chega escrito e pronto na conversa. Você só aperta enviar.</p>
+        </div>
+        <div class="passo">
+          <span class="passo-num">3</span>
+          <h3>A gente confirma</h3>
+          <p>Um atendente vê se tem equipe livre, passa o valor e confirma o horário com você.</p>
+        </div>
+        <div class="passo">
+          <span class="passo-num">4</span>
+          <h3>O profissional chega</h3>
+          <p>No dia combinado, a equipe chega identificada e faz o serviço direito.</p>
+        </div>
+      </div>
+
+      <div class="aviso revela">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.01"/></svg>
+        <p><b>Sem letra miúda:</b> escolher o dia aqui no site é um pedido de agendamento, não uma reserva confirmada. Quem confirma a data, o horário e o valor é sempre uma pessoa do atendimento, falando com você no WhatsApp.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGENDAMENTO -->
+  <section class="secao agendar" id="agendar">
+    <div class="wrap">
+      <div class="revela">
+        <span class="olho olho-claro">Agendamento</span>
+        <h2>Escolha o dia e o horário.</h2>
+        <p class="agendar-sub">Leva menos de um minuto. No fim, seu pedido vai montado para o WhatsApp do atendimento e uma pessoa confirma a disponibilidade com você.</p>
+      </div>
+
+      <div class="ficha revela">
+        <div class="ficha-grade">
+          <div class="ficha-form">
+
+            <div class="campo">
+              <div class="campo-titulo"><span class="campo-num">1</span><h3>Qual serviço você precisa?</h3></div>
+              <select class="entrada" id="f-servico" aria-label="Serviço"></select>
+            </div>
+
+            <div class="campo">
+              <div class="campo-titulo"><span class="campo-num">2</span><h3>Onde é o serviço?</h3></div>
+              <div class="dupla">
+                <div>
+                  <label class="rotulo" for="f-cidade">Cidade</label>
+                  <select class="entrada" id="f-cidade"></select>
+                </div>
+                <div>
+                  <label class="rotulo" for="f-bairro">Bairro</label>
+                  <input class="entrada" id="f-bairro" type="text" placeholder="Ex.: Centro" autocomplete="address-level3">
+                </div>
+              </div>
+            </div>
+
+            <div class="campo">
+              <div class="campo-titulo"><span class="campo-num">3</span><h3>Escolha o dia</h3></div>
+              <div class="cal">
+                <div class="cal-topo">
+                  <button type="button" class="cal-nav" id="cal-antes" aria-label="Mês anterior"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+                  <span class="cal-mes" id="cal-mes" aria-live="polite"></span>
+                  <button type="button" class="cal-nav" id="cal-depois" aria-label="Próximo mês"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></button>
+                </div>
+                <div class="cal-semana" aria-hidden="true"><span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span></div>
+                <div class="cal-dias" id="cal-dias"></div>
+                <p class="cal-nota" id="cal-nota"></p>
+              </div>
+            </div>
+
+            <div class="campo">
+              <div class="campo-titulo"><span class="campo-num">4</span><h3>Escolha o horário</h3></div>
+              <div class="horarios" id="lista-horarios"></div>
+            </div>
+
+            <div class="campo">
+              <div class="campo-titulo"><span class="campo-num">5</span><h3>Seus dados</h3></div>
+              <div class="dupla">
+                <div>
+                  <label class="rotulo" for="f-nome">Seu nome</label>
+                  <input class="entrada" id="f-nome" type="text" placeholder="Como podemos te chamar" autocomplete="name">
+                </div>
+                <div>
+                  <label class="rotulo" for="f-detalhe">O que precisa ser feito</label>
+                  <input class="entrada" id="f-detalhe" type="text" placeholder="Ex.: 1 guarda-roupa de 6 portas">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <aside class="ficha-envio">
+            <p class="envio-titulo">Mensagem que você vai enviar</p>
+            <div class="previa" id="previa" aria-live="polite"></div>
+            <p class="envio-nota">Nada é enviado sozinho. A conversa abre no seu WhatsApp com esse texto pronto e você decide se envia.</p>
+            <a href="#" class="btn btn-zap btn-bloco" id="envio-btn" aria-disabled="true">
+              <svg class="zap-icone" viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+              Enviar pedido no WhatsApp
+            </a>
+            <p id="envio-status"></p>
+            <span class="envio-alt">Prefere só conversar? <a href="#" data-zap-direto>Chamar o atendimento</a></span>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONFIANÇA -->
+  <section class="secao confianca" id="confianca">
+    <div class="wrap">
+      <div class="revela">
+        <span class="olho">Por que confiar</span>
+        <h2>Mais de dez anos fazendo isso na região.</h2>
+      </div>
+
+      <div class="confianca-grade revela">
+        <div class="conf-item">
+          <div class="conf-icone"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.4-3.2 7.8-8 9-4.8-1.2-8-4.6-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <div><h3>Profissional identificado</h3><p>Você recebe o nome de quem vai atender antes da visita. A equipe chega uniformizada e identificada.</p></div>
+        </div>
+        <div class="conf-item">
+          <div class="conf-icone"><svg viewBox="0 0 24 24"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+          <div><h3>Preço combinado antes</h3><p>O valor é passado no WhatsApp antes de o serviço começar. Sem surpresa na hora de pagar.</p></div>
+        </div>
+        <div class="conf-item">
+          <div class="conf-icone"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1015-6.7L21 8"/><path d="M21 3v5h-5"/></svg></div>
+          <div><h3>Se não ficou certo, a gente volta</h3><p>Deu algum problema no serviço? Fale com o atendimento e a equipe retorna para resolver.</p></div>
+        </div>
+        <div class="conf-item">
+          <div class="conf-icone"><svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><h3>Gente daqui</h3><p>Somos da região e atendemos aqui todos os dias. A nossa reputação anda junto com a gente.</p></div>
+        </div>
+      </div>
+
+      <div class="depoimentos revela" id="depoimentos"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="secao duvidas" id="duvidas">
+    <div class="wrap">
+      <div class="revela">
+        <span class="olho">Dúvidas comuns</span>
+        <h2>Perguntas que todo mundo faz.</h2>
+      </div>
+      <div class="faq revela">
+        <details open>
+          <summary>Quanto custa?</summary>
+          <p>Depende do serviço e do tamanho do trabalho. Montar um guarda-roupa não é o mesmo que montar uma cozinha inteira, e higienizar um sofá de dois lugares não é o mesmo que um de canto. Por isso o valor é passado no WhatsApp antes de qualquer coisa começar. Você só fecha se concordar.</p>
+        </details>
+        <details>
+          <summary>Preciso ter comprado o móvel com vocês?</summary>
+          <p>Não. Atendemos móvel comprado em qualquer lugar, inclusive pela internet. A higienização também é para qualquer sofá, poltrona, cabeceira, colchão ou tapete.</p>
+        </details>
+        <details>
+          <summary>Quais cidades vocês atendem?</summary>
+          <p id="faq-cidades"></p>
+        </details>
+        <details>
+          <summary>Escolher o dia aqui já garante o horário?</summary>
+          <p>Ainda não. A sua escolha vira um pedido que chega no WhatsApp do atendimento. Um atendente confere se tem equipe livre naquele dia e horário e confirma com você. Se estiver cheio, ele oferece a opção mais próxima.</p>
+        </details>
+        <details>
+          <summary>E os serviços que aparecem como "em breve"?</summary>
+          <p>São as próximas categorias que estamos preparando, com o mesmo cuidado na seleção dos profissionais. Toque em "Avise-me" no serviço que te interessa e você entra na lista para ser chamado assim que abrir.</p>
+        </details>
+        <details>
+          <summary>Como eu pago?</summary>
+          <p>As formas de pagamento aceitas são combinadas com o atendente no momento da confirmação, junto com o valor do serviço.</p>
+        </details>
+        <details>
+          <summary>Posso remarcar ou cancelar?</summary>
+          <p>Pode. É só avisar pelo mesmo WhatsApp com antecedência e a gente remarca para outro dia sem complicação.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao final">
+    <div class="wrap">
+      <h2>Marque hoje e resolva essa semana.</h2>
+      <p>Escolha o dia, envie no WhatsApp e fale com uma pessoa de verdade do atendimento.</p>
+      <a href="#agendar" class="btn">Escolher dia e horário</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <div class="rodape-grade">
+      <div>
+        <span class="logo-blocos" aria-hidden="true" style="margin-bottom:14px">
+          <span class="bloco">U</span><span class="bloco">N</span><span class="bloco">A</span><span class="bloco">X</span>
+        </span>
+        <p>Serviços para a sua casa na Região dos Lagos, RJ. Montagem, desmontagem e higienização com profissionais qualificados. Atendimento e confirmação feitos por pessoas, no WhatsApp.</p>
+      </div>
+      <div>
+        <h4>Navegue</h4>
+        <ul>
+          <li><a href="#catalogo">Serviços</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#agendar">Agendar</a></li>
+          <li><a href="#duvidas">Dúvidas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="#" data-zap-direto>WhatsApp do atendimento</a></li>
+          <li><a href="#agendar">Agendar pelo site</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rodape-parceria">
+      <span>A UNAX é uma parceria
+        <b><a href="https://www.casaunamar.com.br" target="_blank" rel="noopener">Casa Unamar</a></b>
+        <span class="risca">+</span>
+        <b><a href="https://espxtecnologia.com.br" target="_blank" rel="noopener">ESPX Tecnologia</a></b>
+      </span>
+      <span>Plataforma de agendamento operada pela ESPX Tecnologia</span>
+    </div>
+  </div>
+</footer>
+
+<div class="barra-fixa">
+  <a href="#agendar" class="btn btn-laranja btn-bloco" id="barra-btn">Agendar meu serviço</a>
+</div>
+
+<noscript>
+  <div class="wrap" style="padding:24px 20px;background:#FDEEE3">
+    <p>Para usar o calendário é preciso ativar o JavaScript. Você também pode falar direto com o atendimento pelo WhatsApp.</p>
+  </div>
+</noscript>
+
+<script>
+/* ============================================================
+   CONFIGURAÇÃO  ·  edite só este bloco
+   ============================================================ */
+const CONFIG = {
+  marca: "UNAX",
+
+  // Formato internacional, só dígitos: 55 + DDD + número
+  whatsapp: "5521967090786",
+
+  catalogo: [
+    { nome:"Montagem de móveis",             desc:"Guarda-roupa, cama, cozinha, cômoda, escrivaninha. Móvel comprado em qualquer lugar, inclusive pela internet.", icone:"chave",     ativo:true },
+    { nome:"Desmontagem para mudança",       desc:"Desmontamos com cuidado, protegemos as peças e remontamos no destino, sem quebrar ferragem.",                    icone:"caixa",     ativo:true },
+    { nome:"Montagem de móveis planejados",  desc:"Modulados e planejados de cozinha, quarto e closet, montados no esquadro e no nível.",                           icone:"planejado", ativo:true },
+    { nome:"Instalação de painel e suporte", desc:"Painel de TV, prateleira, nicho e suporte fixados com bucha certa para cada parede.",                            icone:"tv",        ativo:true },
+    { nome:"Montagem para escritório",       desc:"Mesas, estações, armários e cadeiras para escritório, loja e consultório.",                                      icone:"escritorio",ativo:true },
+    { nome:"Higienização de estofados",      desc:"Sofá, poltrona e cabeceira. Limpeza profunda com produto próprio para tecido, sem encharcar.",                   icone:"sofa",      ativo:true },
+    { nome:"Higienização de colchões",       desc:"Remove ácaro, odor e mancha do dia a dia. Secagem rápida, pode dormir na mesma noite.",                          icone:"colchao",   ativo:true },
+    { nome:"Higienização de tapetes",        desc:"Tapete e carpete limpos no local, sem precisar levar embora.",                                                   icone:"tapete",    ativo:true },
+
+    { nome:"Faxina e diarista",              desc:"Limpeza completa da casa, com profissional selecionado e de confiança.",                                         icone:"vassoura",  ativo:false },
+    { nome:"Limpeza de piscina",             desc:"Tratamento da água, aspiração e manutenção da piscina em dia.",                                                  icone:"piscina",   ativo:false },
+    { nome:"Jardinagem",                     desc:"Poda, corte de grama e cuidado do jardim, com hora marcada.",                                                    icone:"folha",     ativo:false },
+    { nome:"Pequenos reparos hidráulicos",   desc:"Torneira pingando, sifão, descarga e vazamento simples resolvidos na hora.",                                     icone:"torneira",  ativo:false },
+    { nome:"Pequenos reparos elétricos",     desc:"Tomada, interruptor, chuveiro e luminária instalados com segurança.",                                           icone:"raio",      ativo:false },
+    { nome:"Pintura de ambientes",           desc:"Pintura de parede, teto e área externa, com acabamento bem feito.",                                             icone:"pintura",   ativo:false },
+    { nome:"Limpeza de ar-condicionado",     desc:"Higienização e manutenção do aparelho para gelar bem e não cheirar mal.",                                        icone:"ar",        ativo:false },
+    { nome:"Controle de pragas",             desc:"Dedetização residencial com produto registrado e horário combinado.",                                            icone:"spray",     ativo:false }
+  ],
+
+  cidades: [
+    "Cabo Frio","Unamar","Barra de São João","Rio das Ostras","Araruama",
+    "Iguaba Grande","São Pedro da Aldeia","Arraial do Cabo","Macaé","Outra cidade"
+  ],
+
+  horarios: ["08:00","10:00","13:00","15:00","17:00"],
+  diasSemAtendimento: [0],       // 0 = domingo
+  diasMinimos: 1,
+  diasMaximos: 60,
+  textoNotaCalendario: "Atendemos de segunda a sábado. Agendamento a partir do próximo dia.",
+
+  // Depoimentos REAIS de clientes. Enquanto a lista estiver vazia, a seção não aparece.
+  // Formato: { texto:"...", nome:"Nome do cliente", cidade:"Cidade" }
+  depoimentos: []
+};
+
+/* ============================================================
+   ÍCONES
+   ============================================================ */
+const ICONES = {
+  chave:'<path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>',
+  caixa:'<path d="M3 7.5l9-4.5 9 4.5v9l-9 4.5-9-4.5z"/><path d="M3 7.5l9 4.5 9-4.5M12 12v9"/>',
+  planejado:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 10h18M12 3v18M7 6.5h.01M7 14h.01M16 6.5h.01M16 14h.01"/>',
+  tv:'<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>',
+  escritorio:'<rect x="3" y="7" width="18" height="11" rx="2"/><path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2M3 12h18"/>',
+  sofa:'<path d="M4 18v-6a2 2 0 012-2h12a2 2 0 012 2v6"/><path d="M6 10V7a2 2 0 012-2h8a2 2 0 012 2v3"/><path d="M2 18h20M6 18v2M18 18v2"/>',
+  colchao:'<rect x="2.5" y="7" width="19" height="10" rx="2.5"/><path d="M7 7v10M12 7v10M17 7v10"/>',
+  tapete:'<rect x="3" y="6" width="18" height="12" rx="1.5"/><path d="M6 9h12M6 12h12M6 15h12"/>',
+  vassoura:'<path d="M12 2.5v8"/><path d="M7.5 10.5h9l1.5 8.5h-12z"/><path d="M10 14v4M14 14v4"/>',
+  piscina:'<path d="M2 8c2.5 0 2.5 2 5 2s2.5-2 5-2 2.5 2 5 2 2.5-2 5-2"/><path d="M2 13.5c2.5 0 2.5 2 5 2s2.5-2 5-2 2.5 2 5 2 2.5-2 5-2"/><path d="M2 19c2.5 0 2.5 2 5 2s2.5-2 5-2 2.5 2 5 2 2.5-2 5-2"/>',
+  folha:'<path d="M11 20.5A7.5 7.5 0 019 6.5c4-3 9-3 11.5-2 1 2.5.5 8-2.5 12-2.5 3.3-6 4-9 4z"/><path d="M2.5 22c2-6 5-9.5 9-12"/>',
+  torneira:'<path d="M12 21.5a3 3 0 003-3c0-1.8-3-5.5-3-5.5s-3 3.7-3 5.5a3 3 0 003 3z"/><path d="M5.5 3v5.5h8a3.5 3.5 0 013.5 3.5"/>',
+  raio:'<path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/>',
+  pintura:'<rect x="3" y="4" width="12" height="6" rx="1.5"/><path d="M15 7h3.5A2.5 2.5 0 0121 9.5v1a2.5 2.5 0 01-2.5 2.5H13a1.5 1.5 0 00-1.5 1.5V16"/><rect x="10" y="16" width="3" height="5.5" rx="1"/>',
+  ar:'<rect x="2.5" y="4.5" width="19" height="7" rx="2"/><path d="M6 11.5v1M12 11.5v1M18 11.5v1"/><path d="M6.5 16c0 2 2 2 2 4M12 16c0 2 2 2 2 4M17.5 16c0 2-2 2-2 4"/>',
+  spray:'<rect x="9" y="2.5" width="5" height="4" rx="1"/><path d="M8 6.5h7a3 3 0 013 3v10a2 2 0 01-2 2H7a2 2 0 01-2-2v-10a3 3 0 013-3z"/><path d="M17.5 3h2.5M17.5 6h2.5"/>'
+};
+const ico = n => `<svg viewBox="0 0 24 24">${ICONES[n] || ICONES.chave}</svg>`;
+
+/* ============================================================
+   ESTADO
+   ============================================================ */
+const estado = { servico:null, cidade:null, bairro:"", data:null, hora:null, nome:"", detalhe:"" };
+const MESES = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
+const SEMANA = ["domingo","segunda-feira","terça-feira","quarta-feira","quinta-feira","sexta-feira","sábado"];
+
+const hoje = new Date(); hoje.setHours(0,0,0,0);
+const minima = new Date(hoje); minima.setDate(minima.getDate() + CONFIG.diasMinimos);
+const maxima = new Date(hoje); maxima.setDate(maxima.getDate() + CONFIG.diasMaximos);
+let mesVisivel = new Date(minima.getFullYear(), minima.getMonth(), 1);
+
+const zapLink = texto => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(texto)}`;
+
+/* ============================================================
+   CATÁLOGO E CARROSSEL
+   ============================================================ */
+let filtroAtual = "ativos";
+
+function desenharCatalogo(){
+  const lista = CONFIG.catalogo.filter(s =>
+    filtroAtual === "todos" ? true : filtroAtual === "ativos" ? s.ativo : !s.ativo);
+
+  document.getElementById("trilho").innerHTML = lista.map((s, i) => `
+    <article class="servico cor-${i % 4} ${s.ativo ? "" : "servico-breve"}">
+      <span class="tag ${s.ativo ? "tag-ativo" : "tag-breve"}">
+        ${s.ativo
+          ? '<svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Disponível'
+          : '<svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg> Em breve'}
+      </span>
+      <div class="servico-icone">${ico(s.icone)}</div>
+      <h3>${s.nome}</h3>
+      <p>${s.desc}</p>
+      <button type="button" class="servico-acao ${s.ativo ? "acao-agendar" : "acao-avisar"}"
+              data-acao="${s.ativo ? "agendar" : "avisar"}" data-nome="${s.nome}">
+        ${s.ativo ? "Agendar este serviço" : "Avise-me quando abrir"}
+      </button>
+    </article>`).join("");
+
+  document.querySelectorAll(".servico-acao").forEach(b => {
+    b.addEventListener("click", () => {
+      const nome = b.dataset.nome;
+      if (b.dataset.acao === "agendar"){
+        const sel = document.getElementById("f-servico");
+        sel.value = nome; estado.servico = nome; atualizar();
+        document.getElementById("agendar").scrollIntoView({ behavior:"smooth", block:"start" });
+      } else {
+        window.open(zapLink(`Olá! Quero ser avisado quando o serviço de *${nome}* estiver disponível na ${CONFIG.marca}.`), "_blank", "noopener");
+      }
+    });
+  });
+}
+
+document.querySelectorAll(".chip").forEach(c => {
+  c.addEventListener("click", () => {
+    document.querySelectorAll(".chip").forEach(o => o.setAttribute("aria-pressed","false"));
+    c.setAttribute("aria-pressed","true");
+    filtroAtual = c.dataset.filtro;
+    desenharCatalogo();
+    document.getElementById("trilho").scrollTo({ left:0, behavior:"smooth" });
+  });
+});
+
+const trilho = document.getElementById("trilho");
+const passoTrilho = () => (trilho.querySelector(".servico")?.offsetWidth || 280) + 16;
+document.getElementById("seta-esq").addEventListener("click", () => trilho.scrollBy({ left:-passoTrilho()*2, behavior:"smooth" }));
+document.getElementById("seta-dir").addEventListener("click", () => trilho.scrollBy({ left: passoTrilho()*2, behavior:"smooth" }));
+
+/* ============================================================
+   FORMULÁRIO
+   ============================================================ */
+function montarServicos(){
+  const ativos = CONFIG.catalogo.filter(s => s.ativo);
+  const sel = document.getElementById("f-servico");
+  sel.innerHTML = '<option value="">Selecione o serviço</option>' +
+    ativos.map(s => `<option value="${s.nome}">${s.nome}</option>`).join("") +
+    '<option value="Outro serviço">Outro serviço</option>';
+  sel.addEventListener("change", () => { estado.servico = sel.value || null; atualizar(); });
+}
+
+function montarCidades(){
+  const sel = document.getElementById("f-cidade");
+  sel.innerHTML = '<option value="">Selecione a cidade</option>' +
+    CONFIG.cidades.map(c => `<option value="${c}">${c}</option>`).join("");
+  sel.addEventListener("change", () => { estado.cidade = sel.value || null; atualizar(); });
+
+  const atendidas = CONFIG.cidades.filter(c => c !== "Outra cidade");
+  document.getElementById("num-cidades").textContent = atendidas.length;
+  document.getElementById("faq-cidades").textContent =
+    "Atendemos " + atendidas.join(", ").replace(/,([^,]*)$/, " e$1") +
+    ". Se a sua cidade não estiver na lista, chame o atendimento no WhatsApp que a gente verifica.";
+}
+
+function montarHorarios(){
+  document.getElementById("lista-horarios").innerHTML =
+    CONFIG.horarios.map(h => `<button type="button" class="hora" data-hora="${h}" aria-pressed="false">${h}</button>`).join("");
+  document.querySelectorAll(".hora").forEach(b => {
+    b.addEventListener("click", () => {
+      document.querySelectorAll(".hora").forEach(o => o.setAttribute("aria-pressed","false"));
+      b.setAttribute("aria-pressed","true");
+      estado.hora = b.dataset.hora;
+      atualizar();
+    });
+  });
+}
+
+function montarDepoimentos(){
+  const alvo = document.getElementById("depoimentos");
+  if (!CONFIG.depoimentos.length){ alvo.remove(); return; }
+  const estrela = '<svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3l-5-4.9 7-.9z"/></svg>';
+  alvo.innerHTML = CONFIG.depoimentos.map(d => `
+    <figure class="depo" style="margin:0">
+      <div class="estrelas" aria-label="5 estrelas">${estrela.repeat(5)}</div>
+      <p>${d.texto}</p>
+      <cite>${d.nome}<span>${d.cidade}</span></cite>
+    </figure>`).join("");
+}
+
+/* ============================================================
+   CALENDÁRIO
+   ============================================================ */
+const diaLiberado = d => d >= minima && d <= maxima && !CONFIG.diasSemAtendimento.includes(d.getDay());
+
+function desenharCalendario(){
+  const ano = mesVisivel.getFullYear(), mes = mesVisivel.getMonth();
+  document.getElementById("cal-mes").textContent = `${MESES[mes]} de ${ano}`;
+  document.getElementById("cal-nota").textContent = CONFIG.textoNotaCalendario;
+
+  const primeiro = new Date(ano, mes, 1).getDay();
+  const total = new Date(ano, mes + 1, 0).getDate();
+  let html = "";
+  for (let i = 0; i < primeiro; i++) html += '<button type="button" class="cal-dia vazio" tabindex="-1" disabled></button>';
+  for (let d = 1; d <= total; d++){
+    const data = new Date(ano, mes, d);
+    const ok = diaLiberado(data);
+    const marcado = estado.data && estado.data.getTime() === data.getTime();
+    html += `<button type="button" class="cal-dia" data-dia="${d}" aria-pressed="${marcado}" ${ok ? "" : "disabled"} aria-label="${d} de ${MESES[mes]}">${d}</button>`;
+  }
+  const alvo = document.getElementById("cal-dias");
+  alvo.innerHTML = html;
+  alvo.querySelectorAll(".cal-dia[data-dia]").forEach(b => {
+    b.addEventListener("click", () => {
+      estado.data = new Date(ano, mes, parseInt(b.dataset.dia, 10));
+      desenharCalendario(); atualizar();
+    });
+  });
+
+  document.getElementById("cal-antes").disabled  = mesVisivel <= new Date(minima.getFullYear(), minima.getMonth(), 1);
+  document.getElementById("cal-depois").disabled = mesVisivel >= new Date(maxima.getFullYear(), maxima.getMonth(), 1);
+}
+
+document.getElementById("cal-antes").addEventListener("click", () => {
+  mesVisivel = new Date(mesVisivel.getFullYear(), mesVisivel.getMonth() - 1, 1); desenharCalendario();
+});
+document.getElementById("cal-depois").addEventListener("click", () => {
+  mesVisivel = new Date(mesVisivel.getFullYear(), mesVisivel.getMonth() + 1, 1); desenharCalendario();
+});
+
+/* ============================================================
+   MENSAGEM E ENVIO
+   ============================================================ */
+const porExtenso = d => `${SEMANA[d.getDay()]}, ${d.getDate()} de ${MESES[d.getMonth()]} de ${d.getFullYear()}`;
+const faltando = (v, t) => v ? v : `<span class="falta">${t}</span>`;
+
+function montarTexto(envio){
+  const local = [estado.bairro, estado.cidade].filter(Boolean).join(", ");
+  const l = [];
+  l.push(`Olá! Quero agendar um serviço com a ${CONFIG.marca}.`);
+  l.push("");
+  l.push(`*Serviço:* ${envio ? (estado.servico || "") : faltando(estado.servico, "escolha o serviço")}`);
+  l.push(`*Dia:* ${estado.data ? porExtenso(estado.data) : (envio ? "" : '<span class="falta">escolha o dia</span>')}`);
+  l.push(`*Horário:* ${envio ? (estado.hora || "") : faltando(estado.hora, "escolha o horário")}`);
+  l.push(`*Local:* ${envio ? local : faltando(local, "informe cidade e bairro")}`);
+  if (estado.nome)    l.push(`*Nome:* ${estado.nome}`);
+  if (estado.detalhe) l.push(`*O que precisa:* ${estado.detalhe}`);
+  l.push("");
+  l.push("Pode confirmar se tem equipe disponível e me passar o valor?");
+  return l.join("\n");
+}
+
+function atualizar(){
+  document.getElementById("previa").innerHTML = montarTexto(false);
+  const pronto = estado.servico && estado.data && estado.hora;
+  const btn = document.getElementById("envio-btn");
+  const barra = document.getElementById("barra-btn");
+  const status = document.getElementById("envio-status");
+
+  if (pronto){
+    const link = zapLink(montarTexto(true));
+    btn.setAttribute("aria-disabled","false");
+    btn.href = link; btn.target = "_blank"; btn.rel = "noopener";
+    status.textContent = "Um atendente confirma a disponibilidade com você.";
+    status.style.color = "var(--tinta-suave)";
+
+    // no celular, a barra de baixo vira o próprio botão de enviar
+    barra.className = "btn btn-zap btn-bloco";
+    barra.textContent = "Enviar pedido no WhatsApp";
+    barra.href = link; barra.target = "_blank"; barra.rel = "noopener";
+  } else {
+    btn.setAttribute("aria-disabled","true");
+    btn.href = "#agendar";
+    btn.removeAttribute("target");
+    const falta = [];
+    if (!estado.servico) falta.push("o serviço");
+    if (!estado.data)    falta.push("o dia");
+    if (!estado.hora)    falta.push("o horário");
+    status.textContent = "Falta escolher " + falta.join(", ").replace(/,([^,]*)$/, " e$1") + ".";
+    status.style.color = "var(--laranja)";
+
+    barra.className = "btn btn-laranja btn-bloco";
+    barra.textContent = "Agendar meu serviço";
+    barra.href = "#agendar"; barra.removeAttribute("target");
+  }
+}
+
+/* Tocar no botão incompleto leva direto ao campo que falta, em vez de não fazer nada */
+function irParaPendencia(){
+  let alvo = null, focar = null;
+  if (!estado.servico)    { alvo = document.getElementById("f-servico"); focar = alvo; }
+  else if (!estado.data)  { alvo = document.querySelector(".cal"); }
+  else if (!estado.hora)  { alvo = document.getElementById("lista-horarios"); focar = alvo.querySelector(".hora"); }
+  if (!alvo) return;
+  alvo.scrollIntoView({ behavior:"smooth", block:"center" });
+  if (focar) setTimeout(() => focar.focus({ preventScroll:true }), 420);
+}
+document.getElementById("envio-btn").addEventListener("click", e => {
+  if (e.currentTarget.getAttribute("aria-disabled") === "true"){ e.preventDefault(); irParaPendencia(); }
+});
+
+[["f-bairro","bairro"],["f-nome","nome"],["f-detalhe","detalhe"]].forEach(([id, chave]) => {
+  document.getElementById(id).addEventListener("input", e => { estado[chave] = e.target.value.trim(); atualizar(); });
+});
+
+document.querySelectorAll("[data-zap-direto]").forEach(a => {
+  a.href = zapLink(`Olá! Vim pelo site da ${CONFIG.marca} e queria tirar uma dúvida.`);
+  a.target = "_blank"; a.rel = "noopener";
+});
+
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window){
+  const obs = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("visivel"); obs.unobserve(e.target); } });
+  }, { threshold:.12 });
+  document.querySelectorAll(".revela").forEach(el => obs.observe(el));
+} else {
+  document.querySelectorAll(".revela").forEach(el => el.classList.add("visivel"));
+}
+
+desenharCatalogo();
+montarServicos();
+montarCidades();
+montarHorarios();
+montarDepoimentos();
+desenharCalendario();
+atualizar();
+</script>
+</body>
+</html>
