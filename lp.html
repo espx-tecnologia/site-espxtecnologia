@@ -1,0 +1,2451 @@
+
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+							<style>
+								body {
+									background-color: white; /* Ensure the iframe has a white background */
+								}
+
+								
+							</style>
+                        </head>
+                        <body>
+                            <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <!--
+    ESPX — LP Comercial
+    Versão: 0.2.0
+    Status: Validação comercial
+
+    Evoluções da versão:
+    - Identidade visual oficial do site institucional
+    - Posicionamento orientado a receita, margem e autonomia
+    - Ofertas comerciais progressivas
+    - Case qualitativo anonimizado
+    - Instrumentação de conversão via dataLayer/GTM
+    - Captura de UTMs
+    - Formulário integrado ao WhatsApp
+  -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ESPX | Crescimento, margem e gestão em ação</title>
+
+  <meta
+    name="description"
+    content="A ESPX ajuda empresas a aumentar resultados, proteger margem e crescer com menos dependência do dono, conectando pessoas, processos, dados e tecnologia."
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <!-- Ajustar quando a URL definitiva da LP for definida -->
+  <link
+    rel="canonical"
+    href="https://www.espxtecnologia.com.br/crescimento-em-acao.html"
+  >
+
+  <meta name="theme-color" content="#081320">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="ESPX Tecnologia">
+  <meta
+    property="og:title"
+    content="ESPX | Crescimento, margem e gestão em ação"
+  >
+  <meta
+    property="og:description"
+    content="Mais resultado, mais margem e menos dependência do dono para a empresa funcionar."
+  >
+  <meta
+    property="og:url"
+    content="https://www.espxtecnologia.com.br/crescimento-em-acao.html"
+  >
+
+  <!-- Fontes oficiais -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Favicon alinhado à identidade atual -->
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><rect width='120' height='120' rx='26' fill='%23102A43'/><text x='60' y='84' font-size='74' font-weight='700' fill='%23EE6C2B' text-anchor='middle' font-family='Georgia,serif'>X</text></svg>"
+  >
+
+  <!-- Google Tag Manager oficial -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+  </script>
+
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({
+        "gtm.start": new Date().getTime(),
+        event:"gtm.js"
+      });
+
+      var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),
+          dl=l!="dataLayer" ? "&l="+l : "";
+
+      j.async=true;
+      j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,"script","dataLayer","GTM-KCKHJXRL");
+  </script>
+
+  <!-- Dados estruturados -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": "https://www.espxtecnologia.com.br/#organization",
+    "name": "ESPX Tecnologia",
+    "alternateName": "ESPX",
+    "url": "https://www.espxtecnologia.com.br/",
+    "telephone": "+55-21-96709-0786",
+    "foundingDate": "2019",
+    "areaServed": "BR",
+    "description": "A ESPX conecta pessoas, processos, dados e tecnologia para ampliar resultados, margem, controle e continuidade.",
+    "slogan": "Especialistas em multiplicar resultados.",
+    "founder": {
+      "@type": "Person",
+      "name": "Thiego Bastos",
+      "url": "https://www.linkedin.com/in/thiegobastos"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Niterói",
+      "addressRegion": "RJ",
+      "addressCountry": "BR"
+    }
+  }
+  </script>
+
+  <style>
+    /* ========================================================
+       DESIGN SYSTEM ESPX
+       ======================================================== */
+
+    :root {
+      --navy-950: #050d16;
+      --navy-900: #081320;
+      --navy-800: #0c1d30;
+      --navy-700: #102a43;
+      --navy-600: #173a5e;
+
+      --orange: #ee6c2b;
+      --orange-light: #f6915a;
+      --orange-pale: #ffd5be;
+
+      --paper: #f4f1ea;
+      --paper-2: #ece7dc;
+      --white: #ffffff;
+
+      --ink: #11202e;
+      --muted: #5d6b78;
+      --text-light: #c3cfda;
+      --text-dim: #91a2b2;
+
+      --line-light: rgba(17, 32, 46, 0.13);
+      --line-dark: rgba(255, 255, 255, 0.11);
+
+      --success: #22784a;
+      --error: #a63e32;
+
+      --serif: "IBM Plex Serif", Georgia, serif;
+      --sans: "IBM Plex Sans", Arial, sans-serif;
+      --mono: "IBM Plex Mono", monospace;
+
+      --container: 1160px;
+
+      --radius-sm: 4px;
+      --radius-md: 12px;
+      --radius-lg: 24px;
+
+      --shadow:
+        0 28px 80px -35px rgba(8, 19, 32, 0.45);
+
+      --transition: 220ms ease;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--serif);
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--orange-light);
+      outline-offset: 4px;
+    }
+
+    ::selection {
+      color: var(--white);
+      background: var(--orange);
+    }
+
+    .container {
+      width: min(calc(100% - 48px), var(--container));
+      margin-inline: auto;
+    }
+
+    .section {
+      position: relative;
+      padding: 108px 0;
+    }
+
+    .section--paper {
+      background: var(--paper);
+    }
+
+    .section--soft {
+      background: var(--paper-2);
+    }
+
+    .section--dark {
+      color: var(--white);
+      background: var(--navy-900);
+    }
+
+    .section--navy {
+      color: var(--white);
+      background: var(--navy-700);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--orange);
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 22px;
+      height: 1px;
+      content: "";
+      background: currentColor;
+    }
+
+    .section-heading {
+      max-width: 800px;
+      margin-bottom: 50px;
+    }
+
+    .section-heading h2 {
+      margin: 15px 0 20px;
+      font-size: clamp(2rem, 4.4vw, 3.7rem);
+    }
+
+    .section-heading p {
+      max-width: 680px;
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+      font-weight: 300;
+    }
+
+    .section--dark .section-heading p,
+    .section--navy .section-heading p {
+      color: var(--text-light);
+    }
+
+    .accent {
+      color: var(--orange);
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 52px;
+      padding: 14px 24px;
+      border: 1px solid transparent;
+      border-radius: var(--radius-sm);
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      cursor: pointer;
+      font-weight: 700;
+      line-height: 1.2;
+      transition:
+        transform var(--transition),
+        background var(--transition),
+        border-color var(--transition);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button--primary {
+      color: var(--white);
+      background: var(--orange);
+    }
+
+    .button--primary:hover {
+      background: #ff7b39;
+      box-shadow:
+        0 14px 32px -14px rgba(238, 108, 43, 0.7);
+    }
+
+    .button--ghost {
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.28);
+      background: transparent;
+    }
+
+    .button--ghost:hover {
+      border-color: var(--white);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .button--dark {
+      color: var(--white);
+      background: var(--navy-700);
+    }
+
+    .button--full {
+      width: 100%;
+    }
+
+    /* ========================================================
+       HEADER
+       ======================================================== */
+
+    .site-header {
+      position: fixed;
+      z-index: 100;
+      top: 0;
+      right: 0;
+      left: 0;
+      border-bottom: 1px solid transparent;
+      background: rgba(8, 19, 32, 0.82);
+      backdrop-filter: blur(14px);
+      transition: border-color var(--transition);
+    }
+
+    .site-header.scrolled {
+      border-color: var(--line-dark);
+    }
+
+    .navbar {
+      display: flex;
+      min-height: 72px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: baseline;
+      color: var(--white);
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .brand__x {
+      color: var(--orange);
+    }
+
+    .brand__desc {
+      margin-left: 8px;
+      color: #adbbc8;
+      font-family: var(--sans);
+      font-size: 0.86rem;
+      font-weight: 400;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav > a:not(.button) {
+      color: var(--text-light);
+      font-family: var(--mono);
+      font-size: 0.67rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .nav > a:not(.button):hover {
+      color: var(--white);
+    }
+
+    .menu-button {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line-dark);
+      border-radius: 50%;
+      color: var(--white);
+      background: transparent;
+      cursor: pointer;
+    }
+
+    /* ========================================================
+       HERO
+       ======================================================== */
+
+    .hero {
+      position: relative;
+      min-height: 820px;
+      overflow: hidden;
+      padding: 175px 0 105px;
+      color: var(--white);
+      background: var(--navy-900);
+      isolation: isolate;
+    }
+
+    .hero::before {
+      position: absolute;
+      z-index: -2;
+      inset: 0;
+      content: "";
+      background:
+        radial-gradient(
+          850px 500px at 82% 0%,
+          rgba(238, 108, 43, 0.2),
+          transparent 65%
+        ),
+        radial-gradient(
+          720px 560px at 5% 105%,
+          rgba(59, 110, 165, 0.2),
+          transparent 62%
+        );
+    }
+
+    .hero::after {
+      position: absolute;
+      z-index: -1;
+      right: -100px;
+      bottom: -200px;
+      color: rgba(255, 255, 255, 0.025);
+      content: "X";
+      font-family: var(--serif);
+      font-size: 42rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .hero-grid {
+      display: grid;
+      align-items: center;
+      gap: 72px;
+      grid-template-columns: minmax(0, 1.16fr) minmax(330px, 0.84fr);
+    }
+
+    .hero h1 {
+      max-width: 13ch;
+      margin: 22px 0 27px;
+      font-size: clamp(3rem, 6.8vw, 6rem);
+      letter-spacing: -0.05em;
+    }
+
+    .hero-copy > p {
+      max-width: 650px;
+      margin-bottom: 34px;
+      color: var(--text-light);
+      font-size: clamp(1.08rem, 1.8vw, 1.3rem);
+      font-weight: 300;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .hero-note {
+      margin-top: 24px;
+      color: var(--text-dim);
+      font-family: var(--mono);
+      font-size: 0.76rem;
+    }
+
+    .hero-panel {
+      padding: 30px;
+      border: 1px solid var(--line-dark);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.08),
+          rgba(255, 255, 255, 0.025)
+        );
+      box-shadow: 0 32px 90px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-panel__label {
+      margin-bottom: 22px;
+      color: var(--orange-light);
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .result-item {
+      display: grid;
+      padding: 17px 0;
+      border-bottom: 1px solid var(--line-dark);
+      grid-template-columns: 42px 1fr;
+      gap: 15px;
+    }
+
+    .result-item:last-of-type {
+      border-bottom: 0;
+    }
+
+    .result-item__number {
+      color: var(--orange-light);
+      font-family: var(--mono);
+      font-weight: 600;
+    }
+
+    .result-item strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .result-item span {
+      color: var(--text-dim);
+      font-size: 0.83rem;
+    }
+
+    .hero-panel__outcome {
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      color: var(--white);
+      background: var(--orange);
+    }
+
+    .hero-panel__outcome strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      line-height: 1.3;
+    }
+
+    /* ========================================================
+       VALUE STRIP
+       ======================================================== */
+
+    .value-strip {
+      border-top: 1px solid var(--line-dark);
+      background: var(--navy-700);
+    }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .value-item {
+      min-height: 145px;
+      padding: 28px;
+      border-right: 1px solid var(--line-dark);
+      color: var(--white);
+    }
+
+    .value-item:first-child {
+      border-left: 1px solid var(--line-dark);
+    }
+
+    .value-item strong {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--orange-light);
+      font-family: var(--serif);
+      font-size: 1.45rem;
+    }
+
+    .value-item span {
+      color: #adbdcb;
+      font-size: 0.88rem;
+    }
+
+    /* ========================================================
+       PROBLEMS
+       ======================================================== */
+
+    .cards {
+      display: grid;
+      gap: 1px;
+      border: 1px solid var(--line-light);
+      background: var(--line-light);
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .problem-card {
+      min-height: 245px;
+      padding: 29px;
+      background: var(--white);
+    }
+
+    .card-index {
+      color: var(--orange);
+      font-family: var(--mono);
+      font-size: 0.77rem;
+      font-weight: 600;
+    }
+
+    .problem-card h3 {
+      margin: 46px 0 12px;
+      font-family: var(--sans);
+      font-size: 1.16rem;
+      letter-spacing: 0;
+    }
+
+    .problem-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    /* ========================================================
+       PILLARS
+       ======================================================== */
+
+    .pillar-grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .pillar {
+      min-height: 410px;
+      padding: 34px;
+      border: 1px solid var(--line-dark);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(
+          155deg,
+          rgba(255,255,255,0.07),
+          rgba(255,255,255,0.025)
+        );
+    }
+
+    .pillar__label {
+      color: var(--orange-light);
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .pillar h3 {
+      margin: 78px 0 17px;
+      font-size: 2rem;
+    }
+
+    .pillar p {
+      color: var(--text-light);
+    }
+
+    .pillar ul,
+    .offer-card ul,
+    .case-list {
+      display: grid;
+      margin: 24px 0 0;
+      padding: 0;
+      gap: 10px;
+      list-style: none;
+    }
+
+    .pillar li,
+    .offer-card li,
+    .case-list li {
+      display: flex;
+      gap: 9px;
+      font-size: 0.9rem;
+    }
+
+    .pillar li::before,
+    .offer-card li::before,
+    .case-list li::before {
+      color: var(--orange);
+      content: "→";
+      font-weight: 700;
+    }
+
+    /* ========================================================
+       X-ACTION
+       ======================================================== */
+
+    .xaction-shell {
+      display: grid;
+      padding: 46px;
+      border-radius: var(--radius-lg);
+      color: var(--white);
+      background: var(--navy-900);
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 54px;
+    }
+
+    .xaction-copy h3 {
+      margin: 14px 0 20px;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+    }
+
+    .xaction-copy p {
+      color: var(--text-light);
+    }
+
+    .xaction-levels {
+      display: grid;
+      gap: 10px;
+    }
+
+    .xaction-level {
+      display: grid;
+      padding: 18px;
+      border: 1px solid var(--line-dark);
+      border-radius: 10px;
+      background: rgba(255,255,255,0.045);
+      grid-template-columns: 42px 1fr;
+      gap: 14px;
+    }
+
+    .xaction-level__number {
+      color: var(--orange-light);
+      font-family: var(--mono);
+      font-weight: 600;
+    }
+
+    .xaction-level strong {
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .xaction-level span {
+      color: var(--text-dim);
+      font-size: 0.82rem;
+    }
+
+    /* ========================================================
+       OFFERS
+       ======================================================== */
+
+    .offer-grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .offer-card {
+      display: flex;
+      min-height: 530px;
+      padding: 31px;
+      border: 1px solid var(--line-light);
+      border-radius: 14px;
+      flex-direction: column;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .offer-card--featured {
+      border-color: rgba(238,108,43,0.55);
+      box-shadow:
+        0 30px 80px -34px rgba(238,108,43,0.55);
+    }
+
+    .offer-tag {
+      display: inline-flex;
+      align-self: flex-start;
+      padding: 6px 9px;
+      border: 1px solid var(--line-light);
+      border-radius: 3px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.64rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .offer-card--featured .offer-tag {
+      color: var(--white);
+      border-color: var(--orange);
+      background: var(--orange);
+    }
+
+    .offer-card h3 {
+      margin: 44px 0 14px;
+      font-size: 1.7rem;
+    }
+
+    .offer-card > p {
+      color: var(--muted);
+    }
+
+    .offer-card .button {
+      margin-top: auto;
+    }
+
+    /* ========================================================
+       CASE
+       ======================================================== */
+
+    .case-shell {
+      display: grid;
+      overflow: hidden;
+      border: 1px solid var(--line-dark);
+      border-radius: var(--radius-lg);
+      background: var(--navy-800);
+      grid-template-columns: 0.85fr 1.15fr;
+    }
+
+    .case-context {
+      padding: 46px;
+      background:
+        radial-gradient(
+          500px 350px at 0 100%,
+          rgba(238,108,43,0.18),
+          transparent 70%
+        );
+    }
+
+    .case-context__type {
+      display: inline-flex;
+      margin-bottom: 50px;
+      padding: 7px 10px;
+      border: 1px solid var(--line-dark);
+      border-radius: 3px;
+      color: var(--orange-light);
+      font-family: var(--mono);
+      font-size: 0.67rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .case-context h3 {
+      margin-bottom: 18px;
+      font-size: 2.2rem;
+    }
+
+    .case-context p {
+      color: var(--text-light);
+    }
+
+    .case-body {
+      padding: 46px;
+    }
+
+    .case-block + .case-block {
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 1px solid var(--line-dark);
+    }
+
+    .case-block h4 {
+      margin: 0 0 12px;
+      color: var(--orange-light);
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .case-block p {
+      margin-bottom: 0;
+      color: var(--text-light);
+    }
+
+    .case-note {
+      margin-top: 26px;
+      color: var(--text-dim);
+      font-size: 0.76rem;
+    }
+
+    /* ========================================================
+       AUTHORITY
+       ======================================================== */
+
+    .authority {
+      display: grid;
+      align-items: start;
+      gap: 55px;
+      grid-template-columns: 1.1fr 0.9fr;
+    }
+
+    .authority-copy h2 {
+      margin: 15px 0 20px;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+    }
+
+    .authority-copy p {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .authority-card {
+      padding: 34px;
+      border: 1px solid var(--line-light);
+      border-top: 3px solid var(--orange);
+      border-radius: 8px;
+      background: var(--white);
+    }
+
+    .authority-card h3 {
+      margin-bottom: 5px;
+      font-size: 1.55rem;
+    }
+
+    .authority-card > span {
+      color: var(--muted);
+    }
+
+    .authority-list {
+      display: grid;
+      margin: 25px 0 0;
+      padding: 0;
+      gap: 13px;
+      list-style: none;
+    }
+
+    .authority-list li {
+      padding-left: 16px;
+      border-left: 2px solid var(--orange);
+      color: #354653;
+      font-size: 0.92rem;
+    }
+
+    /* ========================================================
+       CTA / FORM
+       ======================================================== */
+
+    .contact-shell {
+      display: grid;
+      overflow: hidden;
+      border: 1px solid var(--line-dark);
+      border-radius: var(--radius-lg);
+      background: var(--navy-800);
+      grid-template-columns: 0.92fr 1.08fr;
+      box-shadow: 0 35px 90px rgba(0,0,0,0.3);
+    }
+
+    .contact-copy {
+      position: relative;
+      overflow: hidden;
+      padding: 50px;
+    }
+
+    .contact-copy::after {
+      position: absolute;
+      right: -50px;
+      bottom: -120px;
+      color: rgba(255,255,255,0.025);
+      content: "X";
+      font-family: var(--serif);
+      font-size: 20rem;
+      font-weight: 700;
+    }
+
+    .contact-copy h2 {
+      position: relative;
+      z-index: 2;
+      margin: 15px 0 22px;
+      font-size: clamp(2.1rem, 4.5vw, 3.8rem);
+    }
+
+    .contact-copy p {
+      position: relative;
+      z-index: 2;
+      color: var(--text-light);
+    }
+
+    .contact-form {
+      padding: 50px;
+      color: var(--ink);
+      background: var(--paper);
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 17px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .field {
+      display: grid;
+      gap: 7px;
+    }
+
+    .field--full {
+      grid-column: 1 / -1;
+    }
+
+    .field label {
+      font-size: 0.79rem;
+      font-weight: 700;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      min-height: 51px;
+      padding: 13px 14px;
+      border: 1px solid var(--line-light);
+      border-radius: 4px;
+      color: var(--ink);
+      background: var(--white);
+      outline: none;
+    }
+
+    .field textarea {
+      min-height: 105px;
+      resize: vertical;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--orange);
+      box-shadow: 0 0 0 3px rgba(238,108,43,0.12);
+    }
+
+    .form-footer {
+      margin-top: 20px;
+    }
+
+    .form-footer small {
+      display: block;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.72rem;
+    }
+
+    .form-status {
+      display: none;
+      margin-top: 13px;
+      padding: 11px;
+      border-radius: 4px;
+      font-size: 0.84rem;
+      font-weight: 600;
+    }
+
+    .form-status.success {
+      display: block;
+      color: var(--success);
+      background: rgba(34,120,74,0.1);
+    }
+
+    .form-status.error {
+      display: block;
+      color: var(--error);
+      background: rgba(166,62,50,0.1);
+    }
+
+    /* ========================================================
+       FOOTER / WHATSAPP
+       ======================================================== */
+
+    footer {
+      padding: 44px 0;
+      border-top: 1px solid var(--line-dark);
+      color: var(--text-dim);
+      background: var(--navy-950);
+    }
+
+    .footer-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .footer-tagline {
+      font-family: var(--serif);
+      font-style: italic;
+    }
+
+    .whatsapp {
+      position: fixed;
+      z-index: 90;
+      right: 22px;
+      bottom: 22px;
+      display: grid;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      place-items: center;
+      color: var(--white);
+      background: #25d366;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.27);
+      transition: transform var(--transition);
+    }
+
+    .whatsapp:hover {
+      transform: translateY(-3px) scale(1.03);
+    }
+
+    .whatsapp svg {
+      width: 29px;
+      fill: currentColor;
+    }
+
+    /* ========================================================
+       REVEAL
+       ======================================================== */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition:
+        opacity 650ms ease,
+        transform 650ms ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ========================================================
+       RESPONSIVE
+       ======================================================== */
+
+    @media (max-width: 980px) {
+      .nav {
+        position: fixed;
+        top: 72px;
+        right: 0;
+        left: 0;
+        display: none;
+        padding: 24px;
+        align-items: stretch;
+        flex-direction: column;
+        background: rgba(8,19,32,0.98);
+      }
+
+      .nav.open {
+        display: flex;
+      }
+
+      .nav > a:not(.button) {
+        padding: 12px 0;
+        border-bottom: 1px solid var(--line-dark);
+      }
+
+      .menu-button {
+        display: block;
+      }
+
+      .hero-grid,
+      .xaction-shell,
+      .case-shell,
+      .authority,
+      .contact-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .value-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cards,
+      .pillar-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .offer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .offer-card {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        width: min(calc(100% - 28px), var(--container));
+      }
+
+      .section {
+        padding: 76px 0;
+      }
+
+      .brand__desc {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 132px 0 75px;
+      }
+
+      .hero h1 {
+        font-size: clamp(3rem, 14vw, 4.6rem);
+      }
+
+      .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .hero-actions .button {
+        width: 100%;
+      }
+
+      .hero-panel,
+      .xaction-shell,
+      .case-context,
+      .case-body,
+      .contact-copy,
+      .contact-form {
+        padding: 28px 23px;
+      }
+
+      .value-grid,
+      .cards,
+      .pillar-grid,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .value-item,
+      .value-item:first-child {
+        border-bottom: 1px solid var(--line-dark);
+        border-left: 1px solid var(--line-dark);
+      }
+
+      .field--full {
+        grid-column: auto;
+      }
+
+      .footer-grid {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager noscript -->
+  <noscript>
+    <iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-KCKHJXRL"
+      height="0"
+      width="0"
+      style="display:none;visibility:hidden"
+    ></iframe>
+  </noscript>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container navbar">
+      <a class="brand" href="#inicio" aria-label="ESPX Tecnologia">
+        ESP<span class="brand__x">X</span>
+        <span class="brand__desc">Tecnologia</span>
+      </a>
+
+      <nav class="nav" id="mainNav" aria-label="Navegação principal">
+        <a href="#desafios">Desafios</a>
+        <a href="#xaction">X-Action</a>
+        <a href="#ofertas">Como começar</a>
+        <a href="#case">Aplicação real</a>
+
+        <a
+          class="button button--primary tracked-cta"
+          href="#contato"
+          data-cta-name="header_conversation"
+          data-cta-position="header"
+        >
+          Conversar com a ESPX
+        </a>
+      </nav>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mainNav"
+        aria-label="Abrir menu"
+      >
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Crescimento empresarial em ação</span>
+
+          <h1>
+            Mais resultado. Mais margem.
+            <span class="accent">Menos dependência.</span>
+          </h1>
+
+          <p>
+            A ESPX conecta pessoas, processos, dados e tecnologia para
+            sua empresa agir antes que o resultado já esteja decidido —
+            e crescer sem depender do dono para fazer tudo acontecer.
+          </p>
+
+          <div class="hero-actions">
+            <a
+              class="button button--primary tracked-cta"
+              href="#contato"
+              data-cta-name="hero_assessment"
+              data-cta-position="hero"
+            >
+              Avaliar o momento da minha empresa →
+            </a>
+
+            <a
+              class="button button--ghost tracked-cta"
+              href="#ofertas"
+              data-cta-name="hero_offers"
+              data-cta-position="hero"
+            >
+              Conhecer as formas de começar
+            </a>
+          </div>
+
+          <div class="hero-note">
+            Negócio antes da tecnologia · Método antes da ferramenta
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="Transformação proposta">
+          <div class="hero-panel__label">O que precisa mudar</div>
+
+          <div class="result-item">
+            <div class="result-item__number">01</div>
+            <div>
+              <strong>Enxergar durante o resultado</strong>
+              <span>Metas, ritmo, oportunidades e desvios.</span>
+            </div>
+          </div>
+
+          <div class="result-item">
+            <div class="result-item__number">02</div>
+            <div>
+              <strong>Transformar fatos em ações</strong>
+              <span>Prioridades, responsáveis e acompanhamento.</span>
+            </div>
+          </div>
+
+          <div class="result-item">
+            <div class="result-item__number">03</div>
+            <div>
+              <strong>Criar autonomia de gestão</strong>
+              <span>Processos e ritos que não dependem só do dono.</span>
+            </div>
+          </div>
+
+          <div class="hero-panel__outcome">
+            <strong>
+              A empresa cresce sem multiplicar descontrole, desperdício
+              e dependências.
+            </strong>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- VALUE STRIP -->
+
+    <section class="value-strip" aria-label="Pilares de valor">
+      <div class="container value-grid">
+        <div class="value-item">
+          <strong>Receita</strong>
+          <span>Mais capacidade para identificar e buscar oportunidades.</span>
+        </div>
+
+        <div class="value-item">
+          <strong>Margem</strong>
+          <span>Menos desperdício, retrabalho e crescimento improdutivo.</span>
+        </div>
+
+        <div class="value-item">
+          <strong>Controle</strong>
+          <span>Clareza sobre o que acontece e o que precisa ser feito.</span>
+        </div>
+
+        <div class="value-item">
+          <strong>Continuidade</strong>
+          <span>Menor dependência do dono e de pessoas-chave.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEMS -->
+
+    <section class="section section--soft" id="desafios">
+      <div class="container">
+        <header class="section-heading reveal">
+          <span class="eyebrow">O problema empresarial</span>
+
+          <h2>
+            Sua empresa cresceu. A capacidade de gestão
+            <span class="accent">cresceu junto?</span>
+          </h2>
+
+          <p>
+            O faturamento pode crescer antes que a empresa desenvolva
+            processos, autonomia e capacidade para sustentar esse novo
+            nível de complexidade.
+          </p>
+        </header>
+
+        <div class="cards">
+          <article class="problem-card reveal">
+            <span class="card-index">01</span>
+            <h3>O dono precisa provocar tudo</h3>
+            <p>
+              As metas e os problemas só avançam quando o sócio cobra,
+              acompanha ou interfere pessoalmente.
+            </p>
+          </article>
+
+          <article class="problem-card reveal">
+            <span class="card-index">02</span>
+            <h3>A informação chega tarde</h3>
+            <p>
+              O desvio aparece no fechamento, quando já não existe tempo
+              para recuperar o resultado.
+            </p>
+          </article>
+
+          <article class="problem-card reveal">
+            <span class="card-index">03</span>
+            <h3>Vender mais não aumenta a margem</h3>
+            <p>
+              Descontos, perdas, falhas e custos crescem junto com o
+              faturamento.
+            </p>
+          </article>
+
+          <article class="problem-card reveal">
+            <span class="card-index">04</span>
+            <h3>Os dados não viram ação</h3>
+            <p>
+              Existem sistemas, planilhas e indicadores, mas a resposta
+              continua informal e reativa.
+            </p>
+          </article>
+
+          <article class="problem-card reveal">
+            <span class="card-index">05</span>
+            <h3>Gestores explicam o passado</h3>
+            <p>
+              Reuniões reportam números, mas não aprofundam causas nem
+              acompanham ações até o resultado.
+            </p>
+          </article>
+
+          <article class="problem-card reveal">
+            <span class="card-index">06</span>
+            <h3>A empresa depende de heróis</h3>
+            <p>
+              Conhecimento, decisões e processos ficam concentrados em
+              poucas pessoas.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PILLARS -->
+
+    <section class="section section--dark">
+      <div class="container">
+        <header class="section-heading reveal">
+          <span class="eyebrow">A perspectiva ESPX</span>
+
+          <h2>
+            Crescer mais é importante.
+            <span class="accent">Crescer melhor é essencial.</span>
+          </h2>
+
+          <p>
+            Organizamos a evolução ao redor de três resultados que o
+            empresário reconhece e valoriza.
+          </p>
+        </header>
+
+        <div class="pillar-grid">
+          <article class="pillar reveal">
+            <span class="pillar__label">Resultado 01</span>
+            <h3>Ampliar receita</h3>
+            <p>
+              Metas, dados e oportunidades se transformam em uma rotina
+              comercial orientada à ação.
+            </p>
+            <ul>
+              <li>Ritmo e tendência durante o período</li>
+              <li>Prioridades por vendedor, equipe e unidade</li>
+              <li>Atuação proativa sobre oportunidades</li>
+            </ul>
+          </article>
+
+          <article class="pillar reveal">
+            <span class="pillar__label">Resultado 02</span>
+            <h3>Proteger margem</h3>
+            <p>
+              Processos, automações e inteligência reduzem desperdícios
+              e ampliam produtividade.
+            </p>
+            <ul>
+              <li>Menos retrabalho e falhas</li>
+              <li>Automação de atividades repetitivas</li>
+              <li>Crescimento sem ampliar custos na mesma proporção</li>
+            </ul>
+          </article>
+
+          <article class="pillar reveal">
+            <span class="pillar__label">Resultado 03</span>
+            <h3>Reduzir dependências</h3>
+            <p>
+              Cobrança pessoal e conhecimento individual dão lugar a
+              processos, ritos e responsabilidades.
+            </p>
+            <ul>
+              <li>Gestores orientados por fatos</li>
+              <li>Responsabilidades distribuídas</li>
+              <li>Mais autonomia para os times</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- X-ACTION -->
+
+    <section class="section section--paper" id="xaction">
+      <div class="container">
+        <header class="section-heading reveal">
+          <span class="eyebrow">Gestão em ação</span>
+
+          <h2>
+            Não espere o fim do mês para descobrir que
+            <span class="accent">a meta ficou para trás.</span>
+          </h2>
+
+          <p>
+            O X-Action conecta indicadores, pessoas, ritos e ações para
+            que a empresa atue enquanto ainda existe tempo de mudar o
+            resultado.
+          </p>
+        </header>
+
+        <div class="xaction-shell reveal">
+          <div class="xaction-copy">
+            <span class="eyebrow">X-Action Comercial</span>
+
+            <h3>Da informação à atuação diária.</h3>
+
+            <p>
+              A empresa não precisa contratar toda a estrutura de uma
+              vez. Ela pode começar no nível compatível com sua
+              maturidade e evoluir progressivamente.
+            </p>
+
+            <a
+              class="button button--primary tracked-cta"
+              href="#contato"
+              data-cta-name="xaction_interest"
+              data-cta-position="xaction"
+              data-offer="xaction_comercial"
+            >
+              Avaliar o X-Action Comercial
+            </a>
+          </div>
+
+          <div class="xaction-levels">
+            <div class="xaction-level">
+              <span class="xaction-level__number">01</span>
+              <div>
+                <strong>Sinal</strong>
+                <span>
+                  Metas, realizado, ritmo e alertas chegam às pessoas certas.
+                </span>
+              </div>
+            </div>
+
+            <div class="xaction-level">
+              <span class="xaction-level__number">02</span>
+              <div>
+                <strong>Ritmo</strong>
+                <span>
+                  Prioridades e ritos transformam a meta em rotina.
+                </span>
+              </div>
+            </div>
+
+            <div class="xaction-level">
+              <span class="xaction-level__number">03</span>
+              <div>
+                <strong>Gestão</strong>
+                <span>
+                  Fatos, causas e ações ganham responsáveis e acompanhamento.
+                </span>
+              </div>
+            </div>
+
+            <div class="xaction-level">
+              <span class="xaction-level__number">04</span>
+              <div>
+                <strong>Intelligence</strong>
+                <span>
+                  IA, contexto e memória apoiam decisões e oportunidades.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OFFERS -->
+
+    <section class="section section--soft" id="ofertas">
+      <div class="container">
+        <header class="section-heading reveal">
+          <span class="eyebrow">Formas de começar</span>
+
+          <h2>
+            Sua empresa não precisa transformar
+            <span class="accent">tudo de uma vez.</span>
+          </h2>
+
+          <p>
+            A ESPX pode entrar por uma dor comprável, demonstrar valor e
+            expandir progressivamente conforme a maturidade e a prioridade.
+          </p>
+        </header>
+
+        <div class="offer-grid">
+          <article
+            class="offer-card reveal track-offer"
+            data-offer="sprint_espx"
+          >
+            <span class="offer-tag">Middle ticket</span>
+
+            <h3>Sprint ESPX</h3>
+
+            <p>
+              Leitura direcionada de uma área ou dor para identificar
+              problemas, oportunidades e próximos passos.
+            </p>
+
+            <ul>
+              <li>Escopo e prazo definidos</li>
+              <li>Leitura da situação atual</li>
+              <li>Tensões, riscos e oportunidades</li>
+              <li>Prioridades e plano inicial</li>
+            </ul>
+
+            <a
+              class="button button--dark offer-click"
+              href="#contato"
+              data-offer="sprint_espx"
+            >
+              Avaliar uma área
+            </a>
+          </article>
+
+          <article
+            class="offer-card offer-card--featured reveal track-offer"
+            data-offer="xaction_comercial"
+          >
+            <span class="offer-tag">Entrada recomendada</span>
+
+            <h3>X-Action Comercial</h3>
+
+            <p>
+              Gestão recorrente de metas, ritmo, oportunidades e ações
+              para vendedores e gestores.
+            </p>
+
+            <ul>
+              <li>Meta, realizado, ritmo e tendência</li>
+              <li>Informação ativa para vendedores</li>
+              <li>Visão estratégica para gestores</li>
+              <li>Ritos e ações acompanhadas</li>
+            </ul>
+
+            <a
+              class="button button--primary offer-click"
+              href="#contato"
+              data-offer="xaction_comercial"
+            >
+              Melhorar a gestão comercial
+            </a>
+          </article>
+
+          <article
+            class="offer-card reveal track-offer"
+            data-offer="raio_x_espx"
+          >
+            <span class="offer-tag">High ticket premium</span>
+
+            <h3>Raio-X ESPX</h3>
+
+            <p>
+              Leitura sistêmica para empresas com múltiplas áreas,
+              unidades, dependências ou problemas conectados.
+            </p>
+
+            <ul>
+              <li>Visão ampla da empresa</li>
+              <li>Sete dimensões de análise</li>
+              <li>Riscos e oportunidades priorizados</li>
+              <li>Roadmap executivo de evolução</li>
+            </ul>
+
+            <a
+              class="button button--dark offer-click"
+              href="#contato"
+              data-offer="raio_x_espx"
+            >
+              Conhecer o Raio-X
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE -->
+
+    <section class="section section--navy" id="case">
+      <div class="container">
+        <header class="section-heading reveal">
+          <span class="eyebrow">Aplicação prática</span>
+
+          <h2>
+            Uma visão integrada transforma problemas dispersos
+            <span class="accent">em prioridades claras.</span>
+          </h2>
+
+          <p>
+            Case anonimizado. Nenhum número ou resultado financeiro é
+            publicado sem validação e autorização formal.
+          </p>
+        </header>
+
+        <article class="case-shell reveal track-case" data-case="varejo_multiunidade">
+          <div class="case-context">
+            <span class="case-context__type">
+              Varejo · Empresa multiunidade
+            </span>
+
+            <h3>Da leitura ampla à evolução por frentes prioritárias.</h3>
+
+            <p>
+              Uma empresa de varejo com lojas físicas e operação digital
+              precisava compreender dependências e oportunidades
+              distribuídas entre áreas comerciais e operacionais.
+            </p>
+          </div>
+
+          <div class="case-body">
+            <div class="case-block">
+              <h4>Contexto identificado</h4>
+              <ul class="case-list">
+                <li>Gestão comercial concentrada no fechamento mensal</li>
+                <li>Dados existentes com espaço para gerar atuação diária</li>
+                <li>Dependências entre comercial, estoque e logística</li>
+                <li>Oportunidades na base histórica de clientes</li>
+              </ul>
+            </div>
+
+            <div class="case-block">
+              <h4>Abordagem ESPX</h4>
+              <p>
+                A atuação começou por uma leitura ampla da empresa,
+                organizou tensões e oportunidades e estruturou frentes
+                relacionadas a gestão, dados, tecnologia, automação e
+                evolução de resultados.
+              </p>
+            </div>
+
+            <div class="case-block">
+              <h4>Direcionamento construído</h4>
+              <p>
+                Evoluir de análises predominantemente retroativas para
+                uma gestão capaz de acompanhar ritmo, tendência, desvios
+                e ações durante o período.
+              </p>
+            </div>
+
+            <div class="case-note">
+              Case anonimizado e apresentado sem indicadores financeiros.
+              Resultados quantitativos serão incorporados somente após
+              medição, validação metodológica e autorização do cliente.
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- AUTHORITY -->
+
+    <section class="section section--paper">
+      <div class="container authority">
+        <div class="authority-copy reveal">
+          <span class="eyebrow">Experiência que sustenta a ESPX</span>
+
+          <h2>
+            Negócios e tecnologia conectados por
+            <span class="accent">experiência operacional real.</span>
+          </h2>
+
+          <p>
+            A ESPX nasceu da experiência em ambientes nos quais
+            disponibilidade, previsibilidade e continuidade sempre foram
+            essenciais. Hoje, essa visão é aplicada ao crescimento de
+            empresas brasileiras.
+          </p>
+
+          <p>
+            Não começamos por uma ferramenta. Começamos pela realidade,
+            pelos objetivos e pelo que precisa mudar no resultado.
+          </p>
+        </div>
+
+        <aside class="authority-card reveal">
+          <h3>Thiego Bastos</h3>
+          <span>Fundador da ESPX Tecnologia</span>
+
+          <ul class="authority-list">
+            <li>Mais de 20 anos em tecnologia e operações críticas</li>
+            <li>Liderança de equipes multidisciplinares</li>
+            <li>Experiência em ambientes de alta disponibilidade</li>
+            <li>Integração entre estratégia, operação e tecnologia</li>
+          </ul>
+
+          <a
+            class="button button--dark tracked-cta"
+            href="https://www.linkedin.com/in/thiegobastos"
+            target="_blank"
+            rel="noopener"
+            data-cta-name="founder_linkedin"
+            data-cta-position="authority"
+          >
+            Conhecer a trajetória
+          </a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="section section--dark" id="contato">
+      <div class="container">
+        <div class="contact-shell reveal">
+          <div class="contact-copy">
+            <span class="eyebrow">Próximo passo</span>
+
+            <h2>
+              Onde sua empresa está perdendo resultado, margem ou
+              capacidade de gestão?
+            </h2>
+
+            <p>
+              Conte brevemente o que está acontecendo. A conversa inicial
+              serve para identificar se faz sentido começar por um Sprint,
+              pelo X-Action ou por um Raio-X completo.
+            </p>
+          </div>
+
+          <form class="contact-form" id="leadForm" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Seu nome</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  required
+                >
+              </div>
+
+              <div class="field">
+                <label for="company">Empresa</label>
+                <input
+                  id="company"
+                  name="company"
+                  type="text"
+                  autocomplete="organization"
+                  required
+                >
+              </div>
+
+              <div class="field">
+                <label for="phone">WhatsApp</label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  inputmode="tel"
+                  autocomplete="tel"
+                  placeholder="(00) 00000-0000"
+                  required
+                >
+              </div>
+
+              <div class="field">
+                <label for="role">Seu papel</label>
+                <select id="role" name="role" required>
+                  <option value="">Selecione</option>
+                  <option value="socio">Sócio ou proprietário</option>
+                  <option value="diretor">Diretor</option>
+                  <option value="gestor">Gestor</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="size">Tamanho da empresa</label>
+                <select id="size" name="size" required>
+                  <option value="">Selecione</option>
+                  <option value="1-10">1 a 10 pessoas</option>
+                  <option value="11-30">11 a 30 pessoas</option>
+                  <option value="31-100">31 a 100 pessoas</option>
+                  <option value="101-300">101 a 300 pessoas</option>
+                  <option value="301+">Mais de 300 pessoas</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="priority">Principal prioridade</label>
+                <select id="priority" name="priority" required>
+                  <option value="">Selecione</option>
+                  <option value="receita">Aumentar vendas</option>
+                  <option value="margem">Melhorar margem</option>
+                  <option value="gestao">Melhorar a gestão</option>
+                  <option value="dependencia">
+                    Reduzir dependência do dono
+                  </option>
+                  <option value="eficiencia">
+                    Automatizar e ganhar eficiência
+                  </option>
+                  <option value="clareza">
+                    Entender problemas e prioridades
+                  </option>
+                </select>
+              </div>
+
+              <div class="field field--full">
+                <label for="challenge">
+                  Qual desafio mais preocupa você hoje?
+                </label>
+                <textarea
+                  id="challenge"
+                  name="challenge"
+                  placeholder="Descreva brevemente o momento da empresa..."
+                ></textarea>
+              </div>
+            </div>
+
+            <!-- Contexto comercial -->
+            <input type="hidden" id="selectedOffer" name="selected_offer">
+            <input type="hidden" id="utmSource" name="utm_source">
+            <input type="hidden" id="utmMedium" name="utm_medium">
+            <input type="hidden" id="utmCampaign" name="utm_campaign">
+            <input type="hidden" id="utmContent" name="utm_content">
+            <input type="hidden" id="utmTerm" name="utm_term">
+            <input type="hidden" id="landingPage" name="landing_page">
+
+            <div class="form-footer">
+              <button class="button button--primary button--full" type="submit">
+                Solicitar conversa estratégica →
+              </button>
+
+              <small>
+                Ao continuar, você concorda em ser contatado pela ESPX.
+                Não compartilhamos seus dados com terceiros para fins
+                comerciais.
+              </small>
+
+              <div
+                class="form-status"
+                id="formStatus"
+                role="status"
+                aria-live="polite"
+              ></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="#inicio">
+          ESP<span class="brand__x">X</span>
+          <span class="brand__desc">Tecnologia</span>
+        </a>
+
+        <div>Desde 2019 · Niterói, RJ · Brasil</div>
+      </div>
+
+      <div class="footer-tagline">
+        Especialistas em multiplicar resultados.
+      </div>
+    </div>
+  </footer>
+
+  <a
+    class="whatsapp"
+    id="whatsappFloat"
+    href="https://wa.me/5521967090786?text=Olá,%20vim%20pela%20página%20da%20ESPX%20e%20gostaria%20de%20conversar%20sobre%20minha%20empresa."
+    target="_blank"
+    rel="noopener"
+    aria-label="Falar com a ESPX pelo WhatsApp"
+    data-position="floating_button"
+  >
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M16.04 3C9.46 3 4.1 8.32 4.1 14.86c0 2.1.56 4.16 1.62 5.97L4 29l8.37-1.69a12.03 12.03 0 0 0 3.67.57c6.58 0 11.94-5.32 11.94-11.86S22.62 3 16.04 3zm0 22.78c-1.18 0-2.34-.19-3.45-.58l-.5-.18-4.97 1 1.02-4.82-.25-.5a9.72 9.72 0 0 1-1.12-4.53c0-5.38 4.42-9.76 9.86-9.76s9.86 4.38 9.86 9.76-4.42 9.61-10.45 9.61zm5.4-7.32c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.48-.9-.8-1.5-1.78-1.67-2.08-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.48s1.08 2.88 1.23 3.08c.15.2 2.12 3.22 5.13 4.52.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35z"/>
+    </svg>
+  </a>
+
+  <script>
+    /* ========================================================
+       ANALYTICS HELPERS
+       Nunca enviar nome, telefone ou outros dados pessoais
+       ao dataLayer.
+       ======================================================== */
+
+    window.dataLayer = window.dataLayer || [];
+
+    function trackEvent(eventName, properties = {}) {
+      window.dataLayer.push({
+        event: eventName,
+        page_type: "commercial_landing_page",
+        page_version: "0.2.0",
+        ...properties
+      });
+    }
+
+    /* ========================================================
+       MENU
+       ======================================================== */
+
+    const header = document.getElementById("siteHeader");
+    const menuButton = document.getElementById("menuButton");
+    const mainNav = document.getElementById("mainNav");
+
+    window.addEventListener("scroll", () => {
+      header.classList.toggle("scrolled", window.scrollY > 20);
+    }, { passive: true });
+
+    menuButton.addEventListener("click", () => {
+      const open = mainNav.classList.toggle("open");
+
+      menuButton.setAttribute("aria-expanded", String(open));
+      menuButton.textContent = open ? "×" : "☰";
+      document.body.classList.toggle("menu-open", open);
+    });
+
+    mainNav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mainNav.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.textContent = "☰";
+        document.body.classList.remove("menu-open");
+      });
+    });
+
+    /* ========================================================
+       REVEAL
+       ======================================================== */
+
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+
+        entry.target.classList.add("visible");
+        revealObserver.unobserve(entry.target);
+      });
+    }, {
+      threshold: 0.12
+    });
+
+    document.querySelectorAll(".reveal").forEach(element => {
+      revealObserver.observe(element);
+    });
+
+    /* ========================================================
+       CTA TRACKING
+       ======================================================== */
+
+    document.querySelectorAll(".tracked-cta").forEach(element => {
+      element.addEventListener("click", () => {
+        trackEvent("cta_click", {
+          cta_name: element.dataset.ctaName || "unknown",
+          cta_position: element.dataset.ctaPosition || "unknown",
+          offer_name: element.dataset.offer || null
+        });
+      });
+    });
+
+    /* ========================================================
+       OFFER IMPRESSIONS
+       ======================================================== */
+
+    const viewedOffers = new Set();
+
+    const offerObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+
+        const offer = entry.target.dataset.offer;
+
+        if (viewedOffers.has(offer)) return;
+
+        viewedOffers.add(offer);
+
+        trackEvent("offer_view", {
+          offer_name: offer
+        });
+      });
+    }, {
+      threshold: 0.5
+    });
+
+    document.querySelectorAll(".track-offer").forEach(element => {
+      offerObserver.observe(element);
+    });
+
+    document.querySelectorAll(".offer-click").forEach(element => {
+      element.addEventListener("click", () => {
+        const offer = element.dataset.offer;
+
+        document.getElementById("selectedOffer").value = offer;
+
+        trackEvent("offer_click", {
+          offer_name: offer
+        });
+      });
+    });
+
+    /* ========================================================
+       CASE VIEW
+       ======================================================== */
+
+    const caseElement = document.querySelector(".track-case");
+    let caseTracked = false;
+
+    if (caseElement) {
+      const caseObserver = new IntersectionObserver(entries => {
+        if (caseTracked || !entries[0].isIntersecting) return;
+
+        caseTracked = true;
+
+        trackEvent("case_view", {
+          case_name: caseElement.dataset.case
+        });
+      }, {
+        threshold: 0.5
+      });
+
+      caseObserver.observe(caseElement);
+    }
+
+    /* ========================================================
+       SCROLL DEPTH
+       ======================================================== */
+
+    const scrollThresholds = [25, 50, 75, 90];
+    const reachedThresholds = new Set();
+
+    window.addEventListener("scroll", () => {
+      const documentHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+
+      if (documentHeight <= 0) return;
+
+      const depth = Math.round(
+        (window.scrollY / documentHeight) * 100
+      );
+
+      scrollThresholds.forEach(threshold => {
+        if (
+          depth >= threshold &&
+          !reachedThresholds.has(threshold)
+        ) {
+          reachedThresholds.add(threshold);
+
+          trackEvent("scroll_depth", {
+            scroll_percentage: threshold
+          });
+        }
+      });
+    }, { passive: true });
+
+    /* ========================================================
+       UTM CAPTURE
+       ======================================================== */
+
+    const params = new URLSearchParams(window.location.search);
+
+    const utmMap = {
+      utm_source: "utmSource",
+      utm_medium: "utmMedium",
+      utm_campaign: "utmCampaign",
+      utm_content: "utmContent",
+      utm_term: "utmTerm"
+    };
+
+    Object.entries(utmMap).forEach(([parameter, fieldId]) => {
+      const field = document.getElementById(fieldId);
+
+      if (field) {
+        field.value = params.get(parameter) || "";
+      }
+    });
+
+    document.getElementById("landingPage").value =
+      window.location.href;
+
+    /* ========================================================
+       FORM ENGAGEMENT
+       ======================================================== */
+
+    const leadForm = document.getElementById("leadForm");
+    const formStatus = document.getElementById("formStatus");
+
+    let formStarted = false;
+
+    leadForm.addEventListener("focusin", () => {
+      if (formStarted) return;
+
+      formStarted = true;
+
+      trackEvent("form_start", {
+        form_name: "commercial_assessment"
+      });
+    });
+
+    /* ========================================================
+       PHONE MASK
+       ======================================================== */
+
+    const phoneInput = document.getElementById("phone");
+
+    phoneInput.addEventListener("input", event => {
+      let value = event.target.value
+        .replace(/\D/g, "")
+        .slice(0, 11);
+
+      if (value.length > 10) {
+        value = value.replace(
+          /^(\d{2})(\d{5})(\d{4})$/,
+          "($1) $2-$3"
+        );
+      } else if (value.length > 6) {
+        value = value.replace(
+          /^(\d{2})(\d{4})(\d{0,4})$/,
+          "($1) $2-$3"
+        );
+      } else if (value.length > 2) {
+        value = value.replace(
+          /^(\d{2})(\d+)/,
+          "($1) $2"
+        );
+      }
+
+      event.target.value = value;
+    });
+
+    /* ========================================================
+       FORM SUBMISSION → WHATSAPP
+
+       Esta versão gera a conversa no WhatsApp.
+       Para CRM, substituir por webhook/API antes do redirect.
+       ======================================================== */
+
+    leadForm.addEventListener("submit", event => {
+      event.preventDefault();
+
+      formStatus.className = "form-status";
+      formStatus.textContent = "";
+
+      if (!leadForm.checkValidity()) {
+        leadForm.reportValidity();
+
+        formStatus.classList.add("error");
+        formStatus.textContent =
+          "Preencha os campos obrigatórios para continuar.";
+
+        trackEvent("form_error", {
+          form_name: "commercial_assessment",
+          error_type: "validation"
+        });
+
+        return;
+      }
+
+      const formData = new FormData(leadForm);
+
+      const priority = formData.get("priority");
+      const size = formData.get("size");
+      const role = formData.get("role");
+      const offer = formData.get("selected_offer") || "a_definir";
+
+      /*
+        Importante:
+        nenhum dado pessoal é enviado ao dataLayer.
+      */
+
+      trackEvent("lead_form_submit", {
+        form_name: "commercial_assessment",
+        lead_priority: priority,
+        company_size: size,
+        decision_role: role,
+        offer_interest: offer
+      });
+
+      const message = [
+        "Olá, vim pela página comercial da ESPX.",
+        "",
+        `Nome: ${formData.get("name")}`,
+        `Empresa: ${formData.get("company")}`,
+        `Papel: ${role}`,
+        `Tamanho: ${size}`,
+        `Prioridade: ${priority}`,
+        `Oferta de interesse: ${offer}`,
+        "",
+        `Desafio: ${formData.get("challenge") || "Não informado"}`
+      ].join("\n");
+
+      const whatsappUrl =
+        "https://wa.me/5521967090786?text=" +
+        encodeURIComponent(message);
+
+      formStatus.classList.add("success");
+      formStatus.textContent =
+        "Tudo certo. Estamos abrindo o WhatsApp para continuar.";
+
+      setTimeout(() => {
+        window.open(whatsappUrl, "_blank", "noopener");
+      }, 350);
+    });
+
+    /* ========================================================
+       WHATSAPP FLOAT TRACKING
+       ======================================================== */
+
+    document
+      .getElementById("whatsappFloat")
+      .addEventListener("click", event => {
+        trackEvent("whatsapp_click", {
+          click_position: event.currentTarget.dataset.position
+        });
+      });
+  </script>
+</body>
+</html>
+
+							<script>
+                            	
+							</script>
+                        </body>
+                        </html>
+                    
