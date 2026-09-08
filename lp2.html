@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#081320">
+<title>X-Action | A camada de execução da gestão comercial | ESPX</title>
+<meta name="description" content="ERP registra. BI mostra. X-Action faz agir. Método, tecnologia e ritmo de gestão para transformar informação em ação durante o mês.">
+
+<link rel="canonical" href="https://espxtecnologia.com.br/xaction">
+<meta property="og:title" content="X-Action | A camada de execução da gestão comercial">
+<meta property="og:description" content="No dia 30 você descobre. No dia 8 ainda dava para agir.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://espxtecnologia.com.br/xaction">
+<meta property="og:image" content="https://espxtecnologia.com.br/og-xaction.png">
+<meta property="og:image:secure_url" content="https://espxtecnologia.com.br/og-xaction.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="X-Action. No dia 30 você descobre. No dia 8 ainda dava para agir.">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="X-Action | A camada de execução da gestão comercial">
+<meta name="twitter:description" content="ERP registra. BI mostra. X-Action faz agir.">
+<meta name="twitter:image" content="https://espxtecnologia.com.br/og-xaction.png">
+
+<!-- Consent Mode v2: padrão restritivo antes do GTM -->
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+(function(){
+  var saved=null;
+  try{saved=localStorage.getItem('espx_consent_v1');}catch(e){}
+  gtag('consent','default',{
+    ad_storage:'denied',
+    analytics_storage:'denied',
+    ad_user_data:'denied',
+    ad_personalization:'denied',
+    functionality_storage:'granted',
+    security_storage:'granted',
+    wait_for_update:500
+  });
+  if(saved==='granted'){
+    gtag('consent','update',{
+      ad_storage:'granted',
+      analytics_storage:'granted',
+      ad_user_data:'granted',
+      ad_personalization:'granted'
+    });
+  }
+})();
+</script>
+
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){
+  w[l]=w[l]||[];
+  w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+  j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+  f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KCKHJXRL');
+</script>
+<!-- End Google Tag Manager -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --n950:#050d16;--n900:#081320;--n850:#0a1828;--n800:#0c1d30;--n700:#102A43;
+  --or:#EE6C2B;--or2:#f6915a;--ok:#3E9E7A;
+  --paper:#F5F7F9;--paper2:#E9EDF1;
+  --ink:#0c1d30;--ink2:#4a5f77;
+  --ld:rgba(255,255,255,.11);--ll:rgba(16,42,67,.13);
+  --sans:'IBM Plex Sans',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --shadow:0 24px 80px rgba(0,0,0,.22);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--n900);color:#fff;font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+section{padding:96px 0;position:relative;overflow:hidden}
+h1,h2,h3,h4{margin:0;font-weight:600;letter-spacing:-.026em;line-height:1.1}
+h1{font-size:clamp(2.45rem,6vw,4.45rem);font-weight:700;max-width:13ch}
+h2{font-size:clamp(1.85rem,4vw,2.85rem);max-width:20ch}
+h3{font-size:1.15rem;letter-spacing:-.012em}
+p{margin:0 0 1em;max-width:64ch}
+.lead{font-size:1.1rem;color:#c4d1dd}
+.light .lead,.light2 .lead{color:var(--ink2)}
+.eyebrow{font-family:var(--mono);font-size:.75rem;color:var(--or);margin:0 0 16px;letter-spacing:.07em;text-transform:uppercase}
+.light .eyebrow,.light2 .eyebrow{color:#bd4d15}
+.light{background:var(--paper);color:var(--ink)}
+.light2{background:var(--paper2);color:var(--ink)}
+.n800{background:var(--n800)}
+.punch{font-size:clamp(1.28rem,2.7vw,1.8rem);font-weight:600;letter-spacing:-.025em;line-height:1.3;max-width:29ch;margin:0}
+.muted{color:#7f95aa}
+
+/* Reveal é opt-in: sem JS ou com falha de JS o conteúdo permanece visível */
+html.reveal-ready .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
+html.reveal-ready .reveal.in{opacity:1;transform:none}
+
+.cycle{display:flex;flex-wrap:wrap;gap:9px;align-items:center;font-family:var(--mono);font-size:.75rem;color:#7d93a9}
+.cycle b{color:#c3d0dd;font-weight:500}.cycle i{font-style:normal;color:var(--or)}.cycle .loop{color:var(--or);font-size:.95rem}
+.light .cycle b,.light2 .cycle b{color:var(--ink)}
+
+.skip{position:absolute;left:-9999px;top:auto}
+.skip:focus{left:16px;top:12px;z-index:1000;background:#fff;color:var(--ink);padding:10px 14px;border-radius:5px}
+
+header{position:sticky;top:0;z-index:60;background:rgba(5,13,22,.82);backdrop-filter:blur(18px) saturate(140%);border-bottom:1px solid rgba(255,255,255,.08)}
+.bar{display:flex;align-items:center;gap:28px;height:68px}
+.logo{display:flex;align-items:center;text-decoration:none;font-weight:700;font-size:1.16rem;letter-spacing:-.03em;color:#fff}
+.logo .x{color:var(--or)}
+.logo em{font-style:normal;font-family:var(--mono);font-size:.69rem;font-weight:500;color:#8298ad;padding-left:11px;margin-left:11px;border-left:1px solid var(--ld);letter-spacing:0}
+nav{margin-left:auto;display:flex;gap:26px}
+nav a{font-size:.9rem;color:#aebdcc;text-decoration:none;transition:.2s}
+nav a:hover{color:#fff}
+.nav-cta{background:var(--or);color:#fff;text-decoration:none;font-weight:600;font-size:.88rem;padding:10px 17px;border-radius:5px;white-space:nowrap;box-shadow:0 8px 28px rgba(238,108,43,.18)}
+.burger{display:none;margin-left:auto;background:none;border:1px solid var(--ld);color:#fff;border-radius:5px;padding:8px 12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--sans);font-weight:600;font-size:1rem;padding:16px 26px;border-radius:6px;text-decoration:none;border:0;cursor:pointer;transition:transform .18s,background .18s,box-shadow .18s}
+.btn-p{background:var(--or);color:#fff;box-shadow:0 12px 32px rgba(238,108,43,.2)}
+.btn-p:hover{background:var(--or2);transform:translateY(-1px);box-shadow:0 16px 38px rgba(238,108,43,.25)}
+.btn-s{background:transparent;color:#fff;border:1px solid var(--ld)}
+.btn-s:hover{border-color:rgba(255,255,255,.26)}
+.sub-cta{font-family:var(--mono);font-size:.77rem;color:#8298ad;margin:13px 0 0}
+
+.hero{padding:88px 0 74px;background:radial-gradient(900px 520px at 78% 3%,rgba(238,108,43,.17),transparent 64%),radial-gradient(700px 450px at 15% 75%,rgba(23,57,90,.35),transparent 70%),linear-gradient(180deg,var(--n950),var(--n800))}
+.hero:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.55),transparent 82%);pointer-events:none}
+.hero .wrap{position:relative;z-index:1}.hero .lead{max-width:53ch;margin-top:22px;font-size:1.14rem}.hero-actions{margin-top:30px}
+.triad{font-family:var(--mono);font-size:.85rem;color:#91a5b8;margin:25px 0 0;display:flex;flex-wrap:wrap;gap:8px 14px}.triad b{color:#fff;font-weight:500}
+
+.panel{margin-top:48px;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.018));overflow:hidden;box-shadow:var(--shadow);position:relative}
+.panel:before{content:"";position:absolute;inset:0 0 auto 0;height:1px;background:linear-gradient(90deg,transparent,var(--or),transparent);opacity:.8}
+.panel-top{display:flex;align-items:center;gap:11px;padding:14px 20px;border-bottom:1px solid var(--ld);font-family:var(--mono);font-size:.74rem;color:#8298ad;flex-wrap:wrap}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--or);box-shadow:0 0 16px rgba(238,108,43,.75);flex:none}
+.panel-top .base{margin-left:auto;color:#8fa4b8}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--ld)}
+.kpi{background:rgba(12,29,48,.96);padding:24px 20px}
+.kpi span{display:block;font-family:var(--mono);font-size:.7rem;color:#8298ad;margin-bottom:8px}
+.kpi strong{font-family:var(--mono);font-size:1.32rem;font-weight:500;letter-spacing:-.025em}
+.kpi.alert strong{color:var(--or)}
+.panel-list{padding:21px;display:grid;gap:11px;border-top:1px solid var(--ld)}
+.pl{display:flex;gap:12px;font-size:.95rem;color:#c3d0dd}.pl i{font-style:normal;color:var(--or);font-family:var(--mono);flex:none}
+.panel-foot{padding:16px 20px;border-top:1px solid var(--ld);font-family:var(--mono);font-size:.77rem;color:#d0dae4;background:rgba(238,108,43,.075)}
+
+.flows{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+.flow{border:1px solid var(--ll);border-radius:9px;padding:25px;background:#fff}
+.flow.now{border-color:var(--or);box-shadow:0 12px 34px rgba(16,42,67,.07)}
+.flow h4{font-family:var(--mono);font-size:.75rem;color:var(--ink2);font-weight:500;margin-bottom:16px}.flow.now h4{color:#bd4d15}
+.steps{display:flex;flex-wrap:wrap;gap:8px}.step{font-family:var(--mono);font-size:.8rem;padding:7px 10px;border:1px solid var(--ll);border-radius:4px;color:var(--ink2)}
+.flow.now .step{border-color:rgba(238,108,43,.38);color:var(--ink);background:#fff7f2}
+.cost{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:48px}.cost div{border-top:2px solid var(--or);padding-top:18px}.cost h3{margin-bottom:10px}.cost p{margin:0;color:var(--ink2);font-size:.96rem}
+
+.funnel{margin-top:44px;display:grid;gap:0;max-width:800px}
+.fl{border:1px solid var(--ld);border-radius:9px;padding:22px 24px;background:rgba(255,255,255,.025)}
+.fl.core{border-color:var(--or);background:linear-gradient(135deg,rgba(238,108,43,.17),rgba(12,29,48,.58));padding:29px 24px;box-shadow:0 14px 42px rgba(0,0,0,.14)}
+.fl h4{font-family:var(--mono);font-size:.76rem;color:#8298ad;font-weight:500;margin-bottom:10px}.fl.core h4{color:var(--or)}
+.fl .big{font-size:1.6rem;font-weight:700;letter-spacing:-.035em}.fl .sub{font-family:var(--mono);font-size:.87rem;color:#e8b596;margin-top:8px}
+.fl .items{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.fl .items span{font-family:var(--mono);font-size:.77rem;padding:6px 10px;border:1px solid var(--ld);border-radius:3px;color:#a9bccd}
+.arrow{text-align:center;color:var(--or);font-size:1.2rem;padding:9px 0;line-height:1}
+.mech{margin-top:48px}.mstep{display:grid;grid-template-columns:150px 1fr;gap:28px;padding:25px 0;border-top:1px solid var(--ld)}.mstep:last-child{border-bottom:1px solid var(--ld)}
+.mstep .num{font-family:var(--mono);font-size:.78rem;color:var(--or);padding-top:4px}.mstep p{margin:8px 0 0;color:#c3d0dd;font-size:.98rem}
+
+.day{border:1px solid var(--ll);border-radius:10px;background:#fff;overflow:hidden;margin-top:18px;box-shadow:0 10px 28px rgba(16,42,67,.045)}
+.day-top{display:flex;align-items:center;gap:13px;padding:14px 22px;border-bottom:1px solid var(--ll);flex-wrap:wrap}
+.time{font-family:var(--mono);font-size:.98rem;color:#bd4d15;font-weight:500}.stage{font-family:var(--mono);font-size:.71rem;color:var(--ink2);padding:4px 9px;border:1px solid var(--ll);border-radius:3px}
+.who{margin-left:auto;font-family:var(--mono);font-size:.71rem;color:var(--ink2)}.day-body{padding:24px 22px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ll);border:1px solid var(--ll);border-radius:6px;overflow:hidden;margin-top:16px}.grid3 div{background:var(--paper);padding:17px}
+.grid3 span{display:block;font-family:var(--mono);font-size:.69rem;color:var(--ink2);margin-bottom:7px}.grid3 strong{font-family:var(--mono);font-size:1.1rem;font-weight:500}
+.fca-row{display:grid;grid-template-columns:76px 1fr;gap:18px;padding:14px 0;border-top:1px solid var(--ll)}.fca-row b{font-family:var(--mono);font-size:.74rem;color:#bd4d15;font-weight:500;padding-top:3px}.fca-row p{margin:0;color:var(--ink2);font-size:.97rem}
+.meta-row{display:flex;flex-wrap:wrap;gap:18px;margin-top:18px;font-family:var(--mono);font-size:.78rem;color:var(--ink2)}.meta-row b{color:var(--ink);font-weight:500}
+.bar-prog{height:6px;border-radius:3px;background:var(--paper2);margin-top:18px;overflow:hidden}.bar-prog i{display:block;height:100%;width:66.666%;background:var(--ok)}
+
+.checks{display:grid;gap:10px;margin-top:34px;max-width:830px}
+.check{display:flex;gap:14px;align-items:flex-start;padding:17px 18px;border:1px solid var(--ld);border-radius:7px;background:rgba(255,255,255,.025);cursor:pointer;font-size:.98rem;transition:.18s}
+.check:hover{border-color:rgba(238,108,43,.55);transform:translateX(2px)}.check input{margin:3px 0 0;width:19px;height:19px;accent-color:var(--or);flex:none;cursor:pointer}
+.check.on{border-color:var(--or);background:rgba(238,108,43,.085)}
+.verdict{margin-top:26px;max-width:830px;border:1px solid var(--or);border-radius:9px;display:none;overflow:hidden;box-shadow:0 16px 42px rgba(0,0,0,.15)}.verdict.show{display:block}
+.verdict .score{padding:18px 22px;border-bottom:1px solid var(--ld);font-family:var(--mono);font-size:1rem;color:var(--or);background:rgba(238,108,43,.085)}.verdict .vb{padding:24px 22px}
+
+.nucleo{border:1px solid var(--or);border-radius:10px;background:linear-gradient(140deg,rgba(238,108,43,.13),rgba(12,29,48,.82));padding:30px;margin-top:38px;box-shadow:0 14px 42px rgba(0,0,0,.16)}
+.nucleo .tagline{font-family:var(--mono);font-size:.76rem;color:var(--or);margin:0 0 12px}
+.nucleo .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.nucleo .chips span{font-family:var(--mono);font-size:.78rem;padding:8px 11px;border:1px solid rgba(238,108,43,.4);border-radius:4px;color:#f0d0bc}
+.frentes{display:grid;grid-template-columns:repeat(2,1fr);gap:26px 34px;margin-top:34px}
+.frente{border-top:1px solid var(--ld);padding-top:18px}.frente span{font-family:var(--mono);font-size:.73rem;color:var(--or);display:block;margin-bottom:8px}.frente p{margin:8px 0 0;color:#c3d0dd;font-size:.95rem}
+.frente .q{margin-top:12px;color:#8fa5ba;font-size:.92rem;border-left:2px solid var(--or);padding-left:12px}
+.transversal{border:1px dashed var(--ld);border-radius:9px;padding:22px 24px;margin-top:30px}.transversal h4{font-family:var(--mono);font-size:.77rem;color:#a9bccd;font-weight:500;margin-bottom:10px}.transversal p{margin:0;color:#8fa5ba;font-size:.94rem}
+.delivery{margin-top:30px;padding:24px;border-radius:9px;background:rgba(255,255,255,.035);border:1px solid var(--ld)}
+.delivery>h4{font-family:var(--mono);font-size:.77rem;color:var(--or);font-weight:500;margin-bottom:16px}
+.delivery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--ld);border:1px solid var(--ld);border-radius:7px;overflow:hidden}
+.delivery-grid div{background:var(--n800);padding:18px}.delivery-grid strong{display:block;font-size:.94rem;margin-bottom:6px}.delivery-grid p{margin:0;color:#90a5b9;font-size:.85rem}
+
+.strip-l{border-left:3px solid var(--or);background:rgba(238,108,43,.07);padding:24px 26px;border-radius:0 9px 9px 0;margin-top:36px}.strip-l h3{margin-bottom:10px}.strip-l p{margin:0;color:var(--ink2);font-size:.97rem}
+.strip-d{border-left:3px solid var(--or);background:rgba(255,255,255,.04);padding:24px 26px;border-radius:0 9px 9px 0;margin-top:30px}.strip-d h4{font-family:var(--mono);font-size:.77rem;color:var(--or);font-weight:500;margin-bottom:14px}
+.contract-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px}.contract-grid div{border-top:1px solid var(--ld);padding-top:14px}.contract-grid strong{display:block;margin-bottom:7px}.contract-grid p{margin:0;color:#c3d0dd;font-size:.94rem}
+.contract-note{margin:18px 0 0!important;color:#9bb0c4!important;font-size:.9rem!important}
+
+.weeks{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--ll);border:1px solid var(--ll);border-radius:9px;overflow:hidden;margin-top:40px}
+.week{background:#fff;padding:25px 20px}.week span{font-family:var(--mono);font-size:.72rem;color:#bd4d15;display:block;margin-bottom:10px}.week p{margin:8px 0 0;font-size:.92rem;color:var(--ink2)}
+
+.field{border:1px solid var(--ld);border-radius:9px;background:linear-gradient(145deg,var(--n800),rgba(16,42,67,.6));padding:31px;margin-top:34px}
+.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:22px}.field h4{font-family:var(--mono);font-size:.77rem;color:var(--or);margin-bottom:14px;font-weight:500}
+.field ul{margin:0;padding-left:18px;color:#c3d0dd}.field li{margin-bottom:9px}.field .note{font-size:.84rem;color:#8398ac;margin:24px 0 0;max-width:none;padding-top:20px;border-top:1px solid var(--ld)}
+
+.fit{display:grid;grid-template-columns:1.3fr 1fr;gap:22px;margin-top:40px}.fit>div{border:1px solid var(--ll);border-radius:9px;padding:27px;background:#fff}.fit .no{background:var(--paper2)}
+.fit ul{list-style:none;margin:16px 0 0;padding:0}.fit .yes li{padding-left:25px;position:relative;margin-bottom:10px;color:var(--ink2)}.fit .yes li::before{content:"✓";position:absolute;left:0;color:var(--or);font-weight:700}
+.fit .no p{color:var(--ink2);margin:14px 0 0;font-size:.95rem}
+details{border-bottom:1px solid var(--ll);padding:19px 0}summary{cursor:pointer;font-weight:600;font-size:1.01rem;list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:center}
+summary::-webkit-details-marker{display:none}summary::after{content:"+";color:var(--or);font-size:1.5rem;font-weight:400}details[open] summary::after{content:"–"}details p{margin:14px 0 0;color:var(--ink2)}
+
+.offer{border:1px solid var(--or);border-radius:11px;background:linear-gradient(140deg,rgba(238,108,43,.14),rgba(12,29,48,.86));padding:36px;margin-top:34px;color:#fff;box-shadow:var(--shadow)}
+.answers{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:28px}.answers div{border-top:2px solid var(--or);padding-top:16px}.answers span{font-family:var(--mono);font-size:.73rem;color:var(--or);display:block;margin-bottom:8px}.answers p{margin:0;color:#d3dde7;font-size:.95rem}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:start;margin-top:62px}
+form{background:linear-gradient(145deg,var(--n800),var(--n850));border:1px solid rgba(255,255,255,.13);border-radius:11px;padding:31px;box-shadow:var(--shadow);position:relative}
+label{display:block;font-family:var(--mono);font-size:.75rem;color:#a9bccd;margin:0 0 7px}
+input,select{width:100%;background:rgba(255,255,255,.055);border:1px solid var(--ld);border-radius:6px;color:#fff;padding:13px 14px;font-family:var(--sans);font-size:1rem;margin-bottom:17px;transition:border .18s,background .18s}
+input:hover,select:hover{border-color:rgba(255,255,255,.2)}input:focus,select:focus{outline:2px solid var(--or);outline-offset:1px;background:rgba(255,255,255,.075)}select option{background:var(--n800)}
+form .btn{width:100%}.fnote{font-family:var(--mono);font-size:.72rem;color:#8298ad;margin:15px 0 0;text-align:center;line-height:1.6}
+.hp{position:absolute!important;left:-10000px!important;top:auto!important;width:1px!important;height:1px!important;overflow:hidden!important}
+
+.lead-ok{display:none;background:linear-gradient(145deg,var(--n800),var(--n850));border:1px solid var(--or);border-radius:11px;padding:31px;box-shadow:var(--shadow)}
+.lead-ok.show{display:block}.lead-ok h3{font-size:1.25rem;margin-bottom:12px}.lead-ok p{color:#c3d0dd;font-size:.97rem}.lead-ok a{color:var(--or)}
+
+.espx-strip{padding:42px 0;background:var(--n950);border-top:1px solid var(--ld);border-bottom:1px solid var(--ld)}
+.espx-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center}.principles{display:flex;flex-wrap:wrap;gap:8px}.principles span{font-family:var(--mono);font-size:.75rem;color:#a9bccd;border:1px solid var(--ld);padding:7px 10px;border-radius:4px}
+
+footer{border-top:1px solid var(--ld);padding:42px 0;color:#8298ad;font-size:.9rem}.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px}.foot p{margin:0;max-width:44ch}
+.footer-links{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px}.footer-links a,.footer-links button{font:inherit;font-size:.84rem;color:#aebdcc;background:none;border:0;padding:0;text-decoration:underline;cursor:pointer}
+
+.wfab{position:fixed;right:20px;bottom:20px;z-index:70;background:#25D366;color:#fff;text-decoration:none;font-weight:600;font-size:.92rem;padding:14px 20px;border-radius:40px;box-shadow:0 8px 28px rgba(0,0,0,.42);transition:.18s}.wfab:hover{transform:translateY(-2px)}
+
+.consent{position:fixed;z-index:90;left:50%;bottom:22px;transform:translateX(-50%);width:min(760px,calc(100% - 32px));background:#0a1828;border:1px solid rgba(255,255,255,.16);box-shadow:0 20px 70px rgba(0,0,0,.42);border-radius:12px;padding:20px;display:none}
+.consent.show{display:block}.consent-grid{display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center}.consent p{margin:0;color:#b9c7d4;font-size:.9rem;max-width:none}.consent a{color:#fff}
+.consent-actions{display:flex;gap:10px}.consent-actions button{white-space:nowrap}
+
+:focus-visible{outline:2px solid var(--or);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}html.reveal-ready .reveal{opacity:1;transform:none}}
+@media(max-width:900px){
+  section{padding:64px 0}.wrap{padding:0 22px}
+  nav{display:none}nav.open{display:flex;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:var(--n800);padding:20px 24px;gap:16px;border-bottom:1px solid var(--ld)}
+  .burger{display:block}.nav-cta{display:none}
+  .kpis,.grid3,.weeks,.answers,.delivery-grid{grid-template-columns:1fr 1fr}
+  .flows,.cost,.field-grid,.fit,.contact,.espx-grid,.frentes,.contract-grid{grid-template-columns:1fr}
+  .mstep{grid-template-columns:1fr;gap:4px}.who{margin-left:0;width:100%}
+  .wfab{left:20px;right:20px;text-align:center}.consent{bottom:88px}.consent-grid{grid-template-columns:1fr}.consent-actions{flex-wrap:wrap}
+  body{padding-bottom:78px}.hero{padding-top:68px}
+}
+@media(max-width:560px){
+  body{font-size:16px}.kpis,.grid3,.weeks,.answers,.delivery-grid{grid-template-columns:1fr}
+  .panel-top .base{margin-left:0;width:100%}.btn{width:100%;padding-left:18px;padding-right:18px}.triad{gap:7px 10px}.cycle{font-size:.7rem}
+  .offer{padding:26px 20px}.field{padding:25px 20px}form{padding:25px 20px}.consent-actions{display:grid;grid-template-columns:1fr}.consent-actions .btn{width:100%}
+}
+
+/* V3.2 · estratégia, gestão e ponta conectadas */
+.rhythm-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.82fr);gap:46px;align-items:start;margin-top:38px}
+.rhythm-map{position:relative;border:1px solid var(--ll);border-radius:14px;background:#fff;padding:28px;box-shadow:0 18px 50px rgba(16,42,67,.07)}
+.map-label{font-family:var(--mono);font-size:.69rem;letter-spacing:.05em;color:var(--ink2);text-transform:uppercase}
+.map-stack{display:grid;gap:10px;margin-top:16px}.map-node{display:grid;grid-template-columns:110px 1fr;gap:18px;align-items:center;border:1px solid var(--ll);border-radius:8px;padding:15px 16px;background:var(--paper)}
+.map-node strong{font-size:.96rem}.map-node span{font-family:var(--mono);font-size:.72rem;color:var(--ink2)}.map-node.seller{border-color:rgba(238,108,43,.48);background:#fff7f2}.map-node.seller strong{color:#bd4d15}
+.map-arrow{text-align:center;font-family:var(--mono);font-size:.72rem;color:#bd4d15}.map-client{text-align:center;border:1px dashed var(--ll);border-radius:8px;padding:12px;font-family:var(--mono);font-size:.76rem;color:var(--ink2)}
+.map-return{margin-top:18px;border-top:1px solid var(--ll);padding-top:18px;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center}.map-return p{margin:0;font-size:.9rem;color:var(--ink2)}.map-return .up{font-family:var(--mono);font-size:.72rem;color:#bd4d15;text-align:right}
+.rhythm-cards{display:grid;gap:16px;margin-top:34px}.rhythm-card{border:1px solid var(--ll);border-radius:11px;background:#fff;overflow:hidden;box-shadow:0 10px 30px rgba(16,42,67,.045)}
+.rhythm-head{display:grid;grid-template-columns:120px 1fr auto;gap:18px;align-items:center;padding:16px 20px;border-bottom:1px solid var(--ll)}.rhythm-head .cad{font-family:var(--mono);font-size:.72rem;color:#bd4d15}.rhythm-head .role{font-weight:700}.rhythm-head .verb{font-family:var(--mono);font-size:.7rem;color:var(--ink2);border:1px solid var(--ll);border-radius:4px;padding:5px 8px}
+.rhythm-body{padding:22px 20px}.rhythm-body>p{color:var(--ink2);font-size:.96rem}.fact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--ll);border:1px solid var(--ll);border-radius:7px;overflow:hidden;margin-top:16px}
+.fact-grid div{background:var(--paper);padding:15px}.fact-grid span{display:block;font-family:var(--mono);font-size:.66rem;color:var(--ink2);margin-bottom:6px}.fact-grid strong{font-family:var(--mono);font-size:1rem;font-weight:500}
+.gps{margin-top:16px;border-left:2px solid var(--or);padding:11px 14px;background:#fff7f2;color:var(--ink2);font-size:.9rem}.manager-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.manager-grid div{border:1px solid var(--ll);border-radius:7px;padding:14px;background:var(--paper)}.manager-grid span{display:block;font-family:var(--mono);font-size:.66rem;color:var(--ink2);margin-bottom:5px}.manager-grid b{font-size:.91rem}
+.exec-line{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.exec-line span{font-family:var(--mono);font-size:.72rem;border:1px solid var(--ll);border-radius:4px;padding:7px 9px;color:var(--ink2);background:var(--paper)}
+.rhythm-signature{margin-top:30px;padding-top:25px;border-top:1px solid var(--ll)}.rhythm-signature h3{font-size:clamp(1.35rem,2.8vw,1.9rem);max-width:32ch}.rhythm-signature p{margin:12px 0 0;color:var(--ink2)}
+.product-logic{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}.product-logic div{border:1px solid var(--ld);border-radius:8px;padding:18px;background:rgba(255,255,255,.025)}
+.product-logic span{font-family:var(--mono);font-size:.7rem;color:var(--or);display:block;margin-bottom:7px}.product-logic b{font-size:.98rem}.product-logic p{font-size:.88rem;color:#91a5b8;margin:7px 0 0}
+@media(max-width:900px){.rhythm-intro{grid-template-columns:1fr}.fact-grid{grid-template-columns:1fr 1fr}.manager-grid,.product-logic{grid-template-columns:1fr}.rhythm-head{grid-template-columns:1fr auto}.rhythm-head .cad{grid-column:1/-1}.map-node{grid-template-columns:90px 1fr}}
+@media(max-width:560px){.rhythm-head{grid-template-columns:1fr}.rhythm-head .cad{grid-column:auto}.rhythm-head .verb{justify-self:start}.rhythm-map{padding:20px}.map-node{grid-template-columns:1fr;gap:4px}}
+
+</style>
+</head>
+
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#topo">ESP<span class="x">X</span><em>X-Action</em></a>
+    <button class="burger" aria-label="Abrir menu" aria-controls="nav" aria-expanded="false" id="burger">☰</button>
+    <nav id="nav" aria-label="Navegação principal">
+      <a href="#camada">A camada</a>
+      <a href="#dia">Ritmos de gestão</a>
+      <a href="#composicao">Composição</a>
+      <a href="#implantacao">Implantação</a>
+      <a href="#fit">Para quem é</a>
+    </nav>
+    <a class="nav-cta" href="#contato" data-cta="header">Solicitar Leitura Comercial</a>
+  </div>
+</header>
+
+<main id="conteudo">
+<!-- 1 HERO -->
+<section class="hero" id="topo">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">X-ACTION · A CAMADA DE EXECUÇÃO DA GESTÃO COMERCIAL</p>
+      <h1>No dia 30 você descobre. No dia 8 ainda dava para agir.</h1>
+      <p class="lead">O X-Action transforma os dados comerciais que sua empresa já possui em ritmo, prioridade e ação durante o mês, enquanto ainda existe tempo para mudar o resultado.</p>
+      <div class="hero-actions">
+        <a class="btn btn-p" href="#contato" data-cta="hero">Descobrir onde estamos perdendo resultado <span aria-hidden="true">→</span></a>
+      </div>
+      <p class="triad"><span><b>ERP</b> registra</span><span>·</span><span><b>BI</b> mostra</span><span>·</span><span><b>X-Action</b> faz agir</span></p>
+    </div>
+
+    <div class="panel reveal" aria-label="Exemplo hipotético de leitura comercial do dia 8">
+      <div class="panel-top">
+        <span class="dot"></span> EXEMPLO DE LEITURA · DIA 8
+        <span class="base">6º dia útil de 20 · ritmo atual R$ 40.600/dia</span>
+      </div>
+      <div class="kpis">
+        <div class="kpi"><span>META DO MÊS</span><strong>R$ 1.000.000</strong></div>
+        <div class="kpi"><span>REALIZADO</span><strong>R$ 243.600</strong></div>
+        <div class="kpi"><span>RITMO PROJETADO</span><strong>R$ 812.000</strong></div>
+        <div class="kpi alert"><span>GAP PROJETADO</span><strong>R$ 188.000</strong></div>
+      </div>
+      <div class="panel-list">
+        <div class="pl"><i>→</i><span>3 vendedores abaixo do ritmo necessário</span></div>
+        <div class="pl"><i>→</i><span>Ticket médio abaixo da referência do período</span></div>
+        <div class="pl"><i>→</i><span>Carteira com clientes elegíveis e sem atuação</span></div>
+        <div class="pl"><i>→</i><span>4 ações prioritárias abertas para hoje</span></div>
+      </div>
+      <div class="panel-foot">O fechamento ainda pode mudar. O número não é o problema. Descobrir tarde demais é.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 PROBLEMA -->
+<section class="light" id="problema">
+  <div class="wrap reveal">
+    <p class="eyebrow">O PROBLEMA</p>
+    <h2>Gestão comercial não acontece no fechamento.</h2>
+    <p class="lead">A meta pode ser mensal. A gestão não pode. Todos os dias o cenário muda: vendedores aceleram ou ficam para trás, clientes deixam de comprar, o ticket varia, o desconto come a margem e oportunidades surgem na carteira. Quando isso só vira conversa na reunião, o gestor está administrando um resultado que já aconteceu.</p>
+    <div class="flows">
+      <div class="flow"><h4>COMO ACONTECE HOJE</h4><div class="steps"><span class="step">dado</span><span class="step">relatório</span><span class="step">reunião</span><span class="step">explicação</span><span class="step">fechamento</span></div></div>
+      <div class="flow now"><h4>COM X-ACTION</h4><div class="steps"><span class="step">dado</span><span class="step">sinal</span><span class="step">prioridade</span><span class="step">ação</span><span class="step">acompanhamento</span><span class="step">resultado</span></div></div>
+    </div>
+    <div class="cost">
+      <div><h3>Receita</h3><p>Clientes, oportunidades e capacidade comercial que poderiam produzir resultado e simplesmente não são movimentados.</p></div>
+      <div><h3>Margem</h3><p>Ticket, mix e desconto deterioram o resultado mesmo quando o faturamento cresce.</p></div>
+      <div><h3>Produtividade</h3><p>Gestores e vendedores gastam energia descobrindo, cobrando e lembrando aquilo que deveria fazer parte da rotina.</p></div>
+    </div>
+    <p class="punch" style="margin-top:46px;max-width:38ch">O custo da gestão reativa é a soma das oportunidades que deixaram de ser corrigidas enquanto ainda havia tempo.</p>
+  </div>
+</section>
+
+<!-- 3 CAMADA -->
+<section id="camada">
+  <div class="wrap reveal">
+    <p class="eyebrow">A CAMADA X-ACTION</p>
+    <h2>Seu ERP registra. Seu BI mostra. O X-Action faz a gestão agir.</h2>
+    <p class="lead" style="margin-top:18px">X-Action não é mais uma fonte de verdade. É a camada de execução da gestão comercial: método, tecnologia e ritmo de gestão trabalhando juntos para transformar informação em ação acompanhada.</p>
+
+    <div class="funnel">
+      <div class="fl"><h4>DADOS</h4><div class="items"><span>ERP</span><span>CRM</span><span>BI</span><span>Planilhas</span></div></div>
+      <div class="arrow">↓</div>
+      <div class="fl core"><h4>A CAMADA</h4><div class="big">X-ACTION</div><div class="sub">Método + Tecnologia + Ritmo de Gestão</div></div>
+      <div class="arrow">↓</div>
+      <div class="fl"><h4>O QUE PASSA A ACONTECER</h4><div class="items"><span>SINAL</span><span>PRIORIDADE</span><span>AÇÃO</span><span>ACOMPANHAMENTO</span></div></div>
+      <div class="arrow">↓</div>
+      <div class="fl"><h4>RESULTADO</h4><p class="cycle" style="margin:6px 0 0"><b>FATO</b><i>→</i><b>CAUSA</b><i>→</i><b>AÇÃO</b><i>→</i><b>RESULTADO</b><span class="loop">↻</span><b>NOVO FATO</b></p></div>
+    </div>
+
+    <div class="mech">
+      <div class="mstep"><div class="num">01 · DADOS</div><div><h3>O que a empresa já produz</h3><p>Metas, vendas, vendedores, clientes, produtos, ticket, desconto e margem, nas fontes que já existem na operação.</p></div></div>
+      <div class="mstep"><div class="num">02 · SINAL</div><div><h3>O que merece atenção agora</h3><p>O X-Action transforma metas, referências e regras da operação em sinais de atenção para a gestão: ritmo abaixo do necessário, vendedor fora da tendência, carteira sem atuação, ticket em queda, desconto fora do padrão ou oportunidade de recompra.</p></div></div>
+      <div class="mstep"><div class="num">03 · PRIORIDADE</div><div><h3>Nem toda variação precisa virar ação</h3><p>Os sinais são organizados por relevância para que gestores e vendedores concentrem atenção no que pode efetivamente alterar o resultado do mês.</p></div></div>
+      <div class="mstep"><div class="num">04 · AÇÃO</div><div><h3>O fato ganha causa, dono e prazo</h3><p>A gestão deixa de explicar e passa a decidir. Cada prioridade vira uma ação registrada, com responsável e data.</p></div></div>
+      <div class="mstep"><div class="num">05 · ACOMPANHAMENTO</div><div><h3>A decisão volta como resultado</h3><p>O que foi decidido, o que foi executado e o que mudou no ritmo. O ciclo seguinte não começa do zero. Começa do novo fato.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 RITMOS -->
+<section class="light2" id="dia"><div class="wrap reveal">
+<p class="eyebrow">X-ACTION EM MOVIMENTO</p>
+<h2>Uma gestão. Três níveis. Cada um agindo no tempo certo.</h2>
+<p class="lead">A estratégia nasce na direção, mas o resultado acontece na ponta. O X-Action conecta diretoria, gestores e vendedores em ritmos diferentes, entregando a cada nível a clareza necessária para cumprir seu papel no resultado.</p>
+
+<div class="rhythm-intro">
+<div><p class="punch" style="max-width:34ch">A prioridade organizacional desce. A capacidade de interferir no resultado se aproxima do cliente.</p><p class="lead" style="margin-top:18px">Na hierarquia, a direção define objetivos e prioridades. Na execução, o vendedor está mais perto do cliente e tem maior capacidade de agir agora. O X-Action mantém essas duas forças conectadas.</p></div>
+<div class="rhythm-map" aria-label="Fluxo de gestão do X-Action">
+<span class="map-label">DIREÇÃO ↓</span><div class="map-stack">
+<div class="map-node"><span>ESTRATÉGICO</span><strong>DIRETORIA</strong></div><div class="map-arrow">objetivos · prioridades ↓</div>
+<div class="map-node"><span>TÁTICO</span><strong>GESTOR</strong></div><div class="map-arrow">decisão · foco ↓</div>
+<div class="map-node seller"><span>EXECUÇÃO</span><strong>VENDEDOR</strong></div><div class="map-arrow">atuação ↓</div><div class="map-client">CLIENTE</div></div>
+<div class="map-return"><p>Execução e resultado voltam para a gestão como fatos, evidências e aprendizado.</p><div class="up">RESULTADO ↑<br>EVIDÊNCIA ↑</div></div></div></div>
+
+<div class="rhythm-cards">
+<article class="rhythm-card"><div class="rhythm-head"><span class="cad">DIARIAMENTE</span><span class="role">VENDEDOR</span><span class="verb">ENTRAR NO JOGO · EXECUTAR</span></div><div class="rhythm-body">
+<h3>Clareza factual para saber exatamente onde está.</h3><p>O vendedor não precisa começar o dia interpretando um painel. Precisa enxergar a própria realidade: meta, realizado, quanto falta e ritmo. É assim que a gestão coloca cada vendedor no jogo todos os dias.</p>
+<div class="fact-grid"><div><span>META</span><strong>R$ 100.000</strong></div><div><span>REALIZADO</span><strong>R$ 46.800</strong></div><div><span>FALTA</span><strong>R$ 53.200</strong></div><div><span>RITMO</span><strong style="color:#bd4d15">Atenção</strong></div></div>
+<div class="gps"><strong>Quando fizer sentido, a clareza também vira GPS.</strong> A gestão pode direcionar oportunidades de carteira, recuperação, recompra, mix ou outra prioridade comercial.</div></div></article>
+
+<article class="rhythm-card"><div class="rhythm-head"><span class="cad">SEMANALMENTE</span><span class="role">GESTOR</span><span class="verb">ENTENDER · DECIDIR · CONDUZIR</span></div><div class="rhythm-body">
+<h3>A visão consolidada vira um GPS analítico para a gestão.</h3><p>O gestor cruza o que aconteceu entre vendedores, produtos e períodos para entender o cenário da semana e decidir onde atuar. A reunião deixa de ser coleta de números e passa a ser gestão.</p>
+<div class="manager-grid"><div><span>METAS E RITMO</span><b>Quem está no ritmo, quem exige atenção e qual a tendência.</b></div><div><span>VENDEDORES</span><b>Faturamento, quantidade de vendas, ticket e comparativos.</b></div><div><span>PRODUTOS E MIX</span><b>O que está saindo, o que mudou e onde existe oportunidade.</b></div><div><span>PERÍODOS</span><b>Semana atual, histórico e referências comparáveis.</b></div><div><span>CARTEIRA</span><b>Atuação, oportunidades, recuperação e recorrência.</b></div><div><span>QUALIDADE</span><b>Ticket, desconto, margem e conversão quando disponíveis.</b></div></div>
+<div class="exec-line"><span>FATO</span><span>→</span><span>CAUSA</span><span>→</span><span>AÇÃO</span><span>→</span><span>RESPONSÁVEL</span><span>→</span><span>PRAZO</span></div>
+<p style="margin:16px 0 0">A partir dessa leitura, o gestor estrutura os FCAs da semana e acompanha as ações até que o resultado produza um novo fato.</p></div></article>
+
+<article class="rhythm-card"><div class="rhythm-head"><span class="cad">RITMO-BASE QUINZENAL</span><span class="role">DIRETORIA</span><span class="verb">ACOMPANHAR · DIRECIONAR</span></div><div class="rhythm-body">
+<h3>Visibilidade executiva sem precisar descer à operação para descobrir o que está acontecendo.</h3><p>A diretoria acompanha evolução do resultado, tendências relevantes, FCAs conduzidos pelos gestores, execução das ações e decisões que precisam subir de nível. No início da implantação, esse acompanhamento pode ser mais próximo; com a maturidade, o rito executivo se estabiliza.</p>
+<div class="exec-line"><span>RESULTADO</span><span>→</span><span>EVOLUÇÃO</span><span>→</span><span>FCAs</span><span>→</span><span>DECISÕES</span><span>→</span><span>NOVA DIREÇÃO</span></div></div></article>
+</div>
+
+<div class="rhythm-signature"><h3>A estratégia desce como direção. O resultado sobe como evidência.</h3><p>Não são três relatórios em frequências diferentes. É o mesmo ciclo de gestão amadurecendo conforme percorre a organização.</p><p class="cycle" style="margin-top:18px"><b>DIREÇÃO</b><i>→</i><b>FATO</b><i>→</i><b>CAUSA</b><i>→</i><b>AÇÃO</b><i>→</i><b>RESULTADO</b><i>→</i><b>APRENDIZADO</b><span class="loop">↻</span><b>DIREÇÃO</b></p><p class="muted" style="font-size:.82rem;margin-top:15px">A cadência é um ritmo-base do método e é ajustada à realidade, ao ciclo comercial e à maturidade de cada operação.</p></div>
+</div></section>
+
+<!-- 5 DIAGNOSTICO -->
+<section class="n800" id="leitura">
+  <div class="wrap reveal">
+    <p class="eyebrow">FAÇA UMA LEITURA RÁPIDA</p>
+    <h2>Quanto da sua gestão comercial ainda depende de descobrir, cobrar e lembrar?</h2>
+    <p class="lead">Marque o que acontece hoje na sua operação.</p>
+
+    <div class="checks" id="checks">
+      <label class="check"><input type="checkbox"><span>As metas só avançam quando alguém cobra pessoalmente.</span></label>
+      <label class="check"><input type="checkbox"><span>Descobrimos vendedores abaixo do ritmo tarde demais.</span></label>
+      <label class="check"><input type="checkbox"><span>Temos clientes na base que poderiam voltar a comprar, mas não existe atuação recorrente sobre eles.</span></label>
+      <label class="check"><input type="checkbox"><span>Temos ERP, relatórios ou BI, mas pouca ação acontece a partir dessas informações.</span></label>
+      <label class="check"><input type="checkbox"><span>Faturamento é acompanhado com mais atenção que margem, ticket e conversão.</span></label>
+      <label class="check"><input type="checkbox"><span>A reunião comercial explica mais o que aconteceu do que decide o que precisa acontecer.</span></label>
+    </div>
+
+    <div class="verdict" id="verdict">
+      <div class="score" id="score">0 de 6 sinais identificados</div>
+      <div class="vb">
+        <p class="lead" id="vtext" style="margin-bottom:20px"></p>
+        <a class="btn btn-p" href="#contato" data-cta="diagnostico">Quero uma leitura da minha operação <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 COMPOSICAO -->
+<section id="composicao">
+  <div class="wrap reveal">
+    <p class="eyebrow">COMO O X-ACTION É COMPOSTO</p>
+    <h2>Uma base comum. As frentes certas para o resultado que precisa ser movimentado.</h2>
+    <p class="lead">Você não precisa ativar todas as frentes no primeiro ciclo. Toda implantação começa pelo Núcleo X-Action e é composta com uma ou mais frentes prioritárias para o momento da operação.</p>
+
+    <div class="nucleo">
+      <p class="tagline">NÚCLEO X-ACTION · A BASE DE TODA IMPLANTAÇÃO</p>
+      <h3 style="font-size:1.25rem">É o sistema de gestão que conecta direção, gestores e vendedores.</h3>
+      <p style="margin:10px 0 0;color:#d3dde7;font-size:.97rem;max-width:60ch">O núcleo conecta informação, decisão e execução. Ele faz parte de toda implantação e estabelece a disciplina comum sobre a qual as frentes de gestão operam.</p>
+      <div class="chips"><span>Dados e referências</span><span>Sinais e prioridades</span><span>Fato → Causa → Ação</span><span>Responsável e prazo</span><span>Acompanhamento</span><span>Ritmo de gestão</span></div>
+    </div>
+
+    <p class="lead" style="margin-top:38px">A partir do núcleo, uma ou mais frentes compõem o primeiro ciclo conforme aquilo que mais pode alterar o resultado.</p>
+
+    <div class="frentes">
+      <div class="frente"><span>FRENTE 01</span><h3>Ritmo &amp; Performance</h3><p>Meta, realizado, projeção, tendência, vendedor, equipe, unidade e produtividade.</p><p class="q">Estamos no ritmo necessário e sabemos onde agir antes do fechamento?</p></div>
+      <div class="frente"><span>FRENTE 02</span><h3>Carteira &amp; Receita</h3><p>Reativação, recompra, cross-sell, recovery, oportunidades e atuação recorrente sobre a base.</p><p class="q">Quanto de receita potencial já está dentro da empresa, mas permanece sem atuação?</p></div>
+      <div class="frente"><span>FRENTE 03</span><h3>Qualidade Econômica</h3><p>Ticket, mix, desconto, margem e qualidade da composição da venda.</p><p class="q">Estamos apenas aumentando faturamento ou produzindo um resultado comercial melhor?</p></div>
+      <div class="frente"><span>FRENTE 04</span><h3>Conversão &amp; Produtividade</h3><p>Atuações realizadas, oportunidades, conversão, execução das ações e resultado produzido.</p><p class="q">O esforço comercial está realmente se transformando em resultado?</p></div>
+    </div>
+
+    <div class="transversal">
+      <h4>CAMADA TRANSVERSAL · INTEGRAÇÕES E AUTOMAÇÕES</h4>
+      <p>ERP, CRM, BI, planilhas, canais comerciais e automações são conectados à operação para que a informação chegue à gestão e a ação chegue a quem precisa executar, com o menor atrito possível.</p>
+    </div>
+
+    <div class="delivery">
+      <h4>O QUE PASSA A EXISTIR NA OPERAÇÃO</h4>
+      <div class="delivery-grid">
+        <div><strong>Ambiente X-Action configurado</strong><p>A estrutura de gestão passa a existir em um ambiente próprio, preparado para a operação.</p></div>
+        <div><strong>Indicadores e referências definidos</strong><p>Metas, critérios e referências deixam de depender de interpretação informal.</p></div>
+        <div><strong>Sinais e ações acompanhados</strong><p>Prioridades, responsáveis, prazos e execução passam a ter rastreabilidade.</p></div>
+        <div><strong>Ciclo recorrente de gestão</strong><p>O resultado volta para o sistema como novo fato e alimenta a próxima decisão.</p></div>
+      </div>
+    </div>
+
+    <p class="punch" style="margin-top:42px;max-width:38ch">Sua empresa não precisa implantar tudo para começar. Precisa começar pelo que mais pode alterar o resultado.</p>
+    <p class="lead" style="margin-top:22px">A Leitura Comercial dimensiona o núcleo, identifica as frentes prioritárias e define a sequência de implantação. O X-Action evolui conforme o gargalo da operação evolui.</p>
+  </div>
+</section>
+
+<!-- 7 IMPLANTACAO -->
+<section class="light" id="implantacao">
+  <div class="wrap reveal">
+    <p class="eyebrow">PRIMEIROS 30 DIAS</p>
+    <h2>Começamos pelo que sua empresa já tem.</h2>
+    <p class="lead">O X-Action não começa pedindo troca de ERP, reconstrução do BI ou mais uma grande plataforma. A implantação começa pelo núcleo e por uma ou mais frentes priorizadas na Leitura Comercial. Não esperamos toda a estrutura ficar pronta para começar a gerar gestão.</p>
+
+    <div class="weeks">
+      <div class="week"><span>SEMANA 1</span><h3>Entender e priorizar</h3><p>Operação comercial, metas, indicadores, equipes, unidades, fontes e rotina atual. Dimensionamos o núcleo, definimos as frentes do primeiro ciclo e a sequência de evolução.</p></div>
+      <div class="week"><span>SEMANA 2</span><h3>Conectar</h3><p>Estruturamos os dados necessários e colocamos os primeiros sinais comerciais em funcionamento.</p></div>
+      <div class="week"><span>SEMANA 3</span><h3>Agir</h3><p>Gestores e vendedores começam a operar prioridades, causas e ações sobre os desvios e oportunidades identificados.</p></div>
+      <div class="week"><span>SEMANA 4</span><h3>Gerir</h3><p>Primeiro ciclo completo de gestão: fato, causa, ação, resultado e novo fato.</p></div>
+    </div>
+
+    <div class="strip-l">
+      <h3>O primeiro ciclo precisa deixar algo mensurável.</h3>
+      <p>Antes de iniciar, definimos a referência atual da operação e os indicadores que serão acompanhados. Evolução de ritmo, atuação sobre carteira, conversão, ticket, margem ou produtividade passam a ser avaliados sobre uma base conhecida, e não sobre percepção.</p>
+    </div>
+
+    <p class="punch" style="margin-top:40px;max-width:32ch">O primeiro mês instala o ritmo. Os próximos ciclos multiplicam o aprendizado.</p>
+  </div>
+</section>
+
+<!-- 8 EVIDENCIA -->
+<section id="campo">
+  <div class="wrap reveal">
+    <p class="eyebrow">X-ACTION EM CAMPO</p>
+    <h2>O X-Action nasceu de um problema observado em uma operação real.</h2>
+    <p class="lead">Em uma operação varejista multiunidade, a ESPX encontrou o cenário que resume o problema para o qual o X-Action foi concebido: havia metas, dados e Business Intelligence, mas a gestão permanecia concentrada no fechamento e existiam oportunidades comerciais sem atuação sistemática.</p>
+
+    <div class="field">
+      <div class="field-grid">
+        <div>
+          <h4>CENÁRIO OBSERVADO</h4>
+          <ul>
+            <li>Gestão concentrada no fechamento</li>
+            <li>Informação comercial disponível, mas pouco conectada à rotina</li>
+            <li>Carteira histórica com potencial de atuação</li>
+            <li>Performance distribuída entre vendedores e unidades</li>
+            <li>Dependências entre venda, estoque e capacidade operacional</li>
+          </ul>
+        </div>
+        <div>
+          <h4>ESTRUTURA EM VALIDAÇÃO</h4>
+          <ul>
+            <li>Leitura de meta, realizado, ritmo e tendência durante o mês</li>
+            <li>Priorização por vendedor, equipe e unidade</li>
+            <li>Atuação estruturada sobre a carteira</li>
+            <li>Registro de fato, causa e ação com responsável</li>
+            <li>Aprendizado acumulado a cada ciclo</li>
+          </ul>
+        </div>
+      </div>
+      <p class="note">A ESPX só publica resultado financeiro de cliente depois de baseline, execução, medição e autorização formal. Preferimos apresentar o mecanismo de forma verificável a apresentar número que não podemos sustentar.</p>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="fit">
+  <div class="wrap reveal">
+    <p class="eyebrow">ONDE O X-ACTION MULTIPLICA MAIS</p>
+    <h2>Funciona melhor quando já existe algo para multiplicar.</h2>
+
+    <div class="fit">
+      <div class="yes">
+        <h3>Condições que aceleram o resultado</h3>
+        <ul>
+          <li>Operação comercial ativa e time de vendedores</li>
+          <li>Metas ou objetivos comerciais definidos</li>
+          <li>Histórico de vendas utilizável</li>
+          <li>Dados em ERP, CRM, BI ou planilhas</li>
+          <li>Liderança disposta a gerir por ritmo e ação</li>
+          <li>Alguém disponível para decidir, cobrar execução e acompanhar os ciclos</li>
+          <li>Potencial sobre carteira, conversão, ticket ou produtividade</li>
+        </ul>
+        <p style="margin:20px 0 0;color:var(--ink2);font-size:.94rem;border-top:1px solid var(--ll);padding-top:16px">O X-Action amplia a capacidade de gestão. A decisão e a execução continuam pertencendo às pessoas responsáveis pela operação.</p>
+      </div>
+
+      <div class="no">
+        <h3>Talvez ainda não seja o momento</h3>
+        <p>Se a operação ainda não possui processo comercial minimamente definido, se não existe histórico utilizável ou se a empresa procura apenas uma ferramenta isolada, sem mudança na forma de gerir, o X-Action rende menos do que deveria. Nesse caso preferimos dizer isso na primeira conversa.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:58px;max-width:850px">
+      <h3 style="font-size:1.35rem;margin-bottom:18px">Perguntas diretas</h3>
+
+      <details><summary>Já temos Power BI. Por que precisaríamos do X-Action?</summary><p>Porque visibilidade e execução cumprem papéis diferentes. O BI permite enxergar o que está acontecendo. O X-Action usa essa informação para orientar prioridade, responsável, ação e acompanhamento enquanto ainda existe tempo de interferir no resultado.</p></details>
+
+      <details><summary>Preciso trocar ERP, CRM ou BI?</summary><p>Não como premissa. O X-Action foi concebido para consumir a informação que a empresa já possui e acrescentar a camada de execução da gestão.</p></details>
+
+      <details><summary>O X-Action é um CRM?</summary><p>Não. CRM organiza relacionamento, oportunidades e etapas comerciais. O X-Action organiza a gestão sobre o resultado: ritmo, desvios, prioridades, ações e acompanhamento.</p></details>
+
+      <details><summary>Meu vendedor vai ter que alimentar mais um sistema?</summary><p>O desenho da operação busca reduzir atrito e levar informação e atuação para a rotina que já existe. O formato exato depende da estrutura e dos canais que a empresa já utiliza.</p></details>
+
+      <details><summary>Quanto custa?</summary><p>O investimento é definido pela composição da implantação: núcleo, frentes ativadas, estrutura de equipes ou unidades e integrações necessárias. A Leitura Comercial dimensiona esse cenário antes de apresentarmos uma proposta.</p></details>
+
+      <details><summary>Quanto tempo leva para começar?</summary><p>A implantação inicial foi desenhada para colocar os primeiros sinais e ciclos de gestão em funcionamento dentro do primeiro ciclo de 30 dias, dependendo da disponibilidade e da qualidade das fontes existentes.</p></details>
+
+      <details><summary>Preciso ativar todas as frentes de uma vez?</summary><p>Não. O núcleo faz parte de toda implantação, e uma ou mais frentes podem compor o primeiro ciclo conforme a prioridade da operação. Novas frentes entram quando os resultados e as evidências mostram que outra dimensão passou a exigir atenção. A evolução acontece pela necessidade da operação, não por calendário de contrato.</p></details>
+
+      <details><summary>O X-Action toma decisões pela equipe?</summary><p>Não. O X-Action sinaliza, organiza, prioriza e acompanha. Gestores decidem e os responsáveis executam. A tecnologia aumenta a capacidade de gestão sem substituir a responsabilidade de quem conduz a operação.</p></details>
+
+      <details><summary>Como os dados são tratados?</summary><p>A integração consome apenas as informações necessárias à gestão, respeitando controles de acesso, confidencialidade e os requisitos aplicáveis de proteção de dados. Trabalhamos com acordo de confidencialidade mútuo.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ESPX BRIDGE -->
+<section class="espx-strip" id="espx">
+  <div class="wrap espx-grid reveal">
+    <div>
+      <p class="eyebrow">UMA SOLUÇÃO ESPX</p>
+      <h3 style="font-size:1.55rem">Tecnologia como estrutura de crescimento e continuidade operacional dos negócios.</h3>
+      <p class="lead" style="margin-top:12px;margin-bottom:0">No X-Action, essa perspectiva chega à operação comercial conectando informação, gestão e execução.</p>
+    </div>
+    <div class="principles"><span>Negócio antes da tecnologia</span><span>Ação antes do relatório</span><span>Continuidade antes do evento</span></div>
+  </div>
+</section>
+
+<!-- 9 OFERTA -->
+<section id="contato" style="background:radial-gradient(700px 420px at 15% 20%,rgba(238,108,43,.1),transparent 70%),linear-gradient(180deg,var(--n800),var(--n950))">
+  <div class="wrap reveal">
+    <p class="eyebrow">O PRÓXIMO PASSO</p>
+    <h2>Antes de implantar, precisamos descobrir onde agir primeiro.</h2>
+
+    <div class="offer">
+      <h3 style="font-size:1.5rem">Leitura Comercial ESPX</h3>
+      <p class="lead" style="margin-top:12px;max-width:60ch">Em uma sessão executiva, analisamos como sua empresa transforma meta e informação em ação hoje, onde o resultado está escapando durante o mês e quais frentes merecem prioridade.</p>
+
+      <p style="font-family:var(--mono);font-size:.78rem;color:var(--or);margin:27px 0 0">VOCÊ SAI COM TRÊS RESPOSTAS</p>
+      <div class="answers">
+        <div><span>01</span><p>Onde existe perda ou oportunidade comercial.</p></div>
+        <div><span>02</span><p>O que precisa mudar primeiro.</p></div>
+        <div><span>03</span><p>Qual composição do X-Action faz sentido para executar essa mudança e se ele é o caminho adequado para sua operação.</p></div>
+      </div>
+
+      <div class="strip-d">
+        <h4>COMO O X-ACTION É CONTRATADO</h4>
+        <div class="contract-grid">
+          <div>
+            <strong>Implantação inicial</strong>
+            <p>Estrutura o núcleo, estabelece o baseline, conecta as fontes necessárias, configura referências e coloca as frentes prioritárias no primeiro ciclo de gestão.</p>
+          </div>
+          <div>
+            <strong>Sustentação recorrente</strong>
+            <p>Mantém o ciclo operando, acompanha sinais e ações, ajusta referências, mede evolução e incorpora novas frentes quando a operação exige.</p>
+          </div>
+        </div>
+        <p class="contract-note">A composição é definida antes da proposta conforme as frentes ativadas, a estrutura de equipes ou unidades e as integrações necessárias.</p>
+      </div>
+    </div>
+
+    <div class="contact">
+      <div>
+        <p class="lead">Não começamos por uma apresentação de produto. Começamos olhando para sua operação comercial, seus dados, sua rotina de gestão e onde o resultado pode estar escapando entre saber e fazer.</p>
+        <p class="punch" style="margin-top:30px;max-width:28ch">Quantos dias sua empresa leva para perceber que precisa agir?</p>
+        <p class="cycle" style="margin-top:30px"><b>FATO</b><i>→</i><b>CAUSA</b><i>→</i><b>AÇÃO</b><i>→</i><b>RESULTADO</b><span class="loop">↻</span><b>NOVO FATO</b></p>
+      </div>
+
+      <form id="lead" onsubmit="return enviarLead(event)" novalidate>
+        <div class="hp" aria-hidden="true">
+          <label for="website">Website</label>
+          <input id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <label for="nome">NOME</label>
+        <input id="nome" name="nome" required autocomplete="name">
+
+        <label for="empresa">EMPRESA</label>
+        <input id="empresa" name="empresa" required autocomplete="organization">
+
+        <label for="whats">WHATSAPP</label>
+        <input id="whats" name="whats" required inputmode="tel" autocomplete="tel" placeholder="(21) 90000-0000">
+
+        <label for="prio">QUAL DESSAS SITUAÇÕES MAIS SE PARECE COM A SUA</label>
+        <select id="prio" name="prio" required>
+          <option value="">Selecione</option>
+          <option>Só percebemos o desvio tarde</option>
+          <option>O time depende demais de cobrança</option>
+          <option>Temos clientes e oportunidades pouco trabalhados</option>
+          <option>Vendemos, mas precisamos melhorar margem e ticket</option>
+          <option>Temos dados, mas eles geram pouca ação</option>
+          <option>Preciso entender onde está o principal gargalo</option>
+        </select>
+
+        <button class="btn btn-p" type="submit">Solicitar minha Leitura Comercial <span aria-hidden="true">→</span></button>
+        <p class="fnote">Sessão executiva inicial, sem custo.<br>Confidencialidade respeitada. Retorno em até um dia útil.</p>
+      </form>
+
+      <div class="lead-ok" id="lead-ok" role="status" aria-live="polite">
+        <h3>Sua mensagem está pronta.</h3>
+        <p id="ok-text">Abrimos o WhatsApp para você concluir a solicitação. Se ele não abriu automaticamente, <a id="ok-link" href="https://wa.me/5521967090786" target="_blank" rel="noopener">toque aqui para continuar no WhatsApp</a>.</p>
+        <p style="margin-bottom:0;color:#8298ad;font-size:.9rem">Retorno em até um dia útil após o envio da mensagem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a class="logo" href="#topo">ESP<span class="x">X</span><em>X-Action</em></a>
+      <p style="margin-top:14px">Especialistas em multiplicar resultados.<br>Tecnologia como estrutura de crescimento e continuidade operacional dos negócios.</p>
+      <div class="footer-links">
+        <a href="https://espxtecnologia.com.br/privacidade">Política de Privacidade</a>
+        <button type="button" id="cookiePrefs">Preferências de cookies</button>
+      </div>
+    </div>
+    <div><p>Negócio antes da tecnologia · Ação antes do relatório · Continuidade antes do evento<br>Niterói, RJ · Desde 2019</p></div>
+  </div>
+</footer>
+
+<a class="wfab" id="wfab" href="https://wa.me/5521967090786?text=Ol%C3%A1%2C%20vim%20pela%20p%C3%A1gina%20do%20X-Action%20e%20quero%20solicitar%20uma%20Leitura%20Comercial." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">Falar no WhatsApp</a>
+
+<div class="consent" id="consent" role="dialog" aria-modal="true" aria-labelledby="consent-title">
+  <div class="consent-grid">
+    <div>
+      <strong id="consent-title">Privacidade e medição</strong>
+      <p>Usamos cookies de medição para entender o desempenho desta página e melhorar a experiência. Você pode aceitar ou manter somente os recursos necessários. <a href="https://espxtecnologia.com.br/privacidade">Saiba mais</a>.</p>
+    </div>
+    <div class="consent-actions">
+      <button class="btn btn-s" type="button" id="consentNecessary">Somente necessários</button>
+      <button class="btn btn-p" type="button" id="consentAccept">Aceitar medição</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  'use strict';
+
+  var dl=function(o){if(window.dataLayer)window.dataLayer.push(o);};
+
+  /* Consentimento */
+  var consentEl=document.getElementById('consent');
+  function setConsent(status){
+    try{localStorage.setItem('espx_consent_v1',status);}catch(e){}
+    if(window.gtag){
+      gtag('consent','update',{
+        ad_storage:status==='granted'?'granted':'denied',
+        analytics_storage:status==='granted'?'granted':'denied',
+        ad_user_data:status==='granted'?'granted':'denied',
+        ad_personalization:status==='granted'?'granted':'denied'
+      });
+    }
+    if(consentEl)consentEl.classList.remove('show');
+    dl({event:'consent_choice',consent_status:status});
+  }
+  function openConsent(){
+    if(consentEl)consentEl.classList.add('show');
+  }
+  var savedConsent=null;
+  try{savedConsent=localStorage.getItem('espx_consent_v1');}catch(e){}
+  if(!savedConsent)openConsent();
+  document.getElementById('consentAccept').addEventListener('click',function(){setConsent('granted');});
+  document.getElementById('consentNecessary').addEventListener('click',function(){setConsent('denied');});
+  document.getElementById('cookiePrefs').addEventListener('click',openConsent);
+
+  /* Menu mobile */
+  var burger=document.getElementById('burger'),nav=document.getElementById('nav');
+  if(burger&&nav){
+    burger.addEventListener('click',function(){
+      nav.classList.toggle('open');
+      burger.setAttribute('aria-expanded',nav.classList.contains('open')?'true':'false');
+    });
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',function(){
+        nav.classList.remove('open');
+        burger.setAttribute('aria-expanded','false');
+      });
+    });
+  }
+
+  /* Attribution */
+  var P=new URLSearchParams(location.search),U={};
+  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','gbraid','wbraid','fbclid'].forEach(function(k){
+    if(P.get(k))U[k]=P.get(k);
+  });
+  U.landing_variant='xaction-v3-2';
+  try{
+    var saved=sessionStorage.getItem('espx_utm');
+    if(Object.keys(U).length>1)sessionStorage.setItem('espx_utm',JSON.stringify(U));
+    else if(saved)U=JSON.parse(saved);
+  }catch(e){}
+  window.__espx_utm=U;
+
+  /* CTAs */
+  var pageStart=Date.now(),firstCta=false;
+  document.querySelectorAll('[data-cta]').forEach(function(a){
+    a.addEventListener('click',function(){
+      var loc=a.getAttribute('data-cta');
+      dl({event:'cta_click',cta_local:loc});
+      if(!firstCta){
+        firstCta=true;
+        dl({event:'time_to_first_cta',cta_local:loc,seconds_to_click:Math.round((Date.now()-pageStart)/1000)});
+      }
+    });
+  });
+
+  var wf=document.getElementById('wfab');
+  if(wf)wf.addEventListener('click',function(){
+    dl({event:'whatsapp_click',cta_local:'fab'});
+    if(!firstCta){
+      firstCta=true;
+      dl({event:'time_to_first_cta',cta_local:'fab',seconds_to_click:Math.round((Date.now()-pageStart)/1000)});
+    }
+  });
+
+  /* Scroll */
+  var hits={};
+  window.addEventListener('scroll',function(){
+    var h=document.documentElement,den=Math.max(1,h.scrollHeight-window.innerHeight),pct=Math.round(h.scrollTop/den*100);
+    [25,50,75,90].forEach(function(m){
+      if(pct>=m&&!hits[m]){hits[m]=1;dl({event:'scroll_depth',depth:m});}
+    });
+  },{passive:true});
+
+  /* Section view + reveal seguro */
+  var sectionIds=['topo','problema','camada','dia','leitura','composicao','implantacao','campo','fit','espx','contato'];
+  if('IntersectionObserver' in window){
+    try{
+      var seen={};
+      var io=new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if(e.isIntersecting&&e.target.id&&!seen[e.target.id]){
+            seen[e.target.id]=1;
+            dl({event:'section_view',secao:e.target.id});
+          }
+        });
+      },{rootMargin:'-20% 0px -20% 0px',threshold:0});
+
+      sectionIds.forEach(function(id){
+        var el=document.getElementById(id);
+        if(el)io.observe(el);
+      });
+
+      var revealEls=[].slice.call(document.querySelectorAll('.reveal'));
+      document.documentElement.classList.add('reveal-ready');
+      var rio=new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if(e.isIntersecting){
+            e.target.classList.add('in');
+            rio.unobserve(e.target);
+          }
+        });
+      },{rootMargin:'0px 0px -6% 0px',threshold:.01});
+
+      revealEls.forEach(function(el){rio.observe(el);});
+
+      /* Fail-safe: nenhuma animação pode esconder conteúdo */
+      setTimeout(function(){
+        revealEls.forEach(function(el){el.classList.add('in');});
+      },1800);
+    }catch(err){
+      document.documentElement.classList.remove('reveal-ready');
+    }
+  }
+
+  /* FAQ */
+  document.querySelectorAll('details').forEach(function(d){
+    d.addEventListener('toggle',function(){
+      if(d.open)dl({event:'faq_open',pergunta:d.querySelector('summary').textContent.trim()});
+    });
+  });
+
+  /* Autodiagnóstico */
+  var boxes=document.querySelectorAll('#checks input'),
+      verdict=document.getElementById('verdict'),
+      score=document.getElementById('score'),
+      vtext=document.getElementById('vtext'),
+      started=false,
+      resultViewedScore=null,
+      resultTimer=null;
+
+  window.__espx_score=0;
+
+  function upd(){
+    var n=0;
+    boxes.forEach(function(b){
+      b.closest('.check').classList.toggle('on',b.checked);
+      if(b.checked)n++;
+    });
+
+    window.__espx_score=n;
+    if(!started){started=true;dl({event:'diagnostic_start'});}
+    dl({event:'diagnostic_change',score:n});
+
+    clearTimeout(resultTimer);
+
+    if(n===0){
+      verdict.classList.remove('show');
+      return;
+    }
+
+    score.textContent=n+' de 6 sinais identificados';
+
+    if(n<=2){
+      vtext.textContent='Sua operação apresenta sinais pontuais de gestão reativa. A Leitura Comercial ajuda a separar um sintoma pontual de uma restrição estrutural.';
+    }else if(n<=4){
+      vtext.textContent='Sua operação apresenta sinais de gestão comercial reativa. Existe informação, mas há um intervalo entre perceber o fato, definir a prioridade e fazer a ação acontecer. É esse intervalo que o X-Action reduz.';
+    }else{
+      vtext.textContent='Sua operação apresenta um padrão consistente de gestão reativa. O resultado do mês está sendo administrado depois que já aconteceu, e o intervalo entre informação e execução pode estar limitando o crescimento.';
+    }
+
+    verdict.classList.add('show');
+
+    resultTimer=setTimeout(function(){
+      if(resultViewedScore!==n){
+        resultViewedScore=n;
+        dl({event:'diagnostic_result_view',score:n});
+      }
+    },8000);
+  }
+
+  boxes.forEach(function(b){b.addEventListener('change',upd);});
+  var vcta=document.querySelector('[data-cta="diagnostico"]');
+  if(vcta)vcta.addEventListener('click',function(){
+    dl({event:'diagnostic_complete',score:window.__espx_score||0});
+  });
+
+  /* Formulário */
+  var f=document.getElementById('lead'),fs=false,sent=false,abandonSent=false;
+  window.__espx_form_loaded_at=Date.now();
+
+  f.addEventListener('focusin',function(){
+    if(!fs){fs=true;dl({event:'form_start'});}
+  });
+
+  function abandon(){
+    if(fs&&!sent&&!abandonSent){
+      abandonSent=true;
+      dl({event:'form_abandon'});
+    }
+  }
+  window.addEventListener('pagehide',abandon);
+  document.addEventListener('visibilitychange',function(){
+    if(document.visibilityState==='hidden')abandon();
+  });
+
+  window.__espx_sent=function(){sent=true;};
+
+  var okLink=document.getElementById('ok-link');
+  if(okLink)okLink.addEventListener('click',function(){
+    dl({event:'whatsapp_fallback_click'});
+  });
+})();
+
+/*
+  PRODUÇÃO:
+  1) Defina WEBHOOK_URL com o endpoint definitivo.
+  2) Prefira endpoint first-party/reverse proxy.
+  3) No servidor: rate limit (ex.: 20/min por IP), validação de schema,
+     limite de payload, logs e proteção antiabuso.
+  4) NÃO coloque token secreto no JavaScript do navegador.
+*/
+var WEBHOOK_URL='';
+
+function makeSubmissionId(){
+  try{
+    if(window.crypto&&crypto.randomUUID)return crypto.randomUUID();
+  }catch(e){}
+  return 'sub_'+Date.now()+'_'+Math.random().toString(36).slice(2,10);
+}
+
+function enviarLead(e){
+  e.preventDefault();
+
+  var f=e.target;
+  if(!f.checkValidity()){
+    f.reportValidity();
+    return false;
+  }
+
+  /* Honeypot + envio rápido demais */
+  if(f.website&&f.website.value.trim()!=='')return false;
+  if(Date.now()-(window.__espx_form_loaded_at||0)<900)return false;
+
+  var U=window.__espx_utm||{};
+  var submissionId=makeSubmissionId();
+
+  var d={
+    submission_id:submissionId,
+    nome:f.nome.value.trim(),
+    empresa:f.empresa.value.trim(),
+    whatsapp:f.whats.value.trim(),
+    situacao:f.prio.value,
+    diagnostico_score:window.__espx_score||0,
+    pagina:location.pathname,
+    origem:'lp-xaction-v3-2',
+    utm_source:U.utm_source||'',
+    utm_medium:U.utm_medium||'',
+    utm_campaign:U.utm_campaign||'',
+    utm_content:U.utm_content||'',
+    utm_term:U.utm_term||'',
+    gclid:U.gclid||'',
+    gbraid:U.gbraid||'',
+    wbraid:U.wbraid||'',
+    fbclid:U.fbclid||'',
+    landing_variant:U.landing_variant||''
+  };
+
+  /* dataLayer recebe somente atributos não pessoais */
+  if(window.dataLayer)window.dataLayer.push({
+    event:'lead_submit',
+    submission_id:submissionId,
+    situacao:d.situacao,
+    diagnostico_score:d.diagnostico_score,
+    origem:d.origem,
+    utm_source:d.utm_source,
+    utm_medium:d.utm_medium,
+    utm_campaign:d.utm_campaign
+  });
+
+  if(window.__espx_sent)window.__espx_sent();
+
+  var msg='Olá, sou '+d.nome+' da '+d.empresa+'. Vim pela página do X-Action e quero solicitar uma Leitura Comercial. Situação: '+d.situacao+'.';
+  var url='https://wa.me/5521967090786?text='+encodeURIComponent(msg);
+
+  var link=document.getElementById('ok-link');
+  if(link)link.href=url;
+
+  /*
+    Abrimos o WhatsApp ainda dentro do gesto do usuário.
+    Não usamos await antes desta chamada.
+  */
+  try{
+    var win=window.open(url,'_blank');
+    if(win)try{win.opener=null;}catch(err){}
+  }catch(err){}
+
+  /* Webhook fire-and-forget com keepalive */
+  if(WEBHOOK_URL){
+    try{
+      fetch(WEBHOOK_URL,{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify(d),
+        keepalive:true
+      }).then(function(r){
+        if(window.dataLayer)window.dataLayer.push({
+          event:r.ok?'lead_webhook_ok':'lead_webhook_error',
+          submission_id:submissionId,
+          status:r.status
+        });
+      }).catch(function(){
+        if(window.dataLayer)window.dataLayer.push({
+          event:'lead_webhook_error',
+          submission_id:submissionId,
+          status:0
+        });
+      });
+    }catch(err){}
+  }
+
+  f.style.display='none';
+  var ok=document.getElementById('lead-ok');
+  if(ok)ok.classList.add('show');
+  f.reset();
+
+  return false;
+}
+</script>
+</body>
+</html>
