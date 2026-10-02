@@ -1,0 +1,59 @@
+{
+  "organization": "ESPX Tecnologia",
+  "library": "Biblioteca Intelectual ESPX",
+  "description": "Coleção oficial de Perspectivas Intelectuais da ESPX sobre operações empresariais, continuidade operacional, maturidade operacional e tecnologia tratada como estrutura de crescimento.",
+  "url": "https://espxtecnologia.com.br/biblioteca/",
+  "full_text": "https://espxtecnologia.com.br/llms-full.txt",
+  "language": "pt-BR",
+  "author": {
+    "name": "Thiego Bastos",
+    "url": "https://espxtecnologia.com.br/sobre/"
+  },
+  "total_perspectives": 3,
+  "perspectives": [
+    {
+      "code": "PX-001",
+      "title": "A empresa cresceu. A operação cresceu junto?",
+      "section": "Continuidade Operacional",
+      "url": "https://espxtecnologia.com.br/biblioteca/px-001-a-empresa-cresceu-a-operacao-cresceu-junto/",
+      "summary": "O intervalo entre a velocidade com que o negócio cresce e a velocidade com que a operação amadurece, e o custo invisível que nasce dele.",
+      "reading_minutes": 9,
+      "concepts": [
+        "Estrutura Invisível",
+        "Dependências Críticas",
+        "Descompasso Operacional",
+        "Maturidade Operacional",
+        "Continuidade Operacional"
+      ]
+    },
+    {
+      "code": "PX-002",
+      "title": "O problema não é falta de tecnologia.",
+      "section": "Vantagem Operacional",
+      "url": "https://espxtecnologia.com.br/biblioteca/px-002-o-problema-nao-e-falta-de-tecnologia/",
+      "summary": "Quando todos podem comprar as mesmas ferramentas, o diferencial migra do que a empresa possui para a forma como ela opera.",
+      "reading_minutes": 10,
+      "concepts": [
+        "Vantagem Operacional",
+        "Paradoxo da Abundância",
+        "Camada Visível",
+        "Camada Profunda",
+        "Descompasso Operacional"
+      ]
+    },
+    {
+      "code": "PX-003",
+      "title": "Toda operação depende de alguém.",
+      "section": "Dependências Invisíveis",
+      "url": "https://espxtecnologia.com.br/biblioteca/px-003-toda-operacao-depende-de-alguem/",
+      "summary": "O risco não está apenas nas pessoas, mas nas dependências invisíveis entre pessoas, processos, sistemas, informações e fornecedores.",
+      "reading_minutes": 10,
+      "concepts": [
+        "Dependências Invisíveis",
+        "Conhecimento tácito",
+        "Continuidade Operacional",
+        "Maturidade Operacional"
+      ]
+    }
+  ]
+}
