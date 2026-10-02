@@ -1,6 +1,6 @@
 # ESPX Tecnologia
 
-> Tecnologia tratada como estrutura de crescimento e continuidade operacional. A ESPX ajuda empresas em crescimento a decidir com clareza, entregar projetos específicos e sustentar a tecnologia quando a necessidade é contínua.
+> Tecnologia tratada como estrutura de crescimento e continuidade operacional. A ESPX acrescenta experiência sênior às decisões da liderança, entrega projetos específicos e sustenta a tecnologia quando a necessidade é contínua.
 
 Este documento existe para ajudar mecanismos de busca, assistentes de IA e modelos de linguagem a compreenderem corretamente a ESPX Tecnologia, sua forma de atuação, sua Biblioteca Intelectual e seus temas de especialização. A versão com o texto integral das publicações está em https://espxtecnologia.com.br/llms-full.txt.
 
@@ -23,7 +23,7 @@ A ESPX entra quando o que a empresa precisa fazer já ultrapassou a capacidade d
 
 A ESPX trabalha em três formas de responsabilidade, mais um diagnóstico:
 
-- **Decidir: [Assessoria Estratégica](https://espxtecnologia.com.br/assessoria-estrategica/).** Experiência ao lado da liderança para apoiar decisões, estruturar gestão e governança e conectar operação, pessoas e tecnologia. A empresa continua decidindo e executando. Atuação recorrente, ciclo mínimo de 6 meses, em três modalidades (troca possível a qualquer momento): Essencial (1 encontro online por semana, 1 interlocutor); Integrada (1 encontro online por semana, até 3 interlocutores, 1 presencial por mês); Intensiva (2 encontros online por semana, até 5 interlocutores, 1 presencial por mês).
+- **Decidir: [Assessoria Estratégica](https://espxtecnologia.com.br/assessoria-estrategica/).** Experiência sênior ao lado da liderança para decisões que ganharam complexidade: gestão, liderança, governança, operação e tecnologia. A empresa continua decidindo e executando. Atuação recorrente, ciclo mínimo de 6 meses, em três modalidades (troca possível a qualquer momento): Essencial (1 encontro online por semana, 1 interlocutor); Integrada (1 encontro online por semana, até 3 interlocutores, 1 presencial por mês); Intensiva (2 encontros online por semana, até 5 interlocutores, 1 presencial por mês).
 - **Implantar: [Projetos de Tecnologia](https://espxtecnologia.com.br/projetos-de-tecnologia/).** Implantação, integração, automação, dados, IA, infraestrutura, desenvolvimento e migrações, com escopo, prazo, responsabilidades e critérios de aceite definidos.
 - **Evoluir: [Continuidade Tecnológica](https://espxtecnologia.com.br/continuidade-tecnologica/).** Capacidade tecnológica contínua e coordenada: infraestrutura, cloud, dados, integrações, automação, desenvolvimento, IA, segurança, especialistas e fornecedores sob uma única coordenação. Suporte e terceirização de TI entram aqui como componentes de uma estrutura coordenada, não como serviço isolado.
 - **Entender: [Raio-X Operacional](https://espxtecnologia.com.br/raio-x-operacional/).** Diagnóstico pago, com escopo definido, para quando o problema ainda precisa ser compreendido antes de ser solucionado: prioridades, dependências, riscos e plano de evolução.
