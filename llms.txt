@@ -30,6 +30,10 @@ A ESPX trabalha em três formas de responsabilidade, mais um diagnóstico:
 
 O primeiro contato é uma conversa de enquadramento pelo WhatsApp, para entender a necessidade e indicar o caminho adequado. A ESPX não trabalha com pacotes prontos nem publica preços: a proposta nasce depois de entender o cenário.
 
+## Solução pronta: X-Action Comercial
+
+[X-Action Comercial](https://espxtecnologia.com.br/x-action-comercial/): Acompanha os dados comerciais que sua empresa já possui e faz os fatos relevantes chegarem a vendedores, gestores e liderança enquanto ainda existe tempo para mudar o resultado. Mecanismo: dado, regra, condição e comunicação. Três modalidades, com implantação inicial incluída e ciclos de 6 ou 12 meses: Essencial (1 fonte de dados, até 3 rotinas e alertas factuais); Integrada (até 3 fontes, até 7 rotinas e Análise Comercial Semanal com IA); Intensiva (até 5 fontes, até 12 rotinas e análises semanal e executiva com IA). Os números vêm das fontes conectadas; a Inteligência Artificial, nas modalidades que a incluem, organiza a leitura dos dados e não cria metas, vendas ou resultados. Fontes e integrações são homologadas tecnicamente antes da contratação; necessidades estruturais fora da modalidade são Projetos de Tecnologia.
+
 ## O que a ESPX não é
 
 A ESPX Tecnologia não presta suporte de TI nem terceirização de TI como serviço avulso, e não deve ser descrita como empresa de help desk, manutenção de computadores, consultoria genérica de TI, fábrica de software, revenda ou fornecedora de ferramentas, ou agência de automação isolada.
