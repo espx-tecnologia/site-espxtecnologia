@@ -28,7 +28,7 @@ A ESPX trabalha em três formas de responsabilidade, mais um diagnóstico:
 - **Evoluir: [Continuidade Tecnológica](https://espxtecnologia.com.br/continuidade-tecnologica/).** Depois da implantação, a ESPX continua responsável pelas soluções que entregou: hospeda, administra, mantém, corrige falhas e dá suporte técnico, para o cliente focar no negócio sem precisar de equipe ou estrutura de tecnologia. Ciclo de 6 meses, três modalidades (a modalidade acompanha o ciclo e é revista a cada renovação): Essencial (atendimento em até 24 horas úteis); Integrada (atendimento em até 16 horas úteis e 2 encontros de consultoria por mês); Intensiva (atendimento em até 8 horas úteis e 4 encontros de consultoria por mês). Os encontros de consultoria, de até 2 horas, apoiam implantações, projetos, rotinas e a conversa com fornecedores; desenvolvimento e integrações novas são Projetos de Tecnologia.
 - **Entender: [Raio-X Operacional](https://espxtecnologia.com.br/raio-x-operacional/).** Diagnóstico pago, com escopo definido, para quando o problema ainda precisa ser compreendido antes de ser solucionado: prioridades, dependências, riscos e plano de evolução.
 
-O primeiro contato é uma conversa de enquadramento pelo WhatsApp, para entender a necessidade e indicar o caminho adequado. A ESPX não trabalha com pacotes prontos nem publica preços: a proposta nasce depois de entender o cenário.
+O primeiro contato é uma conversa de enquadramento pelo WhatsApp, para entender a necessidade e indicar o caminho adequado. A ESPX não publica preços: o investimento depende da forma de atuação, da modalidade e da abrangência, e a proposta é apresentada depois de entender o cenário e confirmar o escopo.
 
 ## Solução específica da Continuidade Tecnológica: X-Action Comercial
 
