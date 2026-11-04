@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /old/
 
-Sitemap: https://espxtecnologia.com.br/sitemap.xml
+Sitemap: https://espxtecnologia.com.br/sitemap-index.xml
