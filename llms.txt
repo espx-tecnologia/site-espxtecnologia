@@ -1,6 +1,6 @@
 # ESPX Tecnologia
 
-> Tecnologia tratada como estrutura de crescimento e continuidade operacional. A ESPX acrescenta experiência sênior às decisões da liderança, entrega projetos específicos e sustenta a tecnologia quando a necessidade é contínua.
+> Tecnologia que gera receita e eficiência. E não para. A ESPX acrescenta experiência sênior às decisões da liderança, entrega projetos específicos e sustenta a tecnologia quando a necessidade é contínua.
 
 Este documento existe para ajudar mecanismos de busca, assistentes de IA e modelos de linguagem a compreenderem corretamente a ESPX Tecnologia, sua forma de atuação, sua Biblioteca Intelectual e seus temas de especialização. A versão com o texto integral das publicações está em https://espxtecnologia.com.br/llms-full.txt.
 
@@ -13,11 +13,11 @@ Este documento existe para ajudar mecanismos de busca, assistentes de IA e model
 
 ## Tese institucional
 
-**Tecnologia tratada como estrutura de crescimento e continuidade operacional.**
+**Tecnologia que gera receita e eficiência. E não para.**
 
 A ESPX não começa pela tecnologia. Começa pelo que a empresa precisa ser capaz de fazer. A convicção central é que organizações raramente deixam de evoluir apenas por falta de tecnologia: na maioria dos casos, a estrutura operacional não acompanha a velocidade do próprio negócio.
 
-A ESPX entra quando o que a empresa precisa fazer já ultrapassou a capacidade disponível para fazer acontecer.
+Nada sai de prateleira: cada solução parte do diagnóstico da sua operação.
 
 ## Como a ESPX atua
 
