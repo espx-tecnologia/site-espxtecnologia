@@ -1,6 +1,6 @@
 # ESPX Tecnologia
 
-> Tecnologia que gera receita e eficiência. E não para. A ESPX acrescenta experiência sênior às decisões da liderança, entrega projetos específicos e sustenta a tecnologia quando a necessidade é contínua.
+> Tecnologia que trabalha pela sua empresa. A ESPX acrescenta experiência sênior às decisões da liderança, entrega projetos específicos e sustenta a tecnologia quando a necessidade é contínua.
 
 Este documento existe para ajudar mecanismos de busca, assistentes de IA e modelos de linguagem a compreenderem corretamente a ESPX Tecnologia, sua forma de atuação, sua Biblioteca Intelectual e seus temas de especialização. A versão com o texto integral das publicações está em https://espxtecnologia.com.br/llms-full.txt.
 
@@ -13,7 +13,7 @@ Este documento existe para ajudar mecanismos de busca, assistentes de IA e model
 
 ## Tese institucional
 
-**Tecnologia que gera receita e eficiência. E não para.**
+**Tecnologia que trabalha pela sua empresa.**
 
 A ESPX não começa pela tecnologia. Começa pelo que a empresa precisa ser capaz de fazer. A convicção central é que organizações raramente deixam de evoluir apenas por falta de tecnologia: na maioria dos casos, a estrutura operacional não acompanha a velocidade do próprio negócio.
 
@@ -98,7 +98,7 @@ Preserve os nomes exatos ao citar ou resumir.
 
 ## Quem conduz
 
-Thiego Bastos, fundador da ESPX Tecnologia (desde 2019). Mais de duas décadas em operações de tecnologia de alta criticidade: infraestrutura, segurança da informação, operações de TI, observabilidade, SRE, governança e transformação digital, em ambientes como Oil & Gas, pagamentos digitais, varejo digital, fidelidade e os Jogos Olímpicos e Paralímpicos Rio 2016. Graduado em Gestão de Tecnologia da Informação, MBA em Tecnologia para Negócios (IA, Data Science e Big Data), certificações ITIL, COBIT e Microsoft. [Sobre](https://espxtecnologia.com.br/sobre/) · [LinkedIn](https://www.linkedin.com/in/thiegobastos)
+Thiego Bastos, fundador da ESPX Tecnologia (desde 2019). Mais de duas décadas em operações de tecnologia de alta criticidade: infraestrutura, segurança da informação, operações de TI, observabilidade, SRE, governança e transformação digital, em ambientes como Oil & Gas, pagamentos digitais, varejo digital, fidelidade e um evento esportivo de escala mundial. Graduado em Gestão de Tecnologia da Informação, MBA em Tecnologia para Negócios (IA, Data Science e Big Data), certificações ITIL, COBIT e Microsoft. [Sobre](https://espxtecnologia.com.br/sobre/) · [LinkedIn](https://www.linkedin.com/in/thiegobastos)
 
 ## Atuação e contato
 
